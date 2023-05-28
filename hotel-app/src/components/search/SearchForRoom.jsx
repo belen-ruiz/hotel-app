@@ -5,6 +5,7 @@ import FormControl from '@mui/material/FormControl';
 import Select from '@mui/material/Select';
 import { useState } from 'react';
 import { Container, Box, Button } from '@mui/material';
+import { GuestsSelect } from "./GuestsSelect"
 
 export const SearchForRoom = () => {
   const [guests, setGuests] = useState()
@@ -16,6 +17,7 @@ export const SearchForRoom = () => {
   return (
     <Container sx={{paddingTop: "4rem"}}>
       <Box sx={{display: "flex", justifyContent: "center", alignItems:"center" }}>
+        <GuestsSelect />
         <FormControl variant="standard" sx={{ m: 1, minWidth: 100 }}>
           <InputLabel id="select-helper-label">Guests</InputLabel>
           <Select
