@@ -8,12 +8,13 @@ import MuiInput from '@mui/material/Input';
 import VolumeUp from '@mui/icons-material/VolumeUp';
 import { useState } from 'react';
 import { BoyRounded } from '@mui/icons-material';
+import { MenuItem } from '@mui/material';
 
 const Input = styled(MuiInput)`
   width: 42px;
 `;
 
-export const GuestsSelect = ({ setTotalGuests }) => {
+export const GuestsSelect = ({ totalGuests, setTotalGuests }) => {
 
 
   const [adult, setAdult] = useState(2);
@@ -21,10 +22,14 @@ export const GuestsSelect = ({ setTotalGuests }) => {
 
 
   const handleAdultSliderChange = (e, value) => {
+    console.log("hanldechange de adult change")
+
     setAdult(value);
   };
 
   const handleAdultInputChange = (e) => {
+    console.log("hanldechange de select")
+
     setAdult(e.target.value === '' ? '' : Number(e.target.value));
   };
 
@@ -53,14 +58,17 @@ export const GuestsSelect = ({ setTotalGuests }) => {
   };
 
   const handleClick = () => {
-    const totalGuests = adult + child
+    const totalGuests = `${adult} Adult - ${child} Child`
+    console.log(totalGuests)
     setTotalGuests(totalGuests)
   }
 
 
    return (
-    <Stack>
-        <Box sx={{ width: 150 }}>
+    <>
+      <MenuItem value={totalGuests}>
+        <Stack>
+          <Box sx={{ width: 150 }}>
             <Typography id="input-slider" variant="caption">
                         Adultos
             </Typography>
@@ -100,52 +108,59 @@ export const GuestsSelect = ({ setTotalGuests }) => {
             </Grid>
         
           </Grid>
-        </Box>
+          </Box>
+        </Stack>
+      </MenuItem>
 
+      <MenuItem value={totalGuests}>
+        <Stack>
+            <Box sx={{ width: 150 }}>
+                <Typography id="input-slider" variant="caption">
+                            Niños
+                </Typography>
+            
+              <Grid container spacing={2} alignItems="center">
+                <Grid item>
+                  <BoyRounded />
+                </Grid>
+            
+                <Grid item xs>
+                  <Slider
+                    id="child"
+                    size="small"
+                    value={child ? child : 0}
+                    onChange={handleChildSliderChange}
+                    step={1}
+                    min={1}
+                    max={5}
+                    aria-labelledby="input-slider"
+                  />
+                </Grid>
+            
+                <Grid item>
+                  <Input
+                    value={child}
+                    size="small"
+                    onChange={handleChildInputChange}
+                    onBlur={handleChildBlur}
+                    inputProps={{
+                      step: 1,
+                      min: 1,
+                      max: 5,
+                      type: 'number',
+                      'aria-labelledby': 'input-slider',
+                    }}
+                  />
+                </Grid>
+            
+              </Grid>
+            </Box>
+        </Stack>    
+      </MenuItem>
 
-        <Box sx={{ width: 150 }}>
-            <Typography id="input-slider" variant="caption">
-                        Niños
-            </Typography>
-        
-          <Grid container spacing={2} alignItems="center">
-            <Grid item>
-              <BoyRounded />
-            </Grid>
-        
-            <Grid item xs>
-              <Slider
-                id="child"
-                size="small"
-                value={child ? child : 0}
-                onChange={handleChildSliderChange}
-                step={1}
-                min={1}
-                max={5}
-                aria-labelledby="input-slider"
-              />
-            </Grid>
-        
-            <Grid item>
-              <Input
-                value={child}
-                size="small"
-                onChange={handleChildInputChange}
-                onBlur={handleChildBlur}
-                inputProps={{
-                  step: 1,
-                  min: 1,
-                  max: 5,
-                  type: 'number',
-                  'aria-labelledby': 'input-slider',
-                }}
-              />
-            </Grid>
-        
-          </Grid>
-        </Box>
+      <Button onClick={handleClick}>Aplicar</Button>
 
-        <Button onClick={handleClick}>Aplicar</Button>
-    </Stack>
+    </>
   );
 }
+

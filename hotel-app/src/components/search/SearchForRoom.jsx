@@ -11,9 +11,16 @@ export const SearchForRoom = () => {
   const [guests, setGuests] = useState(1)
   const [totalGuests, setTotalGuests] = useState()
 
-  const handleChange = (e) => {
-    setGuests(e.target.value);
-  };
+  const handleChange = (e, value) => {
+      console.log("hanldechange de select")
+      console.log(e.target.value)
+      //setGuests(totalGuests)
+      //setTotalGuests(typeof totalGuests === 'number' ? totalGuests.split(',') : totalGuests,);
+      //setGuests(totalGuests)
+      
+    };
+    
+    console.log(totalGuests)
 
 
   return (
@@ -24,13 +31,16 @@ export const SearchForRoom = () => {
           <Select
             labelId="demo-simple-select-helper-label"
             id="demo-simple-select-helper"
-            value={totalGuests}
             label="Guests"
-            //onChange={handleChange}
+            onSelect={handleChange}
+            value={guests}
           >
-            <GuestsSelect setTotalGuests={setTotalGuests}/>
+              <GuestsSelect 
+              totalGuests={totalGuests}          
+              setTotalGuests={setTotalGuests}/>
           </Select>
-          {/* <FormHelperText>Min 1 - Max 4</FormHelperText> */}
+          {totalGuests &&
+            <FormHelperText>{totalGuests}</FormHelperText>}
         </FormControl>
         
         <FormControl variant="standard" sx={{ m: 1, minWidth: 140 }}>
@@ -39,15 +49,15 @@ export const SearchForRoom = () => {
             labelId="demo-simple-select-helper-label"
             id="demo-simple-select-helper"
             value={guests}
-            label="Guests"
+            label="frommmm"
             onChange={handleChange}
           >
             <MenuItem value="">
               <em>None</em>
             </MenuItem>
-            <MenuItem value={89}>Ten</MenuItem>
-            <MenuItem value={20}>Twenty</MenuItem>
-            <MenuItem value={30}>Thirty</MenuItem>
+            <MenuItem value={89}>Tenyy</MenuItem>
+            <MenuItem value={20}>Twentyyy</MenuItem>
+            <MenuItem value={30}>Thirtyyy</MenuItem>
           </Select>
         </FormControl>
         
