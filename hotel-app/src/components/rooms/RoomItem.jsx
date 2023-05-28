@@ -13,6 +13,9 @@ import Favorite from "@mui/icons-material/Favorite";
 import Visibility from "@mui/icons-material/Visibility";
 import CreateNewFolder from "@mui/icons-material/CreateNewFolder";
 import { BoyRounded } from "@mui/icons-material";
+import { Button } from "@mui/material";
+import { Stack } from "@mui/material";
+import FormHelperText from '@mui/material/FormHelperText';
 
 export const RoomItem = () => {
     //const { imgUrl, title, capacity, amenities, price } = data
@@ -50,33 +53,54 @@ export const RoomItem = () => {
                         transition: "0.1s ease-in",
                         background:
                             "linear-gradient(0deg, rgba(2,0,36,0.8379551649761467) 0%, #033e4a34 100%); ",
+                            
                     }}
                 >
                     {/* The first box acts as a container that inherits style from the CardCover */}
-                    <Box>
-                        <Typography variant="h6" noWrap sx={{ color: "#fff",}}>
+                    <Box sx={{ display: "flex", flexDirection: "column", top: "1rem"}}>
+                        <Typography variant="h6" sx={{ color: "#fff", alignSelf: "start", padding: "3rem 2rem", fontWeight: "bold", letterSpacing: 1}}>
                     
-                                Room Name
+                                Room Nameee
                         </Typography>
 
                         <Box
                             sx={{
-                                p: 2,
                                 display: "flex",
-                                alignItems: "center",
-                                gap: 1.5,
-                                flexGrow: 1,
-                                alignSelf: "flex-end",
+                                height: "100%",
+                                flexDirection: "column",
+                                justifyContent: "end",
+                                alignItems: "end",
+                                gap:"1rem",
+                                alignSelf: "end",
+                                padding: "3rem 2rem"
                             }}
                         >
+
+                            <Box
+                                sx={{ ml: "auto" }}>
+                                <IconButton size="sm"
+                                    color="neutral"
+                                    
+                                >
+                                    <Favorite />
+                                </IconButton>
+                                
+                                <IconButton
+                                    size="sm"
+                                    color="neutral"
+                                    sx={{ ml: "0.5rem" }}
+                                >
+                                    <CreateNewFolder />
+                                </IconButton>
+                            </Box>
+
                             <Chip
                                 variant="outlined"
                                 color="neutral"
                                 size="sm"
                                 sx={{
                                     borderRadius: "sm",
-                                    py: 0.25,
-                                    px: 0.5,
+                                    ml: "auto"
                                 }}
                             >
                                 <BoyRounded sx={{ color: "#fff" }} />
@@ -84,17 +108,25 @@ export const RoomItem = () => {
                                 <BoyRounded sx={{ color: "#fff" }} />
                             </Chip>
 
-                            <IconButton size="sm" color="neutral">
-                                <Favorite />
-                            </IconButton>
+                            <Stack>
+                                <Typography 
+                                    sx={{ fontSize: "5rem", color: "#fff" }}
+                                >
+                                    25$
+                                </Typography>
 
-                            <IconButton
-                                size="sm"
-                                color="neutral"
-                                sx={{ ml: "auto" }}
-                            >
-                                <CreateNewFolder />
-                            </IconButton>
+                                <FormHelperText
+                                    sx={{ color: "#fff", alignSelf: "end" }}
+                                    > per night</FormHelperText>
+
+                            </Stack>
+
+                            <Button
+                                variant="contained"
+                                color="primary"
+                                >
+                                RESERVATION
+                            </Button>
                         </Box>
                     </Box>
                 </CardCover>
