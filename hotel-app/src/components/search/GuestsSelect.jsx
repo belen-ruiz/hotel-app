@@ -13,9 +13,12 @@ const Input = styled(MuiInput)`
   width: 42px;
 `;
 
-export const GuestsSelect = () => {
+export const GuestsSelect = ({ setTotalGuests }) => {
+
+
   const [adult, setAdult] = useState(2);
   const [child, setChild] = useState(1);
+
 
   const handleAdultSliderChange = (e, value) => {
     setAdult(value);
@@ -49,7 +52,13 @@ export const GuestsSelect = () => {
     }
   };
 
-  return (
+  const handleClick = () => {
+    const totalGuests = adult + child
+    setTotalGuests(totalGuests)
+  }
+
+
+   return (
     <Stack>
         <Box sx={{ width: 150 }}>
             <Typography id="input-slider" variant="caption">
@@ -135,6 +144,8 @@ export const GuestsSelect = () => {
         
           </Grid>
         </Box>
+
+        <Button onClick={handleClick}>Aplicar</Button>
     </Stack>
   );
 }
