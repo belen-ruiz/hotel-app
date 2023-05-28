@@ -1,9 +1,12 @@
 import { useRoutes } from 'react-router-dom'
 import { Error404 } from '../pages/Error404'
 import { Home } from '../pages/Home'
+import { Rooms } from '../pages/Rooms'
+import { Amenities } from '../pages/Amenities'
+import { Gallery } from '../pages/Gallery'
+import { Contact } from '../pages/Contact'
+import { Reservations } from '../pages/Reservations'
 
-
-// se importa en la app
 
 const allRoutes = () => {
     const routes = [
@@ -18,35 +21,36 @@ const allRoutes = () => {
             element: <Home />
         },
         {
-            path:"/home",
+            path:"/rooms",
+            exact: true,
+            element: <Rooms />
+        },
+        {
+            path:"/room/:type",
             exact: true,
             element: <Home />
         },
         {
-            path:"/home",
+            path:"/amenities",
             exact: true,
-            element: <Home />
+            element: <Amenities />
         },
         {
-            path:"/home",
+            path:"/gallery",
             exact: true,
-            element: <Home />
+            element: <Gallery />
         },
         {
-            path:"/home",
+            path:"/contact",
             exact: true,
-            element: <Home />
+            element: <Contact />
         },
         {
-            path:"/home",
+            path:"/booking",
             exact: true,
-            element: <Home />
+            element: <Reservations />
         },
-        {
-            path:"/home",
-            exact: true,
-            element: <Home />
-        },
+       
         {
             path:"/*",
             exact: false,
