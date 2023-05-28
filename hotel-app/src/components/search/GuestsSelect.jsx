@@ -14,7 +14,7 @@ const Input = styled(MuiInput)`
   width: 42px;
 `;
 
-export const GuestsSelect = ({ totalGuests, setTotalGuests }) => {
+export const GuestsSelect = ({ totalGuests,setTotalGuests }) => {
 
 
   const [adult, setAdult] = useState(2);
