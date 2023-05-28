@@ -18,7 +18,7 @@ export const GuestsSelect = ({ totalGuests,setTotalGuests }) => {
 
 
   const [adult, setAdult] = useState(2);
-  const [child, setChild] = useState(1);
+  const [kids, setKids] = useState(1);
 
 
   const handleAdultSliderChange = (e, value) => {
@@ -41,24 +41,24 @@ export const GuestsSelect = ({ totalGuests,setTotalGuests }) => {
     }
   };
 
-  const handleChildSliderChange = (e, value) => {
-    setChild(value);
+  const handlekidsSliderChange = (e, value) => {
+    setKids(value);
   };
 
-  const handleChildInputChange = (event) => {
-    setChild(event.target.value === '' ? '' : Number(event.target.value));
+  const handlekidsInputChange = (event) => {
+    setKids(event.target.value === '' ? '' : Number(event.target.value));
   };
 
-  const handleChildBlur = () => {
+  const handlekidsBlur = () => {
     if (adult < 0) {
-        setChild(0);
+        setKids(0);
     } else if (adult > 5) {
-        setChild(5);
+        setKids(5);
     }
   };
 
   const handleClick = () => {
-    const totalGuests = `${adult} Adult - ${child} Child`
+    const totalGuests = `${adult} Adult - ${kids} kids`
     console.log(totalGuests)
     setTotalGuests(totalGuests)
   }
@@ -126,10 +126,10 @@ export const GuestsSelect = ({ totalGuests,setTotalGuests }) => {
             
                 <Grid item xs>
                   <Slider
-                    id="child"
+                    id="kids"
                     size="small"
-                    value={child ? child : 0}
-                    onChange={handleChildSliderChange}
+                    value={kids ? kids : 0}
+                    onChange={handlekidsSliderChange}
                     step={1}
                     min={1}
                     max={5}
@@ -139,10 +139,10 @@ export const GuestsSelect = ({ totalGuests,setTotalGuests }) => {
             
                 <Grid item>
                   <Input
-                    value={child}
+                    value={kids}
                     size="small"
-                    onChange={handleChildInputChange}
-                    onBlur={handleChildBlur}
+                    onChange={handlekidsInputChange}
+                    onBlur={handlekidsBlur}
                     inputProps={{
                       step: 1,
                       min: 1,
