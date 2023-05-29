@@ -8,19 +8,18 @@ export const RoomDetailContainer = ({  }) => {
 
     const { rooms }  =  useRoomContext()
 
+    const roooms = rooms[0]
+    console.log(roooms)
   return (
+
     <Container 
         sx={{
             display:"flex",
             }}>
-    
-    {
-        rooms && rooms.map((room) => (
-                {room && <RoomDetail rooms={room}/>}
+
             <Box>
+                {roooms && <RoomDetail roooms={roooms}/>}
             </Box>
-        ))
-    }
 
     </Container>
   )
