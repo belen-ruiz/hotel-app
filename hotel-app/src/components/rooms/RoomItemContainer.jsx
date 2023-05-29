@@ -16,16 +16,19 @@ export const RoomItemContainer = () => {
     <Container 
         sx={{
             display:"flex",
-            overflowY:"scroll"
+            overflowY:"scroll",
+            padding: "1rem 0",
+            height: "100vh",
             }}>
     
-    {
+        <Box xs={{height: "fit-content",backgroundColor: "red", margin: "2rem"
+}}>
+        {
         rooms && rooms.map((room) => (
-            <Box>
-                {room && <RoomItem rooms={room}/>}
-            </Box>
-        ))
-    }
+                room && <RoomItem rooms={room}/>
+                ))
+        }
+        </Box>
 
     </Container>
   )

@@ -46,6 +46,8 @@ export const RoomItem = ({ rooms }) => {
                     <CardCover
                         className="gradient-cover"
                         sx={{
+                            height: "auto",
+                            weight: "auto",
                             "&:hover, &:focus-within": {
                                 opacity: 1,
                             },
