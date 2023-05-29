@@ -16,7 +16,9 @@ export const RoomItemListContainer = () => {
     <Container 
         sx={{
             display:"flex",
-            flexDirection: "column"
+            flexDirection: "column",
+            backgroundColor:"grey"
+
             }}>
     
     {

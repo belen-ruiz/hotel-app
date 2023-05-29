@@ -15,6 +15,12 @@ import { Button } from "@mui/material";
 import { Stack } from "@mui/material";
 import FormHelperText from "@mui/material/FormHelperText";
 import { Link } from "react-router-dom";
+import { confort } from "../../utils/confort";
+
+
+import CardContent from '@mui/joy/CardContent';
+import CardOverflow from '@mui/joy/CardOverflow';
+import Divider from '@mui/joy/Divider';
 
 export const RoomItemList = ({ rooms }) => {
     const title = rooms.title;
@@ -30,125 +36,148 @@ export const RoomItemList = ({ rooms }) => {
         <Link to={`/room/${title}`}>
             <Card
                 sx={{
-                    width: 600,
-                    bgcolor: "initial",
+                    width: "100%",
                     boxShadow: "none",
                     "--Card-padding": "0px",
-                }}
-            >
-                <Box sx={{ position: "relative" }}>
-                    <AspectRatio ratio="3/4">
-                        <figure>
-                            <img src={imgUrl} loading="lazy" alt={title} />
-                        </figure>
-                    </AspectRatio>
+                    margin: "1rem 0",
+                    transition: "all .3s ease-out",
+                    "&:hover":{ 
+                        transform: "translateY(-10%)" }
+                    
+                }}>
 
-                    <CardCover
-                        className="gradient-cover"
+                <Box sx={{ 
+                         }}>
+
+                    <Card
+                        className="cover"
                         sx={{
-                            "&:hover, &:focus-within": {
-                                opacity: 1,
-                            },
-                            opacity: 0,
-                            transition: "0.1s ease-in",
-                            background:
-                                "linear-gradient(0deg, rgba(2,0,36,0.8379551649761467) 0%, #033e4a34 100%); ",
+                            backgroundColor:"rgb(247, 245, 245)",
+
                         }}
-                    >
-                        {/* The first box acts as a container that inherits style from the CardCover */}
-                        <Box
-                            sx={{
-                                display: "flex",
-                                flexDirection: "column",
-                                top: "1rem",
-                            }}
                         >
-                            <Typography
-                                variant="h6"
-                                sx={{
-                                    color: "#fff",
-                                    alignSelf: "start",
-                                    padding: "3rem 2rem",
-                                    fontWeight: "bold",
-                                    letterSpacing: 1,
-                                }}
-                            >
-                                {title}
-                            </Typography>
+                        {/* The first box acts as a container that inherits style from the CardCover */}
+                        <Box sx={{display:"flex"}}>
+                            {/* IMAGEN */}
+                            <Box>
+                                <AspectRatio ratio="4/3" sx={{width: 250}}>
+                                        <figure >
+                                            <img  src={imgUrl} loading="lazy" alt={title} />
+                                        </figure>
+                                </AspectRatio>
+                            </Box>
 
-                            <Box
-                                sx={{
-                                    display: "flex",
-                                    height: "100%",
-                                    flexDirection: "column",
-                                    justifyContent: "end",
-                                    alignItems: "end",
-                                    gap: "1rem",
-                                    alignSelf: "end",
-                                    padding: "3rem 2rem",
-                                }}
-                            >
-                                <Box sx={{ ml: "auto" }}>
-                                    <IconButton size="sm" color="neutral">
-                                        <Favorite />
-                                    </IconButton>
 
-                                    <IconButton
-                                        size="sm"
-                                        color="neutral"
-                                        sx={{ ml: "0.5rem" }}
-                                    >
-                                        <CreateNewFolder />
-                                    </IconButton>
-                                </Box>
-
-                                <Chip
-                                    variant="outlined"
-                                    color="neutral"
-                                    size="sm"
+                            {/* TEXT Y RESERV */}
+                            <Box sx={{display: "flex", gap: "1rem", paddingLeft: "1rem"}}>
+                                {/* TEXT */}
+                                <Stack
                                     sx={{
-                                        borderRadius: "sm",
-                                        ml: "auto",
                                         display: "flex",
-                                    }}
-                                >
-                                    {capacity && (
-                                        <div>
-                                            {Array(capacity)
-                                                .fill()
-                                                .map((_, index) => (
-                                                    <BoyRounded
-                                                        style={{
-                                                            color: "#fff",
-                                                        }}
-                                                    />
-                                                ))}
-                                        </div>
-                                    )}
-                                    ;
-                                </Chip>
-
-                                <Stack>
+                                        flexDirection: "column",
+                                        gap: "1rem",
+                                        alignSelf: "start",
+                                    }}>
                                     <Typography
-                                        sx={{ fontSize: "5rem", color: "#fff" }}
+                                        variant="h6"
+                                        sx={{
+                                            color: "grey",
+                                            alignSelf: "",
+                                            padding: "",
+                                            fontWeight: "bold",
+                                            letterSpacing: 1,
+                                        }}
                                     >
-                                        $ {price}
+                                        {title}
+                                    </Typography>
+                                
+                                    <Chip
+                                        variant="outlined"
+                                        color="neutral"
+                                        size="sm"
+                                        sx={{
+                                            borderRadius: "sm",
+                                            display: "flex",
+                                            width: "fit-content"
+                                        }}
+                                    >
+                                        {capacity && (
+                                            <div title={`Room for ${capacity} people`}>
+                                                {Array(capacity)
+                                                    .fill()
+                                                    .map((_, index) => (
+                                                        <BoyRounded
+                                                            style={{
+                                                                color: "grey",
+                                                            }}
+                                                        />
+                                                    ))}
+                                            </div>
+                                        )}
+                                        
+                                    </Chip>
+
+
+                                    <Typography
+                                        sx={{
+                                            color: "grey",
+                                            fontSize: "0.8rem"
+                                            
+                                        }}
+                                    >
+                                        {description}
                                     </Typography>
 
-                                    <FormHelperText
-                                        sx={{ color: "#fff", alignSelf: "end" }}
-                                    >
-                                        {" "}
-                                        person per night
-                                    </FormHelperText>
-                                </Stack>
 
-                                <Button variant="contained" color="primary">
-                                    RESERVATION
-                                </Button>
+
+                                    <Box sx={{display: "flex", gap:"1rem"}}>
+                        {confort && amenities &&
+                            confort.map((service) => {
+                                if (amenities.includes(service.name)) {
+                                    return (
+                                        <div title={service.name} key={service.name} style={{
+                                            color: "grey",
+                                        }}>
+                                            {service.icon }
+                                        </div>
+                                    );
+                                }
+                            })}
+                    </Box>
+                                
+                                </Stack>
+                                
+
+
+                                
+                                {/* PRICE Y RESERVATION */}
+                                <Stack sx={{ 
+                                        display: "flex",
+                                        flexDirection: "column",
+                                        justifyContent: "space-between",
+                                        alignItems: "center",
+                                        justifySelf: "end",
+                                        padding: "1rem" }}>
+                                    <Typography
+                                        sx={{ fontSize: "3rem", color: "grey",
+                                    }}
+                                    >
+                                        ${price}
+                                        <FormHelperText
+                                            sx={{ color: "grey"}}
+                                        >
+                                            person per night
+                                        </FormHelperText>
+                                    </Typography>
+                                
+                                
+                                    <Button variant="contained" color="primary" sx={{alignSelf: "end"}}>
+                                        RESERVATION
+                                    </Button>
+                                </Stack>
                             </Box>
                         </Box>
-                    </CardCover>
+                    </Card>
                 </Box>
             </Card>
         </Link>
@@ -157,53 +186,20 @@ export const RoomItemList = ({ rooms }) => {
 
 
 
-import * as React from 'react';
-import AspectRatio from '@mui/joy/AspectRatio';
-import Card from '@mui/joy/Card';
-import CardContent from '@mui/joy/CardContent';
-import CardOverflow from '@mui/joy/CardOverflow';
-import Divider from '@mui/joy/Divider';
-import Typography from '@mui/joy/Typography';
 
-export default function RowCard() {
-  return (
-    <Card
-      orientation="horizontal"
-      variant="outlined"
-      sx={{ width: 260, bgcolor: 'background.body' }}
-    >
-      <CardOverflow>
-        <AspectRatio ratio="1" sx={{ width: 90 }}>
-          <img
-            src="https://images.unsplash.com/photo-1507833423370-a126b89d394b?auto=format&fit=crop&w=90"
-            srcSet="https://images.unsplash.com/photo-1507833423370-a126b89d394b?auto=format&fit=crop&w=90&dpr=2 2x"
-            loading="lazy"
-            alt=""
-          />
-        </AspectRatio>
-      </CardOverflow>
-      <CardContent sx={{ px: 2 }}>
-        <Typography fontWeight="md" textColor="success.plainColor" mb={0.5}>
-          Yosemite Park
-        </Typography>
-        <Typography level="body2">California, USA</Typography>
-      </CardContent>
-      <Divider />
-      <CardOverflow
-        variant="soft"
-        color="primary"
-        sx={{
-          px: 0.2,
-          writingMode: 'vertical-rl',
-          textAlign: 'center',
-          fontSize: 'xs2',
-          fontWeight: 'xl2',
-          letterSpacing: '1px',
-          textTransform: 'uppercase',
-        }}
-      >
-        Ticket
-      </CardOverflow>
-    </Card>
-  );
-}
+
+// <Box sx={{ ml: "auto" }}>
+//                                     <IconButton size="sm" color="neutral">
+//                                         <Favorite />
+//                                     </IconButton>
+
+//                                     <IconButton
+//                                         size="sm"
+//                                         color="neutral"
+//                                         sx={{ ml: "0.5rem" }}
+//                                     >
+//                                         <CreateNewFolder />
+//                                     </IconButton>
+//                                 </Box>
+
+

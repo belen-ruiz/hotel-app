@@ -79,7 +79,6 @@ export const RoomItem = ({ rooms }) => {
                             <Box
                                 sx={{
                                     display: "flex",
-                                    height: "100%",
                                     flexDirection: "column",
                                     justifyContent: "end",
                                     alignItems: "end",

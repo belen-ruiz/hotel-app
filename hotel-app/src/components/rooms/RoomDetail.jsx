@@ -46,7 +46,7 @@ export const RoomDetail = ({ room }) => {
                 <Box sx={{paddingTop: "1rem"}}>
                     <Typography variant="subtitle2" >Amenities</Typography>
                     <Box>
-                        {confort &&
+                        {confort && amenities &&
                             confort.map((service) => {
                                 if (amenities.includes(service.name)) {
                                     return (
@@ -89,3 +89,5 @@ export const RoomDetail = ({ room }) => {
         </Box>
     );
 };
+
+
