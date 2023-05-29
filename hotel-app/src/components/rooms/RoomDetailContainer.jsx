@@ -15,12 +15,9 @@ export const RoomDetailContainer = ({  }) => {
     <Container 
         sx={{
             display:"flex",
+            padding: "3rem"
             }}>
-
-            <Box>
                 {roooms && <RoomDetail roooms={roooms}/>}
-            </Box>
-
     </Container>
   )
 }

@@ -13,21 +13,18 @@ import CreateNewFolder from "@mui/icons-material/CreateNewFolder";
 import { BoyRounded } from "@mui/icons-material";
 import { Button } from "@mui/material";
 import { Stack } from "@mui/material";
-import FormHelperText from '@mui/material/FormHelperText';
+import FormHelperText from "@mui/material/FormHelperText";
 import { Link } from "react-router-dom";
 
-
-
 export const RoomItem = ({ rooms }) => {
-
-    const title = rooms.title
-    const capacity = rooms.capacity
-    const amenities = rooms.amenities
-    const allows = rooms.allows
-    const donts = rooms.donts
-    const description = rooms.description
-    const price = rooms.price
-    const imgUrl = rooms.imgUrl
+    const title = rooms.title;
+    const capacity = rooms.capacity;
+    const amenities = rooms.amenities;
+    const allows = rooms.allows;
+    const donts = rooms.donts;
+    const description = rooms.description;
+    const price = rooms.price;
+    const imgUrl = rooms.imgUrl;
 
     return (
         <Link to={`/room/${title}`}>
@@ -42,14 +39,10 @@ export const RoomItem = ({ rooms }) => {
                 <Box sx={{ position: "relative" }}>
                     <AspectRatio ratio="3/4">
                         <figure>
-                            <img
-                                src={imgUrl}
-                                loading="lazy"
-                                alt={title}
-                            />
+                            <img src={imgUrl} loading="lazy" alt={title} />
                         </figure>
                     </AspectRatio>
-            
+
                     <CardCover
                         className="gradient-cover"
                         sx={{
@@ -60,16 +53,29 @@ export const RoomItem = ({ rooms }) => {
                             transition: "0.1s ease-in",
                             background:
                                 "linear-gradient(0deg, rgba(2,0,36,0.8379551649761467) 0%, #033e4a34 100%); ",
-                                
                         }}
                     >
                         {/* The first box acts as a container that inherits style from the CardCover */}
-                        <Box sx={{ display: "flex", flexDirection: "column", top: "1rem"}}>
-                            <Typography variant="h6" sx={{ color: "#fff", alignSelf: "start", padding: "3rem 2rem", fontWeight: "bold", letterSpacing: 1}}>
-                        
-                                    {title}
+                        <Box
+                            sx={{
+                                display: "flex",
+                                flexDirection: "column",
+                                top: "1rem",
+                            }}
+                        >
+                            <Typography
+                                variant="h6"
+                                sx={{
+                                    color: "#fff",
+                                    alignSelf: "start",
+                                    padding: "3rem 2rem",
+                                    fontWeight: "bold",
+                                    letterSpacing: 1,
+                                }}
+                            >
+                                {title}
                             </Typography>
-            
+
                             <Box
                                 sx={{
                                     display: "flex",
@@ -77,21 +83,16 @@ export const RoomItem = ({ rooms }) => {
                                     flexDirection: "column",
                                     justifyContent: "end",
                                     alignItems: "end",
-                                    gap:"1rem",
+                                    gap: "1rem",
                                     alignSelf: "end",
-                                    padding: "3rem 2rem"
+                                    padding: "3rem 2rem",
                                 }}
                             >
-            
-                                <Box
-                                    sx={{ ml: "auto" }}>
-                                    <IconButton size="sm"
-                                        color="neutral"
-                                        
-                                    >
+                                <Box sx={{ ml: "auto" }}>
+                                    <IconButton size="sm" color="neutral">
                                         <Favorite />
                                     </IconButton>
-                                    
+
                                     <IconButton
                                         size="sm"
                                         color="neutral"
@@ -100,7 +101,7 @@ export const RoomItem = ({ rooms }) => {
                                         <CreateNewFolder />
                                     </IconButton>
                                 </Box>
-            
+
                                 <Chip
                                     variant="outlined"
                                     color="neutral"
@@ -111,33 +112,38 @@ export const RoomItem = ({ rooms }) => {
                                         display: "flex",
                                     }}
                                 >
-                                    <Typography 
-                                        sx={{ fontSize: "0.8rem", color: "#fff" }}
-                                    >
-                                        {capacity}
-                                    </Typography>
-                                   
-                                    <BoyRounded sx={{ color: "#fff" }} />
-                                   
+                                    {capacity && (
+                                        <div>
+                                            {Array(capacity)
+                                                .fill()
+                                                .map((_, index) => (
+                                                    <BoyRounded
+                                                        style={{
+                                                            color: "#fff",
+                                                        }}
+                                                    />
+                                                ))}
+                                        </div>
+                                    )}
+                                    ;
                                 </Chip>
-            
+
                                 <Stack>
-                                    <Typography 
+                                    <Typography
                                         sx={{ fontSize: "5rem", color: "#fff" }}
                                     >
                                         $ {price}
                                     </Typography>
-            
+
                                     <FormHelperText
                                         sx={{ color: "#fff", alignSelf: "end" }}
-                                        > person per night</FormHelperText>
-            
-                                </Stack>
-            
-                                <Button
-                                    variant="contained"
-                                    color="primary"
                                     >
+                                        {" "}
+                                        person per night
+                                    </FormHelperText>
+                                </Stack>
+
+                                <Button variant="contained" color="primary">
                                     RESERVATION
                                 </Button>
                             </Box>

@@ -16,23 +16,42 @@ export const RoomDetail = ({ roooms }) => {
     const price = roooms.price;
     const imgUrl = roooms.imgUrl;
 
-
     return (
-        <Box>
+        <Box sx={{display: "flex", gap: "2rem"}}>
             <Box>
                 <img src={imgUrl} alt="" />
             </Box>
 
             <Stack>
-                <Box>
-                    <Typography>Amenities</Typography>
+                <Typography>{title}</Typography>
+
+                <Box sx={{paddingTop: "1rem"}}>
+                    <Typography variant="subtitle2" >Capacity</Typography>
+                    <Box>
+                        {capacity && (
+                            <div>
+                                {Array(capacity)
+                                    .fill()
+                                    .map((_, index) => (
+                                        <BoyRounded />
+                                    ))}
+                            </div>
+                        )}
+                        
+                    </Box>
+                </Box>
+
+
+
+                <Box sx={{paddingTop: "1rem"}}>
+                    <Typography variant="subtitle2" >Amenities</Typography>
                     <Box>
                         {allAmenities &&
                             allAmenities.map((service) => {
                                 if (amenities.includes(service.name)) {
                                     return (
                                         <div key={service.name}>
-                                            {service.icon}
+                                            {service.icon} - {service.name}
                                         </div>
                                     );
                                 }
@@ -40,14 +59,30 @@ export const RoomDetail = ({ roooms }) => {
                     </Box>
                 </Box>
 
-                <Box>
-                    <Typography> ${price}</Typography>
+                
+
+
+                <Box sx={{paddingTop: "1rem"}}>
+                    <Typography variant="subtitle2" > 
+                    Includes
+                    </Typography>
+
+                    <Typography variant="subtitle2" > 
+                    Doesnt Include
+                    </Typography>
+                </Box>
+
+
+
+                <Box sx={{paddingTop: "1rem"}}>
+                    <Typography variant="subtitle2" > ${price} per person per night</Typography>
                     <Button variant="contained" color="primary">
                         RESERVATION
                     </Button>
                 </Box>
-                <Box>
-                    <Typography>Description</Typography>
+
+                <Box sx={{paddingTop: "1rem"}}>
+                    <Typography variant="subtitle2" >Description</Typography>
                     <Typography>{description}</Typography>
                 </Box>
             </Stack>
