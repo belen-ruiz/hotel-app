@@ -16,8 +16,9 @@ export const RoomDetail = ({ roooms }) => {
     const price = roooms.price
     const imgUrl = roooms.imgUrl
 
-    console.log(amenities)
+    console.log(allAmenities[0].icon)
 
+   
     
   return (
     
@@ -32,10 +33,12 @@ export const RoomDetail = ({ roooms }) => {
             <Box>
                 <Typography>Amenities</Typography>
                 <Box>
-                    { amenities && amenities.map((services) => {
+                    
+                    { allAmenities && allAmenities.filter((services) => {
                     amenities.map((service) => {
-                        if (service.name == services){
-                            return <div>{service.icon}</div>
+                        if (service === services.name){
+                            console.log(services.icon)
+                            return <div> {services.icon} </div>
                         }
                     })})}
                 </Box>

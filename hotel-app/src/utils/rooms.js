@@ -2,7 +2,7 @@ export const roomsData = [
     {
         title: "Napoleon",
         capacity: 2,
-        amenities: [" tv ", " sofa ", " ironing service"],
+        amenities: ["tv", "sofa", "ironing service"],
         allows: "dog",
         donts: "cat",
         description: "Punta Canavdhn unfucrffu ccf rfijmi njr ifmcen hfruueuh urfhru f ur ur nrulefimjcf eihfin nhrwgh r",
@@ -12,7 +12,7 @@ export const roomsData = [
     {
         title: "Lenin",
         capacity: 2,
-        amenities: [" tv ", " sofa ", " ironing service"],
+        amenities: ["tv", "sofa", "ironing service"],
         allows: "dog",
         donts: "cat",
         description: "Punta Canavdhn unfucrffu ccf rfijmi njr ifmcen hfruueuh urfhru f ur ur nrulefimjcf eihfin nhrwgh r",
@@ -22,7 +22,7 @@ export const roomsData = [
     {
         title: "London",
         capacity: 3,
-        amenities: [" tv ", " sofa ", " ironing service"],
+        amenities: ["tv", "sofa", "ironing service"],
         allows: "dog",
         donts: "cat",
         description: "Punta Canavdhn unfucrffu ccf rfijmi njr ifmcen hfruueuh urfhru f ur ur nrulefimjcf eihfin nhrwgh r",
@@ -32,7 +32,7 @@ export const roomsData = [
     {
         title: "Aruba",
         capacity: 4,
-        amenities: [" tv ", " sofa ", " ironing service"],
+        amenities: ["tv", "sofa", "ironing service"],
         allows: "dog",
         donts: "cat",
         description: "Punta Canavdhn unfucrffu ccf rfijmi njr ifmcen hfruueuh urfhru f ur ur nrulefimjcf eihfin nhrwgh r",
@@ -42,7 +42,7 @@ export const roomsData = [
     {
         title: "Punta Cana",
         capacity: 3,
-        amenities: [" tv ", " sofa ", " ironing service"],
+        amenities: ["tv", "sofa", "ironing service"],
         allows: "dog",
         donts: "cat",
         description: "Punta Canavdhn unfucrffu ccf rfijmi njr ifmcen hfruueuh urfhru f ur ur nrulefimjcf eihfin nhrwgh r",
@@ -52,7 +52,7 @@ export const roomsData = [
     {
         title: "Jamaica",
         capacity: 5,
-        amenities: [" tv ", " sofa ", " ironing service"],
+        amenities: ["tv", "sofa", "ironing service"],
         allows: "dog",
         donts: "cat",
         description: "Punta Canvdhn unfucrffu ccf rfijmi njr ifmcen hfruueuh urfhru f ur ur nrulefimjcf eihfin nhrwgh ra",
@@ -62,7 +62,7 @@ export const roomsData = [
     {
         title: "Cuba",
         capacity: 2,
-        amenities: [" tv ", " sofa ", " ironing service"],
+        amenities: ["tv", "sofa", "ironing service"],
         allows: "dog",
         donts: "cat",
         description: "Punta Cana",
@@ -72,7 +72,7 @@ export const roomsData = [
     {
         title: "Republica Dominicana",
         capacity: 1,
-        amenities: [" tv ", " sofa ", " ironing service"],
+        amenities: ["tv", "sofa", "ironing service"],
         allows: "dog",
         donts: "cat",
         description: "Punta vdhn unfucrffu ccf rfijmi njr ifmcen hfruueuh urfhru f ur ur nrulefimjcf eihfin nhrwgh rCana",
@@ -82,7 +82,7 @@ export const roomsData = [
     {
         title: "Habanna",
         capacity: 3,
-        amenities: [" tv ", " sofa ", " ironing service"],
+        amenities: ["tv", "sofa", "ironing service"],
         allows: "dog",
         donts: "cat",
         description: "Punta vdhn unfucrffu ccf rfijmi njr ifmcen hfruueuh urfhru f ur ur nrulefimjcf eihfin nhrwgh rCana",

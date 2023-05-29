@@ -12,47 +12,47 @@ import { BathroomRounded } from "@mui/icons-material"
 export const amenities = [
     
     {
-        name:    " mini bar ",
+        name:    "mini bar",
 
         icon:  <LocalBarRounded />
     },
     {
-        name:    " tv ",
+        name:    "tv",
 
         icon:  <TvRounded />
     },
     {
-        name:    " sofa ",
+        name:    "sofa",
 
         icon: <ChairRounded />
     },
     {
-        name:    " ironing service ",
+        name:    "ironing service",
 
         icon: <IronRounded />
     },
     {
-        name:    " computer ",
+        name:    "computer",
 
         icon:  <ComputerRounded />
     },
     {
-        name:    " phone ",
+        name:    "phone",
 
         icon: <PhoneAndroidRounded />
     },
     {
-        name:    " laundry ",
+        name:    "laundry",
 
         icon:  <LocalLaundryServiceRounded />
     },
     {
-        name:    " taxi service ",
+        name:    "taxi service",
 
         icon:  <LocalTaxiRounded />
     },
     {
-        name:    " hairdryer ",
+        name:    "hairdryer",
 
         icon:  <SportsRounded />
     },
