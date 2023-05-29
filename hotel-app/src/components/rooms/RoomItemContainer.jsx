@@ -21,7 +21,7 @@ export const RoomItemContainer = () => {
             height: "100vh",
             }}>
     
-        <Box xs={{height: "fit-content",backgroundColor: "red", margin: "2rem"
+        <Box sx={{height: "fit-content",backgroundColor: "red", margin: "2rem"
 }}>
         {
         rooms && rooms.map((room) => (
