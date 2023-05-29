@@ -1,5 +1,5 @@
 import React from 'react'
-import { RoomItemContainer } from '../components/rooms/RoomItemContainer'
+import { RoomItemListContainer } from '../components/rooms/RoomItemListContainer'
 import { useRoomContext } from '../context/RoomProvider'
 
 export const Rooms = () => {
@@ -7,7 +7,7 @@ export const Rooms = () => {
   return (
     <div>Rooms
 
-      <RoomItemContainer />
+      <RoomItemListContainer />
     </div>
   )
 }

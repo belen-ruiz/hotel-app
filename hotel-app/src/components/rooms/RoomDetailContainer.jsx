@@ -17,8 +17,6 @@ export const RoomDetailContainer = ({  }) => {
     setRoom(findRoom)
   }
 
-  console.log(room)
-
     useEffect(() => {
         fecthRoom()
     }, [room_id])
