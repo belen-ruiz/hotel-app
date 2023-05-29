@@ -9,7 +9,7 @@ import { ChairRounded } from "@mui/icons-material"
 import { LocalBarRounded } from "@mui/icons-material"
 import { BathroomRounded } from "@mui/icons-material"
 
-export const amenities = [
+export const confort = [
     
     {
         name:    "mini bar",

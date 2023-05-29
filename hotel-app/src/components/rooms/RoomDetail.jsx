@@ -4,17 +4,17 @@ import { Button } from "@mui/material";
 import { Typography } from "@mui/material";
 import { Box } from "@mui/material";
 import React from "react";
-import { amenities as allAmenities } from "../../utils/amenities";
+import { confort } from "../../utils/confort";
 
-export const RoomDetail = ({ roooms }) => {
-    const title = roooms.title;
-    const capacity = roooms.capacity;
-    const amenities = roooms.amenities;
-    const allows = roooms.allows;
-    const donts = roooms.donts;
-    const description = roooms.description;
-    const price = roooms.price;
-    const imgUrl = roooms.imgUrl;
+export const RoomDetail = ({ room }) => {
+    const title = room.title;
+    const capacity = room.capacity;
+    const amenities = room.amenities;
+    const allows = room.allows;
+    const donts = room.donts;
+    const description = room.description;
+    const price = room.price;
+    const imgUrl = room.imgUrl;
 
     return (
         <Box sx={{display: "flex", gap: "2rem"}}>
@@ -46,8 +46,8 @@ export const RoomDetail = ({ roooms }) => {
                 <Box sx={{paddingTop: "1rem"}}>
                     <Typography variant="subtitle2" >Amenities</Typography>
                     <Box>
-                        {allAmenities &&
-                            allAmenities.map((service) => {
+                        {confort &&
+                            confort.map((service) => {
                                 if (amenities.includes(service.name)) {
                                     return (
                                         <div key={service.name}>
