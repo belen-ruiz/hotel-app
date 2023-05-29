@@ -17,11 +17,18 @@ import { Button } from "@mui/material";
 import { Stack } from "@mui/material";
 import FormHelperText from '@mui/material/FormHelperText';
 
-export const RoomItem = () => {
-    //const { imgUrl, title, capacity, amenities, price } = data
 
-    const imgUrl =
-        "https://images.pexels.com/photos/6032424/pexels-photo-6032424.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1";
+
+export const RoomItem = ({ data }) => {
+
+    const title = data.title
+    const capacity =     data.capacity
+    const amenities =     data.amenities
+    const allows =     data.allows
+    const donts =     data.donts
+    const description =     data.description
+    const price =     data.price
+    const imgUrl =     data.imgUrl
 
     return (
         <Card
@@ -60,7 +67,7 @@ export const RoomItem = () => {
                     <Box sx={{ display: "flex", flexDirection: "column", top: "1rem"}}>
                         <Typography variant="h6" sx={{ color: "#fff", alignSelf: "start", padding: "3rem 2rem", fontWeight: "bold", letterSpacing: 1}}>
                     
-                                Room Nameee
+                                {title}
                         </Typography>
 
                         <Box
@@ -100,24 +107,30 @@ export const RoomItem = () => {
                                 size="sm"
                                 sx={{
                                     borderRadius: "sm",
-                                    ml: "auto"
+                                    ml: "auto",
+                                    display: "flex",
                                 }}
                             >
+                                <Typography 
+                                    sx={{ fontSize: "0.8rem", color: "#fff" }}
+                                >
+                                    {capacity}
+                                </Typography>
+                               
                                 <BoyRounded sx={{ color: "#fff" }} />
-                                <BoyRounded sx={{ color: "#fff" }} />
-                                <BoyRounded sx={{ color: "#fff" }} />
+                               
                             </Chip>
 
                             <Stack>
                                 <Typography 
                                     sx={{ fontSize: "5rem", color: "#fff" }}
                                 >
-                                    25$
+                                    $ {price}
                                 </Typography>
 
                                 <FormHelperText
                                     sx={{ color: "#fff", alignSelf: "end" }}
-                                    > per night</FormHelperText>
+                                    > person per night</FormHelperText>
 
                             </Stack>
 

@@ -1,11 +1,14 @@
 import React from 'react'
-import { RoomItem } from '../components/rooms/RoomItem'
+import { RoomItemContainer } from '../components/rooms/RoomItemContainer'
+import { useRoomContext } from '../context/RoomProvider'
 
 export const Rooms = () => {
+  const { rooms }  =  useRoomContext()
+
   return (
     <div>Rooms
 
-      <RoomItem />
+      <RoomItemContainer data={rooms}/>
     </div>
   )
 }

@@ -19,19 +19,30 @@ import { LocalizationProvider } from '@mui/x-date-pickers/LocalizationProvider';
 import { AdapterDayjs } from '@mui/x-date-pickers/AdapterDayjs';
 import { DatePicker } from '@mui/x-date-pickers/DatePicker';
 import dayjs from 'dayjs';
+import { useRoomContext } from "../../context/RoomProvider";
 
 const Input = styled(MuiInput)`
     width: 42px;
 `;
 
 export const SearchBar = () => {
+
+    const { 
+        rooms,
+        setRooms,
+        adults,
+        setAdults,
+        kids,
+        setKids,
+        totalGuests,
+        setTotalGuests,
+        handleClick } = useRoomContext()
+
     const [search, setSearch] = useState()    
     const [startDate, setStartDate] = useState(false);
     const [endDate, setEndDate] = useState(false);
 
-    const [adults, setAdults] = useState(2);
-    const [kids, setKids] = useState(1);
-    const [totalGuests, setTotalGuests] = useState();
+    
 
     const handleAdultSliderChange = (e, value) => {
         setAdults(value);
@@ -64,13 +75,7 @@ export const SearchBar = () => {
             setKids(5);
         }
     };
-
-    const handleClick = () => {
-        const total = adults + kids;
-        setTotalGuests(total);
-        setSearch([totalGuests, startDate, endDate])
-    };
-
+    
     return (
         <Container>
             <Box
