@@ -6,6 +6,7 @@ import { Amenities } from '../pages/Amenities'
 import { Gallery } from '../pages/Gallery'
 import { Contact } from '../pages/Contact'
 import { Reservations } from '../pages/Reservations'
+import { RoomDetails } from '../pages/RoomDetails'
 
 
 const allRoutes = () => {
@@ -26,9 +27,9 @@ const allRoutes = () => {
             element: <Rooms />
         },
         {
-            path:"/room/:type",
+            path:"/room/:room_id",
             exact: true,
-            element: <Home />
+            element: <RoomDetails />
         },
         {
             path:"/amenities",

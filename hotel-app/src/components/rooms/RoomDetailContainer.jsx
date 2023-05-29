@@ -1,28 +1,23 @@
-import { Stack } from '@mui/material'
-import { Container } from '@mui/material'
 import { Box } from '@mui/material'
+import { Container } from '@mui/material'
 import React from 'react'
 import { useRoomContext } from '../../context/RoomProvider'
-import { RoomItem } from './RoomItem'
+import { RoomDetail } from './RoomDetail'
 
-
-export const RoomItemContainer = () => {
-
+export const RoomDetailContainer = ({  }) => {
 
     const { rooms }  =  useRoomContext()
 
-
-   return (
+  return (
     <Container 
         sx={{
             display:"flex",
-            overflowY:"scroll"
             }}>
     
     {
         rooms && rooms.map((room) => (
+                {room && <RoomDetail rooms={room}/>}
             <Box>
-                {room && <RoomItem rooms={room}/>}
             </Box>
         ))
     }
@@ -30,3 +25,5 @@ export const RoomItemContainer = () => {
     </Container>
   )
 }
+
+

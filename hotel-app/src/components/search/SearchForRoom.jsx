@@ -27,7 +27,7 @@ export const SearchForRoom = () => {
   return (
     <Container sx={{paddingTop: "4rem"}}>
       <SearchBar />
-      <Box sx={{paddingTop: "4rem", display: "flex", justifyContent: "center", alignItems:"center" }}>
+      {/* <Box sx={{paddingTop: "4rem", display: "flex", justifyContent: "center", alignItems:"center" }}>
         <FormControl variant="standard" sx={{ m: 1, minWidth: 100 }}>
           <InputLabel id="select-helper-label">Guests</InputLabel>
           <Select
@@ -104,7 +104,7 @@ export const SearchForRoom = () => {
              color="primary"
              >Check Availability
         </Button>
-      </Box>
+      </Box> */}
     </Container>
   );
 }
