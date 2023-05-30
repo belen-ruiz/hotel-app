@@ -41,14 +41,14 @@ export const RoomProvider = ({ children }) => {
     useEffect(() => {
         //guest render
         if (totalGuests) {
-            const roomsFiltered = roomsData.filter((room) => {
-                return room.capacity = totalGuests;
-            });
-            setRooms(roomsFiltered);
+            const roomsFiltered = roomsData.filter((room) => 
+                totalGuests == room.capacity)
+                setRooms(roomsFiltered);
+            ;
         }
     }, [totalGuests]);
     
-    
+    console.log(totalGuests)
     console.log(rooms)
 
 
