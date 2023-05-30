@@ -1,4 +1,5 @@
 import { useContext, useState, useEffect, createContext } from "react";
+import { useNavigate } from "react-router-dom";
 import { useParams } from "react-router-dom";
 import { roomsData } from "../utils/rooms";
 
@@ -6,15 +7,18 @@ const RoomContext = createContext([]);
 export const useRoomContext = () => useContext(RoomContext);
 export const RoomProvider = ({ children }) => {
 
-    const [rooms, setRooms] = useState(roomsData);
+    const navigate  = useNavigate()
 
-    const [adults, setAdults] = useState(2);
-    const [kids, setKids] = useState(1);
+    const [rooms, setRooms] = useState([]);
+    const [search, setSearch] = useState([]);
+
+    const [adults, setAdults] = useState(1);
+    const [kids, setKids] = useState(0);
 
     const [startDate, setStartDate] = useState(false);
     const [endDate, setEndDate] = useState(false);
 
-    const [totalGuests, setTotalGuests] = useState(0);
+    const [totalGuests, setTotalGuests] = useState(1);
     const [totalDate, setTotalDate] = useState();
     const [totalSelect, setTotalSelect] = useState([]);
 
@@ -32,29 +36,45 @@ export const RoomProvider = ({ children }) => {
         //setTotalSelect([[totalGuests], [totalDate]]);       okkkk     
     };
 
-
+    const renderRooms = () => {
+        setRooms(roomsData)
+    }
     // useEffect(() => {
     //   setTotalDate(dayNumberMonthYear) 
     // }, [startDate])
 
+    useEffect(() => {
+
+        setTimeout(() => {
+            
+            renderRooms()
+        }, 1000);
+    }, [])
   
     useEffect(() => {
         //guest render
         if (totalGuests) {
-            const roomsFiltered = roomsData.filter((room) => 
+            const roomsFiltered = rooms.filter((room) => 
                 totalGuests == room.capacity)
-                setRooms(roomsFiltered);
-            ;
-        }
+                setSearch(roomsFiltered);
+                navigate("/rooms")
+                ;
+            } 
+        
     }, [totalGuests]);
     
+    
+
+
     console.log(totalGuests)
     console.log(rooms)
+    console.log(search)
 
 
     return (
         <RoomContext.Provider
             value={{
+                search,
                 rooms,
                 setRooms,
                 adults,

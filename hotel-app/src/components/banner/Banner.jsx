@@ -7,7 +7,6 @@ import { fastcontact } from "../../utils/fastcontact"
 
 export const Banner = () => {
 
-  console.log(fastcontact)
   return (
     <Container>
       <Toolbar sx={{ justifyContent: 'space-between', alignContent: "center", height: 50, minHeight: false }}>

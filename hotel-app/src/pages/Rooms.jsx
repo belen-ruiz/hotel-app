@@ -1,6 +1,8 @@
+import { Container } from '@mui/material'
 import React, { useEffect, useState } from 'react'
 import { RoomItemGridContainer } from '../components/rooms/RoomItemGridContainer'
 import { RoomItemListContainer } from '../components/rooms/RoomItemListContainer'
+import { SearchForRoom } from '../components/search/SearchForRoom'
 import { useRoomContext } from '../context/RoomProvider'
 import { FilterIcons } from '../filter/FilterIcons'
 
@@ -22,12 +24,14 @@ export const Rooms = () => {
   
   
   return (
-    <div>Rooms
+    <Container >
+      Rooms
+      <SearchForRoom />
       <FilterIcons setSelect={setSelect} select={select} />
 
       {view}
 
       <RoomItemListContainer isList={isList} setIsList={setIsList} />
-    </div>
+    </Container>
   )
 }

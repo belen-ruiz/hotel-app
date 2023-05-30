@@ -7,19 +7,19 @@ import { Testimonials } from '../components/testimonials/Testimonials'
 import { AboutUs } from '../components/about/AboutUs'
 import { Map } from '../components/map/Map'
 import { RoomItemContainer } from '../components/rooms/RoomItemContainer'
+import { useRoomContext } from '../context/RoomProvider'
 
 
 export const Home = () => {
 
-  const [search, setSearch] = useState([])
-
+const { search } = useRoomContext()
 
   return (
     <Container>
       <Carrousel />
       <Features />
 
-      <SearchForRoom search={search} setSearch={setSearch}/>
+      <SearchForRoom search={search}/>
       <RoomItemContainer search={search}/>
 
       <Testimonials />

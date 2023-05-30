@@ -6,11 +6,12 @@ import { useRoomContext } from '../../context/RoomProvider'
 import { RoomItem } from './RoomItem'
 
 
-export const RoomItemContainer = () => {
+export const RoomItemContainer = ({ search }) => {
 
 
     const { rooms }  =  useRoomContext()
 
+console.log(search.length)
 
    return (
     <Container 
@@ -24,8 +25,13 @@ export const RoomItemContainer = () => {
         <Box sx={{height: "fit-content",backgroundColor: "red", margin: "2rem"
 }}>
         {
-        rooms && rooms.map((room) => (
+        search.length > 0 && search.map((room) => (
                 room && <RoomItem rooms={room}/>
+                ))
+        ||
+        
+        rooms && rooms.map((room) => (
+                room && <RoomItem rooms={room}/> 
                 ))
         }
         </Box>

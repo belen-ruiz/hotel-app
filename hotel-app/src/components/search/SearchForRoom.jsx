@@ -9,7 +9,7 @@ import { GuestsSelect } from "./GuestsSelect";
 import { SearchBar } from "./SearchBar";
 import { useRoomContext } from "../../context/RoomProvider";
 
-export const SearchForRoom = ({ search, setSearch }) => {
+export const SearchForRoom = ({  }) => {
   const { 
     adults,
     setAdults,
