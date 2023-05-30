@@ -7,41 +7,50 @@ export const useRoomContext = () => useContext(RoomContext);
 export const RoomProvider = ({ children }) => {
 
     const [rooms, setRooms] = useState(roomsData);
+
     const [adults, setAdults] = useState(2);
     const [kids, setKids] = useState(1);
+
+    const [startDate, setStartDate] = useState(false);
+    const [endDate, setEndDate] = useState(false);
 
     const [totalGuests, setTotalGuests] = useState(0);
     const [totalDate, setTotalDate] = useState();
     const [totalSelect, setTotalSelect] = useState([]);
 
     const total = adults + kids;
+    const day = startDate.$W // mal
+    const number = startDate.$D
+    const month = startDate.$M //mal
+    const year = startDate.$y
+    const dayNumberMonthYear =  [`${day} - ${number} / ${month} / ${year}`]
     
 
     const handleClick = () => {
-        setTotalSelect([[totalGuests], [totalDate]]);            
+        setTotalGuests(total);
+
+        //setTotalSelect([[totalGuests], [totalDate]]);       okkkk     
     };
 
-    useEffect(() => {
-        setTotalGuests(total);
-    }, [total]);
 
+    // useEffect(() => {
+    //   setTotalDate(dayNumberMonthYear) 
+    // }, [startDate])
+
+  
     useEffect(() => {
+        //guest render
         if (totalGuests) {
             const roomsFiltered = roomsData.filter((room) => {
-                return room.capacity >= totalGuests;
+                return room.capacity = totalGuests;
             });
             setRooms(roomsFiltered);
         }
     }, [totalGuests]);
-
-
+    
+    
     console.log(rooms)
-    console.log(totalGuests)
 
-
-    useEffect(() => {
-        setTimeout(() => {}, 1000);
-    }, []);
 
     return (
         <RoomContext.Provider
@@ -57,7 +66,7 @@ export const RoomProvider = ({ children }) => {
 
                 totalDate,
                 setTotalDate,
-                handleClick,
+                handleClick, startDate, setStartDate, endDate,setEndDate
             }}
         >
             {children}

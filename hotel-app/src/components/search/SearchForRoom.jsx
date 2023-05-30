@@ -14,23 +14,9 @@ export const SearchForRoom = ({ search, setSearch }) => {
     adults,
     setAdults,
     kids,
-    setKids, setTotalDate
+    setKids,
+      startDate, setStartDate, endDate,setEndDate
    } = useRoomContext()
-
-    const [startDate, setStartDate] = useState(false);
-    const [endDate, setEndDate] = useState(false);
-
-
-    const day = startDate.$W // mal
-    const number = startDate.$D
-    const month = startDate.$M //mal
-    const year = startDate.$y
-    const dayNumberMonthYear =  [`${day} - ${number} / ${month} / ${year}`]
-    
-    useEffect(() => {
-      setTotalDate(dayNumberMonthYear) 
-    }, [startDate])
-    
 
 
     const handleAdultSliderChange = (e, value) => {
