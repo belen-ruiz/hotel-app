@@ -1,20 +1,16 @@
 import { Box } from '@mui/material';
 import React, { useState, useEffect, useCallback } from 'react';
+import { useNavigate } from 'react-router-dom';
 import { itemView } from '../utils/itemView';
 
 export const FilterIcons = ({ select, setSelect }) => {
-  //const [select, setSelect] = useState('');
+
+  const navigate = useNavigate()
 
   const handleClick = useCallback((e, name) => {
     setSelect(name);
   }, []);
 
-  // useEffect(() => {
-  //   if (select !== '') {
-  //     console.log(select);
-  //     // Realiza acciones adicionales con el valor actualizado de select
-  //   }
-  // }, [select]);
 
   return (
     <Box sx={{ display: 'flex', gap: '1rem', justifyContent: 'end' }}>
