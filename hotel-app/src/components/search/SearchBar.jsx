@@ -1,10 +1,6 @@
 import { Typography, Box, Stack, Button } from "@mui/material";
 import React, { useState } from "react";
-//import "react-date-picker/dist/DatePicker.css";
-//import "react-calendar/dist/Calendar.css";
-//import DatePicker from "react-date-picker";
-import { CalendarToday } from "@mui/icons-material";
-import { CalendarMonth } from "@mui/icons-material";
+
 import FormHelperText from "@mui/material/FormHelperText";
 
 import Grid from "@mui/material/Grid";
@@ -25,56 +21,16 @@ const Input = styled(MuiInput)`
     width: 42px;
 `;
 
-export const SearchBar = () => {
+export const SearchBar = ({ handleAdultSliderChange, handleAdultInputChange, handleAdultBlur, handlekidsSliderChange, handlekidsInputChange, handlekidsBlur, startDate, setStartDate, endDate, setEndDate }) => {
 
     const { 
-        rooms,
-        setRooms,
         adults,
         setAdults,
         kids,
         setKids,
-        totalGuests,
-        setTotalGuests,
         handleClick } = useRoomContext()
 
-    const [search, setSearch] = useState()    
-    const [startDate, setStartDate] = useState(false);
-    const [endDate, setEndDate] = useState(false);
-
     
-
-    const handleAdultSliderChange = (e, value) => {
-        setAdults(value);
-    };
-
-    const handleAdultInputChange = (e) => {
-        setAdults(e.target.value === "" ? "" : Number(e.target.value));
-    };
-
-    const handleAdultBlur = () => {
-        if (adults < 0) {
-            setAdults(0);
-        } else if (setAdults > 5) {
-            setAdults(5);
-        }
-    };
-
-    const handlekidsSliderChange = (e, value) => {
-        setKids(value);
-    };
-
-    const handlekidsInputChange = (event) => {
-        setKids(event.target.value === "" ? "" : Number(event.target.value));
-    };
-
-    const handlekidsBlur = () => {
-        if (adults < 0) {
-            setKids(0);
-        } else if (adults > 5) {
-            setKids(5);
-        }
-    };
     
     return (
         <Container>

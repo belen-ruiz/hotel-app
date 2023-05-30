@@ -1,34 +1,47 @@
 import { useContext, useState, useEffect, createContext } from "react";
 import { useParams } from "react-router-dom";
-import { roomsData } from "../utils/rooms"
+import { roomsData } from "../utils/rooms";
 
 const RoomContext = createContext([]);
 export const useRoomContext = () => useContext(RoomContext);
 export const RoomProvider = ({ children }) => {
-  const { room_id } = useParams()
 
-    const [rooms, setRooms] = useState(roomsData)
+    const [rooms, setRooms] = useState(roomsData);
     const [adults, setAdults] = useState(2);
     const [kids, setKids] = useState(1);
-    const [totalGuests, setTotalGuests] = useState();
+
+    const [totalGuests, setTotalGuests] = useState(0);
+    const [totalDate, setTotalDate] = useState();
+    const [totalSelect, setTotalSelect] = useState([]);
+
+    const total = adults + kids;
+    
 
     const handleClick = () => {
-        const total = adults + kids;
-        setTotalGuests(total);
-
-        const roomsFiltered = roomsData.filter((room) => {
-            return totalGuests <= room.capacity;
-        })
-
-        setRooms(roomsFiltered)
+        setTotalSelect([[totalGuests], [totalDate]]);            
     };
-      
-    useEffect(() => {
-      setTimeout(() => {
 
-    }, 1000);
-    }, [])
-    
+    useEffect(() => {
+        setTotalGuests(total);
+    }, [total]);
+
+    useEffect(() => {
+        if (totalGuests) {
+            const roomsFiltered = roomsData.filter((room) => {
+                return room.capacity >= totalGuests;
+            });
+            setRooms(roomsFiltered);
+        }
+    }, [totalGuests]);
+
+
+    console.log(rooms)
+    console.log(totalGuests)
+
+
+    useEffect(() => {
+        setTimeout(() => {}, 1000);
+    }, []);
 
     return (
         <RoomContext.Provider
@@ -42,8 +55,9 @@ export const RoomProvider = ({ children }) => {
                 totalGuests,
                 setTotalGuests,
 
+                totalDate,
+                setTotalDate,
                 handleClick,
-            
             }}
         >
             {children}

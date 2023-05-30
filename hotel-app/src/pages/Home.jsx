@@ -1,5 +1,5 @@
 import { Container } from '@mui/material'
-import React from 'react'
+import React, { useState } from 'react'
 import { Carrousel } from '../components/carrousel/Carrousel'
 import { SearchForRoom } from '../components/search/SearchForRoom'
 import { Features } from '../components/features/Features'
@@ -10,12 +10,18 @@ import { RoomItemContainer } from '../components/rooms/RoomItemContainer'
 
 
 export const Home = () => {
+
+  const [search, setSearch] = useState([])
+
+
   return (
     <Container>
       <Carrousel />
       <Features />
-      <SearchForRoom />
-      <RoomItemContainer />
+
+      <SearchForRoom search={search} setSearch={setSearch}/>
+      <RoomItemContainer search={search}/>
+
       <Testimonials />
       <AboutUs />
       <Map />

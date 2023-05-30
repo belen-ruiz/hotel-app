@@ -23,7 +23,7 @@ export const Rooms = () => {
   
   return (
     <div>Rooms
-      <FilterIcons     setSelect={setSelect} select={select} />
+      <FilterIcons setSelect={setSelect} select={select} />
 
       {view}
 
