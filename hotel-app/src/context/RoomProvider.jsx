@@ -64,10 +64,15 @@ export const RoomProvider = ({ children }) => {
             } 
         
     }, [totalGuests]);
-    
+
+    const getAll = () => {
+        setTotalGuests(0)
+        setSearch([])
+    }
+     
     
 
-
+  
     console.log(totalGuests)
     //console.log(rooms)
     console.log(search)
@@ -90,7 +95,7 @@ export const RoomProvider = ({ children }) => {
                 setTotalDate,
                 handleClick, startDate, setStartDate, endDate,setEndDate,
 
-                isList, setIsList
+                isList, setIsList, getAll
             }}
         >
             {children}
