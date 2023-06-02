@@ -12,6 +12,7 @@ export const Banner = () => {
       <Toolbar sx={{ justifyContent: 'space-between', alignContent: "center", height: 50, minHeight: false }}>
         {fastcontact.map((data) => (
           <Box
+            key={data.text}
             sx={{
               mr: 2,
               display: { xs: 'none', md: 'flex' },

@@ -121,6 +121,7 @@ export const RoomItemList = ({ rooms, isList, setIsList }) => {
                                                         .fill()
                                                         .map((_, index) => (
                                                             <BoyRounded
+                                                                key={index}
                                                                 style={{
                                                                     color: "grey",
                                                                 }}
@@ -181,12 +182,12 @@ export const RoomItemList = ({ rooms, isList, setIsList }) => {
                                         }}
                                         >
                                             ${price}
+                                        </Typography>
                                             <FormHelperText
                                                 sx={{ color: "grey"}}
                                             >
                                                 person per night
                                             </FormHelperText>
-                                        </Typography>
                                     
                                     
                                         <Button variant="contained" color="primary" sx={{alignSelf: isList? "end" : "start", }}>

@@ -10,7 +10,9 @@ export const RoomProvider = ({ children }) => {
     const navigate  = useNavigate()
 
     const [rooms, setRooms] = useState([]);
+    const [isList, setIsList] = useState(true)
     const [search, setSearch] = useState([]);
+
 
     const [adults, setAdults] = useState(1);
     const [kids, setKids] = useState(0);
@@ -18,7 +20,7 @@ export const RoomProvider = ({ children }) => {
     const [startDate, setStartDate] = useState(false);
     const [endDate, setEndDate] = useState(false);
 
-    const [totalGuests, setTotalGuests] = useState(1);
+    const [totalGuests, setTotalGuests] = useState(0);
     const [totalDate, setTotalDate] = useState();
     const [totalSelect, setTotalSelect] = useState([]);
 
@@ -67,7 +69,7 @@ export const RoomProvider = ({ children }) => {
 
 
     console.log(totalGuests)
-    console.log(rooms)
+    //console.log(rooms)
     console.log(search)
 
 
@@ -86,7 +88,9 @@ export const RoomProvider = ({ children }) => {
 
                 totalDate,
                 setTotalDate,
-                handleClick, startDate, setStartDate, endDate,setEndDate
+                handleClick, startDate, setStartDate, endDate,setEndDate,
+
+                isList, setIsList
             }}
         >
             {children}

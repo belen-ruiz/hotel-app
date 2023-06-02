@@ -144,6 +144,7 @@ const RoomItemGrid = ({ rooms }) => {
                                                         .fill()
                                                         .map((_, index) => (
                                                             <BoyRounded
+                                                                key={capacity}
                                                                 style={{
                                                                     color: "grey",
                                                                 }}
@@ -216,12 +217,12 @@ const RoomItemGrid = ({ rooms }) => {
                                             }}
                                             >
                                             ${price}
+                                        </Typography>
                                             <FormHelperText
                                                 sx={{ color: "grey" }}
                                             >
                                                 person per night
                                             </FormHelperText>
-                                        </Typography>
 
                                         <Button
                                             variant="contained"

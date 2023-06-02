@@ -6,12 +6,9 @@ import { useRoomContext } from '../../context/RoomProvider'
 import { RoomItem } from './RoomItem'
 
 
-export const RoomItemContainer = ({ search }) => {
+export const RoomItemContainer = ({  }) => {
 
-
-    const { rooms }  =  useRoomContext()
-
-console.log(search.length)
+    const { rooms, isList, setIsList }  =  useRoomContext()
 
    return (
     <Container 
@@ -25,17 +22,37 @@ console.log(search.length)
         <Box sx={{height: "fit-content",backgroundColor: "red", margin: "2rem"
 }}>
         {
-        search.length > 0 && search.map((room) => (
-                room && <RoomItem rooms={room}/>
-                ))
-        ||
         
         rooms && rooms.map((room) => (
-                room && <RoomItem rooms={room}/> 
-                ))
-        }
+            <Box key={rooms.title}>
+
+                {room &&  <RoomItem isList={isList} setIsList={setIsList} rooms={room} />}
+
+            </Box>
+            ))
+    }
         </Box>
 
     </Container>
   )
 }
+
+
+
+//useEffect(() => {
+
+    //     if (search.length > 0 ) {search.map((room) => (
+    //         room && <RoomItem rooms={room}/>
+    //         ))
+    //     } else {
+    
+    //         rooms && rooms.map((room) => (
+    //                 room && <RoomItem rooms={room}/> 
+    //                 ))
+    //     }
+    
+    
+      
+    // }, [])
+    
+    

@@ -12,7 +12,7 @@ import { useRoomContext } from '../context/RoomProvider'
 
 export const Home = () => {
 
-const { search } = useRoomContext()
+const { rooms, search } = useRoomContext()
 
   return (
     <Container>
@@ -20,7 +20,7 @@ const { search } = useRoomContext()
       <Features />
 
       <SearchForRoom search={search}/>
-      <RoomItemContainer search={search}/>
+      <RoomItemContainer rooms={rooms}/>
 
       <Testimonials />
       <AboutUs />

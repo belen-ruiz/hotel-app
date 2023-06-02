@@ -119,6 +119,7 @@ export const RoomItem = ({ rooms }) => {
                                                 .fill()
                                                 .map((_, index) => (
                                                     <BoyRounded
+                                                        key={capacity}
                                                         style={{
                                                             color: "#fff",
                                                         }}
@@ -139,7 +140,6 @@ export const RoomItem = ({ rooms }) => {
                                     <FormHelperText
                                         sx={{ color: "#fff", alignSelf: "end" }}
                                     >
-                                        {" "}
                                         person per night
                                     </FormHelperText>
                                 </Stack>
