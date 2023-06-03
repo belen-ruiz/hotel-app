@@ -2,6 +2,8 @@ import { Typography } from "@mui/material";
 import { Button } from "@mui/material";
 import { Container } from "@mui/material";
 import React, { useEffect, useState } from "react";
+import Breadcrums from "../components/breadcrumbs/Breadcrums";
+import { Loading } from "../components/loading/Loading";
 import { RoomItemContainer } from "../components/rooms/RoomItemContainer";
 import { RoomItemGridContainer } from "../components/rooms/RoomItemGridContainer";
 import { RoomItemListContainer } from "../components/rooms/RoomItemListContainer";
@@ -11,7 +13,7 @@ import { FilterIcons } from "../filter/FilterIcons";
 
 export const Rooms = () => {
     const [select, setSelect] = useState("list");
-    const { search, setIsList, totalGuests, getAll } = useRoomContext();
+    const { loading, search, setIsList, totalGuests, getAll } = useRoomContext();
 
     useEffect(() => {
         if (select === "list") {
@@ -19,7 +21,7 @@ export const Rooms = () => {
         } else {
             setIsList(false);
         }
-    }, [select]);
+    }, [select, loading]);
 
     return (
         <Container>
@@ -27,6 +29,8 @@ export const Rooms = () => {
             <SearchForRoom search={search} />
             <FilterIcons setSelect={setSelect} select={select} />
             {/* {view} */}
+            {loading && <Loading /> }
+            
             {totalGuests === 0 ? (
                 <Typography>
                     Showing results for all Rooms 

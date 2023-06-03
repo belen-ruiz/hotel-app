@@ -15,7 +15,7 @@ export const Home = () => {
 const { rooms, search } = useRoomContext()
 
   return (
-    <Container>
+    <>
       <Carrousel />
       <Features />
 
@@ -25,6 +25,6 @@ const { rooms, search } = useRoomContext()
       <Testimonials />
       <AboutUs />
       <Map />
-    </Container>
+    </>
   )
 }

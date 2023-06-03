@@ -10,73 +10,68 @@ import { BoyRounded } from "@mui/icons-material";
 import { styled } from "@mui/material/styles";
 import { Container } from "@mui/material";
 
-import { DemoContainer } from '@mui/x-date-pickers/internals/demo';
-import { LocalizationProvider } from '@mui/x-date-pickers/LocalizationProvider';
-import { AdapterDayjs } from '@mui/x-date-pickers/AdapterDayjs';
-import { DatePicker } from '@mui/x-date-pickers/DatePicker';
-import dayjs from 'dayjs';
+import { DatePicker } from "@mui/x-date-pickers/DatePicker";
 import { useRoomContext } from "../../context/RoomProvider";
+
+import dayjs from "dayjs";
+import { DemoContainer, DemoItem } from "@mui/x-date-pickers/internals/demo";
 
 const Input = styled(MuiInput)`
     width: 42px;
 `;
 
-export const SearchBar = ({ handleAdultSliderChange, handleAdultInputChange, handleAdultBlur, handlekidsSliderChange, handlekidsInputChange, handlekidsBlur, startDate, setStartDate, endDate, setEndDate }) => {
+export const SearchBar = ({
+    handleAdultSliderChange,
+    handleAdultInputChange,
+    handleAdultBlur,
+    handlekidsSliderChange,
+    handlekidsInputChange,
+    handlekidsBlur,
+    startDate,
+    setStartDate,
+    endDate,
+    setEndDate,
+}) => {
+    const { adults, setAdults, kids, setKids, handleClick } = useRoomContext();
 
-    const { 
-        adults,
-        setAdults,
-        kids,
-        setKids,
-        handleClick } = useRoomContext()
-
-    
-    
     return (
-        <Container>
+        <Container sx={{backgroundColor:"#858484"}}>
             <Box
                 sx={{
                     paddingTop: "4rem",
                     display: "flex",
                     justifyContent: "center",
                     alignItems: "center",
-                    gap: "2rem"
+                    gap: "2rem",
                 }}
             >
                 <Box sx={{ width: 200 }}>
-                    <LocalizationProvider dateAdapter={AdapterDayjs}>
-                    <DemoContainer components={['DatePicker']}>
+                    <DemoContainer components={["DatePicker"]}>
+                    <DemoItem >
                         <DatePicker
-                        label="Check in"
-                        value={dayjs(startDate)}
-                        onChange={(date) => setStartDate(date)}
+                            label="Check in"
+                            value={dayjs("2023-08-17")}
+                            onChange={(date) => setStartDate(date)}
                         />
+                    </DemoItem>
+
                     </DemoContainer>
-                    </LocalizationProvider>
-
-    
                 </Box>
-
-
-
 
                 <Box sx={{ width: 200 }}>
-                    <LocalizationProvider dateAdapter={AdapterDayjs}>
-                    <DemoContainer components={['DatePicker']}>
+                    <DemoContainer components={["DatePicker"]}>
+                        <DemoItem>
                         <DatePicker
-                        label="Check out"
-                        value={dayjs(endDate)}
-                        onChange={(date) => setEndDate(date)}
-                        />
+                            label="Check out"
+                            value={dayjs("2023-08-17")}
+                            onChange={(date) => setEndDate(date)}
+                        />  
+                        </DemoItem>
                     </DemoContainer>
-                    </LocalizationProvider>
                 </Box>
 
-
-
-
                 <Box sx={{ width: 150 }}>
-                <Typography id="input-slider" variant="caption">
+                    <Typography id="input-slider" variant="caption">
                         Adult
                     </Typography>
 
@@ -115,9 +110,6 @@ export const SearchBar = ({ handleAdultSliderChange, handleAdultInputChange, han
                         </Grid>
                     </Grid>
                 </Box>
-
-
-
 
                 <Box sx={{ width: 150 }}>
                     <Typography id="input-slider" variant="caption">
@@ -159,9 +151,6 @@ export const SearchBar = ({ handleAdultSliderChange, handleAdultInputChange, han
                         </Grid>
                     </Grid>
                 </Box>
-                
-
-
 
                 <Button
                     onClick={handleClick}
@@ -174,5 +163,3 @@ export const SearchBar = ({ handleAdultSliderChange, handleAdultInputChange, han
         </Container>
     );
 };
-
-

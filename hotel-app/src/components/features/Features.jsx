@@ -32,6 +32,7 @@ const Feature = ({ data }) => {
                 justifyContent: "center",
                 alignItems: "center",
                 gap: "0.5rem",
+                color:"#4f4e4e"
             }}>
             <Box>{icon}</Box>
             <Typography 

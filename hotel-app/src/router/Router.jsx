@@ -9,45 +9,53 @@ import { Reservations } from '../pages/Reservations'
 import { RoomDetails } from '../pages/RoomDetails'
 
 
-const allRoutes = () => {
+export const allRoutes = () => {
     const routes = [
         {
             path:"/",
+            label: "home",
             exact: true,
             element: <Home />
         },
         {
             path:"/home",
+            label: "home",
             exact: true,
             element: <Home />
         },
         {
             path:"/rooms",
+            label: "rooms",
             exact: true,
             element: <Rooms />
         },
         {
             path:"/room/:room_id",
+            label: "room detail",
             exact: true,
             element: <RoomDetails />
         },
         {
             path:"/amenities",
+            label: "amenities",
             exact: true,
             element: <Amenities />
         },
         {
-            path:"/gallery",
+            path:"/amenities",
+            label: "amenities",
             exact: true,
             element: <Gallery />
         },
         {
             path:"/contact",
+            label: "booking",
             exact: true,
             element: <Contact />
         },
         {
             path:"/booking",
+            label: "booking",
             exact: true,
             element: <Reservations />
         },

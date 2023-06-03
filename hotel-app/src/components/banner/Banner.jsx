@@ -8,8 +8,8 @@ import { fastcontact } from "../../utils/fastcontact"
 export const Banner = () => {
 
   return (
-    <Container>
-      <Toolbar sx={{ justifyContent: 'space-between', alignContent: "center", height: 50, minHeight: false }}>
+    <Container style={{ background: '#fff' }}>
+      <Toolbar sx={{ justifyContent: 'space-between', alignContent: "center", minHeight: "auto"}}>
         {fastcontact.map((data) => (
           <Box
             key={data.text}
@@ -17,7 +17,7 @@ export const Banner = () => {
               mr: 2,
               display: { xs: 'none', md: 'flex' },
               fontFamily: 'monospace',
-              color: 'inherit',
+              color: '#858484',
               textDecoration: 'underline',
               alignItems: "center",
               gap: 1,
@@ -33,9 +33,8 @@ export const Banner = () => {
         <Box
           sx={{
             display: { xs: 'none', md: 'flex' },
-            color: 'inherit',
+            color: '#858484',
             gap: 1,
-            fontSize: "1rem",
           }}>
           {socialmedia.map((icon) => (icon))}
         </Box>

@@ -7,12 +7,12 @@ import { WhatsApp } from '@mui/icons-material'
 import { LinkedIn } from '@mui/icons-material'
 
 export const socialmedia = [
-    <Facebook fontSize="small" />,
-    <Twitter fontSize="small" />,
-    <Google fontSize="small" />,
-    <Instagram fontSize="small" />,
-    <Pinterest fontSize="small" />,
-    <LinkedIn fontSize="small" />,
+    <Facebook fontSize="1rem" />,
+    <Twitter fontSize="1rem" />,
+    <Google fontSize="1rem" />,
+    <Instagram fontSize="1rem" />,
+    <Pinterest fontSize="1rem" />,
+    <LinkedIn fontSize="1rem" />,
 ];
 
 

@@ -8,21 +8,24 @@ import { carrouselData } from "../../utils/carrouselData"
 export const Carrousel = () => {
 
     return (
-        <Container>
+        <Container sx={{p: 0, m: 0}}>
             <Box sx={{
                 zIndex: 999,
-                backgroundColor: "#0518546c",
-                height: "50%",
-                width: "50%",
+                height: "40%",
+                width: "40%",
                 position: "absolute",
                 top: "40%",
-                left: "25%",
+                left: "30%",
                 display: "flex",
                 flexDirection: "column",
                 justifyContent: "center",
                 alignItems: "center",
+                alignSelf:"center",
                 gap: "1rem",
-                color: "white"
+                color: "white",
+                backdropFilter: "blur(10px)",
+                backgroundColor: "rgba(238, 236, 236, 0.155)",
+                borderRadius: "10px"
             }}>
                 <Typography 
                     variant="subtitle1"
@@ -30,11 +33,11 @@ export const Carrousel = () => {
                     >W E L C O M E </Typography>
                 <Typography
                     variant="h3"
-                    >L A S S A L I N A </Typography>
-                <Button 
-                    variant="outlined"
-                    color="primary"
-                    >BOOK NOW</Button>
+                    >LAS SALINAS </Typography>
+                <Typography
+                    variant="subtitle2"
+                    >Your favorite choice </Typography>
+                
             </Box>
 
             <Box sx={{

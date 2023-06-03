@@ -9,6 +9,8 @@ export const RoomProvider = ({ children }) => {
 
     const navigate  = useNavigate()
 
+    const [loading, setLoading] = useState(true)
+
     const [rooms, setRooms] = useState([]);
     const [isList, setIsList] = useState(true)
     const [search, setSearch] = useState([]);
@@ -55,13 +57,19 @@ export const RoomProvider = ({ children }) => {
   
     useEffect(() => {
         //guest render
-        if (totalGuests) {
-            const roomsFiltered = rooms.filter((room) => 
-                totalGuests == room.capacity)
-                setSearch(roomsFiltered);
-                navigate("/rooms")
-                ;
-            } 
+
+        setTimeout(() => {
+            if (totalGuests) {
+                const roomsFiltered = rooms.filter((room) => 
+                    totalGuests == room.capacity)
+                    setSearch(roomsFiltered);
+                    navigate("/rooms")
+                    ;
+                } 
+            setLoading(false)
+        }, 2000);
+
+
         
     }, [totalGuests]);
 
@@ -81,6 +89,8 @@ export const RoomProvider = ({ children }) => {
     return (
         <RoomContext.Provider
             value={{
+                loading,
+                
                 search,
                 rooms,
                 setRooms,

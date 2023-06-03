@@ -27,7 +27,7 @@ export const Navbar = () => {
   };
 
   return (
-    <AppBar position="static">
+    <AppBar style={{backgroundColor:'#ecedee'}}  position="static">
       <Container maxWidth="xl">
         <Toolbar disableGutters>
           {/* logo */}
@@ -47,13 +47,14 @@ export const Navbar = () => {
 
           {/* menu  */}
           <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}>
+            {/* menu icon */}
             <IconButton
               size="large"
               aria-label="account of current user"
               aria-controls="menu-appbar"
               aria-haspopup="true"
               onClick={handleOpenNavMenu}
-              color="inherit"
+              color="#4f4e4e"
             >
               <MenuIcon />
             </IconButton>
@@ -113,7 +114,7 @@ export const Navbar = () => {
 
           {/* menu web */}
           <Box 
-            sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
+            sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' }, gap:"0.6rem", fontSize:"0.7rem", textTransform: "uppercase" }}>
             {pages.map((page) => (
               <NavLink
                 to={`${page.link}`}
@@ -131,7 +132,7 @@ export const Navbar = () => {
           <Box sx={{ flexGrow: 0 }}>
              <Button 
               key="book-now"
-              sx={{ my: 2, color: 'white', display: 'block' }} >
+              sx={{ my: 2,  backgrounColor: '#74e63bfb4', display: 'block' }} >
               BOOK NOW
              </Button>
           </Box>
