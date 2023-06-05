@@ -24,14 +24,13 @@ export const SearchForRoom = ({  }) => {
     return (
         <Container sx={{ paddingTop: "2rem" }}>
             <SearchBar 
-            handleChangeDate={handleChangeDate}
+              handleChangeDate={handleChangeDate}
               handleSliderChange={handleSliderChange}
               handleInputChange={handleInputChange}              
               handleBlur={handleBlur}
               handleClick={handleClick}
               kids={kids}
               adults={adults}
-              
               />
         </Container>
     );

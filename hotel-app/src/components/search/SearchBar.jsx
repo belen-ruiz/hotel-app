@@ -25,9 +25,9 @@ export const SearchBar = ({
     handleSliderChange,
     handleInputChange,
     handleBlur,
+    handleClick,
     kids, 
     adults,
-    handleClick,
 }) => {
 
     

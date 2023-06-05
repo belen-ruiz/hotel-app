@@ -16,7 +16,7 @@ export const RoomProvider = ({ children }) => {
     const [search, setSearch] = useState([]);
 
 
-    const [adults, setAdults] = useState(1);
+    const [adults, setAdults] = useState(0);
     const [kids, setKids] = useState(0);
 
     const [startDate, setStartDate] = useState(false);
@@ -33,13 +33,6 @@ export const RoomProvider = ({ children }) => {
     const year = startDate.$y
     const dayNumberMonthYear =  [`${day} - ${number} / ${month} / ${year}`]
     
-    console.log(adults)
-    console.log(kids)
-
-    const handleClick = () => {
-        setTotalGuests(total);
-        //setTotalSelect([[totalGuests], [totalDate]]);       okkkk     
-    };
 
     const renderRooms = () => {
         setRooms(roomsData)
@@ -52,6 +45,16 @@ export const RoomProvider = ({ children }) => {
         setTotalGuests(0)
         setSearch([])
     }
+
+    const roomsFilter = () => {
+        if (totalGuests) {
+            const roomsFiltered = rooms.filter((room) => 
+                totalGuests == room.capacity)
+                setSearch(roomsFiltered);
+                //navigate("/rooms");
+        } 
+    }
+
 
     const handleChangeDate = (e) => {
         const id = e.currentTarget.id;
@@ -71,6 +74,7 @@ export const RoomProvider = ({ children }) => {
         } else if (id === "kids"){
             setKids(value);
         }
+
     };
 
     const handleInputChange = (e) => {
@@ -99,44 +103,49 @@ export const RoomProvider = ({ children }) => {
             }
         }
     };
-     
 
-    useEffect(() => {
-        //initial room render       
 
-        setTimeout(() => {            
-            renderRooms()
-        }, 2000);
-    }, [])
+    const handleClick = () => {
+        setTotalGuests(total);
+        roomsFilter()
+        //setTotalSelect([[totalGuests], [totalDate]]);       okkkk     
+    };
+    
+    console.log(search)
+    console.log(rooms)
+    console.log(total)
+
+    // useEffect(() => {
+    //     //initial room render       
+    //     setTimeout(() => {            
+    //         renderRooms()
+    //     }, 2000);
+    // }, [])
 
     
   
-    useEffect(() => {
-        //guest render
+    // useEffect(() => {
+    //     //guest render
+    //     setTimeout(() => {            
+    //         roomsFilter()
+    //         setLoading(false)
+    //     }, 2000); 
 
-        setTimeout(() => {
-            if (totalGuests) {
-                const roomsFiltered = rooms.filter((room) => 
-                    totalGuests == room.capacity)
-                    setSearch(roomsFiltered);
-                    navigate("/rooms")
-                    ;
-                } 
-            setLoading(false)
-        }, 2000);        
-    }, [totalGuests]);
+    // }, [totalGuests]);
+
+    
+   
     
 
     return (
         <RoomContext.Provider
             value={{
-                loading,
+                loading, setLoading,
                 search,
                 rooms,
 
-                isList, 
-                setIsList, 
-                getAllRooms,
+                isList, setIsList, 
+                getAllRooms, renderRooms, roomsFilter,
                 
                 handleChangeDate, handleSliderChange, handleInputChange, handleBlur, handleClick, 
                 

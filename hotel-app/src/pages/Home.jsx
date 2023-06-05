@@ -1,5 +1,5 @@
 import { Container } from '@mui/material'
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import { Carrousel } from '../components/carrousel/Carrousel'
 import { SearchForRoom } from '../components/search/SearchForRoom'
 import { Features } from '../components/features/Features'
@@ -12,7 +12,17 @@ import { useRoomContext } from '../context/RoomProvider'
 
 export const Home = () => {
 
-const { rooms, search } = useRoomContext()
+const { rooms, renderRooms, search, setLoading } = useRoomContext()
+
+useEffect(() => {
+  //initial room render       
+  setTimeout(() => {     
+      console.log("renderroom home")       
+      renderRooms()
+      setLoading(false)
+  }, 2000);
+}, [])
+
 
   return (
     <Container sx={{display: "flex", flexDirection:"column",
