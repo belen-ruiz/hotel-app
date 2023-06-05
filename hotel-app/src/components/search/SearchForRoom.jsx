@@ -19,35 +19,42 @@ export const SearchForRoom = ({  }) => {
    } = useRoomContext()
 
 
-    const handleAdultSliderChange = (e, value) => {
-        setAdults(value);
-    };
 
-    const handleAdultInputChange = (e) => {
-        setAdults(e.target.value === "" ? "" : Number(e.target.value));
-    };
+    const [guests, setGuests] = useState()
 
-    const handleAdultBlur = () => {
-        if (adults < 0) {
-            setAdults(0);
-        } else if (setAdults > 5) {
-            setAdults(5);
+    const handleSliderChange = (e, value) => {
+        const id = e.target.id
+        if (id === "adults") {
+            setAdults(value);
+        } else if (id === "kids"){
+            setKids(value);
         }
     };
 
-    const handleKidsSliderChange = (e, value) => {
-        setKids(value);
+    const handleInputChange = (e) => {
+        const id = e.target.id
+        if (id === "adults") {
+            setAdults(e.target.value === "" ? "" : Number(e.target.value));
+        } else if (id === "kids"){
+            setKids(e.target.value === "" ? "" : Number(e.target.value));
+        }
+
     };
 
-    const handleKidsInputChange = (event) => {
-        setKids(event.target.value === "" ? "" : Number(event.target.value));
-    };
-
-    const handleKidsBlur = () => {
-        if (kids < 0) {
-            setKids(0);
-        } else if (kids > 5) {
-            setKids(5);
+    const handleBlur = (e) => {
+        const id = e.target.id
+        if (id === "adults") {
+            if (adults < 0) {
+                setAdults(0);
+            } else if (adults > 5) {
+                setAdults(5);
+            }           
+        } else if (id === "kids"){
+            if (kids < 0) {
+                setKids(0);
+            } else if (kids > 5) {
+                setKids(5);
+            }
         }
     };
 
@@ -55,12 +62,9 @@ export const SearchForRoom = ({  }) => {
     return (
         <Container sx={{ paddingTop: "2rem" }}>
             <SearchBar 
-              handleAdultSliderChange={handleAdultSliderChange}
-              handleAdultInputChange={handleAdultInputChange}              
-              handleAdultBlur={handleAdultBlur}
-              handleKidsSliderChange={handleKidsSliderChange} 
-              handleKidsInputChange={handleKidsInputChange} 
-              handleKidsBlur={handleKidsBlur}
+              handleSliderChange={handleSliderChange}
+              handleInputChange={handleInputChange}              
+              handleBlur={handleBlur}
               setStartDate={setStartDate}
               setEndDate={setEndDate}
               />

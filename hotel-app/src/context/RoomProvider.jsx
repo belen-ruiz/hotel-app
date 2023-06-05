@@ -33,6 +33,8 @@ export const RoomProvider = ({ children }) => {
     const year = startDate.$y
     const dayNumberMonthYear =  [`${day} - ${number} / ${month} / ${year}`]
     
+    console.log(adults)
+    console.log(kids)
 
     const handleClick = () => {
         setTotalGuests(total);
@@ -79,7 +81,6 @@ export const RoomProvider = ({ children }) => {
     }
      
     
-
   
     console.log(totalGuests)
     //console.log(rooms)

@@ -25,29 +25,25 @@ const Input = styled(MuiInput)`
 `;
 
 export const SearchBar = ({
-    handleAdultSliderChange,
-    handleAdultInputChange,
-    handleAdultBlur,
-    handleKidsSliderChange,
-    handleKidsInputChange,
-    handleKidsBlur,
+    handleSliderChange,
+    handleInputChange,
+    handleBlur,
     setStartDate,
     setEndDate,
 }) => {
     const { adults, kids, handleClick } = useRoomContext();
 
     return (
-        <Container sx={{  }}>
+        <Container sx={{}}>
             <Box
                 sx={{
                     display: "flex",
                     justifyContent: "space-around",
                     alignItems: "center",
                     backgroundColor: "#f0efed",
-boxShadow: "10px 10px 35px -21px rgba(69,68,69,1)",
-padding: "2rem",
-borderRadius: "10px"
-
+                    boxShadow: "10px 10px 35px -21px rgba(69,68,69,1)",
+                    padding: "2rem",
+                    borderRadius: "10px",
                 }}
             >
                 <Box>
@@ -67,7 +63,7 @@ borderRadius: "10px"
                 <Divider orientation="vertical" flexItem />
 
                 <Box>
-                <InputLabel>Check Out</InputLabel>
+                    <InputLabel>Check Out</InputLabel>
 
                     <input
                         type="date"
@@ -79,7 +75,6 @@ borderRadius: "10px"
                         onChange={(date) => setEndDate(date)}
                         min="2023-01-01"
                         max="2030-12-31"
-
                     />
                 </Box>
 
@@ -87,33 +82,31 @@ borderRadius: "10px"
 
                 <Box>
                     <InputLabel>Adults</InputLabel>
-                    <Box sx={{display: "flex"}}>
-
-                        <Box >
+                    <Box sx={{ display: "flex" }}>
+                        <Box>
                             <BoyRounded />
                         </Box>
 
-                        <Box >
+                        <Box>
                             <input
                                 type="range"
                                 id="adults"
                                 name="adult-guests"
                                 value={adults}
-                                onChange={handleAdultSliderChange}
+                                onChange={handleSliderChange}
                                 step={1}
                                 min={1}
                                 max={5}
-                                style={{width: "100px"}}
-
+                                style={{ width: "100px" }}
                             />
                         </Box>
 
-                        <Box >
-                            <Input
+                        <Box>
+                            <Input                                           id="adults"
                                 value={adults}
                                 size="small"
-                                onChange={handleAdultInputChange}
-                                onBlur={handleAdultBlur}
+                                onChange={handleInputChange}
+                                onBlur={handleBlur}
                                 inputProps={{
                                     step: 1,
                                     min: 0,
@@ -129,33 +122,34 @@ borderRadius: "10px"
                 <Divider orientation="vertical" flexItem />
 
                 <Box>
-                <InputLabel>Kids</InputLabel>
+                    <InputLabel>Kids</InputLabel>
 
-                    <Box  sx={{display: "flex"}}>
-                        <Box >
+                    <Box sx={{ display: "flex" }}>
+                        <Box>
                             <BoyRounded />
                         </Box>
 
-                        <Box >
+                        <Box>
                             <input
-                                style={{width: "100px"}}
+                                style={{ width: "100px" }}
                                 type="range"
                                 id="kids"
                                 name="kids-guests"
                                 value={kids}
-                                onChange={handleKidsSliderChange}
+                                onChange={handleSliderChange}
                                 step={1}
                                 min={1}
                                 max={5}
                             />
                         </Box>
 
-                        <Box >
+                        <Box>
                             <Input
                                 value={kids}
                                 size="small"
-                                onChange={handleKidsInputChange}
-                                onBlur={handleKidsBlur}
+                                id="kids"
+                                onChange={handleInputChange}
+                                onBlur={handleBlur}
                                 inputProps={{
                                     step: 1,
                                     min: 0,
@@ -167,7 +161,7 @@ borderRadius: "10px"
                         </Box>
                     </Box>
                 </Box>
-                
+
                 <Box sx={{ width: 150 }}>
                     <Button
                         onClick={handleClick}
