@@ -55,7 +55,6 @@ export const RoomItemList = ({ rooms, isList, setIsList }) => {
                              }}>
             
                         <Card
-                            className="cover"
                             sx={{
                                 backgroundColor:"rgb(247, 245, 245)",
             
@@ -66,7 +65,7 @@ export const RoomItemList = ({ rooms, isList, setIsList }) => {
                                     justifyContent: "center",
                                     alignItems: "center",
                                     flexDirection: isList? "row" : "column", 
-                                    width:"min-content"
+                                    width: isList? "100%" : "min-content"
                                 }}>
                                 {/* IMAGEN */}
                                 <Box>
@@ -175,7 +174,7 @@ export const RoomItemList = ({ rooms, isList, setIsList }) => {
                                             alignItems: isList? "center" : "start",
                                             justifySelf: "end",
                                             padding: isList && "1rem",
-                                            gap: !isList && "2rem" 
+                                            gap: !isList && "1rem" 
                                             }}>
                                         <Typography
                                             sx={{ fontSize: "3rem", color: "grey",
@@ -186,7 +185,7 @@ export const RoomItemList = ({ rooms, isList, setIsList }) => {
                                             <FormHelperText
                                                 sx={{ color: "grey"}}
                                             >
-                                                person per night
+                                                p p night
                                             </FormHelperText>
                                     
                                     

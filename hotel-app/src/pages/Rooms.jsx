@@ -1,11 +1,10 @@
-import { Typography } from "@mui/material";
-import { Button } from "@mui/material";
+
 import { Container } from "@mui/material";
 import React, { useEffect, useState } from "react";
 import Breadcrums from "../components/breadcrumbs/Breadcrums";
+import { DisplayData } from "../components/displayData/DisplayData";
+import { Hero } from "../components/hero/Hero";
 import { Loading } from "../components/loading/Loading";
-import { RoomItemContainer } from "../components/rooms/RoomItemContainer";
-import { RoomItemGridContainer } from "../components/rooms/RoomItemGridContainer";
 import { RoomItemListContainer } from "../components/rooms/RoomItemListContainer";
 import { SearchForRoom } from "../components/search/SearchForRoom";
 import { useRoomContext } from "../context/RoomProvider";
@@ -23,32 +22,25 @@ export const Rooms = () => {
         }
     }, [select, loading]);
 
+    
     return (
         <Container>
-            Rooms
+            <Hero 
+                pageTitle="Our Rooms" 
+                imgUrl="https://images.pexels.com/photos/2121120/pexels-photo-2121120.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"/>
+
+
             <SearchForRoom search={search} />
-            <FilterIcons setSelect={setSelect} select={select} />
-            {/* {view} */}
+
+            <DisplayData 
+                getAllRooms={getAllRooms} 
+                totalGuests={totalGuests} 
+                setSelect={setSelect} 
+                select={select}
+            />
+
             {loading && <Loading /> }
             
-            {totalGuests === 0 ? (
-                <Typography>
-                    Showing results for all Rooms 
-                </Typography>
-            ):(
-              <>
-                <Typography>
-                      Showing results for Rooms for {totalGuests}
-                      people
-                </Typography>
-                
-                <Button onClick={getAllRooms}>
-                      Show all
-                </Button>
-                
-              </>
-            )
-            }
             <RoomItemListContainer />
         </Container>
     );

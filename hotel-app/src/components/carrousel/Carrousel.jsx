@@ -12,10 +12,10 @@ export const Carrousel = () => {
         paddingRight: { xs: 0, md: 0 },}}>
             <Box sx={{
                 zIndex: 999,
-                height: "40%",
-                width: "40%",
+                height: "30%",
+                width: "30%",
                 position: "absolute",
-                top: "40%",
+                top: "30%",
                 left: "30%",
                 display: "flex",
                 flexDirection: "column",
@@ -42,7 +42,6 @@ export const Carrousel = () => {
             </Box>
 
             <Box sx={{
-                height: "80vh",
                 overflow: "hidden",
                 position: "relative",
                 zIndex: 99,
