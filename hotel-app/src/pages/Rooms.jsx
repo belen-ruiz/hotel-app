@@ -13,7 +13,7 @@ import { FilterIcons } from "../filter/FilterIcons";
 
 export const Rooms = () => {
     const [select, setSelect] = useState("list");
-    const { loading, search, setIsList, totalGuests, getAll } = useRoomContext();
+    const { loading, search, setIsList, totalGuests, getAllRooms } = useRoomContext();
 
     useEffect(() => {
         if (select === "list") {
@@ -42,7 +42,7 @@ export const Rooms = () => {
                       people
                 </Typography>
                 
-                <Button onClick={getAll}>
+                <Button onClick={getAllRooms}>
                       Show all
                 </Button>
                 

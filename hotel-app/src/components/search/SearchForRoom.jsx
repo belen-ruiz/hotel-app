@@ -5,7 +5,6 @@ import FormControl from "@mui/material/FormControl";
 import Select from "@mui/material/Select";
 import { useEffect, useState } from "react";
 import { Container, Box, Button } from "@mui/material";
-import { GuestsSelect } from "./GuestsSelect";
 import { SearchBar } from "./SearchBar";
 import { useRoomContext } from "../../context/RoomProvider";
 

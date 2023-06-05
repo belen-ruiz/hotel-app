@@ -48,33 +48,7 @@ export const RoomProvider = ({ children }) => {
     //   setTotalDate(dayNumberMonthYear) 
     // }, [startDate])
 
-    useEffect(() => {
-
-        setTimeout(() => {
-            
-            renderRooms()
-        }, 1000);
-    }, [])
-  
-    useEffect(() => {
-        //guest render
-
-        setTimeout(() => {
-            if (totalGuests) {
-                const roomsFiltered = rooms.filter((room) => 
-                    totalGuests == room.capacity)
-                    setSearch(roomsFiltered);
-                    navigate("/rooms")
-                    ;
-                } 
-            setLoading(false)
-        }, 2000);
-
-
-        
-    }, [totalGuests]);
-
-    const getAll = () => {
+    const getAllRooms = () => {
         setTotalGuests(0)
         setSearch([])
     }
@@ -126,37 +100,48 @@ export const RoomProvider = ({ children }) => {
         }
     };
      
+
+    useEffect(() => {
+        //initial room render       
+
+        setTimeout(() => {            
+            renderRooms()
+        }, 2000);
+    }, [])
+
     
   
-    console.log(totalGuests)
-    //console.log(rooms)
-    console.log(search)
+    useEffect(() => {
+        //guest render
 
-    console.log(startDate)
-    console.log(endDate)
+        setTimeout(() => {
+            if (totalGuests) {
+                const roomsFiltered = rooms.filter((room) => 
+                    totalGuests == room.capacity)
+                    setSearch(roomsFiltered);
+                    navigate("/rooms")
+                    ;
+                } 
+            setLoading(false)
+        }, 2000);        
+    }, [totalGuests]);
+    
 
     return (
         <RoomContext.Provider
             value={{
                 loading,
-                handleChangeDate, handleSliderChange, handleInputChange, handleBlur, 
-
-                
                 search,
                 rooms,
-                setRooms,
-                adults,
-                setAdults,
-                kids,
-                setKids,
-                totalGuests,
-                setTotalGuests,
 
-                totalDate,
-                setTotalDate,
-                handleClick, startDate, setStartDate, endDate,setEndDate,
-
-                isList, setIsList, getAll
+                isList, 
+                setIsList, 
+                getAllRooms,
+                
+                handleChangeDate, handleSliderChange, handleInputChange, handleBlur, handleClick, 
+                
+                adults, kids, totalGuests,
+                
             }}
         >
             {children}
