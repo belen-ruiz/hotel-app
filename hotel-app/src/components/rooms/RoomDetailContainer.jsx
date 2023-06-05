@@ -29,7 +29,6 @@ export const RoomDetailContainer = ({  }) => {
 
     <Container 
         sx={{
-            display:"flex",
             padding: "3rem"
             }}>
                           

@@ -8,7 +8,7 @@ import { fastcontact } from "../../utils/fastcontact"
 export const Banner = () => {
 
   return (
-    <Container sx={{ background: '#fff', zIndex: 999999, 
+    <Container sx={{ width: "100vw", background: '#fff', zIndex: 999999, padding: "0.1rem"
   }}>
       <Box sx={{ display: "flex", justifyContent: 'space-between', alignItems: "center", minHeight: "auto", padding: "0.5rem 0"}}>
         {fastcontact.map((data) => (
