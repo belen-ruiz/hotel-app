@@ -13,7 +13,11 @@ export const SearchForRoom = ({  }) => {
   const { 
     adults,
     kids,
-    handleChangeDate, handleSliderChange,handleInputChange, handleBlur, handleClick
+    handleChangeDate, 
+    handleSliderChange,
+    handleInputChange, 
+    handleBlur, 
+    handleClick
 
    } = useRoomContext()
 
@@ -26,6 +30,8 @@ export const SearchForRoom = ({  }) => {
               handleInputChange={handleInputChange}              
               handleBlur={handleBlur}
               handleClick={handleClick}
+              kids={kids}
+              adults={adults}
               
               />
         </Container>
