@@ -35,38 +35,34 @@ export const SearchForRoom = ({  }) => {
         }
     };
 
-    const handlekidsSliderChange = (e, value) => {
+    const handleKidsSliderChange = (e, value) => {
         setKids(value);
     };
 
-    const handlekidsInputChange = (event) => {
+    const handleKidsInputChange = (event) => {
         setKids(event.target.value === "" ? "" : Number(event.target.value));
     };
 
-    const handlekidsBlur = () => {
-        if (adults < 0) {
+    const handleKidsBlur = () => {
+        if (kids < 0) {
             setKids(0);
-        } else if (adults > 5) {
+        } else if (kids > 5) {
             setKids(5);
         }
     };
 
 
     return (
-        <Container sx={{ paddingTop: "4rem" }}>
+        <Container sx={{ paddingTop: "2rem" }}>
             <SearchBar 
               handleAdultSliderChange={handleAdultSliderChange}
               handleAdultInputChange={handleAdultInputChange}              
               handleAdultBlur={handleAdultBlur}
-              handlekidsSliderChange={handlekidsSliderChange} 
-              handlekidsInputChange={handlekidsInputChange} 
-              handlekidsBlur={handlekidsBlur}
-              startDate={startDate}
+              handleKidsSliderChange={handleKidsSliderChange} 
+              handleKidsInputChange={handleKidsInputChange} 
+              handleKidsBlur={handleKidsBlur}
               setStartDate={setStartDate}
-              endDate={endDate}
               setEndDate={setEndDate}
-              adults={adults}
-              setAdults={setAdults}
               />
         </Container>
     );
