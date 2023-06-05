@@ -38,7 +38,6 @@ export const RoomProvider = ({ children }) => {
 
     const handleClick = () => {
         setTotalGuests(total);
-
         //setTotalSelect([[totalGuests], [totalDate]]);       okkkk     
     };
 
@@ -79,6 +78,53 @@ export const RoomProvider = ({ children }) => {
         setTotalGuests(0)
         setSearch([])
     }
+
+    const handleChangeDate = (e) => {
+        const id = e.currentTarget.id;
+        const value = e.currentTarget.value;
+
+        if (id === "date-start") {
+            setStartDate(value);
+        } else if (id === "date-end") {
+            setEndDate(value);
+        }
+    };
+
+    const handleSliderChange = (e, value) => {
+        const id = e.target.id
+        if (id === "adults") {
+            setAdults(value);
+        } else if (id === "kids"){
+            setKids(value);
+        }
+    };
+
+    const handleInputChange = (e) => {
+        const id = e.target.id
+        if (id === "adults") {
+            setAdults(e.target.value === "" ? "" : Number(e.target.value));
+        } else if (id === "kids"){
+            setKids(e.target.value === "" ? "" : Number(e.target.value));
+        }
+
+    };
+
+    const handleBlur = (e) => {
+        const id = e.target.id
+        if (id === "adults") {
+            if (adults < 0) {
+                setAdults(0);
+            } else if (adults > 5) {
+                setAdults(5);
+            }           
+        } else if (id === "kids"){
+            if (kids < 0) {
+                setKids(0);
+            } else if (kids > 5) {
+                setKids(5);
+            }
+        }
+    };
      
     
   
@@ -86,11 +132,15 @@ export const RoomProvider = ({ children }) => {
     //console.log(rooms)
     console.log(search)
 
+    console.log(startDate)
+    console.log(endDate)
 
     return (
         <RoomContext.Provider
             value={{
                 loading,
+                handleChangeDate, handleSliderChange, handleInputChange, handleBlur, 
+
                 
                 search,
                 rooms,

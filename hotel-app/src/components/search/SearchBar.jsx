@@ -3,20 +3,14 @@ import React, { useState } from "react";
 
 import FormHelperText from "@mui/material/FormHelperText";
 
-import Grid from "@mui/material/Grid";
-import Slider from "@mui/material/Slider";
 import MuiInput from "@mui/material/Input";
 import { BoyRounded } from "@mui/icons-material";
 import { styled } from "@mui/material/styles";
 import { Container } from "@mui/material";
 
-import { DatePicker } from "@mui/x-date-pickers/DatePicker";
 import { useRoomContext } from "../../context/RoomProvider";
 
-import dayjs from "dayjs";
-import { DemoContainer, DemoItem } from "@mui/x-date-pickers/internals/demo";
-import { TextField } from "@mui/material";
-import { GifBoxSharp } from "@mui/icons-material";
+import { searchDates } from "../../utils/searchDates";
 import { Divider } from "@mui/material";
 import { InputLabel } from "@mui/material";
 
@@ -25,13 +19,16 @@ const Input = styled(MuiInput)`
 `;
 
 export const SearchBar = ({
+    handleChangeDate,
     handleSliderChange,
     handleInputChange,
     handleBlur,
-    setStartDate,
-    setEndDate,
+
+    handleClick
 }) => {
-    const { adults, kids, handleClick } = useRoomContext();
+    const { adults, kids } = useRoomContext();
+
+    
 
     return (
         <Container sx={{}}>
@@ -46,39 +43,27 @@ export const SearchBar = ({
                     borderRadius: "10px",
                 }}
             >
-                <Box>
-                    <InputLabel>Check In</InputLabel>
-                    <input
-                        type="date"
-                        label="Check In"
-                        id="start"
-                        name="trip-start"
-                        value="2023-08-17"
-                        onChange={(date) => setStartDate(date)}
-                        min="2023-01-01"
-                        max="2030-12-31"
-                    />
-                </Box>
-
-                <Divider orientation="vertical" flexItem />
-
-                <Box>
-                    <InputLabel>Check Out</InputLabel>
-
-                    <input
-                        type="date"
-                        id="end"
-                        label="Check out"
-                        name="trip-start"
-                        defaultValue="2023-08-17"
-                        value="2023-08-17"
-                        onChange={(date) => setEndDate(date)}
-                        min="2023-01-01"
-                        max="2030-12-31"
-                    />
-                </Box>
-
-                <Divider orientation="vertical" flexItem />
+                {searchDates &&
+                    searchDates.map(
+                        (elem) =>
+                            elem && (
+                                <>
+                                    <Box key={elem.id}>
+                                        <InputLabel>{elem.label}</InputLabel>
+                                        <input
+                                            type={elem.type}
+                                            label={elem.label}
+                                            id={elem.id}
+                                            name={elem.name}
+                                            onChange={handleChangeDate}
+                                            min={elem.min}
+                                            max={elem.max}
+                                        />
+                                    </Box>
+                                    <Divider orientation="vertical" flexItem />
+                                </>
+                            )
+                    )}
 
                 <Box>
                     <InputLabel>Adults</InputLabel>
@@ -102,7 +87,8 @@ export const SearchBar = ({
                         </Box>
 
                         <Box>
-                            <Input                                           id="adults"
+                            <Input
+                                id="adults"
                                 value={adults}
                                 size="small"
                                 onChange={handleInputChange}
