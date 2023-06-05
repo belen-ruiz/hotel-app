@@ -8,7 +8,8 @@ import { carrouselData } from "../../utils/carrouselData"
 export const Carrousel = () => {
 
     return (
-        <Container sx={{p: 0, m: 0}}>
+        <Container sx={{paddingLeft: { xs: 0, md: 0 },
+        paddingRight: { xs: 0, md: 0 },}}>
             <Box sx={{
                 zIndex: 999,
                 height: "40%",

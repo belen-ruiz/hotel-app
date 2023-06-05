@@ -36,7 +36,7 @@ export const RoomItem = ({ rooms }) => {
                     "--Card-padding": "0px",
                 }}
             >
-                <Box sx={{ position: "relative" }}>
+                <Box sx={{  }}>
                     <AspectRatio ratio="3/4">
                         <figure>
                             <img src={imgUrl} loading="lazy" alt={title} />
@@ -46,8 +46,7 @@ export const RoomItem = ({ rooms }) => {
                     <CardCover
                         className="gradient-cover"
                         sx={{
-                            height: "auto",
-                            weight: "auto",
+
                             "&:hover, &:focus-within": {
                                 opacity: 1,
                             },
@@ -55,6 +54,8 @@ export const RoomItem = ({ rooms }) => {
                             transition: "0.1s ease-in",
                             background:
                                 "linear-gradient(0deg, rgba(2,0,36,0.8379551649761467) 0%, #033e4a34 100%); ",
+                            height: "max-content"
+
                         }}
                     >
                         {/* The first box acts as a container that inherits style from the CardCover */}
@@ -70,9 +71,10 @@ export const RoomItem = ({ rooms }) => {
                                 sx={{
                                     color: "#fff",
                                     alignSelf: "start",
-                                    padding: "3rem 2rem",
+                                    padding: "2.5rem 0 0 2rem",
                                     fontWeight: "bold",
                                     letterSpacing: 1,
+                                    marginInline: 0
                                 }}
                             >
                                 {title}
@@ -86,7 +88,7 @@ export const RoomItem = ({ rooms }) => {
                                     alignItems: "end",
                                     gap: "1rem",
                                     alignSelf: "end",
-                                    padding: "3rem 2rem",
+                                    padding: "0 1rem 3rem 0",
                                 }}
                             >
                                 <Box sx={{ ml: "auto" }}>

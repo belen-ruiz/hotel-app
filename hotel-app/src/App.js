@@ -14,7 +14,6 @@ function App() {
    <>
 <LocalizationProvider dateAdapter={AdapterDayjs}>
     <RoomProvider>
-        <Banner />
         <Header />
         <Router />
         <Footer />

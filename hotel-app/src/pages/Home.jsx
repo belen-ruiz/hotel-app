@@ -15,7 +15,11 @@ export const Home = () => {
 const { rooms, search } = useRoomContext()
 
   return (
-    <>
+    <Container sx={{display: "flex", flexDirection:"column",
+    alignItems:"center",
+    paddingLeft: { xs: 0, md: 0 },
+    paddingRight: { xs: 0, md: 0 },
+  }}>
       <Carrousel />
       <Features />
 
@@ -25,6 +29,6 @@ const { rooms, search } = useRoomContext()
       <Testimonials />
       <AboutUs />
       <Map />
-    </>
+    </Container>
   )
 }

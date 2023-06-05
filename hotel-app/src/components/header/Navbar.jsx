@@ -13,6 +13,7 @@ import MenuItem from '@mui/material/MenuItem';
 import { Logo } from "./Logo"
 import { pages } from "../../utils/pages"
 import { Link, NavLink } from 'react-router-dom';
+import { Banner } from '../banner/Banner';
 
 
 export const Navbar = () => {
@@ -27,7 +28,8 @@ export const Navbar = () => {
   };
 
   return (
-    <AppBar style={{backgroundColor:'#ecedee'}}  position="static">
+    <AppBar style={{backgroundColor:'#ecedee'}}  position="sticky">
+            <Banner />
       <Container maxWidth="xl">
         <Toolbar disableGutters>
           {/* logo */}
