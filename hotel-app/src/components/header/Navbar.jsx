@@ -28,23 +28,9 @@ export const Navbar = () => {
 
     return (
         <AppBar style={{ backgroundColor: "#ecedee" }} position="sticky">
-
             <Banner />
             <Container maxWidth="xl">
                 <Toolbar disableGutters>
-                    {/* logo */}
-                    <Box
-                        sx={{
-                            display: { xs: "none", md: "flex" },
-                            fontFamily: "Elsie, cursive",
-                            letterSpacing: ".3rem",
-                            color: "inherit",
-                            textDecoration: "none",
-                        }}
-                    >
-                        {<Logo />}
-                    </Box>
-
                     {/* menu  */}
                     <Box
                         sx={{
@@ -124,20 +110,68 @@ export const Navbar = () => {
                         sx={{
                             flexGrow: 1,
                             display: { xs: "none", md: "flex" },
-                            gap: "0.6rem",
+                            gap: "2rem",
                             fontSize: "0.7rem",
                             textTransform: "uppercase",
-                        }}
-                    >
-                        {pages.map((page) => (
+                            justifyContent: "end",
+                            fontWeight: "bold",
+                        }}>
+                        {pages.slice(0, 3).map((page) => (
                             <NavLink
-                                to={`${page.link}`}
+                                to={page.link}
                                 key={page.page}
                                 onClick={handleCloseNavMenu}
-                                sx={{ my: 2, color: "white", display: "block" }}
+                                isActive={(match, location) => {
+                                    // Lógica para determinar si el enlace está activo
+                                    return match !== null && match.isExact;
+                                }}
+                                style={{
+                                    color: page.isActive
+                                        ? "#912929"
+                                        : "#6c0bad",
+                                }}
                             >
                                 {page.page}
                             </NavLink>
+                        ))}
+                    </Box>
+
+                    {/* logo */}
+                    <Box
+                        sx={{
+                            display: { xs: "none", md: "flex" },
+                            fontFamily: "Elsie, cursive",
+                            letterSpacing: ".3rem",
+                            color: "inherit",
+                            textDecoration: "none",
+                            padding: "0 4rem",
+                        }}
+                    >
+                        {<Logo />}
+                    </Box>
+
+                    {/* menu web */}
+                    <Box
+                        sx={{
+                            flexGrow: 1,
+                            display: { xs: "none", md: "flex" },
+                            gap: "2rem",
+                            fontSize: "0.7rem",
+                            textTransform: "uppercase",
+                            justifyContent: "start",
+                            fontWeight: "bold",
+                        }}
+                    >
+                        {pages.slice(3, 6).map((page) => (
+                            <Box
+                                component={NavLink}
+                                to={`${page.link}`}
+                                key={page.page}
+                                onClick={handleCloseNavMenu}
+                                sx={{ color: "#1c1c1c" }}
+                            >
+                                {page.page}
+                            </Box>
                         ))}
                     </Box>
 

@@ -6,9 +6,15 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box!important;
+  text-decoration: none!important;
   font-family: 'Open Sans', sans-serif;
   /* font-family: 'Elsie', cursive; */
 
 }
 
 
+.link{
+  text-decoration: none!important;
+  color: #ca1919;
+  background-color: aqua;
+}
