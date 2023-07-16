@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { useLocation } from "react-router-dom";
 import AppBar from "@mui/material/AppBar";
 import Box from "@mui/material/Box";
 import Toolbar from "@mui/material/Toolbar";
@@ -16,180 +17,175 @@ import { Link, NavLink } from "react-router-dom";
 import { Banner } from "../banner/Banner";
 
 export const Navbar = () => {
-    const [anchorElNav, setAnchorElNav] = useState(null);
+  const [anchorElNav, setAnchorElNav] = useState(null);
+  const location = useLocation();
 
-    const handleOpenNavMenu = (e) => {
-        setAnchorElNav(e.currentTarget);
-    };
+  const handleOpenNavMenu = (e) => {
+    setAnchorElNav(e.currentTarget);
+  };
 
-    const handleCloseNavMenu = () => {
-        setAnchorElNav(null);
-    };
+  const handleCloseNavMenu = () => {
+    setAnchorElNav(null);
+  };
 
-    return (
-        <AppBar style={{ backgroundColor: "#ecedee" }} position="sticky">
-            <Banner />
-            <Container maxWidth="xl">
-                <Toolbar disableGutters>
-                    {/* menu  */}
-                    <Box
-                        sx={{
-                            flexGrow: 1,
-                            display: { xs: "flex", md: "none" },
-                        }}
-                    >
-                        {/* menu icon */}
-                        <IconButton
-                            size="large"
-                            aria-label="account of current user"
-                            aria-controls="menu-appbar"
-                            aria-haspopup="true"
-                            onClick={handleOpenNavMenu}
-                            color="#4f4e4e"
-                        >
-                            <MenuIcon />
-                        </IconButton>
-                        <Menu
-                            id="menu-appbar"
-                            anchorEl={anchorElNav}
-                            anchorOrigin={{
-                                vertical: "bottom",
-                                horizontal: "left",
-                            }}
-                            keepMounted
-                            transformOrigin={{
-                                vertical: "top",
-                                horizontal: "left",
-                            }}
-                            open={Boolean(anchorElNav)}
-                            onClose={handleCloseNavMenu}
-                            sx={{
-                                display: { xs: "block", md: "none" },
-                            }}
-                        >
-                            {pages.map((page) => (
-                                <MenuItem
-                                    key={page.page}
-                                    onClick={handleCloseNavMenu}
-                                >
-                                    <Link to={`${page.link}`}>
-                                        <Typography
-                                            textAlign="center"
-                                            variant="h5"
-                                        >
-                                            {page.page}
-                                        </Typography>
-                                    </Link>
-                                </MenuItem>
-                            ))}
-                        </Menu>
-                    </Box>
+  return (
+    <AppBar style={{ backgroundColor: "#ecedee" }} position="sticky">
+      <Banner />
+      <Container maxWidth="xl">
+        <Toolbar disableGutters>
+          {/* menu  */}
+          <Box
+            sx={{
+              flexGrow: 1,
+              display: { xs: "flex", md: "none" },
+            }}
+          >
+            {/* menu icon */}
+            <IconButton
+              size="large"
+              aria-label="account of current user"
+              aria-controls="menu-appbar"
+              aria-haspopup="true"
+              onClick={handleOpenNavMenu}
+              color="#4f4e4e"
+            >
+              <MenuIcon />
+            </IconButton>
+            <Menu
+              id="menu-appbar"
+              anchorEl={anchorElNav}
+              anchorOrigin={{
+                vertical: "bottom",
+                horizontal: "left",
+              }}
+              keepMounted
+              transformOrigin={{
+                vertical: "top",
+                horizontal: "left",
+              }}
+              open={Boolean(anchorElNav)}
+              onClose={handleCloseNavMenu}
+              sx={{
+                display: { xs: "block", md: "none" },
+              }}
+            >
+              {pages.map((page) => (
+                <MenuItem key={page.page} onClick={handleCloseNavMenu}>
+                  <Link to={`${page.link}`}>
+                    <Typography textAlign="center" variant="h5">
+                      {page.page}
+                    </Typography>
+                  </Link>
+                </MenuItem>
+              ))}
+            </Menu>
+          </Box>
 
-                    {/* logo */}
-                    <Box
-                        variant="h5"
-                        noWrap
-                        component="a"
-                        href=""
-                        sx={{
-                            mr: 2,
-                            display: { xs: "flex", md: "none" },
-                            flexGrow: 1,
-                            fontFamily: "monospace",
-                            fontWeight: 700,
-                            letterSpacing: ".3rem",
-                            color: "inherit",
-                            textDecoration: "none",
-                        }}
-                    >
-                        {<Logo />}
-                    </Box>
+          {/* logo */}
+          <Box
+            variant="h5"
+            noWrap
+            component="a"
+            href=""
+            sx={{
+              mr: 2,
+              display: { xs: "flex", md: "none" },
+              flexGrow: 1,
+              fontFamily: "monospace",
+              fontWeight: 700,
+              letterSpacing: ".3rem",
+              color: "inherit",
+              textDecoration: "none",
+            }}
+          >
+            {<Logo />}
+          </Box>
 
-                    {/* menu web */}
-                    <Box
-                        sx={{
-                            flexGrow: 1,
-                            display: { xs: "none", md: "flex" },
-                            gap: "2rem",
-                            fontSize: "0.7rem",
-                            textTransform: "uppercase",
-                            justifyContent: "end",
-                            fontWeight: "bold",
-                        }}>
-                        {pages.slice(0, 3).map((page) => (
-                            <NavLink
-                                to={page.link}
-                                key={page.page}
-                                onClick={handleCloseNavMenu}
-                                isActive={(match, location) => {
-                                    // Lógica para determinar si el enlace está activo
-                                    return match !== null && match.isExact;
-                                }}
-                                style={{
-                                    color: page.isActive
-                                        ? "#912929"
-                                        : "#6c0bad",
-                                }}
-                            >
-                                {page.page}
-                            </NavLink>
-                        ))}
-                    </Box>
+          {/* menu web */}
+          <Box
+            sx={{
+              flexGrow: 1,
+              display: { xs: "none", md: "flex" },
+              gap: "2rem",
+              fontSize: "0.7rem",
+              textTransform: "uppercase",
+              justifyContent: "end",
+              fontWeight: "bold",
+            }}
+          >
+            {pages.slice(0, 3).map((page) => (
+              <NavLink
+                to={page.link}
+                key={page.page}
+                style={{
+                  color:
+                    location.pathname === page.link ? "#7d7c7e" : "#1c1c1c",
+                }}
+              >
+                {page.page}
+              </NavLink>
+            ))}
+          </Box>
 
-                    {/* logo */}
-                    <Box
-                        sx={{
-                            display: { xs: "none", md: "flex" },
-                            fontFamily: "Elsie, cursive",
-                            letterSpacing: ".3rem",
-                            color: "inherit",
-                            textDecoration: "none",
-                            padding: "0 4rem",
-                        }}
-                    >
-                        {<Logo />}
-                    </Box>
+          {/* logo */}
+          <Box
+            sx={{
+              display: { xs: "none", md: "flex" },
+              fontFamily: "Elsie, cursive",
+              letterSpacing: ".3rem",
+              color: "inherit",
+              textDecoration: "none",
+              padding: "0 4rem",
+            }}
+          >
+            {<Logo />}
+          </Box>
 
-                    {/* menu web */}
-                    <Box
-                        sx={{
-                            flexGrow: 1,
-                            display: { xs: "none", md: "flex" },
-                            gap: "2rem",
-                            fontSize: "0.7rem",
-                            textTransform: "uppercase",
-                            justifyContent: "start",
-                            fontWeight: "bold",
-                        }}
-                    >
-                        {pages.slice(3, 6).map((page) => (
-                            <Box
-                                component={NavLink}
-                                to={`${page.link}`}
-                                key={page.page}
-                                onClick={handleCloseNavMenu}
-                                sx={{ color: "#1c1c1c" }}
-                            >
-                                {page.page}
-                            </Box>
-                        ))}
-                    </Box>
+          {/* menu web */}
+          <Box
+            sx={{
+              flexGrow: 1,
+              display: { xs: "none", md: "flex" },
+              gap: "2rem",
+              fontSize: "0.7rem",
+              textTransform: "uppercase",
+              justifyContent: "start",
+              fontWeight: "bold",
+            }}
+          >
+            {pages.slice(3, 6).map((page) => (
+              <NavLink
+              to={page.link}
+              key={page.page}
+              style={{
+                color:
+                  location.pathname === page.link ? "#7d7c7e" : "#1c1c1c",
+              }}
+            >
+              {page.page}
+            </NavLink>
+            ))}
+          </Box>
 
-                    {/* booknow */}
-                    <Box sx={{ flexGrow: 0 }}>
-                        <Button
-                            key="book-now"
-                            sx={{
-                                my: 2,
-                                backgrounColor: "#74e63bfb4",
-                                display: "block",
-                            }}
-                        >
-                            BOOK NOW
-                        </Button>
-                    </Box>
-                </Toolbar>
-            </Container>
-        </AppBar>
-    );
+          {/* booknow */}
+          <Box
+            sx={{
+              flexGrow: 0,
+            }}
+          >
+            <Button
+              key="book-now"
+              sx={{
+                my: 2,
+                backgroundColor: "#74e63bfb4",
+                display: "block",
+              }}
+            >
+              BOOK NOW
+            </Button>
+          </Box>
+        </Toolbar>
+      </Container>
+    </AppBar>
+  );
 };
