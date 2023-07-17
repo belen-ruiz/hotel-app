@@ -28,6 +28,30 @@ export const features = [
         icon: <LocalBar fontSize="large" />,
         description: "Lorem loremLorem loremLorem loremLorem loremLorem lorem",
     },
+    {
+        id: 5,
+        title: "Pet Friendly",
+        icon: <PetsOutlined fontSize="large" />,
+        description: "Lorem loremLorem loremLorem loremLorem loremLorem lorem",
+    },
+    {
+        id: 6,
+        title: "Gourmet dishes",
+        icon: <DinnerDining fontSize="large" />,
+        description: "Lorem loremLorem loremLorem loremLorem loremLorem lorem",
+    },
+    {
+        id: 7,
+        title: "Free Wifi",
+        icon: <Wifi fontSize="large" />,
+        description: "Lorem loremLorem loremLorem loremLorem loremLorem lorem",
+    },
+    {
+        id: 8,
+        title: "Author cocktails",
+        icon: <LocalBar fontSize="large" />,
+        description: "Lorem loremLorem loremLorem loremLorem loremLorem lorem",
+    },
     
 
 ];

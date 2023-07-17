@@ -1,14 +1,17 @@
-import { Box } from '@mui/material'
-import React from 'react'
+import { Box, Typography } from "@mui/material";
+import React from "react";
 
 export const Logo = () => {
-  return (
-    <Box sx={{color: "#4f4e4e"}}>
-      HOTEL.APP
-    </Box>
-  )
-}
-
-
-
-
+    return (
+        <Typography
+            sx={{
+              fontFamily: "EB Garamond, serif",       
+              fontWeight: 700,
+              fontSize: "1.5rem",
+              color: "#1c1c1c",
+            }}
+        >
+            Las Salinas
+        </Typography>
+    );
+};

@@ -1,51 +1,82 @@
-import { Box } from '@mui/material'
-import { Stack } from '@mui/material'
-import { Typography } from '@mui/material'
-import { Toolbar } from '@mui/material'
-import { Container } from '@mui/material'
-import { features } from "../../utils/features"
-
+import { Box } from "@mui/material";
+import { Stack } from "@mui/material";
+import { Typography } from "@mui/material";
+import { Toolbar } from "@mui/material";
+import { Container } from "@mui/material";
+import { features } from "../../utils/features";
+   
 export const Features = () => {
-  return (
-    <Container sx={{paddingTop: "4rem"}}>
-         <Box 
-            sx={{display: "flex", justifyContent: "center",alignItems:"center" }}>
-            {
-            features.map((feature) => (
-                <Feature key={feature.id} data={feature} />
-            ))    
-            }
-        </Box>
-        
-    </Container>
-  )
-}
+    return (
+        <Container
+            sx={{
+                display: "flex",
+                height: "100vh",
+                justifyContent: "center",
+                alignItems: "center",
+            }}
+        >
+            <Stack
+                sx={{
+                    display: "flex",
+                    alignItems: "center",
+                    gap: "2rem",
+                }}
+            >
+                <p className="subtitle">Enjoy all benefits while you stay</p>
+                <p className="title">Our services</p>
 
+                <Box
+                    sx={{
+                        display: "flex",
+                        justifyContent: "center",
+                        flexWrap: "wrap",
+                    }}
+                >
+                    {features.map((feature) => (
+                        <Box
+                            key={feature.id}
+                            mb={5}
+                            sx={{
+                                flex: "0 0 25%",
+                                maxWidth: "25%",
+                            }}
+                        >
+                            <Feature data={feature} />
+                        </Box>
+                    ))}
+                </Box>
+            </Stack>
+        </Container>
+    );
+};
 
 const Feature = ({ data }) => {
-    const { id, icon, title, description  } = data
+    const { id, icon, title, description } = data;
     return (
-        <Stack 
+        <Stack
             sx={{
                 display: "flex",
                 flexDirection: "column",
                 justifyContent: "center",
                 alignItems: "center",
                 gap: "0.5rem",
-                color:"#4f4e4e"
-            }}>
+                color: "#4f4e4e",
+            }}
+        >
             <Box>{icon}</Box>
-            <Typography 
-                sx={{borderBottom: "2px solid black"}}
-
+            <Typography
                 variant="subtitle2"
-                >{title}</Typography>
-            <Typography 
+            >
+                {title}
+            </Typography>
+            <Typography
                 sx={{
-                    textAlign: "center"
+                    textAlign: "center",
                 }}
                 variant="caption"
-                >{description}</Typography>
+            >
+                {description}
+            </Typography>
         </Stack>
-    )
-}
+    );
+};

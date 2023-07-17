@@ -1,5 +1,5 @@
 import { Stack } from "@mui/material";
-import { Container } from "@mui/material";
+import { Container, Typography } from "@mui/material";
 import { Box } from "@mui/material";
 import React from "react";
 import { useRoomContext } from "../../context/RoomProvider";
@@ -11,33 +11,51 @@ export const RoomItemContainer = ({}) => {
     return (
         <Container
             sx={{
-                overflowX: "scroll",
-                padding: "1rem 0",
-                // height: "100vh",
+                display: "flex",
+                height: "100vh",
+                justifyContent: "center",
+                alignItems: "center",
             }}
         >
-            <Box
-                sx={{
-                    // height: "fit-content",
-                    margin: "2rem",
-                    display: "flex",
-                    gap: "1.5rem",
+            <Container>
+                <Box sx={{ display: "flex" }}>
+                    <Stack
+                        sx={{
+                            gap: 4,
+                        }}
+                    >
+                        <p className="subtitle"> Discover our rooms </p>
+                        <p className="title"> Choose your room </p>
+                    </Stack>
 
-                }}
-            >
-                {rooms &&
-                    rooms.map((room) => (
-                        <Box key={rooms.title}>
-                            {room && (
-                                <RoomItem
-                                    isList={isList}
-                                    setIsList={setIsList}
-                                    rooms={room}
-                                />
-                            )}
+                    {/* scroll */}
+                    <Container
+                        sx={{
+                            overflowX: "scroll",
+                        }}
+                    >
+                        <Box
+                            sx={{
+                                display: "flex",
+                                gap: "1.5rem",
+                            }}
+                        >
+                            {rooms &&
+                                rooms.map((room) => (
+                                    <Box key={rooms.title}>
+                                        {room && (
+                                            <RoomItem
+                                                isList={isList}
+                                                setIsList={setIsList}
+                                                rooms={room}
+                                            />
+                                        )}
+                                    </Box>
+                                ))}
                         </Box>
-                    ))}
-            </Box>
+                    </Container>
+                </Box>
+            </Container>
         </Container>
     );
 };

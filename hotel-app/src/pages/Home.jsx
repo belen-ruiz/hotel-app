@@ -23,14 +23,17 @@ export const Home = () => {
             }}
         >
             <Carrousel />
-            <Features />
 
             <SearchForRoom search={search} />
+
             <RoomItemContainer rooms={rooms} />
 
-            <Testimonials />
+            <Features />
+
             <AboutUs />
-            <Map />
+
+            <Testimonials />
+
         </Container>
     );
 };

@@ -1,6 +1,13 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Elsie:wght@400;900&family=Open+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=EB+Garamond:wght@400;500;700&display=swap');
 
+
+:root{
+  --color-primary: #1c1c1c;
+  --color-secondary: #7d7c7e;
+  --color-secondary-light: #ecedee;
+}
 
 *{
   padding: 0;
@@ -8,13 +15,51 @@
   box-sizing: border-box!important;
   text-decoration: none!important;
   font-family: 'Open Sans', sans-serif;
-  /* font-family: 'Elsie', cursive; */
-
 }
 
+::-webkit-scrollbar {
+  width: 8px; /* Ancho de la barra de desplazamiento */
+}
 
 .link{
   text-decoration: none!important;
-  color: #ca1919;
-  background-color: aqua;
+}
+
+.title{
+  font-family: "EB Garamond, serif";       
+  font-size: 3rem;
+  font-weight: 700;
+  color: var(--color-primary);
+  text-transform: capitalize;
+
+}
+
+.subtitle{
+  font-size: 0.8rem;
+  font-weight: bolder;
+  color: var(--color-secondary);
+  text-transform: uppercase;
+  letter-spacing: 5px;
+}
+
+.sb1{
+  letter-spacing: 0px;
+}
+
+
+.parraph{
+  font-size: 1rem;
+  color: var(--color-primary);
+}
+
+
+.quote{
+  font-style: italic;
+}
+
+.display-grid{
+  display: grid;
+  gap: 2rem;
+  grid-template-columns: repeat(8, 1fr);
+
 }

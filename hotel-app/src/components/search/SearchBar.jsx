@@ -38,19 +38,20 @@ export const SearchBar = ({
                     display: "flex",
                     justifyContent: "space-around",
                     alignItems: "center",
-                    backgroundColor: "#f0efed",
+                    backgroundColor: "var(--color-secondary-light)",                    
                     boxShadow: "10px 10px 35px -21px rgba(69,68,69,1)",
-                    padding: "2rem",
+                    padding: "2.5rem",
                     borderRadius: "10px",
-                }}
-            >
+                    gap: "2rem"
+                }}>
+
                 {searchDates &&
                     searchDates.map(
                         (elem) =>
                             elem && (
                                 <>
                                     <Box key={elem.id}>
-                                        <InputLabel>{elem.label}</InputLabel>
+                                        <p className="subtitle sb1">{elem.label}</p>
                                         <input
                                             type="date"
                                             label={elem.label}
@@ -72,9 +73,10 @@ export const SearchBar = ({
                         (elem) =>
                             elem && (
                                 <>
-                                    <Box key={elem.id}>
-                                        <InputLabel>{elem.label}</InputLabel>
-                                        <Box sx={{ display: "flex" }}>
+                                    <Stack key={elem.id}>
+
+                                        <p className="subtitle sb1">{elem.label}</p>
+                                        <Box sx={{ display: "flex", gap: "1rem" }}>
                                             <Box>
                                                 <BoyRounded />
                                             </Box>
@@ -111,21 +113,20 @@ export const SearchBar = ({
                                                 />
                                             </Box>
                                         </Box>
-                                    </Box>
+                                    </Stack>
                                 </>
                             )
                     )}
 
-
-                <Box sx={{ width: 150 }}>
-                    <Button
-                        onClick={handleClick}
-                        variant="contained"
-                        color="primary"
-                    >
-                        Check Availability
-                    </Button>
-                </Box>
+                                    <Box sx={{ width: 150 }}>
+                                        <Button
+                                            onClick={handleClick}
+                                            variant="contained"
+                                            color="primary"
+                                        >
+                                            Check Availability
+                                        </Button>
+                                    </Box>
             </Box>
         </Container>
     );

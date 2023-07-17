@@ -29,7 +29,7 @@ export const Navbar = () => {
   };
 
   return (
-    <AppBar style={{ backgroundColor: "#ecedee" }} position="sticky">
+    <AppBar style={{ backgroundColor: "var(--color-secondary-light)" }} position="sticky">
       <Banner />
       <Container maxWidth="xl">
         <Toolbar disableGutters>
@@ -83,19 +83,11 @@ export const Navbar = () => {
 
           {/* logo */}
           <Box
-            variant="h5"
             noWrap
             component="a"
             href=""
             sx={{
-              mr: 2,
               display: { xs: "flex", md: "none" },
-              flexGrow: 1,
-              fontFamily: "monospace",
-              fontWeight: 700,
-              letterSpacing: ".3rem",
-              color: "inherit",
-              textDecoration: "none",
             }}
           >
             {<Logo />}

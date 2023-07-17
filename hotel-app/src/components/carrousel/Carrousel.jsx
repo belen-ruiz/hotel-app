@@ -18,7 +18,7 @@ export const Carrousel = () => {
                     zIndex: 99,
                     overflow: "hidden",
                     position: "relative",
-                    height: "50vh",
+                    height: "80vh",
                     width: "100%",
                 }}>
                     <Carousel interval="2000">

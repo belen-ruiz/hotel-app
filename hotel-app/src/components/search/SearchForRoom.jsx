@@ -19,14 +19,18 @@ export const SearchForRoom = ({  }) => {
 
 
     return (
-        <Container >
-            <Stack sx={{ display: "flex", alignItems: "center", paddingTop: "2rem" }}>
-              <Typography variant="subtitle" >
+        <Container sx={{ display: "flex", height: "100vh", justifyContent: "center", alignItems: "center" }}>
+            <Stack sx={{ display: "flex", alignItems: "center", gap: "2rem"}}>
+              <p className="subtitle">
                   Make your reservation
-              </Typography>
-              
+              </p>
+
+              <p className="title">
+                  Reservations
+              </p>
+
               <SearchBar 
-              handleChangeDate={handleChangeDate}
+                handleChangeDate={handleChangeDate}
                 handleSliderChange={handleSliderChange}
                 handleInputChange={handleInputChange}              
                 handleBlur={handleBlur}
