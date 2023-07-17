@@ -30,13 +30,13 @@ export const RoomItem = ({ rooms }) => {
         <Link to={`/room/${title}`}>
             <Card
                 sx={{
-                    width: 300,
+                    width: 400,
                     bgcolor: "initial",
                     boxShadow: "none",
                     "--Card-padding": "0px",
                 }}
             >
-                <Box sx={{  }}>
+                <Box sx={{ height: "100%" }}>
                     <AspectRatio ratio="3/4">
                         <figure>
                             <img src={imgUrl} loading="lazy" alt={title} />
@@ -52,8 +52,8 @@ export const RoomItem = ({ rooms }) => {
                             opacity: 0,
                             transition: "0.1s ease-in",
                             background:
-                                "linear-gradient(0deg, rgba(2,0,36,0.8379551649761467) 0%, #033e4a34 100%); ",
-                            height: "max-content",
+                                "linear-gradient(0deg, #222223d5 0%, #46474734 100%); ",
+                            padding: "1rem"
                         }}>
 
                         {/* The first box acts as a container that inherits style from the CardCover */}
@@ -62,15 +62,13 @@ export const RoomItem = ({ rooms }) => {
                                 height: "100%",
                                 display: "flex",
                                 flexDirection: "column",
-                                top: "1rem",
                             }}
                         >
                             <Typography
                                 variant="h6"
                                 sx={{
                                     color: "#fff",
-                                    alignSelf: "start",
-                                    padding: "2.5rem 0 0 2rem",
+                                    alignSelf: "end",
                                     fontWeight: "bold",
                                     letterSpacing: 1,
                                     marginInline: 0,
@@ -109,7 +107,6 @@ export const RoomItem = ({ rooms }) => {
                                     size="sm"
                                     sx={{
                                         borderRadius: "sm",
-                                        ml: "auto",
                                         display: "flex",
                                     }}
                                 >

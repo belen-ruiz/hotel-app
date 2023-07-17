@@ -3,12 +3,12 @@ import { Box, Toolbar, Container } from '@mui/material'
 import React from 'react'
 import { socialmedia } from "../../utils/socialmedia"
 import { fastcontact } from "../../utils/fastcontact"
-
+  
 
 export const Banner = () => {
 
   return (
-    <Container sx={{ width: "100vw", background: '#fff', zIndex: 999999, padding: "0.1rem"
+    <Container maxWidth="inherit" sx={{ background: '#fff', zIndex: 999999, padding: "0.1rem 0"
   }}>
       <Box sx={{ display: "flex", justifyContent: 'space-between', alignItems: "center", minHeight: "auto", padding: "0.5rem 0"}}>
         {fastcontact.map((data) => (
@@ -18,7 +18,7 @@ export const Banner = () => {
               mr: 2,
               display: { xs: 'none', md: 'flex' },
               fontFamily: 'monospace',
-              color: '#858484',
+              color: "var(--color-secondary)",
               textDecoration: 'underline',
               alignItems: "center",
               gap: 1,
@@ -34,7 +34,7 @@ export const Banner = () => {
         <Box
           sx={{
             display: { xs: 'none', md: 'flex' },
-            color: '#858484',
+            color: "var(--color-secondary)",
             gap: 1,
           }}>
           {socialmedia.map((icon) => (icon))}

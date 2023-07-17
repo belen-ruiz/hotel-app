@@ -30,15 +30,15 @@ export const Features = () => {
                         display: "flex",
                         justifyContent: "center",
                         flexWrap: "wrap",
+                        gap: "2rem"
                     }}
                 >
                     {features.map((feature) => (
                         <Box
                             key={feature.id}
-                            mb={5}
                             sx={{
-                                flex: "0 0 25%",
-                                maxWidth: "25%",
+                                flex: "0 0 20%",
+                                maxWidth: "20%",
                             }}
                         >
                             <Feature data={feature} />

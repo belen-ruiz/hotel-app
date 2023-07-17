@@ -12,7 +12,7 @@ export const RoomItemContainer = ({}) => {
         <Container
             sx={{
                 display: "flex",
-                height: "100vh",
+                height: "80vh",
                 justifyContent: "center",
                 alignItems: "center",
             }}
