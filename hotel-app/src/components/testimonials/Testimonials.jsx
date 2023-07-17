@@ -10,7 +10,7 @@ export const Testimonials = () => {
         <Container
             sx={{
                 display: "flex",
-                height: "100vh",
+                height: "80vh",
                 justifyContent: "center",
                 alignItems: "center",
             }}
@@ -28,22 +28,19 @@ export const Testimonials = () => {
                 <Stack
                     sx={{
                         display: "flex",
+                        width: "80%",
                         alignItems: "center",
                         gap: "1rem"
 
                     }}
                 >
-                    <p className="parraph quote">
-                        "loem cndufciw hi fqhi dhihqi xnjak JKDPOED djadbab,
-                        djoqof jdiqdj. joqfkcpjq, joqfnwfjop. oqeiqoeio
-                        dnihawhfqi jcnjebfuhi snhh jsp ps sjo psps. joqfkcpjq, joqfnwfjop. oqeiqoeio
-                        dnihawhfqi jcnjebfuhi snhh jsp ps sjo psps. joqfkcpjq, joqfnwfjop. oqeiqoeio
-                        dnihawhfqi jcnjebfuhi snhh jsp ps sjo psps."
+                    <p className="testimonials">
+                        "My stay was simply amazing and exceeded all my expectations. The room, elegantly decorated, offered breathtaking views and exceptional comfort. The pool, located right by the shore, was an oasis of relaxation. The staff, friendly, attentive, and helpful at all times, made every effort to provide me with an unforgettable experience. I would highly recommend this hotel without hesitation for a dream vacation by the beach!"
                     </p>
-                    <p className="parraph">
+                    <p className="parraph bold">
                         Bruce Wayne
                     </p>
-                    <p className="parraph">
+                    <p className="parraph italic">
                         Reviewed from TripAdvisor
                     </p>
                     <img
