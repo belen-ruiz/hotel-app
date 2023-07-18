@@ -20,9 +20,9 @@ export const AboutUs = () => {
                             gap: 4,
                             }}
                         >
-                            <p className="subtitle"> a little about us </p>
-                            <p className="title"> the Best place to enjoy life </p>
-                            <p className="parraph">
+                            <p className="subtitle secondary"> a little about us </p>
+                            <p className="title primary"> the Best place to enjoy life </p>
+                            <p className="parraph primary">
                                 the Best place to enjoy life place to enjoy life place
                                 to enjoy life place to enjoy life place to enjoy life
                                 place to enjoy life place to enjoy life place to enjoy

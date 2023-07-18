@@ -17,27 +17,30 @@ export const RoomItemContainer = ({}) => {
                 alignItems: "center",
             }}
         >
-            <Container>
+            <Container sx={{}}>
                 <Box sx={{ display: "flex" }}>
                     <Stack
                         sx={{
                             gap: 4,
                         }}
                     >
-                        <p className="subtitle"> Discover our rooms </p>
-                        <p className="title"> Choose your room </p>
+                        <p className="subtitle secondary"> Discover our rooms </p>
+                        <p className="title primary"> Choose your room </p>
                     </Stack>
 
                     {/* scroll */}
                     <Container
                         sx={{
-                            overflowX: "scroll",
+                            overflowX: "auto",
+                            height: "85%",
+                            maxHeight: "70vh",
                         }}
                     >
                         <Box
                             sx={{
                                 display: "flex",
                                 gap: "1.5rem",
+                                minHeight: "60vh",
                             }}
                         >
                             {rooms &&

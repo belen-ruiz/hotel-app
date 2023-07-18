@@ -25,7 +25,7 @@ export const Footer = () => {
                                     style={{
                                         color:
                                             location.pathname === feet.title
-                                                ? "#fff"
+                                                ? "var(--color-white)"
                                                 : "var(--color-secondary)",
                                     }}
                                 >

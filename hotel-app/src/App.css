@@ -4,6 +4,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&display=swap');
 
 :root{
+  --color-white: #fff;
   --color-primary: #1c1c1c;
   --color-secondary: #7d7c7e;
   --color-secondary-light: #ecedee;
@@ -24,21 +25,40 @@
   text-decoration: none!important;
 }
 
+.white{
+  color: var(--color-white);
+
+}
+
+.primary{
+  color: var(--color-primary);
+}
+
+.secondary{
+  color: var(--color-secondary);
+}
+
+
+.secondary-light{
+  color: var(--color-secondary-light);
+}
+
+
 .title{
   font-family: "EB Garamond, serif";       
   font-size: 3rem;
   font-weight: 700;
-  color: var(--color-primary);
   text-transform: capitalize;
-
 }
+
 
 .subtitle{
   font-size: 0.8rem;
-  font-weight: bolder;
-  color: var(--color-secondary);
+  font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 5px;
+  background-color: var(--color-white);
+  padding: 0.4rem 0.5rem;
 }
 
 .sb1{
@@ -48,7 +68,6 @@
 .testimonials{
   font-size: 1.5rem;
   font-weight: 400;
-  color: var(--color-primary);
   text-transform: lowercase;
   font-style: italic;
   text-align: center;
@@ -59,10 +78,17 @@
   text-transform: uppercase;
 }
 
+.title-2{
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+
+
+
 .parraph{
   font-size: 1rem;
   font-weight: 400;
-  color: var(--color-primary);
   text-transform: lowercase;
 
 }

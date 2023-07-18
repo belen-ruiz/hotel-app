@@ -22,8 +22,8 @@ export const Testimonials = () => {
                     gap: "2rem",
                 }}
             >
-                <p className="subtitle">TESTIMONIALS</p>
-                <p className="title">What our clients say</p>
+                <p className="subtitle secondary">TESTIMONIALS</p>
+                <p className="title primary">What our clients say</p>
 
                 <Stack
                     sx={{

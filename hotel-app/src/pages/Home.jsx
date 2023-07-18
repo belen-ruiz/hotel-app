@@ -24,11 +24,12 @@ export const Home = () => {
         >
             <Carrousel />
 
+            <Features />
+            
             <SearchForRoom search={search} />
 
             <RoomItemContainer rooms={rooms} />
 
-            <Features />
 
             <AboutUs />
 

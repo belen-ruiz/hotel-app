@@ -51,7 +51,7 @@ export const SearchBar = ({
                             elem && (
                                 <>
                                     <Box key={elem.id}>
-                                        <p className="subtitle sb1">{elem.label}</p>
+                                        <p className="title-2 primary">{elem.label}</p>
                                         <input
                                             type="date"
                                             label={elem.label}
@@ -75,7 +75,7 @@ export const SearchBar = ({
                                 <>
                                     <Stack key={elem.id}>
 
-                                        <p className="subtitle sb1">{elem.label}</p>
+                                        <p className="title-2 primary">{elem.label}</p>
                                         <Box sx={{ display: "flex", gap: "1rem" }}>
                                             <Box>
                                                 <BoyRounded />

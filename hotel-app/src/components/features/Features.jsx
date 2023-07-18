@@ -10,7 +10,7 @@ export const Features = () => {
         <Container
             sx={{
                 display: "flex",
-                height: "100vh",
+                height: "80vh",
                 justifyContent: "center",
                 alignItems: "center",
             }}
@@ -22,8 +22,8 @@ export const Features = () => {
                     gap: "2rem",
                 }}
             >
-                <p className="subtitle">Enjoy all benefits while you stay</p>
-                <p className="title">Our services</p>
+                <p className="subtitle secondary">Enjoy all benefits while you stay</p>
+                <p className="title primary">Our services</p>
 
                 <Box
                     sx={{

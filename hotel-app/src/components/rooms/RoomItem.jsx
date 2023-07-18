@@ -30,7 +30,7 @@ export const RoomItem = ({ rooms }) => {
         <Link to={`/room/${title}`}>
             <Card
                 sx={{
-                    width: 400,
+                    width: 300,
                     bgcolor: "initial",
                     boxShadow: "none",
                     "--Card-padding": "0px",
@@ -53,41 +53,66 @@ export const RoomItem = ({ rooms }) => {
                             transition: "0.1s ease-in",
                             background:
                                 "linear-gradient(0deg, #222223d5 0%, #46474734 100%); ",
-                            padding: "1rem"
-                        }}>
-
+                            padding: "1rem",
+                        }}
+                    >
                         {/* The first box acts as a container that inherits style from the CardCover */}
                         <Box
                             sx={{
                                 height: "100%",
                                 display: "flex",
                                 flexDirection: "column",
+                                gap: "1.5rem"
                             }}
                         >
-                            <Typography
-                                variant="h6"
-                                sx={{
-                                    color: "#fff",
-                                    alignSelf: "end",
-                                    fontWeight: "bold",
-                                    letterSpacing: 1,
-                                    marginInline: 0,
-                                }}
-                            >
-                                {title}
-                            </Typography>
+                            <p className="title-2 ">{title}</p>
 
                             <Box
                                 sx={{
                                     display: "flex",
                                     flexDirection: "column",
-                                    justifyContent: "end",
-                                    alignItems: "end",
-                                    gap: "1rem",
-                                    alignSelf: "end",
-                                }}
-                            >
-                                <Box sx={{ ml: "auto" }}>
+                                    gap: "1rem"}}>
+
+                                <Box
+                                    sx={{
+                                        border: "1px solid white",
+                                        borderRadius: "10px",
+                                        display: "flex",
+                                        margin: "auto"
+                                    }}>
+                                    {capacity && (
+                                        <Box>
+                                            {Array(capacity)
+                                                .fill()
+                                                .map((_, index) => (
+                                                    <BoyRounded
+                                                        key={capacity}
+                                                        style={{
+                                                            color: "var(--color-white)",
+                                                            fontSize: "2rem"
+                                                        }}
+                                                    />
+                                                ))}
+                                        </Box>
+                                    )}
+                                    ;
+                                </Box>
+
+                                <Stack>
+                                    <p className="title secondary-light">
+                                        $ {price}
+                                    </p>
+
+                                    <p className="parraph secondary-light">
+                                        person per night
+                                    </p>
+                                </Stack>
+
+                                <Button variant="contained" color="primary">
+                                    RESERVATION
+                                </Button>
+
+                                <Box sx={{ }}>
                                     <IconButton size="sm" color="neutral">
                                         <Favorite />
                                     </IconButton>
@@ -95,55 +120,11 @@ export const RoomItem = ({ rooms }) => {
                                     <IconButton
                                         size="sm"
                                         color="neutral"
-                                        sx={{ ml: "0.5rem" }}
+                                        sx={{ }}
                                     >
                                         <CreateNewFolder />
                                     </IconButton>
                                 </Box>
-
-                                <Chip
-                                    variant="outlined"
-                                    color="neutral"
-                                    size="sm"
-                                    sx={{
-                                        borderRadius: "sm",
-                                        display: "flex",
-                                    }}
-                                >
-                                    {capacity && (
-                                        <div>
-                                            {Array(capacity)
-                                                .fill()
-                                                .map((_, index) => (
-                                                    <BoyRounded
-                                                        key={capacity}
-                                                        style={{
-                                                            color: "#fff",
-                                                        }}
-                                                    />
-                                                ))}
-                                        </div>
-                                    )}
-                                    ;
-                                </Chip>
-
-                                <Stack>
-                                    <Typography
-                                        sx={{ fontSize: "5rem", color: "#fff" }}
-                                    >
-                                        $ {price}
-                                    </Typography>
-
-                                    <FormHelperText
-                                        sx={{ color: "#fff", alignSelf: "end" }}
-                                    >
-                                        person per night
-                                    </FormHelperText>
-                                </Stack>
-
-                                <Button variant="contained" color="primary">
-                                    RESERVATION
-                                </Button>
                             </Box>
                         </Box>
                     </CardCover>
