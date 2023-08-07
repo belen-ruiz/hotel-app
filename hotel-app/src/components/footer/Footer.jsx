@@ -11,7 +11,7 @@ export const Footer = () => {
     const location = useLocation();
 
     return (
-        <Container sx={{ backgroundColor: "var(--color-primary)", padding: "2rem" }}>
+        <Container  maxWidth="xl" sx={{ backgroundColor: "var(--color-primary)", padding: "2rem" }}>
             <Grid container spacing={2}>
                 <Grid item xs={6}>
                     <Grid

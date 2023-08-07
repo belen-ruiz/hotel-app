@@ -30,7 +30,6 @@ export const Home = () => {
 
             <RoomItemContainer rooms={rooms} />
 
-
             <AboutUs />
 
             <Testimonials />
