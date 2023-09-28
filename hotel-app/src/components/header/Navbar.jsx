@@ -8,13 +8,14 @@ import Typography from "@mui/material/Typography";
 import Menu from "@mui/material/Menu";
 import MenuIcon from "@mui/icons-material/Menu";
 import Container from "@mui/material/Container";
-import Button from "@mui/material/Button";
 import Tooltip from "@mui/material/Tooltip";
 import MenuItem from "@mui/material/MenuItem";
 import { Logo } from "./Logo";
 import { pages } from "../../utils/pages";
 import { Link, NavLink } from "react-router-dom";
 import { Banner } from "../banner/Banner";
+import { Buttons } from "../button/Buttons"
+
 
 export const Navbar = () => {
   const [anchorElNav, setAnchorElNav] = useState(null);
@@ -29,7 +30,7 @@ export const Navbar = () => {
   };
 
   return (
-    <AppBar style={{ backgroundColor: "var(--color-secondary-light)" }} position="sticky">
+    <AppBar style={{ backgroundColor: "var(--color-white)" }} position="sticky">
       <Banner />
       <Container maxWidth="xl">
         <Toolbar disableGutters>
@@ -125,12 +126,11 @@ export const Navbar = () => {
               display: { xs: "none", md: "flex" },
               fontFamily: "Elsie, cursive",
               letterSpacing: ".3rem",
-              color: "inherit",
               textDecoration: "none",
               padding: "0 4rem",
             }}
           >
-            {<Logo />}
+            {<Logo colorLogo={"#1c1c1c"}/>}
           </Box>
 
           {/* menu web */}
@@ -165,16 +165,8 @@ export const Navbar = () => {
               flexGrow: 0,
             }}
           >
-            <Button
-              key="book-now"
-              sx={{
-                my: 2,
-                backgroundColor: "#74e63bfb4",
-                display: "block",
-              }}
-            >
-              BOOK NOW
-            </Button>
+
+            <Buttons data={"book now"}/>
           </Box>
         </Toolbar>
       </Container>

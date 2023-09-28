@@ -6,13 +6,16 @@ import Container from "@mui/material/Container";
 import Grid from "@mui/material/Grid";
 import { footer } from "../../utils/footer";
 import { Link, NavLink } from "react-router-dom";
+import { Logo } from "../header/Logo";
 
 export const Footer = () => {
     const location = useLocation();
 
     return (
-        <Container  maxWidth="xl" sx={{ backgroundColor: "var(--color-primary)", padding: "2rem" }}>
-            <Grid container spacing={2}>
+        <Container  maxWidth="xl" sx={{ backgroundColor: "var(--color-primary)", padding: "3rem" }}>
+            <Grid container spacing={2} margin={0} padding={2} >
+                
+                {/* col 2 */}
                 <Grid item xs={6}>
                     <Grid
                         container
@@ -36,8 +39,10 @@ export const Footer = () => {
                     </Grid>
                 </Grid>
 
-                <Grid item xs={6}>
-                    fsfsf
+
+                {/* col 2 */}
+                <Grid item xs={6} sx={{display: "flex", justifyContent: "end", alignItems: "end"}}>
+                    <Logo colorLogo={"#e8e2e2"}/>
                 </Grid>
             </Grid>
         </Container>
