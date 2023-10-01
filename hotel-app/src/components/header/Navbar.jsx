@@ -10,11 +10,11 @@ import MenuIcon from "@mui/icons-material/Menu";
 import Container from "@mui/material/Container";
 import Tooltip from "@mui/material/Tooltip";
 import MenuItem from "@mui/material/MenuItem";
-import { Logo } from "./Logo";
 import { pages } from "../../utils/pages";
 import { Link, NavLink } from "react-router-dom";
 import { Banner } from "../banner/Banner";
 import { Buttons } from "../button/Buttons"
+import { Logo } from "../logo/Logo";
 
 
 export const Navbar = () => {
@@ -31,7 +31,6 @@ export const Navbar = () => {
 
   return (
     <AppBar style={{ backgroundColor: "var(--color-white)" }} position="sticky">
-      <Banner />
       <Container maxWidth="xl">
         <Toolbar disableGutters>
           {/* menu  */}
@@ -52,6 +51,8 @@ export const Navbar = () => {
             >
               <MenuIcon />
             </IconButton>
+
+            
             <Menu
               id="menu-appbar"
               anchorEl={anchorElNav}
@@ -84,14 +85,23 @@ export const Navbar = () => {
 
           {/* logo */}
           <Box
-            noWrap
             component="a"
             href=""
             sx={{
               display: { xs: "flex", md: "none" },
-            }}
+            }} 
           >
             {<Logo />}
+          </Box>
+
+          {/* logo */}
+          <Box
+            sx={{
+              display: { xs: "none", md: "flex" },
+              padding: "0 4rem",
+            }}
+          >
+             {<Logo />}
           </Box>
 
           {/* menu web */}
@@ -104,48 +114,10 @@ export const Navbar = () => {
               textTransform: "uppercase",
               justifyContent: "end",
               fontWeight: "bold",
+              padding: "0rem 2rem"
             }}
           >
-            {pages.slice(0, 3).map((page) => (
-              <NavLink
-                to={page.link}
-                key={page.page}
-                style={{
-                  color:
-                    location.pathname === page.link ? "#7d7c7e" : "#1c1c1c",
-                }}
-              >
-                {page.page}
-              </NavLink>
-            ))}
-          </Box>
-
-          {/* logo */}
-          <Box
-            sx={{
-              display: { xs: "none", md: "flex" },
-              fontFamily: "Elsie, cursive",
-              letterSpacing: ".3rem",
-              textDecoration: "none",
-              padding: "0 4rem",
-            }}
-          >
-            {<Logo colorLogo={"#1c1c1c"}/>}
-          </Box>
-
-          {/* menu web */}
-          <Box
-            sx={{
-              flexGrow: 1,
-              display: { xs: "none", md: "flex" },
-              gap: "2rem",
-              fontSize: "0.7rem",
-              textTransform: "uppercase",
-              justifyContent: "start",
-              fontWeight: "bold",
-            }}
-          >
-            {pages.slice(3, 6).map((page) => (
+            {pages.map((page) => (
               <NavLink
               to={page.link}
               key={page.page}
@@ -166,7 +138,7 @@ export const Navbar = () => {
             }}
           >
 
-            <Buttons data={"book now"}/>
+            <Buttons data={"book now"} />
           </Box>
         </Toolbar>
       </Container>

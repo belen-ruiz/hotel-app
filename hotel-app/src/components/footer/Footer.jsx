@@ -6,7 +6,7 @@ import Container from "@mui/material/Container";
 import Grid from "@mui/material/Grid";
 import { footer } from "../../utils/footer";
 import { Link, NavLink } from "react-router-dom";
-import { Logo } from "../header/Logo";
+import { Logo } from "../logo/Logo";
 
 export const Footer = () => {
     const location = useLocation();
