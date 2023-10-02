@@ -38,7 +38,6 @@ export const RoomProvider = ({ children }) => {
 
     const handleClick = () => {
         setTotalGuests(total);
-        console.log("hola")
         //setTotalSelect([[totalGuests], [totalDate]]);       okkkk     
     };
 

@@ -69,14 +69,7 @@ const Feature = ({ data }) => {
             >
                 {title}
             </Typography>
-            <Typography
-                sx={{
-                    textAlign: "center",
-                }}
-                variant="caption"
-            >
-                {description}
-            </Typography>
+            
         </Stack>
     );
 };

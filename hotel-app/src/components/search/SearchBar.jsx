@@ -124,15 +124,7 @@ export const SearchBar = ({
                                             data={"check availability"}
                                              />
                                     </Box>
-                                    <Box sx={{ width: 150 }}>
-                                        <Button
-                                            onClick={handleClick}
-                                            variant="contained"
-                                            color="primary"
-                                        >
-                                            Check Availability
-                                        </Button>
-                                    </Box>
+                                    
             </Box>
         </Container>
     );

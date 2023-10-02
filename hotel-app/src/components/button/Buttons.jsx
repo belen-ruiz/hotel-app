@@ -8,17 +8,19 @@ import Stack from '@mui/material/Stack';
 
 const BookButtonStyled = styled(Button)({
   boxShadow: 'none',
-  textTransform: 'none',
+  textTransform: 'uppercase',
   fontSize: 16,
   padding: '6px 12px',
-  border: '1px solid',
   lineHeight: 1.5,
   backgroundColor: '#b47201',  
+  transform: "scale(1)",
+  transition: "transform 0.3s ease",
 
   '&:hover': {
-    backgroundColor: '#b47201a4',
+    backgroundColor: '#b47201',
     borderColor: 'none',
-    boxShadow: "10px 10px 35px -21px rgba(69,68,69,1)",
+    boxShadow: "30px #454544",
+    transform: "scale(1.1)"
   },
 //   '&:active': {
 //     // boxShadow: 'none',
@@ -28,6 +30,8 @@ const BookButtonStyled = styled(Button)({
 //   '&:focus': {
 //     boxShadow: '0 0 0 0.2rem rgba(0,123,255,.5)',  },
 });
+
+
 
 
 export const Buttons = ({ data }) => {
