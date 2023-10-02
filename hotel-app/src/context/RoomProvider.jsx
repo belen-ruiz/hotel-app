@@ -38,6 +38,7 @@ export const RoomProvider = ({ children }) => {
 
     const handleClick = () => {
         setTotalGuests(total);
+        console.log("hola")
         //setTotalSelect([[totalGuests], [totalDate]]);       okkkk     
     };
 
@@ -64,14 +65,17 @@ export const RoomProvider = ({ children }) => {
         }
     };
 
-    const handleSliderChange = (e, value) => {
+
+    const handleSliderChange = (e) => {
         const id = e.target.id
         if (id === "adults") {
-            setAdults(value);
+            setAdults(e.target.value === "" ? "" : Number(e.target.value));
         } else if (id === "kids"){
-            setKids(value);
+            setKids(e.target.value === "" ? "" : Number(e.target.value));
         }
+
     };
+
 
     const handleInputChange = (e) => {
         const id = e.target.id

@@ -14,51 +14,44 @@ export const RoomItemContainer = ({}) => {
                 display: "flex",
                 height: "80vh",
                 justifyContent: "center",
-                alignItems: "center",
-            }}
-        >
-            <Container sx={{}}>
-                <Box sx={{ display: "flex" }}>
-                    <Stack
-                        sx={{
-                            gap: 4,
-                        }}
-                    >
-                        <p className="subtitle secondary"> Discover our rooms </p>
-                        <p className="title primary"> Choose your room </p>
-                    </Stack>
+                alignItems: "center" }}>
+            <Box sx={{ display: "flex" }}>
+                <Stack
+                    sx={{
+                        gap: 4,
+                    }}>
+                    <p className="subtitle secondary"> Discover our rooms </p>
+                    <p className="title primary"> Choose your room </p>
+                </Stack>
 
-                    {/* scroll */}
-                    <Container
+                {/* scroll */}
+                <Container
+                    sx={{
+                        overflowX: "auto",
+                        height: "85%",
+                        maxHeight: "70vh"}} >
+                    <Box
                         sx={{
-                            overflowX: "auto",
-                            height: "85%",
-                            maxHeight: "70vh",
+                            display: "flex",
+                            gap: "1.5rem",
+                            minHeight: "60vh",
                         }}
                     >
-                        <Box
-                            sx={{
-                                display: "flex",
-                                gap: "1.5rem",
-                                minHeight: "60vh",
-                            }}
-                        >
-                            {rooms &&
-                                rooms.map((room) => (
-                                    <Box key={rooms.title}>
-                                        {room && (
-                                            <RoomItem
-                                                isList={isList}
-                                                setIsList={setIsList}
-                                                rooms={room}
-                                            />
-                                        )}
-                                    </Box>
-                                ))}
-                        </Box>
-                    </Container>
-                </Box>
-            </Container>
+                        {rooms &&
+                            rooms.map((room) => (
+                                <Box key={rooms.title}>
+                                    {room && (
+                                        <RoomItem
+                                            isList={isList}
+                                            setIsList={setIsList}
+                                            rooms={room}
+                                        />
+                                    )}
+                                </Box>
+                            ))}
+                    </Box>
+                </Container>
+            </Box>
         </Container>
     );
 };

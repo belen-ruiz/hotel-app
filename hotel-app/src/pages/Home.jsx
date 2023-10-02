@@ -25,11 +25,11 @@ export const Home = () => {
             <Carrousel />
 
             <Features />
-            
-            <SearchForRoom search={search} />
 
             <RoomItemContainer rooms={rooms} />
 
+            <SearchForRoom search={search} />
+            
             <AboutUs />
 
             <Testimonials />

@@ -30,7 +30,7 @@ export const Navbar = () => {
   };
 
   return (
-    <AppBar style={{ backgroundColor: "var(--color-white)" }} position="sticky">
+    <AppBar sx={{ backgroundColor: "transparent" }} position="sticky">
       <Container maxWidth="xl">
         <Toolbar disableGutters>
           {/* menu  */}

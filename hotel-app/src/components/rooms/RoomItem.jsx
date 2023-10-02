@@ -1,20 +1,17 @@
 import React from "react";
 
 import AspectRatio from "@mui/joy/AspectRatio";
-import Avatar from "@mui/joy/Avatar";
 import Box from "@mui/joy/Box";
 import Card from "@mui/joy/Card";
 import CardCover from "@mui/joy/CardCover";
-import Chip from "@mui/joy/Chip";
 import IconButton from "@mui/joy/IconButton";
 import Typography from "@mui/joy/Typography";
 import Favorite from "@mui/icons-material/Favorite";
 import CreateNewFolder from "@mui/icons-material/CreateNewFolder";
 import { BoyRounded } from "@mui/icons-material";
-import { Button } from "@mui/material";
 import { Stack } from "@mui/material";
-import FormHelperText from "@mui/material/FormHelperText";
 import { Link } from "react-router-dom";
+import { Buttons } from "../button/Buttons";
 
 export const RoomItem = ({ rooms }) => {
     const title = rooms.title;
@@ -106,11 +103,10 @@ export const RoomItem = ({ rooms }) => {
                                     <p className="parraph secondary-light">
                                         person per night
                                     </p>
+                                    <Buttons data={"See more info"} />
                                 </Stack>
 
-                                <Button variant="contained" color="primary">
-                                    RESERVATION
-                                </Button>
+                                
 
                                 <Box sx={{ }}>
                                     <IconButton size="sm" color="neutral">

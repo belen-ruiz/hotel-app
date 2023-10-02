@@ -6,41 +6,43 @@ import Stack from '@mui/material/Stack';
 
 
 
-const BootstrapButton = styled(Button)({
+const BookButtonStyled = styled(Button)({
   boxShadow: 'none',
   textTransform: 'none',
   fontSize: 16,
   padding: '6px 12px',
   border: '1px solid',
   lineHeight: 1.5,
-  backgroundColor: '#f39d09',
-  borderColor: '#0063cc',
-  
+  backgroundColor: '#b47201',  
 
   '&:hover': {
-    backgroundColor: '#0069d9',
-    borderColor: '#0062cc',
-    boxShadow: 'none',
+    backgroundColor: '#b47201a4',
+    borderColor: 'none',
+    boxShadow: "10px 10px 35px -21px rgba(69,68,69,1)",
   },
-  '&:active': {
-    boxShadow: 'none',
-    backgroundColor: '#0062cc',
-    borderColor: '#005cbf',
-  },
-  '&:focus': {
-    boxShadow: '0 0 0 0.2rem rgba(0,123,255,.5)',
-  },
+//   '&:active': {
+//     // boxShadow: 'none',
+//     backgroundColor: '#0062cc',
+//     borderColor: 'none',
+//   },
+//   '&:focus': {
+//     boxShadow: '0 0 0 0.2rem rgba(0,123,255,.5)',  },
 });
 
 
-export default function CustomizedButtons() {
-  return (
-    <Stack spacing={2} direction="row">
-      <BootstrapButton variant="contained">Custom CSS</BootstrapButton>
-      
-    </Stack>
-  );
-}
+export const Buttons = ({ data }) => {
+    return (
+        <>
+            <BookButtonStyled
+                variant="contained">
+                {data}
+            </BookButtonStyled>
+            
+        </>
+    );
+};
+
+
 
 // const theme = createTheme({
 //     palette: {
@@ -55,27 +57,3 @@ export default function CustomizedButtons() {
 // //         // white: '#fff',
 //     },
 //   });
-
-
-export const Buttons = ({ data }) => {
-    return (
-        <>
-            <Button
-                variant="contained"
-                //color={"hightlight"}
-                sx={{
-                    my: 2,
-                    //backgroundColor: "primary",
-                    display: "block",
-                    //color: "var--(color-white)",
-                }}
-                onClick={() => {
-                    alert("clicked");
-                }}
-            >
-                {data}
-            </Button>
-            <BootstrapButton variant="contained">Custom CSS</BootstrapButton>
-        </>
-    );
-};

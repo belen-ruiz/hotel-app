@@ -36,7 +36,7 @@
 }
 
 .secondary{
-  color: var(--color-secondary);
+  color: var(--color-white);
 }
 
 
@@ -58,7 +58,7 @@
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 5px;
-  background-color: var(--color-white);
+  background-color: var(--color-highlight);
   padding: 0.4rem 0.5rem;
 }
 

@@ -23,6 +23,7 @@ import CardContent from '@mui/joy/CardContent';
 import CardOverflow from '@mui/joy/CardOverflow';
 import Divider from '@mui/joy/Divider';
 import { Container } from "@mui/material";
+import { Buttons } from "../button/Buttons";
 
 export const RoomItemList = ({ rooms, isList, setIsList }) => {
     const title = rooms.title;
@@ -188,10 +189,9 @@ export const RoomItemList = ({ rooms, isList, setIsList }) => {
                                                 p p night
                                             </FormHelperText>
                                     
-                                    
-                                        <Button variant="contained" color="primary" sx={{alignSelf: isList? "end" : "start", }}>
-                                            RESERVATION
-                                        </Button>
+                                        <Buttons data={"RESERVATION"} sx={{alignSelf: isList? "end" : "start", }}/>
+                                        
+                                          
                                     </Stack>
                                 </Box>
                             </Box>
