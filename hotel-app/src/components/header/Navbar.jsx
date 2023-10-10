@@ -60,7 +60,7 @@ export const Navbar = () => {
             style={ navbarStyle }>
             <Container maxWidth="xl">
                 <Toolbar disableGutters>
-                    {/* menu  */}
+                    {/* menu mobile */}
                     <Box
                         sx={{
                             flexGrow: 1,
@@ -145,8 +145,12 @@ export const Navbar = () => {
                                 style={{
                                     color:
                                         location.pathname === page.link
-                                            ? "#ecebed"
+                                            ? "#4e4e4ee2"
                                             : "#7d7c7e",
+                                    textDecoration:
+                                    location.pathname === page.link
+                                            ? "underline"
+                                            : "none",
                                 }}
                             >
                                 {page.page}

@@ -1,6 +1,7 @@
 import React from "react";
 
 import { Typography, Container, Box } from "@mui/material";
+import { Button } from "@mui/material";
 
 const bgImg =
     "https://images.pexels.com/photos/6129991/pexels-photo-6129991.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1";
@@ -49,7 +50,8 @@ export const Intro = () => {
                 }}>
                 <Typography variant="h3">AURORA MONTAIN </Typography>
                 <Typography variant="subtitle2">É muito fácil revelar na FotoRegistro! As fotos podem ser enviadas tanto do seu celular quanto do computador. Faça login no site, escolha suas fotos e receba em casa. </Typography>
-                <Typography variant="subtitle1">Your favorite choice </Typography>
+                <Button variant="outlined"> Contact us </Button>
+                
             </Box>
         </Container>
     );
