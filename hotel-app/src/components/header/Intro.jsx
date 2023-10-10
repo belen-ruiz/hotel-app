@@ -12,6 +12,8 @@ export const Intro = () => {
             sx={{
                 padding: { xs: 0, md: 0 },
                 display: "grid",
+                width: "100%",
+                height: "100vh",
                 position: "relative",
                 }}>
 

@@ -15,22 +15,23 @@ export const Features = () => {
                 alignItems: "center",
             }}
         >
-            <Stack
-                sx={{
+            <Stack spacing={6}>
+                <Stack spacing={1} sx={{
                     display: "flex",
                     alignItems: "center",
-                    gap: "2rem",
-                }}
-            >
-                <p className="subtitle secondary">Enjoy all benefits while you stay</p>
-                <p className="title primary">Our services</p>
+                }}>
+                    <p className="subtitle secondary">Enjoy all benefits while you stay</p>
+                    
+                    <p className="title primary">Our services</p>
+                    
+                    <p className="parraph primary">Enjoy all benefits while you stay</p>
+                </Stack>
 
-                <Box
-                    sx={{
+                <Box  sx={{
                         display: "flex",
                         justifyContent: "center",
                         flexWrap: "wrap",
-                        gap: "2rem"
+                        gap: "2rem 1rem"
                     }}
                 >
                     {features.map((feature) => (
