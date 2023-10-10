@@ -2,10 +2,6 @@ import { useRoutes } from 'react-router-dom'
 import { Error404 } from '../pages/Error404'
 import { Home } from '../pages/Home'
 import { Rooms } from '../pages/Rooms'
-import { Amenities } from '../pages/Amenities'
-import { Gallery } from '../pages/Gallery'
-import { Contact } from '../pages/Contact'
-import { Reservations } from '../pages/Reservations'
 import { RoomDetails } from '../pages/RoomDetails'
 
 
@@ -36,28 +32,28 @@ export const allRoutes = () => {
             element: <RoomDetails />
         },
         {
-            path:"/amenities",
+            path:"/home",
             label: "amenities",
             exact: true,
-            element: <Amenities />
+            element: <Home />
         },
         {
-            path:"/amenities",
+            path:"/home",
             label: "amenities",
             exact: true,
-            element: <Gallery />
+            element: <Home />
         },
         {
-            path:"/contact",
+            path:"/home",
             label: "booking",
             exact: true,
-            element: <Contact />
+            element: <Home />
         },
         {
-            path:"/booking",
+            path:"/home",
             label: "booking",
             exact: true,
-            element: <Reservations />
+            element: <Home />
         },
        
         {
