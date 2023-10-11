@@ -1,18 +1,19 @@
 import React from "react";
 
-import { Typography, Container, Box } from "@mui/material";
+import { Typography, Container, Box, Stack } from "@mui/material";
 import { Button } from "@mui/material";
 
 const bgImg =
-    "https://images.pexels.com/photos/6129991/pexels-photo-6129991.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1";
+    "https://images.pexels.com/photos/17488420/pexels-photo-17488420/free-photo-of-madera-paisaje-agua-apple.jpeg";
 
 export const Intro = () => {
     return (
         <Container
+        maxWidth="none"
             sx={{
                 padding: { xs: 0, md: 0 },
                 display: "grid",
-                width: "100%",
+                width: "100vw",
                 height: "100vh",
                 position: "relative",
                 }}>
@@ -22,31 +23,33 @@ export const Intro = () => {
                 sx={{
                     overflow: "hidden",
                     position: "absolute",
-                    height: "100vh",
+                    height: "100%",
                     width: "100%"}}>
                 <img
                     src={bgImg}
                     alt="imgHotel"
+                    style={{ width: '100%', height: '100%', objectFit: 'cover' }}
                     // sx={{
                     //     top: "0",
                     // }}
                 />
             </Box>
 
+
             {/* text box */}
-            <Box
+            
+            <Stack
                 sx={{
-                    height: "33vh",
-                    width: "50%",
-                    zIndex: 1,
-                    position: "absolute",
-                    top: 100,
-                    left: 250,
-                    display: "flex",
-                    flexDirection: "column",
+                    width: "100%",
+                            top: "50%",
+                            display: "flex",
+                            //left: "1rem",
+                            position: "absolute",
+
+                        //height: "33vh",
+                        zIndex: 1,
                     justifyContent: "center",
                     alignItems: "center",
-                    alignSelf: "center",
                     gap: "0,8rem",
                     color: "white",
                 }}>
@@ -54,7 +57,7 @@ export const Intro = () => {
                 <Typography variant="subtitle2">É muito fácil revelar na FotoRegistro! As fotos podem ser enviadas tanto do seu celular quanto do computador. Faça login no site, escolha suas fotos e receba em casa. </Typography>
                 <Button variant="outlined"> Contact us </Button>
                 
-            </Box>
+            </Stack>
         </Container>
     );
 };

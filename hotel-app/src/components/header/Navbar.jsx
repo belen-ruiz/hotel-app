@@ -30,13 +30,14 @@ export const Navbar = () => {
     };
 
     const navbarStyle = {
-      backgroundColor: scrolling ? 'white' : 'transparent',
-      //transition: 'background-color 0.3s ease',
+      backgroundColor: 'transparent',
+      backdropFilter: scrolling ? 'blur(10px)' : 'none',
+      transition: 'background-color 0.3s ease',
       paddingTop: "1rem",
       zIndex: 1,
       margin: 0
-
     };
+
 
 
     useEffect(() => {
@@ -143,14 +144,12 @@ export const Navbar = () => {
                                 to={page.link}
                                 key={page.page}
                                 style={{
+                                    
                                     color:
                                         location.pathname === page.link
-                                            ? "#4e4e4ee2"
-                                            : "#7d7c7e",
-                                    textDecoration:
-                                    location.pathname === page.link
-                                            ? "underline"
-                                            : "none",
+                                            ? "#f5f1f1fb"
+                                            : "rgb(199, 198, 199)",
+                                    
                                 }}
                             >
                                 {page.page}

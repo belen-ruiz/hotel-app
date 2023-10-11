@@ -60,6 +60,7 @@
   letter-spacing: 5px;
   background-color: var(--color-highlight);
   padding: 0.4rem 0.5rem;
+  margin-bottom: 0.3rem;
 }
 
 .sb1{
@@ -91,6 +92,7 @@
   font-size: 1rem;
   font-weight: 400;
   text-transform: lowercase;
+  margin: 0;
 
 }
 
