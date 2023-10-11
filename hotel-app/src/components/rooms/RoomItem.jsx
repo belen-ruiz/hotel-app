@@ -24,108 +24,79 @@ export const RoomItem = ({ rooms }) => {
     const imgUrl = rooms.imgUrl;
 
     return (
-        <Link to={`/room/${title}`}>
-            <Card
+        <Card
+            sx={{
+                width: 300,
+                "--Card-padding": "0px"}}>
+            <AspectRatio ratio="3/4" sx={{borderRadius: 0}} >
+                <figure>
+                    <img src={imgUrl} loading="lazy" alt={title} />
+                </figure>
+            </AspectRatio>
+
+            <CardCover
+                className="gradient-cover"
                 sx={{
-                    width: 300,
-                    bgcolor: "initial",
-                    boxShadow: "none",
-                    "--Card-padding": "0px",
-                }}
-            >
-                <Box sx={{ height: "100%" }}>
-                    <AspectRatio ratio="3/4">
-                        <figure>
-                            <img src={imgUrl} loading="lazy" alt={title} />
-                        </figure>
-                    </AspectRatio>
-
-                    <CardCover
-                        className="gradient-cover"
+                    "&:hover, &:focus-within": {opacity: 1},
+                    display: "flex",
+                    opacity: 0,
+                    transition: "0.2s ease-in",
+                    background: "linear-gradient(0deg, #222223d5 0%, #46474734 100%);",
+                    height: "100%",
+                    }}>
+                    {/* The first box acts as a container that inherits style from the CardCover */}
+                    <Stack spacing={1}
                         sx={{
-                            "&:hover, &:focus-within": {
-                                opacity: 1,
-                            },
-                            opacity: 0,
-                            transition: "0.1s ease-in",
-                            background:
-                                "linear-gradient(0deg, #222223d5 0%, #46474734 100%); ",
+                            display: "flex",
+                            height: "100%",                            
                             padding: "1rem",
-                        }}
-                    >
-                        {/* The first box acts as a container that inherits style from the CardCover */}
-                        <Box
-                            sx={{
-                                height: "100%",
-                                display: "flex",
-                                flexDirection: "column",
-                                gap: "1.5rem"
-                            }}
-                        >
-                            <p className="title-2 ">{title}</p>
+                            display: "flex",
+                            justifyContent: "space-between",
 
-                            <Box
-                                sx={{
-                                    display: "flex",
-                                    flexDirection: "column",
-                                    gap: "1rem"}}>
-
-                                <Box
-                                    sx={{
+                            }}>
+                            
+                            {/* capacidad */}
+                            {capacity && (
+                            <Box sx={{
                                         border: "1px solid white",
-                                        borderRadius: "10px",
+                                        borderRadius: 0,
                                         display: "flex",
-                                        margin: "auto"
                                     }}>
-                                    {capacity && (
-                                        <Box>
-                                            {Array(capacity)
-                                                .fill()
-                                                .map((_, index) => (
-                                                    <BoyRounded
-                                                        key={capacity}
-                                                        style={{
-                                                            color: "var(--color-white)",
-                                                            fontSize: "2rem"
-                                                        }}
-                                                    />
-                                                ))}
-                                        </Box>
-                                    )}
-                                    ;
-                                </Box>
-
-                                <Stack>
-                                    <p className="title secondary-light">
-                                        $ {price}
-                                    </p>
-
-                                    <p className="parraph secondary-light">
-                                        person per night
-                                    </p>
-                                    <Buttons data={"See more info"} />
-                                </Stack>
-
+                                        {Array(capacity)
+                                            .fill()
+                                            .map((_, index) => (
+                                                <BoyRounded
+                                                    key={capacity}
+                                                    style={{
+                                                        color: "var(--color-white)",
+                                                        fontSize: "2rem",
+                                                    }}
+                                                />
+                                            ))}
+                            </Box>)}
                                 
+                            {/* data */}
+                            <Stack>
+                                <p className="title-2 ">{title}</p>
 
-                                <Box sx={{ }}>
-                                    <IconButton size="sm" color="neutral">
-                                        <Favorite />
-                                    </IconButton>
+                                <p className="title secondary-light">
+                                    $ {price}
+                                </p>
 
-                                    <IconButton
-                                        size="sm"
-                                        color="neutral"
-                                        sx={{ }}
-                                    >
-                                        <CreateNewFolder />
-                                    </IconButton>
+                                <p className="parraph secondary-light">
+                                    person per night
+                                </p>
+
+                                <Box sx={{}}>
+                                    <Favorite />
+
+                                    <Link to={`/room/${title}`}>
+                                        <Buttons data={"See more info"} />
+                                    </Link>
                                 </Box>
-                            </Box>
-                        </Box>
-                    </CardCover>
-                </Box>
-            </Card>
-        </Link>
+                            </Stack>
+                        </Stack>
+            </CardCover>
+        </Card>
     );
 };
