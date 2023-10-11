@@ -33,17 +33,19 @@ export const SearchBar = ({
 
     
     return (
-        <Container sx={{}}>
+        <Container sx={{width: "100%",
+    }}>
             <Box
                 sx={{
                     display: "flex",
+                    width: "100%",                
                     justifyContent: "space-around",
                     alignItems: "center",
-                    backgroundColor: "var(--color-secondary-light)",                    
+                    backgroundColor: "var(--color-secondary-light)",    
                     boxShadow: "10px 10px 35px -21px rgba(69,68,69,1)",
                     padding: "2.5rem",
                     borderRadius: "10px",
-                    gap: "2rem"
+                    gap: "1rem"
                 }}>
 
                 {searchDates &&

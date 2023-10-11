@@ -35,10 +35,9 @@ export const Navbar = () => {
       transition: 'background-color 0.3s ease',
       paddingTop: "1rem",
       zIndex: 1,
-      margin: 0
+      margin: 0,
+      width: "100%",
     };
-
-
 
     useEffect(() => {
       const handleScroll = () => {

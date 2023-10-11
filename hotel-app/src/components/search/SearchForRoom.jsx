@@ -14,27 +14,28 @@ export const SearchForRoom = ({}) => {
         handleInputChange,
         handleBlur,
         handleClick,
-    } = useRoomContext();
+    } = useRoomContext(); 
 
     const imgURL =
         "https://images.pexels.com/photos/3601421/pexels-photo-3601421.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1";
 
     return (
         <Container
-            sx={{
-                display: "flex",
-                height: "80vh",
+        sx={{
+            display: "flex",
+            height: "80vh",
+            justifyContent: "center",
+            alignItems: "center",
+            position: "relative",
 
-                position: "relative",
-            }}
+        }}
         >
             <Box
                 sx={{
                     justifyContent: "center",
-                    alignContent: "center",
                     alignItems: "center",
                     position: "absolute",
-                    width: "100%",
+                    width: "80%",
                     height: "100%",
                     backgroundImage: `url(${imgURL})`,
                     backgroundPosition: "center",
@@ -51,9 +52,16 @@ export const SearchForRoom = ({}) => {
                         justifyContent: "center",
                     }}
                 >
-                    <p className="subtitle secondary">Make your reservation</p>
-
-                    <p className="title primary">Reservations</p>
+                    <Stack spacing={1} sx={{
+                    display: "flex",
+                    alignItems: "center",
+                }}>
+                        <p className="subtitle secondary">Make your reservation</p>
+                        
+                        <p className="title primary">Reservations</p>
+                        
+                        <p className="parraph primary">Enjoy all benefits while you stay</p>
+                    </Stack>
 
                     <SearchBar
                         handleChangeDate={handleChangeDate}

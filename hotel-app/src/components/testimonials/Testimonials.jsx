@@ -13,24 +13,28 @@ export const Testimonials = () => {
                 height: "80vh",
                 justifyContent: "center",
                 alignItems: "center",
-            }}
-        >
+            }}>
             <Stack
                 sx={{
+                    width: "100%",
                     display: "flex",
                     alignItems: "center",
-                    gap: "2rem",
-                }}
-            >
-                <p className="subtitle secondary">TESTIMONIALS</p>
-                <p className="title primary">What our clients say</p>
+                    gap: "1rem",
+                }}>
 
+                <Stack spacing={1} sx={{
+                    display: "flex",
+                    alignItems: "center",
+                }}>
+                    <p className="subtitle secondary">TESTIMONIALS</p>
+                    <p className="title primary">What our clients say</p>
+                </Stack>
                 <Stack
+                    spacing={1}
                     sx={{
                         display: "flex",
                         width: "80%",
                         alignItems: "center",
-                        gap: "1rem"
 
                     }}
                 >
