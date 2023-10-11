@@ -1,7 +1,8 @@
 import React from "react";
 
 import { Typography, Container, Box, Stack } from "@mui/material";
-import { Button } from "@mui/material";
+import { ContainedButton } from "../buttons/CustomButton";
+
 
 const bgImg =
     "https://images.pexels.com/photos/17488420/pexels-photo-17488420/free-photo-of-madera-paisaje-agua-apple.jpeg";
@@ -55,7 +56,11 @@ export const Intro = () => {
                 }}>
                 <Typography variant="h3">AURORA MONTAIN </Typography>
                 <Typography variant="subtitle2">É muito fácil revelar na FotoRegistro! As fotos podem ser enviadas tanto do seu celular quanto do computador. Faça login no site, escolha suas fotos e receba em casa. </Typography>
-                <Button variant="outlined"> Contact us </Button>
+
+                {/* contact */}
+                <Box sx={ContainedButton} >
+                        contact us
+                </Box>
                 
             </Stack>
         </Container>

@@ -11,7 +11,7 @@ import Container from "@mui/material/Container";
 import MenuItem from "@mui/material/MenuItem";
 import { pages } from "../../utils/pages";
 import { Link, NavLink } from "react-router-dom";
-import { Buttons } from "../button/Buttons";
+import { OutlinedButton } from "../buttons/CustomButton";
 import { Logo } from "../logo/Logo";
 
 
@@ -157,12 +157,8 @@ export const Navbar = () => {
                     </Box>
 
                     {/* booknow */}
-                    <Box
-                        sx={{
-                            flexGrow: 0,
-                        }}
-                    >
-                        <Buttons data={"book now"} />
+                    <Box sx={OutlinedButton} >
+                        book now
                     </Box>
                 </Toolbar>
             </Container>

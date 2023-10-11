@@ -11,7 +11,7 @@ import CreateNewFolder from "@mui/icons-material/CreateNewFolder";
 import { BoyRounded } from "@mui/icons-material";
 import { Stack } from "@mui/material";
 import { Link } from "react-router-dom";
-import { Buttons } from "../button/Buttons";
+import { Buttons, OutlinedButton } from "../buttons/CustomButton";
 
 export const RoomItem = ({ rooms }) => {
     const title = rooms.title;
@@ -91,8 +91,8 @@ export const RoomItem = ({ rooms }) => {
                                     <Favorite />
 
                                     <Link to={`/room/${title}`}>
-                                        <Buttons data={"See more info"} />
-                                    </Link>
+                                    <Box style={OutlinedButton}>
+see more info                    </Box>                                    </Link>
                                 </Box>
                             </Stack>
                         </Stack>

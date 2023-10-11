@@ -15,7 +15,7 @@ import { Divider } from "@mui/material";
 import { InputLabel } from "@mui/material";
 
 import { searchGuests } from "../../utils/searchGuests"
-import { Buttons } from "../button/Buttons";
+import { OutlinedButton } from "../buttons/CustomButton";
 
 const Input = styled(MuiInput)`
     width: 42px;
@@ -120,12 +120,10 @@ export const SearchBar = ({
                                 </>
                             )
                     )}
-
-                                    <Box onClick={handleClick} sx={{ width: 150 }}>
-                                        <Buttons
-                                            data={"check availability"}
-                                             />
-                                    </Box>
+                                    
+                                    <Box onClick={handleClick} style={OutlinedButton} sx={{width: 150 }}>
+                                        RESERVATION
+                                        </Box>
                                     
             </Box>
         </Container>
