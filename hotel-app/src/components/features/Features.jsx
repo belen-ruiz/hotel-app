@@ -4,6 +4,7 @@ import { Typography } from "@mui/material";
 import { Toolbar } from "@mui/material";
 import { Container } from "@mui/material";
 import { features } from "../../utils/features";
+import { TopText, Title, SubtitleCenter } from "../../custom/typography/Typography"
    
 export const Features = () => {
     return (
@@ -20,11 +21,11 @@ export const Features = () => {
                     display: "flex",
                     alignItems: "center",
                 }}>
-                    <p className="subtitle secondary">Enjoy all benefits while you stay</p>
+                    <p style={ TopText }>Enjoy all benefits while you stay</p>
                     
-                    <p className="title primary">Our services</p>
+                    <p style={ Title }>Our services</p>
                     
-                    <p className="parraph primary">Enjoy all benefits while you stay</p>
+                    <p style={ SubtitleCenter } >Enjoy all benefits while you stay</p>
                 </Stack>
 
                 <Box  sx={{

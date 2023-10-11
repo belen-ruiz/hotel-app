@@ -4,6 +4,8 @@ import { SearchBar } from "./SearchBar";
 import { useRoomContext } from "../../context/RoomProvider";
 import { Typography } from "@mui/material";
 import { Stack } from "@mui/material";
+import { TopText, Title, SubtitleCenter } from "../../custom/typography/Typography"
+
 
 export const SearchForRoom = ({}) => {
     const {
@@ -56,11 +58,11 @@ export const SearchForRoom = ({}) => {
                     display: "flex",
                     alignItems: "center",
                 }}>
-                        <p className="subtitle secondary">Make your reservation</p>
+                        <p style={ TopText } >Make your reservation</p>
                         
-                        <p className="title primary">Reservations</p>
+                        <p style={ Title }>Reservations</p>
                         
-                        <p className="parraph primary">Enjoy all benefits while you stay</p>
+                        <p style={ SubtitleCenter }>Enjoy all benefits while you stay</p>
                     </Stack>
 
                     <SearchBar

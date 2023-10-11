@@ -1,6 +1,8 @@
 import { Button } from "@mui/material";
 import { Grid, Container, Stack, Box } from "@mui/material";
 import { Link } from "react-router-dom";
+import { TopText, Title, SubtitleJustify, SubtitleBold, SubtitleItalic } from "../../custom/typography/Typography"
+
 
 export const AboutUs = () => {
     return (
@@ -14,19 +16,16 @@ export const AboutUs = () => {
         >
             <Box sx={{ display: "flex", width: "100%", gap: "1rem", height: "80%" }}>
                 <Stack spacing={1} sx={{ width: "30%" }}>
-                    <p className="subtitle secondary"> a little about us </p>
-                    <p className="title primary">
-                        {" "}
-                        the Best place to enjoy life{" "}
-                    </p>
-                    <p className="parraph primary">
+                    <p style={ TopText } > a little about us </p>
+                    <p style={ Title }>the Best place to enjoy life </p>
+                    <p style={ SubtitleJustify }>
                         the Best place to enjoy life place to enjoy life place
                         to enjoy life place to enjoy life place to enjoy life
                         place to enjoy life place to enjoy life place to enjoy
                         life place to enjoy life.
                     </p>
-                    <p className="parraph bold"> FRANCO MOLINA </p>
-                    <p className="parraph italic"> CEO of Las Salinas </p>
+                    <p style={ SubtitleBold }> FRANCO MOLINA </p>
+                    <p style={ SubtitleItalic }> CEO of Las Salinas </p>
                 </Stack>
 
                 <Box sx={{ display: "flex", width: "70%"}}>

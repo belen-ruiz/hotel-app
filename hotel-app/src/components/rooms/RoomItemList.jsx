@@ -23,7 +23,7 @@ import CardContent from '@mui/joy/CardContent';
 import CardOverflow from '@mui/joy/CardOverflow';
 import Divider from '@mui/joy/Divider';
 import { Container } from "@mui/material";
-import { OutlinedButton } from "../buttons/CustomButton";
+import { OutlinedButton } from "../../custom/buttons/CustomButton";
 
 export const RoomItemList = ({ rooms, isList, setIsList }) => {
     const title = rooms.title;

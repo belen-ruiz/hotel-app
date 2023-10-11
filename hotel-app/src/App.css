@@ -44,7 +44,7 @@
   color: var(--color-secondary-light);
 }
 
-
+//
 .title{
   font-family: "EB Garamond, serif";       
   font-size: 3rem;
@@ -52,7 +52,7 @@
   text-transform: capitalize;
 }
 
-
+//
 .subtitle{
   font-size: 0.8rem;
   font-weight: 700;
@@ -67,6 +67,7 @@
   letter-spacing: 0px;
 }
 
+//
 .testimonials{
   font-size: 1.2rem;
   font-weight: 400;
@@ -80,6 +81,7 @@
   text-transform: uppercase;
 }
 
+//
 .title-2{
   font-size: 0.8rem;
   text-transform: uppercase;
@@ -87,7 +89,7 @@
 }
 
 
-
+//
 .parraph{
   font-size: 1rem;
   font-weight: 400;
@@ -96,14 +98,15 @@
 
 }
 
-.parraph:first-letter{
+/* .parraph:first-letter{
   text-transform: uppercase;
-}
+} */
 
+//
 .bold{
   font-weight: 700;
 }
-
+//
 .italic{
   font-style: italic;
 }

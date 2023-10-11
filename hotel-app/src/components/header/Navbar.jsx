@@ -11,7 +11,7 @@ import Container from "@mui/material/Container";
 import MenuItem from "@mui/material/MenuItem";
 import { pages } from "../../utils/pages";
 import { Link, NavLink } from "react-router-dom";
-import { OutlinedButton } from "../buttons/CustomButton";
+import { OutlinedButton } from "../../custom/buttons/CustomButton";
 import { Logo } from "../logo/Logo";
 
 

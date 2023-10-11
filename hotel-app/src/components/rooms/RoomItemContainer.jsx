@@ -7,6 +7,8 @@ import { useRoomContext } from "../../context/RoomProvider";
 import { RoomItem } from "./RoomItem";
 import ArrowCircleLeftRoundedIcon from "@mui/icons-material/ArrowCircleLeftRounded";
 import ArrowCircleRightRoundedIcon from "@mui/icons-material/ArrowCircleRightRounded";
+import { TopText, Title, SubtitleJustify } from "../../custom/typography/Typography"
+
 
 export const RoomItemContainer = ({}) => {
     const { rooms, isList, setIsList } = useRoomContext();
@@ -38,9 +40,9 @@ export const RoomItemContainer = ({}) => {
         >
             <Box sx={{ display: "flex", width: "100%", gap: "1rem" }}>
                 <Stack spacing={1} sx={{ width: "30%" }}>
-                    <p className="subtitle secondary"> Discover our rooms </p>
-                    <p className="title primary"> Choose your room </p>
-                    <p className="parraph primary">
+                    <p style={ TopText } > Discover our rooms </p>
+                    <p style={ Title }> Choose your room </p>
+                    <p style={ SubtitleJustify }>
                         the Best place to enjoy life place to enjoy life place
                         to enjoy life place to enjoy.
                     </p>

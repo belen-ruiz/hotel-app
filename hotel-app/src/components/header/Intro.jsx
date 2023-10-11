@@ -1,7 +1,7 @@
 import React from "react";
 
 import { Typography, Container, Box, Stack } from "@mui/material";
-import { ContainedButton } from "../buttons/CustomButton";
+import { ContainedButton } from "../../custom/buttons/CustomButton";
 
 
 const bgImg =

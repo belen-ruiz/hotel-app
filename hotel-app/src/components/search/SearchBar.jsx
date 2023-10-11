@@ -1,21 +1,15 @@
-import { Typography, Box, Stack, Button } from "@mui/material";
+import { Typography, Box, Stack, Container } from "@mui/material";
 import React, { useState } from "react";
-
-import FormHelperText from "@mui/material/FormHelperText";
 
 import MuiInput from "@mui/material/Input";
 import { BoyRounded } from "@mui/icons-material";
 import { styled } from "@mui/material/styles";
-import { Container } from "@mui/material";
-
-import { useRoomContext } from "../../context/RoomProvider";
 
 import { searchDates } from "../../utils/searchDates";
 import { Divider } from "@mui/material";
-import { InputLabel } from "@mui/material";
 
 import { searchGuests } from "../../utils/searchGuests"
-import { OutlinedButton } from "../buttons/CustomButton";
+import { ContainedButton } from "../../custom/buttons/CustomButton";
 
 const Input = styled(MuiInput)`
     width: 42px;
@@ -121,7 +115,7 @@ export const SearchBar = ({
                             )
                     )}
                                     
-                                    <Box onClick={handleClick} style={OutlinedButton} sx={{width: 150 }}>
+                                    <Box onClick={handleClick} sx={ContainedButton}>
                                         RESERVATION
                                         </Box>
                                     

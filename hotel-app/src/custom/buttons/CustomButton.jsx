@@ -30,6 +30,7 @@ const ContainedButton = {
     cursor: "pointer",
 
     "&:hover": {
+      color: "#e49408",
         backgroundColor: "transparent",
         boxShadow: "30px #454544",
         backdropFilter: "blur(10px)",
