@@ -7,7 +7,7 @@ import { useRoomContext } from "../../context/RoomProvider";
 import { RoomItem } from "./RoomItem";
 import ArrowCircleLeftRoundedIcon from "@mui/icons-material/ArrowCircleLeftRounded";
 import ArrowCircleRightRoundedIcon from "@mui/icons-material/ArrowCircleRightRounded";
-import { TopText, Title, SubtitleJustify } from "../../custom/typography/Typography"
+import { SubtitleJustify, TopText, Title } from "../../custom/typography/Typography"
 
 
 export const RoomItemContainer = ({}) => {

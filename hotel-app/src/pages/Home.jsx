@@ -19,7 +19,7 @@ export const Home = () => {
                 display: "flex",
                 flexDirection: "column",
                 alignItems: "center",
-                gap: "2rem",
+                gap: "1rem",
                 padding: { xs: 0, md: 0 },
             }}>
 

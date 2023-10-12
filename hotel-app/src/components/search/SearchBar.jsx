@@ -11,6 +11,7 @@ import { Divider } from "@mui/material";
 import { searchGuests } from "../../utils/searchGuests"
 import { ContainedButton } from "../../custom/buttons/CustomButton";
 
+
 const Input = styled(MuiInput)`
     width: 42px;
 `;

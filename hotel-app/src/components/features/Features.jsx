@@ -9,6 +9,8 @@ import { TopText, Title, SubtitleCenter } from "../../custom/typography/Typograp
 export const Features = () => {
     return (
         <Container
+        disableGutters
+        maxWidth="lg"
             sx={{
                 display: "flex",
                 height: "80vh",

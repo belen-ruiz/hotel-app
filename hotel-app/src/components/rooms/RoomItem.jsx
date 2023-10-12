@@ -12,7 +12,7 @@ import { BoyRounded } from "@mui/icons-material";
 import { Stack } from "@mui/material";
 import { Link } from "react-router-dom";
 import { OutlinedButton } from "../../custom/buttons/CustomButton";
-import { SmallText,  } from "../../custom/typography/Typography"
+import { SmallText } from "../../custom/typography/Typography"
 
 
 export const RoomItem = ({ rooms }) => {
@@ -24,6 +24,7 @@ export const RoomItem = ({ rooms }) => {
     const description = rooms.description;
     const price = rooms.price;
     const imgUrl = rooms.imgUrl;
+
 
     return (
         <Card
