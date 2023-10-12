@@ -19,7 +19,6 @@ function App() {
                         <Header />
                         <Router />
                         <Footer />
-                        <Banner />
                     </RoomProvider>
                 </LocalizationProvider>
         {/* </ThemeProvider> */} 

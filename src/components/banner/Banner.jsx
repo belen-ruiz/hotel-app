@@ -7,11 +7,12 @@ import { fastcontact } from "../../utils/fastcontact";
 export const Banner = () => {
     return (
         <Container
-            maxWidth="inherit"
+        disableGutters
             sx={{
                 zIndex: 999999,
-                padding: "0.1rem 0",
+                padding: "0.2rem 1rem",
                 backgroundColor: "#b66808",
+                width: "100%",
             }}>
             <Box
                 sx={{

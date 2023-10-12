@@ -7,6 +7,7 @@ import { AboutUs } from "../components/about/AboutUs";
 import { Map } from "../components/map/Map";
 import { RoomItemContainer } from "../components/rooms/RoomItemContainer";
 import { useRoomContext } from "../context/RoomProvider";
+import { Intro } from "../components/header/Intro";
 
 
 export const Home = () => {
@@ -16,6 +17,7 @@ export const Home = () => {
         <Container
             sx={{
                 width: "100vw",
+                //height: "100vh",
                 display: "flex",
                 flexDirection: "column",
                 alignItems: "center",
@@ -23,6 +25,8 @@ export const Home = () => {
                 padding: { xs: 0, md: 0, lg: 0 },                
                 margin: { xs: 0, md: 0, lg: 0 },                
             }}>
+
+            <Intro />
 
             <Features />
 

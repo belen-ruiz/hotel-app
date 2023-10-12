@@ -1,5 +1,4 @@
 import React from "react";
-
 import { Typography, Container, Box, Stack } from "@mui/material";
 import { ContainedButton } from "../../custom/buttons/CustomButton";
 
@@ -10,31 +9,29 @@ const bgImg =
 export const Intro = () => {
     return (
         <Container
-            maxWidth="lg"
-            sx={{
-                
-                display: "grid",
-                width: "100%",
+            sx={{           
+                display: "flex",
+                //width: "100vw",
                 height: "100vh",
                 position: "relative",
                 padding: { xs: 0, md: 0, lg: 0 },                
-                margin: { xs: 0, md: 0, lg: 0 },  
+                margin: { xs: 0, md: 0, lg: 0 }, 
+                justifyContent: "center",
+                alignItems: "center" 
                 }}>
 
             {/* img */}
             <Box
                 sx={{
                     overflow: "hidden",
-                    position: "absolute",
-                    height: "100%",
-                    width: "100%"}}>
+                    //height: "100%",
+                    //width: "100%"
+                }}>
                 <img
                     src={bgImg}
                     alt="imgHotel"
                     style={{ width: '100%', height: '100%', objectFit: 'cover' }}
-                    // sx={{
-                    //     top: "0",
-                    // }}
+                    
                 />
             </Box>
 

@@ -25,7 +25,7 @@ export const SearchForRoom = ({}) => {
         <Container
         sx={{
             display: "flex",
-            height: "80vh",
+            //height: "80vh",
             justifyContent: "center",
             alignItems: "center",
             position: "relative",

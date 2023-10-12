@@ -13,7 +13,7 @@ export const Features = () => {
         maxWidth="lg"
             sx={{
                 display: "flex",
-                height: "80vh",
+                //height: "80vh",
                 justifyContent: "center",
                 alignItems: "center",
             }}

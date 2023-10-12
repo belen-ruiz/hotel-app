@@ -31,7 +31,7 @@ export const RoomItemContainer = ({}) => {
             sx={{
                 display: "flex",
                 width: "100%",
-                height: "80vh",
+                //height: "80vh",
                 justifyContent: "center",
                 alignItems: "center",
             }}

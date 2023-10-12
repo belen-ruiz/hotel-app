@@ -56,10 +56,10 @@ export const Navbar = () => {
     }, []);
 
     return (
-        <AppBar
+        <AppBar 
             style={ navbarStyle }>
-            <Container maxWidth="xl">
-                <Toolbar disableGutters>
+            <Container maxWidth="md">
+                <Toolbar disableGutters sx={{display: "flex", justifyContent:"space-between" }} >
                     {/* menu mobile */}
                     <Box
                         sx={{
@@ -128,12 +128,11 @@ export const Navbar = () => {
                     {/* menu web */}
                     <Box
                         sx={{
-                            flexGrow: 1,
+                            //flexGrow: 1,
                             display: { xs: "none", md: "flex" },
                             gap: "2rem",
                             fontSize: "0.7rem",
                             textTransform: "uppercase",
-                            justifyContent: "end",
                             fontWeight: "bold",
                             padding: "0rem 2rem",
                         }}
