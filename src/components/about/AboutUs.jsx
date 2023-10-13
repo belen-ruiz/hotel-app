@@ -25,10 +25,9 @@ export const AboutUs = () => {
                     width: "100%",
                     gap: "1rem",
                     //height: "80%",
-                }}
-            >
-                {/* titles */}
+                }}>
 
+                {/* titles */}
                 <Stack 
                     spacing={1} 
                     sx={{ width: "30%",                         alignItems: "start",
@@ -46,7 +45,6 @@ export const AboutUs = () => {
                 </Stack>
 
                 {/* img */}
-
                 <Box sx={{ display: "flex", width: "70%" }}>
                     <img
                         src="https://images.pexels.com/photos/189296/pexels-photo-189296.jpeg?auto=compress&cs=tinysrgb&dpr=1"

@@ -30,14 +30,24 @@ export const RoomItemContainer = ({}) => {
         <Container
             sx={{
                 display: "flex",
-                width: "100%",
+                //width: "100%",
                 //height: "80vh",
                 justifyContent: "center",
                 alignItems: "center",
             }}
         >
-            <Box sx={{ display: "flex", width: "100%", gap: "1rem" }}>
-                <Stack spacing={1} sx={{ width: "30%" }}>
+            <Box 
+                sx={{ 
+                    display: "flex", 
+                    width: "100%", 
+                    gap: "1rem" 
+                }}>
+
+                {/* titles */}
+                <Stack 
+                    spacing={1} 
+                    sx={{ width: "30%" 
+                }}>
                     <p style={ TopText } > Discover our rooms </p>
                     <p style={ Title }> Choose your room </p>
                     <p style={ SubtitleJustify }>
@@ -46,21 +56,26 @@ export const RoomItemContainer = ({}) => {
                     </p>
                 </Stack>
 
-                <Box sx={{ display: "flex", width: "70%", position: "relative", paddingLeft: { xs: "0", md: "0", xl: "0" },
-                paddingRight: { xs: "0", md: "0", xl: "0" }, }}>
+                {/* scroll container */}
+                <Box 
+                    sx={{ 
+                    display: "flex", 
+                    width: "70%", 
+                    position: "relative", paddingLeft: { xs: "0", md: "0", xl: "0" },
+                    paddingRight: { xs: "0", md: "0", xl: "0" }, }}>
+
                     {/* buttons */}
                     <Box
                         sx={{
+                            display: "flex",
                             position: "absolute",
                             width: "100%",
                             height: "35px",
                             top: "45%",
                             left: "0",
-                            display: "flex",
                             justifyContent: "space-between",
-                            //right: "8rem",
+                            right: "8rem",
                             //transform: "translateY(-50%)",
-                            zIndex: 2000,
                         }}
                     >
                         <Box
@@ -107,25 +122,35 @@ export const RoomItemContainer = ({}) => {
                             scrollBehavior: "smooth",
                             scrollSnapType: "x mandatory",
                             scrollbarWidth: "none",
-                            height: "100%",
-                            maxHeight: "70vh",
-                            position: "relative",
-                        }}
-                    >
+                            //height: "100%",
+                            //maxHeight: "70vh",
+                            //position: "relative",
+                        }}>
+
+                    {/* item list container */}
                         <Box
                             sx={{
                                 width: "100%",
                                 display: "flex",
                                 gap: "1rem",
-                                height: "70vh",
-                                minHeight: "60vh",
+                                //height: "70vh",
+                                //minHeight: "60vh",
                                 position: "relative",
                             }}
                         >
-                            {/* room list */}
+                            {/* item */}
                             {rooms &&
                                 rooms.map((room) => (
-                                    <Box key={rooms.title}>
+                                    <Box 
+                                    sx={{
+                                        width: "100%",
+                                        display: "flex",
+                                        gap: "1rem",
+                                        //height: "70vh",
+                                        //minHeight: "60vh",
+                                        //position: "relative",
+                                    }}
+                                    key={rooms.title}>
                                         {room && (
                                             <RoomItem
                                                 isList={isList}

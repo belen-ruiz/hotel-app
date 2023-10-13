@@ -35,7 +35,6 @@ export const Testimonials = () => {
                 <Stack
                     spacing={1}
                     sx={{
-                        display: "flex",
                         alignItems: "center",
                     }}
                 >

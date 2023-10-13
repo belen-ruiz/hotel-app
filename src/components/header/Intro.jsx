@@ -2,49 +2,41 @@ import React from "react";
 import { Typography, Container, Box, Stack } from "@mui/material";
 import { ContainedButton } from "../../custom/buttons/CustomButton";
 
-
 const bgImg =
     "https://images.pexels.com/photos/17488420/pexels-photo-17488420/free-photo-of-madera-paisaje-agua-apple.jpeg";
 
 export const Intro = () => {
     return (
         <Container
-            sx={{           
+            sx={{
                 display: "flex",
                 //width: "100vw",
-                height: "100vh",
+                //height: "100vh",
                 position: "relative",
-                padding: { xs: 0, md: 0, lg: 0 },                
-                margin: { xs: 0, md: 0, lg: 0 }, 
+                padding: { xs: 0, md: 0, lg: 0 },
+                margin: { xs: 0, md: 0, lg: 0 },
                 justifyContent: "center",
-                alignItems: "center" 
+                alignItems: "center"
                 }}>
 
             {/* img */}
-            <Box
-                sx={{
-                    overflow: "hidden",
-                    //height: "100%",
-                    //width: "100%"
-                }}>
-                <img
-                    src={bgImg}
-                    alt="imgHotel"
-                    style={{ width: '100%', height: '100%', objectFit: 'cover' }}
-                    
-                />
+            <Box sx={{ display: "flex", width: "100%", overflow: "hidden", }}>
+                    <img
+                        src={bgImg}
+                        alt="who we are"
+                        style={{ width: "100%", objectFit:"cover" }}
+                    />
             </Box>
 
-
             {/* text box */}
-            
             <Stack
                 sx={{
                     width: "100%",
-                            top: "50%",
+                    //top: "50%",
                             display: "flex",
                             //left: "1rem",
                             position: "absolute",
+                            padding: { xs: 4, md: 8, lg: 16 },
 
                         //height: "33vh",
                         zIndex: 1,
@@ -60,7 +52,7 @@ export const Intro = () => {
                 <Box sx={ContainedButton} >
                         contact us
                 </Box>
-                
+
             </Stack>
         </Container>
     );

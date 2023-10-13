@@ -4,13 +4,17 @@ import { Typography } from "@mui/material";
 import { Toolbar } from "@mui/material";
 import { Container } from "@mui/material";
 import { features } from "../../utils/features";
-import { TopText, Title, SubtitleCenter } from "../../custom/typography/Typography"
-   
+import {
+    TopText,
+    Title,
+    SubtitleCenter,
+} from "../../custom/typography/Typography";
+
 export const Features = () => {
     return (
         <Container
-        disableGutters
-        maxWidth="lg"
+            disableGutters
+            maxWidth="lg"
             sx={{
                 display: "flex",
                 //height: "80vh",
@@ -18,23 +22,39 @@ export const Features = () => {
                 alignItems: "center",
             }}
         >
-            <Stack spacing={6}>
-                <Stack spacing={1} sx={{
+            <Stack
+                spacing={6}
+                sx={{
                     display: "flex",
+                    width: "100%",
                     alignItems: "center",
-                }}>
-                    <p style={ TopText }>Enjoy all benefits while you stay</p>
-                    
-                    <p style={ Title }>Our services</p>
-                    
-                    <p style={ SubtitleCenter } >Enjoy all benefits while you stay</p>
+                }}
+            >
+                {/* titles */}
+
+                <Stack
+                    spacing={1}
+                    sx={{
+                        alignItems: "center",
+                    }}
+                >
+                    <p style={TopText}>Enjoy all benefits while you stay</p>
+
+                    <p style={Title}>Our services</p>
+
+                    <p style={SubtitleCenter}>
+                        Enjoy all benefits while you stay
+                    </p>
                 </Stack>
 
-                <Box  sx={{
+                {/* item box */}
+
+                <Box
+                    sx={{
                         display: "flex",
                         justifyContent: "center",
                         flexWrap: "wrap",
-                        gap: "2rem 1rem"
+                        gap: "2rem 1rem",
                     }}
                 >
                     {features.map((feature) => (
@@ -68,12 +88,7 @@ const Feature = ({ data }) => {
             }}
         >
             <Box>{icon}</Box>
-            <Typography
-                variant="subtitle2"
-            >
-                {title}
-            </Typography>
-            
+            <Typography variant="subtitle2">{title}</Typography>
         </Stack>
     );
 };

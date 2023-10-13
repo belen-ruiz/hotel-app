@@ -13,7 +13,7 @@ import { ContainedButton } from "../../custom/buttons/CustomButton";
 
 
 const Input = styled(MuiInput)`
-    width: 42px;
+    width: 30px;
 `;
 
 export const SearchBar = ({

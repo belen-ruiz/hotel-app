@@ -17,7 +17,7 @@ export const Home = () => {
         <Container
             sx={{
                 width: "100vw",
-                //height: "100vh",
+                height: "auto",
                 display: "flex",
                 flexDirection: "column",
                 alignItems: "center",
