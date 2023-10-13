@@ -53,9 +53,11 @@ export const RoomProvider = ({ children }) => {
         setSearch([])
     }
 
-    const handleChangeDate = (e) => {
-        const id = e.currentTarget.id;
-        const value = e.currentTarget.value;
+    const handleChangeDate = (e,id) => {
+        //const id = e.target.id;
+        const value = e.target.value;
+
+        console.log(value)
 
         if (id === "date-start") {
             setStartDate(value);
@@ -141,7 +143,7 @@ export const RoomProvider = ({ children }) => {
                 setIsList, 
                 getAllRooms,
                 
-                handleChangeDate, handleSliderChange, handleInputChange, handleBlur, handleClick, 
+                startDate, handleChangeDate, handleSliderChange, handleInputChange, handleBlur, handleClick, 
                 
                 adults, kids, totalGuests,
                 

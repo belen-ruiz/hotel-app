@@ -14,7 +14,7 @@ export const Features = () => {
     return (
         <Container
             disableGutters
-            maxWidth="lg"
+            maxWidth="md"
             sx={{
                 display: "flex",
                 //height: "80vh",

@@ -6,7 +6,7 @@ import { Container } from '@mui/material';
 export const Header = () => {
   return (
     <Container  
-    waxWidth="md"
+    maxWidth="md"
     disableGutters
     sx={{
       width: "100%",

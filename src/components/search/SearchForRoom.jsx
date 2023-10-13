@@ -26,6 +26,8 @@ export const SearchForRoom = ({}) => {
 
     return (
         <Container
+        disableGutters
+            maxWidth="md"
             sx={{
                 display: "flex",
                 //height: "80vh",
@@ -35,19 +37,18 @@ export const SearchForRoom = ({}) => {
             }}
         >
                 <Stack
+                spacing={6}
                     sx={{
                     display: "flex",
                     width: "100%",
                     justifyContent: "center",
                     alignItems: "center",
-                    position: "absolute",
+                    //position: "absolute",
                     padding: "2rem",
-                    //height: "100%",
                     backgroundImage: `url(${imgURL})`,
                     backgroundPosition: "center",
                     backgroundSize: "cover",
                     backgroundRepeat: "no-repeat",
-                        //height: "100%",
                     }}>
 
                     {/* titles */}

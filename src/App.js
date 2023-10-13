@@ -17,7 +17,9 @@ function App() {
         {/* //<ThemeProvider theme={theme}> */}
                 <LocalizationProvider dateAdapter={AdapterDayjs}>
                     <RoomProvider>
-                    <Stack sx={{ maxWidth: "1200px", margin: "0 auto" }}>
+                    <Stack style={{ 
+                        maxWidth: "1200px", margin: "0 auto",
+                        backgroundColor: "#ecedee" }}>
                             <Header />
                             <Router />
                             <Footer />

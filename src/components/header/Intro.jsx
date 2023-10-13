@@ -36,7 +36,7 @@ export const Intro = () => {
                             display: "flex",
                             //left: "1rem",
                             position: "absolute",
-                            padding: { xs: 4, md: 8, lg: 16 },
+                            padding: { xs: 4, md: 16, lg: 24 },
 
                         //height: "33vh",
                         zIndex: 1,
