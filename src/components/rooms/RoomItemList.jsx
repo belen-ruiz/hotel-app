@@ -19,8 +19,6 @@ import { Link } from "react-router-dom";
 import { confort } from "../../utils/confort";
 
 
-import CardContent from '@mui/joy/CardContent';
-import CardOverflow from '@mui/joy/CardOverflow';
 import Divider from '@mui/joy/Divider';
 import { Container } from "@mui/material";
 import { OutlinedButton } from "../../custom/buttons/CustomButton";
@@ -42,7 +40,7 @@ export const RoomItemList = ({ rooms, isList, setIsList }) => {
             <Link to={`/room/${title}`} sx={{height: "fit-content"}}>
                 <Card
                     sx={{
-                        width: "fit-cotent",
+                        //width: "fit-cotent",
                         boxShadow: "none",
                         "--Card-padding": "0px",
                         margin: "1rem 0",
@@ -205,22 +203,5 @@ export const RoomItemList = ({ rooms, isList, setIsList }) => {
     );
 };
 
-
-
-
-
-// <Box sx={{ ml: "auto" }}>
-//                                     <IconButton size="sm" color="neutral">
-//                                         <Favorite />
-//                                     </IconButton>
-
-//                                     <IconButton
-//                                         size="sm"
-//                                         color="neutral"
-//                                         sx={{ ml: "0.5rem" }}
-//                                     >
-//                                         <CreateNewFolder />
-//                                     </IconButton>
-//                                 </Box>
 
 

@@ -15,39 +15,34 @@ export const RoomItemListContainer = ({}) => {
                 display: "flex",
                 flexDirection: isList ? "column" : "row",
                 flexWrap: !isList && "wrap",
-                backgroundColor: "grey",
-                widht: "fit-content",
+                width: "fit-content",
             }}
         >
 
-            {search.length > 0
-                ? search.map((room, index) => (
-                      <>
-
+            {
+                search.length > 0 ? 
+                    search.map((room, index) => (
                           <Box key={index}>
                               {room && (
-                                  <>
-                                      <RoomItemList
+                                        <RoomItemList
                                           isList={isList}
                                           setIsList={setIsList}
                                           rooms={room}
                                       />
-                                  </>
                               )}
                           </Box>
-                      </>
                   ))
                 : rooms &&
-                  rooms.map((room, index) => (
-                      <Box key={index}>
-                          {room && (
-                              <RoomItemList
-                                  isList={isList}
-                                  setIsList={setIsList}
-                                  rooms={room}
-                              />
-                          )}
-                      </Box>
+                    rooms.map((room, index) => (
+                            <Box key={index}>
+                                {room && (
+                                    <RoomItemList
+                                        isList={isList}
+                                        setIsList={setIsList}
+                                        rooms={room}
+                                    />
+                                )}
+                            </Box>
                   ))}
         </Container>
     );

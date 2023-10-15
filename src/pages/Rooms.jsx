@@ -23,7 +23,16 @@ export const Rooms = () => {
 
     
     return (
-        <Container>
+        <Container  sx={{
+            width: "100vw",
+            height: "auto",
+            display: "flex",
+            flexDirection: "column",
+            alignItems: "center",
+            gap: "2rem",
+            padding: { xs: 0, md: 0, lg: 0 },                
+            margin: { xs: 0, md: 0, lg: 0 },                
+        }}>
             
             <SearchForRoom search={search} />
 
