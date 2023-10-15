@@ -29,6 +29,7 @@ export const RoomItem = ({ rooms }) => {
             sx={{
                 width: 300,
                 "--Card-padding": "0px",
+                borderRadius: 0 
             }}
         >
             <AspectRatio ratio="3/4" sx={{ borderRadius: 0 }}>

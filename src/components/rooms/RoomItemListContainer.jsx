@@ -16,6 +16,7 @@ export const RoomItemListContainer = ({}) => {
                 flexDirection: isList ? "column" : "row",
                 flexWrap: !isList && "wrap",
                 width: "fit-content",
+                gap: "2rem"
             }}
         >
 

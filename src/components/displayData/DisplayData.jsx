@@ -6,7 +6,7 @@ import { FilterIcons } from "../../filter/FilterIcons";
 
 export const DisplayData = ({ getAllRooms, totalGuests, setSelect, select }) => {
   return (
-    <Box sx={{display: "flex", justifyContent:"space-between", alignItems:"center" }}>
+    <Box sx={{display: "flex", justifyContent:"space-between", alignItems:"center", width: "100%" }}>
 
         {totalGuests === 0 ? (
         <Typography variant="subtitle2">

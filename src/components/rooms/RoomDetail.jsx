@@ -7,7 +7,7 @@ import { Button } from "@mui/material";
 import { Typography } from "@mui/material";
 import { Box } from "@mui/material";
 import React from "react";
-import { confort } from "../../utils/confort";
+import { comfort } from "../../utils/comfort";
 
 
 const Review = () => {
@@ -66,8 +66,8 @@ export const RoomDetail = ({ room }) => {
                      <Box sx={{paddingTop: "1rem"}}>
                          <Typography variant="subtitle2" >Amenities</Typography>
                          <Grid container spacing={2}  sx={{ justifyContent: "space-between" }}>
-                             {confort && amenities &&
-                                 confort.map((service) => {
+                             {comfort && amenities &&
+                                 comfort.map((service) => {
                                      if (amenities.includes(service.name)) {
                                          return (
                                              <Grid item xs={4}

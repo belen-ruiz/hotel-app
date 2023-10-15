@@ -9,7 +9,7 @@ import { ChairRounded } from "@mui/icons-material"
 import { LocalBarRounded } from "@mui/icons-material"
 import { BathroomRounded } from "@mui/icons-material"
 
-export const confort = [
+export const comfort = [
     
     {
         name:    "mini bar",
@@ -41,19 +41,19 @@ export const confort = [
 
         icon: <PhoneAndroidRounded />
     },
-    {
-        name:    "laundry",
+    // {
+    //     name:    "laundry",
 
-        icon:  <LocalLaundryServiceRounded />
-    },
-    {
-        name:    "taxi service",
+    //     icon:  <LocalLaundryServiceRounded />
+    // },
+    // {
+    //     name:    "taxi service",
 
-        icon:  <LocalTaxiRounded />
-    },
-    {
-        name:    "hairdryer",
+    //     icon:  <LocalTaxiRounded />
+    // },
+    // {
+    //     name:    "hairdryer",
 
-        icon:  <SportsRounded />
-    },
+    //     icon:  <SportsRounded />
+    // },
 ]    

@@ -1,4 +1,3 @@
-
 import React, { useState } from "react";
 
 import AspectRatio from "@mui/joy/AspectRatio";
@@ -16,17 +15,20 @@ import { Button } from "@mui/material";
 import { Stack } from "@mui/material";
 import FormHelperText from "@mui/material/FormHelperText";
 import { Link } from "react-router-dom";
-import { confort } from "../../utils/confort";
+import { comfort } from "../../utils/comfort";
 
-
-import Divider from '@mui/joy/Divider';
+import Divider from "@mui/joy/Divider";
 import { Container } from "@mui/material";
-import { OutlinedButton } from "../../custom/buttons/CustomButton";
+import {
+    ContainedButton,
+    OutlinedButton,
+} from "../../custom/buttons/CustomButton";
 
 export const RoomItemList = ({ rooms, isList, setIsList }) => {
     const title = rooms.title;
     const capacity = rooms.capacity;
-    const amenities = rooms.amenities;
+    //const amenities = rooms.amenities;
+    const amenities = rooms.amenities.slice(0, 4);
     const allows = rooms.allows;
     const donts = rooms.donts;
     const description = rooms.description;
@@ -34,174 +36,178 @@ export const RoomItemList = ({ rooms, isList, setIsList }) => {
     const imgUrl = rooms.imgUrl;
 
     //const [isList, setIsList] = useState(true)
+    //<Link to={`/room/${title}`} sx={{height: "fit-content"}}>
 
     return (
-        <Container sx={{height:"fit-content" }}>
-            <Link to={`/room/${title}`} sx={{height: "fit-content"}}>
-                <Card
+        <Card
+            sx={{
+                width: isList ? "fit-content" : "300px",
+                //boxShadow: "none",
+                height: "fit-content",
+                backgroundColor: "rgb(247, 245, 245)",
+                "--Card-padding": "0px",
+                transition: "all .4s ease-out",
+                "&:hover": {
+                    transform: "translateY(-5%)",
+                },
+            }}
+        >
+            <Box
+                sx={{
+                    display: "flex",
+                    //justifyContent: "center",
+                    flexDirection: isList ? "row" : "column",
+                    alignItems: "space-between",
+                    width: "100%",
+                }}
+            >
+                {/* IMAGEN */}
+                <Box sx={{ flex: 1 }}>
+                    <AspectRatio
+                        ratio="4/3"
+                        sx={{ width: 300, borderRadius: 0 }}
+                    >
+                        <figure>
+                            <img src={imgUrl} alt={title} />
+                        </figure>
+                    </AspectRatio>
+                </Box>
+
+                {/* data */}
+                <Stack
                     sx={{
-                        //width: "fit-cotent",
-                        boxShadow: "none",
-                        "--Card-padding": "0px",
-                        margin: "1rem 0",
-                        transition: "all .4s ease-out",
-                        "&:hover":{ 
-                            transform: "translateY(-5%)" }
-                        
-                    }}>
-            
-                    <Box sx={{ 
-                             }}>
-            
-                        <Card
+                        display: "flex",
+                        gap: "0.5rem",
+                        //width: "50%",
+                        padding: "1rem",
+                        justifySelf: "start",
+                        flex: 2
+                    }}
+                >
+                    {/* title */}
+                    <Typography
+                        variant="h6"
+                        sx={{
+                            color: "grey",
+                            alignSelf: "",
+                            padding: "",
+                            fontWeight: "bold",
+                            letterSpacing: 1,
+                        }}
+                    >
+                        {title}
+                    </Typography>
+
+                    {/* capacity & amenities */}
+                    <Box
+                        sx={{
+                            display: "flex",
+                            gap: "0.5rem",
+                            alignItems: "center",
+                        }}
+                    >
+                        {/* capacity */}
+                        <Chip
+                            size="sm"
                             sx={{
-                                backgroundColor:"rgb(247, 245, 245)",
-            
+                                borderRadius: "sm",
+                                display: "flex",
+                                backgroundColor: "green",
                             }}
-                            >
-                            {/* The first box acts as a container that inherits style from the CardCover */}
-                            <Box sx={{display:"flex", 
-                                    justifyContent: "center",
-                                    alignItems: "center",
-                                    flexDirection: isList? "row" : "column", 
-                                    width: isList? "100%" : "min-content"
-                                }}>
-                                {/* IMAGEN */}
-                                <Box>
-                                    <AspectRatio ratio="4/3" sx={{width: 250}}>
-                                            <figure >
-                                                <img  src={imgUrl} loading="lazy" alt={title} />
-                                            </figure>
-                                    </AspectRatio>
-                                </Box>
-            
-            
-                                {/* TEXT Y RESERV */}
-                                <Box sx={{
-                                        display: "flex", 
-                                        flexDirection: isList? "row" : "column",
-                                        gap: "1rem", 
-                                        paddingLeft: isList && "1rem"}}>
-                                    {/* TEXT */}
-                                    <Stack
-                                        sx={{
-                                            display: "flex",
-                                            flexDirection: "column",
-                                            gap: "1rem",
-                                            alignSelf: "start",
-                                        }}>
-                                        <Typography
-                                            variant="h6"
-                                            sx={{
-                                                color: "grey",
-                                                alignSelf: "",
-                                                padding: "",
-                                                fontWeight: "bold",
-                                                letterSpacing: 1,
-                                            }}
-                                        >
-                                            {title}
-                                        </Typography>
-                                    
-                                        <Chip
-                                            variant="outlined"
-                                            color="neutral"
-                                            size="sm"
-                                            sx={{
-                                                borderRadius: "sm",
-                                                display: "flex",
-                                                width: "fit-content"
-                                            }}
-                                        >
-                                            {capacity && (
-                                                <div title={`Room for ${capacity} people`}>
-                                                    {Array(capacity)
-                                                        .fill()
-                                                        .map((_, index) => (
-                                                            <BoyRounded
-                                                                key={index}
-                                                                style={{
-                                                                    color: "grey",
-                                                                }}
-                                                            />
-                                                        ))}
-                                                </div>
-                                            )}
-                                            
-                                        </Chip>
-            
-            
-                                        { isList &&
-                                        <Typography
-                                            sx={{
-                                                color: "grey",
-                                                fontSize: "0.8rem"
-                                                
-                                            }}
-                                        >
-                                            {description}
-                                        </Typography>
-                                        }
-            
-            
-            
-                                        <Box sx={{display: "flex", gap:"1rem"}}>
-                            {confort && amenities &&
-                                confort.map((service) => {
-                                    if (amenities.includes(service.name)) {
+                        >
+                            {capacity && (
+                                <div title={`Room for ${capacity} people`}>
+                                    {Array(capacity)
+                                        .fill()
+                                        .map((_, index) => (
+                                            <BoyRounded
+                                                key={index}
+                                                style={{
+                                                    color: "#f7f0f0",
+                                                }}
+                                            />
+                                        ))}
+                                </div>
+                            )}
+                        </Chip>
+
+                        <Divider orientation="vertical" flexItem />
+
+                        {/* amenities */}
+                        <Box sx={{ display: "flex", gap: "0.5rem" }}>
+                            {comfort &&
+                                amenities &&
+                                comfort.map((amenity) => {
+                                    if (amenities.includes(amenity.name)) {
                                         return (
-                                            <div title={service.name} key={service.name} style={{
-                                                color: "grey",
-                                            }}>
-                                                {service.icon }
+                                            <div
+                                                title={amenity.name}
+                                                key={amenity.name}
+                                                style={{
+                                                    color: "rgb(38, 37, 38)",
+                                                }}
+                                            >
+                                                {amenity.icon}
                                             </div>
                                         );
                                     }
                                 })}
                         </Box>
-                                    
-                                    </Stack>
-                                    
-            
-            
-                                    
-                                    {/* PRICE Y RESERVATION */}
-                                    <Stack sx={{ 
-                                            display: "flex",
-                                            flexDirection: isList?"column" : "row",
-                                            justifyContent: "space-between",
-                                            alignItems: isList? "center" : "start",
-                                            justifySelf: "end",
-                                            padding: isList && "1rem",
-                                            gap: !isList && "1rem" 
-                                            }}>
-                                        <Typography
-                                            sx={{ fontSize: "3rem", color: "grey",
-                                        }}
-                                        >
-                                            ${price}
-                                        </Typography>
-                                            <FormHelperText
-                                                sx={{ color: "grey"}}
-                                            >
-                                                p p night
-                                            </FormHelperText>
-                                    
-                                        
-                                        <Box style={OutlinedButton} sx={{alignSelf: isList? "end" : "start", }}>
-                                        RESERVATION
-                                        </Box>
-                                          
-                                    </Stack>
-                                </Box>
-                            </Box>
-                        </Card>
                     </Box>
-                </Card>
-            </Link>
-        </Container>
+
+                    {/* descrip */}
+                    <Typography
+                        sx={{
+                            color: "grey",
+                            fontSize: "0.8rem",
+                            width: isList ? "70%" : "100%",
+                        }}
+                    >
+                        {description}
+                    </Typography>
+                </Stack>
+
+                {/* dividers */}
+                {isList ? 
+                <Divider orientation="vertical" flexItem />
+                :
+                <Divider flexItem />
+                }
+
+                {/* price & book */}
+                <Stack
+                    sx={{
+                        display: "flex",
+                        width: "100%",
+                        flexDirection: "column",
+                        justifyContent: "space-between",
+                        alignItems: "start",
+                        padding: "1rem",
+                        flex: isList && 1,
+                        //justifySelf: "end",
+                        //gap: !isList && "1rem",
+                    }}
+                >
+                    {/* price */}
+                    <p sx={{ fontSize: "3rem", color: "grey" }}>
+                        ${price} <FormHelperText sx={{ color: "grey" }}>
+                        price per night
+                    </FormHelperText>
+                    </p>
+                    
+
+                    {/* buttons */}
+                    <Box sx={{ display: "flex", gap: "1.5rem", justifyContent: "space-between" }}>
+                        <Link to={`/room/${title}`}>
+                            <Box sx={OutlinedButton}>BOOK NOW</Box>
+                        </Link>
+
+                        <Link to={`/room/${title}`}>
+                            <Box sx={ContainedButton}>MORE INFO</Box>
+                        </Link>
+                    </Box>
+                </Stack>
+            </Box>
+        </Card>
     );
 };
-
-
-

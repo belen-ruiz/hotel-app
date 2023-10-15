@@ -15,7 +15,7 @@
 // import { Stack } from "@mui/material";
 // import FormHelperText from "@mui/material/FormHelperText";
 // import { Link } from "react-router-dom";
-// import { confort } from "../../utils/confort";
+// import { comfort } from "../../utils/comfort";
 
 // import CardContent from "@mui/joy/CardContent";
 // import CardOverflow from "@mui/joy/CardOverflow";
@@ -169,9 +169,9 @@
 //                                                 gap: "1rem",
 //                                             }}
 //                                         >
-//                                             {confort &&
+//                                             {comfort &&
 //                                                 amenities &&
-//                                                 confort.map((service) => {
+//                                                 comfort.map((service) => {
 //                                                     if (
 //                                                         amenities.includes(
 //                                                             service.name

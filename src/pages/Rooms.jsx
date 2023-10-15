@@ -30,7 +30,7 @@ export const Rooms = () => {
             flexDirection: "column",
             alignItems: "center",
             gap: "2rem",
-            padding: { xs: 0, md: 0, lg: 0 },                
+            padding: "1rem",                
             margin: { xs: 0, md: 0, lg: 0 },                
         }}>
             
