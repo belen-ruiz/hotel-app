@@ -19,6 +19,8 @@ export const RoomProvider = ({ children }) => {
     const [adults, setAdults] = useState(1);
     const [kids, setKids] = useState(0);
 
+
+    const [dateValue, setDateValue] = useState(undefined);
     const [startDate, setStartDate] = useState(false);
     const [endDate, setEndDate] = useState(false);
 
@@ -33,8 +35,6 @@ export const RoomProvider = ({ children }) => {
     const year = startDate.$y
     const dayNumberMonthYear =  [`${day} - ${number} / ${month} / ${year}`]
     
-    console.log(adults)
-    console.log(kids)
 
     const handleClick = () => {
         setTotalGuests(total);
@@ -44,26 +44,25 @@ export const RoomProvider = ({ children }) => {
     const renderRooms = () => {
         setRooms(roomsData)
     }
-    // useEffect(() => {
-    //   setTotalDate(dayNumberMonthYear) 
-    // }, [startDate])
-
+    
     const getAllRooms = () => {
         setTotalGuests(0)
         setSearch([])
     }
 
-    const handleChangeDate = (e,id) => {
+    const handleChangeDate = (e, value) => {
         //const id = e.target.id;
-        const value = e.target.value;
-
         console.log(value)
+        setDateValue(value)
+        //const valueDate = value;
 
-        if (id === "date-start") {
-            setStartDate(value);
-        } else if (id === "date-end") {
-            setEndDate(value);
-        }
+        //console.log(valueDate)
+
+        // if (id === "date-start") {
+        //     setStartDate(dateValue);
+        // } else if (id === "date-end") {
+        //     setEndDate(dateValue);
+        // }
     };
 
 
@@ -143,7 +142,7 @@ export const RoomProvider = ({ children }) => {
                 setIsList, 
                 getAllRooms,
                 
-                startDate, handleChangeDate, handleSliderChange, handleInputChange, handleBlur, handleClick, 
+                handleChangeDate, handleSliderChange, handleInputChange, handleBlur, handleClick, dateValue, 
                 
                 adults, kids, totalGuests,
                 

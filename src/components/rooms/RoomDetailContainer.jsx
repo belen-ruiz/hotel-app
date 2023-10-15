@@ -29,9 +29,7 @@ export const RoomDetailContainer = ({  }) => {
     <Container 
         sx={{
             padding: "3rem"
-            }}>
-                          
-
+            }}>                       
                 {rooms && <RoomDetail room={room}/>}
     </Container>
   )

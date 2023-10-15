@@ -30,8 +30,8 @@ export const Navbar = () => {
     };
 
     const navbarStyle = {
-      backgroundColor: 'transparent',
-      backdropFilter: scrolling ? 'blur(10px)' : 'none',
+      backgroundColor: '#ffffff8b',
+      backdropFilter: scrolling ? 'blur(20px)' : 'none',
       transition: 'background-color 0.3s ease',
       paddingTop: "1rem",
       zIndex: 1,
@@ -142,12 +142,15 @@ export const Navbar = () => {
                                 to={page.link}
                                 key={page.page}
                                 style={{
-                                    
                                     color:
                                         location.pathname === page.link
+                                            ? "#989696fa"
+                                            : "rgb(38, 37, 38)",
+                                    boxShadow:
+                                        location.pathname === page.link
                                             ? "#f5f1f1fb"
-                                            : "rgb(199, 198, 199)",
-                                    
+                                            : "rgb(38, 37, 38)",
+                                        
                                 }}
                             >
                                 {page.page}

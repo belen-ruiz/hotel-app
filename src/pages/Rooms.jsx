@@ -3,7 +3,6 @@ import { Container } from "@mui/material";
 import React, { useEffect, useState } from "react";
 import Breadcrums from "../components/breadcrumbs/Breadcrums";
 import { DisplayData } from "../components/displayData/DisplayData";
-import { Hero } from "../components/hero/Hero";
 import { Loading } from "../components/loading/Loading";
 import { RoomItemListContainer } from "../components/rooms/RoomItemListContainer";
 import { SearchForRoom } from "../components/search/SearchForRoom";
@@ -25,11 +24,7 @@ export const Rooms = () => {
     
     return (
         <Container>
-            <Hero 
-                pageTitle="Our Rooms" 
-                imgUrl="https://images.pexels.com/photos/2121120/pexels-photo-2121120.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"/>
-
-
+            
             <SearchForRoom search={search} />
 
             <DisplayData 

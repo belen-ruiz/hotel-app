@@ -16,9 +16,7 @@ import { DemoContainer, DemoItem } from "@mui/x-date-pickers/internals/demo";
 import { AdapterDayjs } from "@mui/x-date-pickers/AdapterDayjs";
 import { LocalizationProvider } from "@mui/x-date-pickers/LocalizationProvider";
 import { DatePicker } from "@mui/x-date-pickers/DatePicker";
-import { MobileDatePicker } from "@mui/x-date-pickers/MobileDatePicker";
-import { DesktopDatePicker } from "@mui/x-date-pickers/DesktopDatePicker";
-import { StaticDatePicker } from "@mui/x-date-pickers/StaticDatePicker";
+
 
 const Input = styled(MuiInput)`
     width: 30px;
@@ -32,8 +30,16 @@ export const SearchBar = ({
     kids,
     adults,
     handleClick,
-    startDate
+    dateValue,
+    setDateValue
 }) => {
+
+    //const [value, setValue] = useState()
+    const today = dayjs();
+    const tomorrow = dayjs().add(1, 'day');
+
+    console.log(dateValue)
+
     return (
         <Container sx={{ width: "100%" }}>
             <Box
@@ -43,7 +49,7 @@ export const SearchBar = ({
                     justifyContent: "space-around",
                     alignItems: "center",
                     boxShadow: "10px 10px 35px -21px rgba(69,68,69,1)",
-                    padding: "2.5rem",
+                    padding: "1rem",
                     borderRadius: "10px",
                     gap: "1rem",
                 }}
@@ -53,21 +59,27 @@ export const SearchBar = ({
                         (elem) =>
                             elem && (
                                 <>
-                                    <Box key={elem.id}>
+                                    <Box key={elem.id} id={elem.id}>
                                         <DemoContainer components={["DatePicker"]}>
-                                            <DemoItem>
                                                 <DatePicker
-                                                    defaultValue={dayjs("2022-04-17")}
-                                                    // value={value}
+                                                    disablePast
                                                     label={elem.label}
-                                                    id={elem.id}
-                                                    name={elem.name}
+                                                    defaultValue={elem.defaultValue}
+                                                    value={dateValue}
+                                                    //value={dateValue}
+                                                    
+                                                    //maxDate={dayjs('2025-04-17')}
+                                                    //maxDate={elem.max}
                                                     onChange={handleChangeDate}
-                                                    min={elem.min}
-                                                    max={elem.max}
-                                                    views={['year', 'month', 'day']}
+                                                    
+                                                    //onChange={(newValue) => setDateValue(newValue)}
+                                                    
+                                                    // name={elem.name}
+                                                    // min={elem.min}
+                                                    // max={elem.max}
+                                                    //views={['day', 'month', 'year']}
                                                 />
-                                            </DemoItem>
+                                                <Typography>Value: {dateValue == null ? 'null' : dateValue.format('L')}</Typography>
                                         </DemoContainer>
                                     </Box>
                                 </>
@@ -111,7 +123,7 @@ export const SearchBar = ({
                                                     step={1}
                                                     min={0}
                                                     max={5}
-                                                    style={{ width: "100px" }}
+                                                    style={{ width: "50px" }}
                                                 />
                                             </Box>
 
