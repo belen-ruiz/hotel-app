@@ -1,4 +1,4 @@
-import { useContext, useState, useEffect, createContext } from "react";
+import { useContext, useState, useEffect, createContext, useRef } from "react";
 import { useNavigate } from "react-router-dom";
 import { useParams } from "react-router-dom";
 import { roomsData } from "../utils/rooms";
@@ -34,7 +34,19 @@ export const RoomProvider = ({ children }) => {
     const month = startDate.$M //mal
     const year = startDate.$y
     const dayNumberMonthYear =  [`${day} - ${number} / ${month} / ${year}`]
-    
+
+    const containerRef = useRef(null);
+    const container = containerRef.current;
+
+    const handleScroll = (direction) => {
+        if (container) {
+            if (direction === "left") {
+                container.scrollLeft -= 300;
+            } else if (direction === "right") {
+                container.scrollLeft += 300;
+            }
+        }
+    };
 
     const handleClick = () => {
         setTotalGuests(total);
@@ -143,6 +155,8 @@ export const RoomProvider = ({ children }) => {
                 getAllRooms,
                 
                 handleChangeDate, handleSliderChange, handleInputChange, handleBlur, handleClick, dateValue, 
+
+                handleScroll, containerRef,
                 
                 adults, kids, totalGuests,
                 

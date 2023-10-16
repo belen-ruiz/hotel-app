@@ -9,7 +9,7 @@ import { searchDates } from "../../utils/searchDates";
 import { Divider } from "@mui/material";
 
 import { searchGuests } from "../../utils/searchGuests";
-import { ContainedButton } from "../../custom/buttons/CustomButton";
+import { ContainedButton } from "../../custom/Buttons";
 
 import dayjs from "dayjs";
 import { DemoContainer, DemoItem } from "@mui/x-date-pickers/internals/demo";
@@ -41,7 +41,7 @@ export const SearchBar = ({
     console.log(dateValue)
 
     return (
-        <Container sx={{ width: "100%" }}>
+        <Container sx={{ backgroundColor: "#142006", width: "100%" }}>
             <Box
                 sx={{
                     display: "flex",

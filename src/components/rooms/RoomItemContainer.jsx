@@ -7,36 +7,30 @@ import { useRoomContext } from "../../context/RoomProvider";
 import { RoomItem } from "./RoomItem";
 import ArrowCircleLeftRoundedIcon from "@mui/icons-material/ArrowCircleLeftRounded";
 import ArrowCircleRightRoundedIcon from "@mui/icons-material/ArrowCircleRightRounded";
+import { Sections } from "../../custom/Display";
+
 import {
-    SubtitleJustify,
+    White, WhiteBC, GreenBC,
     TopText,
     Title,
-} from "../../custom/typography/Typography";
+    Subtitle,
+    TextAlignJustify, 
+} from "../../custom/Typography";
+
+import {
+    WhiteButton,
+} from "../../custom/Buttons";
+
 
 export const RoomItemContainer = ({}) => {
-    const { rooms, isList, setIsList } = useRoomContext();
-    const containerRef = useRef(null);
-    const container = containerRef.current;
-
-    const handleScroll = (direction) => {
-        if (container) {
-            if (direction === "left") {
-                container.scrollLeft -= 300;
-            } else if (direction === "right") {
-                container.scrollLeft += 300;
-            }
-        }
-    };
+    const { rooms, isList, setIsList, handleScroll, containerRef } = useRoomContext();
+    
 
     return (
         <Container
-            sx={{
-                display: "flex",
-                //width: "100%",
-                //height: "80vh",
-                justifyContent: "center",
-                alignItems: "center",
-            }}
+            disableGutters
+            maxWidth="lg"
+            sx={{ ...Sections, ...GreenBC }}
         >
             <Box
                 sx={{
@@ -47,9 +41,9 @@ export const RoomItemContainer = ({}) => {
             >
                 {/* titles */}
                 <Stack spacing={1} sx={{ width: "30%" }}>
-                    <p style={TopText}> Discover our rooms </p>
-                    <p style={Title}> Choose your room </p>
-                    <p style={SubtitleJustify}>
+                    <p style={{ ...TopText, ...WhiteBC }}> Discover our rooms </p>
+                    <p style={{...Title, ...White}}> Choose your room </p>
+                    <p style={{...Subtitle, ...White, ...TextAlignJustify}}>
                         the Best place to enjoy life place to enjoy life place
                         to enjoy life place to enjoy.
                     </p>
@@ -134,18 +128,7 @@ export const RoomItemContainer = ({}) => {
                     >
                         <Box
                             sx={{
-                                color: "green",
-                                cursor: "pointer",
-                                transition: "transform 0.3s ease",
-                                
-                                //paddingLeft: { xs: "0", md: "0", xl: "0" },
-                                //paddingRight: { xs: "0", md: "0", xl: "0" },
-                                "&:hover": {
-                                    boxShadow: "2px 2px 4px rgba(0, 0, 0, 0.3)",
-                                    transform: "scale(1.5)",
-                                    borderRadius: "50%",
-
-                                },
+                                ...WhiteButton
                             }}
                             onClick={() => handleScroll("left")}
                         >
@@ -153,17 +136,7 @@ export const RoomItemContainer = ({}) => {
                         </Box>
 
                         <Box
-                            sx={{
-                                color: "green",
-                                cursor: "pointer",
-                                transition: "transform 0.3s ease",
-
-                                "&:hover": {
-                                    boxShadow: "2px 2px 4px rgba(0, 0, 0, 0.3)",
-                                    borderRadius: "50%",
-                                    transform: "scale(1.5)",
-                                },
-                            }}
+                            sx={{ ...WhiteButton }}
                             onClick={() => handleScroll("right")}
                         >
                             <ArrowCircleRightRoundedIcon fontSize="large" />

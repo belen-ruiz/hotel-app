@@ -3,24 +3,28 @@ import { Stack } from "@mui/material";
 import { Typography } from "@mui/material";
 import { Toolbar } from "@mui/material";
 import { Container } from "@mui/material";
-import { features } from "../../utils/features";
+import { Sections } from "../../custom/Display";
+
 import {
+    White,
+    Green,
+    Orange,
+    WhiteBC,
+    GreenBC,
     TopText,
     Title,
+    Subtitle,
     Quote,
-    SubtitleBold,
-    SubtitleItalic,
-} from "../../custom/typography/Typography";
+    Bold,
+    Italic,
+} from "../../custom/Typography";
 
 export const Testimonials = () => {
     return (
         <Container
-            sx={{
-                display: "flex",
-                //height: "80vh",
-                justifyContent: "center",
-                alignItems: "center",
-            }}
+            disableGutters
+            maxWidth="lg"
+            sx={{ ...Sections, ...WhiteBC }}
         >
             <Stack
                 spacing={1}
@@ -38,8 +42,11 @@ export const Testimonials = () => {
                         alignItems: "center",
                     }}
                 >
-                    <p style={TopText}>TESTIMONIALS</p>
-                    <p style={Title}>What our clients say</p>
+                    <p style={{ ...TopText, ...White, ...GreenBC }}>
+                        What our clients say
+                    </p>
+
+                    <p style={{ ...Title, ...Green }}>Testimonials</p>
                 </Stack>
 
                 {/* tripAd quote */}
@@ -51,7 +58,7 @@ export const Testimonials = () => {
                         alignItems: "center",
                     }}
                 >
-                    <p style={Quote}>
+                    <p style={{...Quote, ...Green}}>
                         "My stay was simply amazing and exceeded all my
                         expectations. The room, elegantly decorated, offered
                         breathtaking views and exceptional comfort. The pool,
@@ -62,8 +69,10 @@ export const Testimonials = () => {
                         hotel without hesitation for a dream vacation by the
                         beach!"
                     </p>
-                    <p style={SubtitleBold}>Bruce Wayne</p>
-                    <p style={SubtitleItalic}>Reviewed from TripAdvisor</p>
+                    <p style={{ ...Subtitle, ...Bold }}>Bruce Wayne</p>
+                    <p style={{ ...Subtitle, ...Italic }}>
+                        Reviewed from TripAdvisor
+                    </p>
                     <img
                         src="https://download.logo.wine/logo/TripAdvisor/TripAdvisor-Logo.wine.png"
                         alt="trip advisor"
@@ -75,29 +84,29 @@ export const Testimonials = () => {
     );
 };
 
-const Feature = ({ data }) => {
-    const { id, icon, title, description } = data;
-    return (
-        <Stack
-            sx={{
-                display: "flex",
-                flexDirection: "column",
-                justifyContent: "center",
-                alignItems: "center",
-                gap: "0.5rem",
-                color: "#4f4e4e",
-            }}
-        >
-            <Box>{icon}</Box>
-            <Typography variant="subtitle2">{title}</Typography>
-            <Typography
-                sx={{
-                    textAlign: "center",
-                }}
-                variant="caption"
-            >
-                {description}
-            </Typography>
-        </Stack>
-    );
-};
+// const Feature = ({ data }) => {
+//     const { id, icon, title, description } = data;
+//     return (
+//         <Stack
+//             sx={{
+//                 display: "flex",
+//                 flexDirection: "column",
+//                 justifyContent: "center",
+//                 alignItems: "center",
+//                 gap: "0.5rem",
+//                 color: "#4f4e4e",
+//             }}
+//         >
+//             <Box>{icon}</Box>
+//             <Typography variant="subtitle2">{title}</Typography>
+//             <Typography
+//                 sx={{
+//                     textAlign: "center",
+//                 }}
+//                 variant="caption"
+//             >
+//                 {description}
+//             </Typography>
+//         </Stack>
+//     );
+// };

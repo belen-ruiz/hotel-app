@@ -4,30 +4,30 @@ import { Typography } from "@mui/material";
 import { Toolbar } from "@mui/material";
 import { Container } from "@mui/material";
 import { features } from "../../utils/features";
+import { Sections } from "../../custom/Display";
 import {
+    White, WhiteBC,
+    Green, GreenBC,
     TopText,
     Title,
-    SubtitleCenter,
-} from "../../custom/typography/Typography";
+    Subtitle,
+} from "../../custom/Typography";
 
 export const Features = () => {
     return (
         <Container
             disableGutters
-            maxWidth="md"
-            sx={{
-                display: "flex",
-                //height: "80vh",
-                justifyContent: "center",
-                alignItems: "center",
-            }}
+            maxWidth="lg"
+            sx={{ ...Sections, ...GreenBC }}
         >
             <Stack
                 spacing={6}
                 sx={{
                     display: "flex",
                     width: "100%",
+                    justifyContent: "center",
                     alignItems: "center",
+                    //height: "75vh",
                 }}
             >
                 {/* titles */}
@@ -38,17 +38,16 @@ export const Features = () => {
                         alignItems: "center",
                     }}
                 >
-                    <p style={TopText}>Enjoy all benefits while you stay</p>
+                    <p style={{ ...TopText, ...Green, ...WhiteBC }}>Enjoy all benefits while you stay</p>
 
-                    <p style={Title}>Our services</p>
+                    <p style={{...Title, ...White}}>Our services</p>
 
-                    <p style={SubtitleCenter}>
+                    <p style={{...Subtitle, ...White}}>
                         Enjoy all benefits while you stay
                     </p>
                 </Stack>
 
                 {/* item box */}
-
                 <Box
                     sx={{
                         display: "flex",
@@ -84,7 +83,7 @@ const Feature = ({ data }) => {
                 justifyContent: "center",
                 alignItems: "center",
                 gap: "0.5rem",
-                color: "#4f4e4e",
+                color: {...White},
             }}
         >
             <Box>{icon}</Box>

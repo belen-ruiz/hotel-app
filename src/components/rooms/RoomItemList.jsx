@@ -22,7 +22,7 @@ import { Container } from "@mui/material";
 import {
     ContainedButton,
     OutlinedButton,
-} from "../../custom/buttons/CustomButton";
+} from "../../custom/Buttons";
 
 export const RoomItemList = ({ rooms, isList, setIsList }) => {
     const title = rooms.title;

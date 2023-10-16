@@ -1,6 +1,6 @@
 import React from "react";
 import { Typography, Container, Box, Stack } from "@mui/material";
-import { ContainedButton } from "../../custom/buttons/CustomButton";
+import { ContainedButton } from "../../custom/Buttons";
 
 const bgImg =
     "https://images.pexels.com/photos/17488420/pexels-photo-17488420/free-photo-of-madera-paisaje-agua-apple.jpeg";

@@ -4,11 +4,18 @@ import { SearchBar } from "./SearchBar";
 import { useRoomContext } from "../../context/RoomProvider";
 import { Typography } from "@mui/material";
 import { Stack } from "@mui/material";
+
+import { Sections } from "../../custom/Display";
+
 import {
+    White,
+    WhiteBC,
+    Green,
+    GreenBC,
     TopText,
     Title,
-    SubtitleCenter,
-} from "../../custom/typography/Typography";
+    Subtitle,
+} from "../../custom/Typography";
 
 export const SearchForRoom = ({}) => {
     const {
@@ -21,20 +28,11 @@ export const SearchForRoom = ({}) => {
         handleClick,
     } = useRoomContext(); 
 
-    const imgURL =
-        "https://images.pexels.com/photos/3601421/pexels-photo-3601421.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1";
-
     return (
         <Container
-        disableGutters
-            maxWidth="md"
-            sx={{
-                display: "flex",
-                //height: "80vh",
-                justifyContent: "center",
-                alignItems: "center",
-                //position: "relative",
-            }}
+            disableGutters
+            maxWidth="lg"
+            sx={{ ...Sections, ...WhiteBC }}
         >
                 <Stack
                 spacing={6}
@@ -45,10 +43,6 @@ export const SearchForRoom = ({}) => {
                     alignItems: "center",
                     //position: "absolute",
                     padding: "2rem",
-                    backgroundImage: `url(${imgURL})`,
-                    backgroundPosition: "center",
-                    backgroundSize: "cover",
-                    backgroundRepeat: "no-repeat",
                     }}>
 
                     {/* titles */}
@@ -59,11 +53,11 @@ export const SearchForRoom = ({}) => {
                             alignItems: "center",
                         }}
                     >
-                        <p style={TopText}>Make your reservation</p>
+                        <p style={{ ...TopText, ...White, ...GreenBC }}>Make your reservation</p>
 
-                        <p style={Title}>Reservations</p>
+                        <p style={{...Title, ...Green}}>Reservations</p>
 
-                        <p style={SubtitleCenter}>
+                        <p style={{...Subtitle, ...Green}}>
                             Enjoy all benefits while you stay
                         </p>
                     </Stack>

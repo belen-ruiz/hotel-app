@@ -21,7 +21,7 @@ export const Home = () => {
                 display: "flex",
                 flexDirection: "column",
                 alignItems: "center",
-                gap: "4rem",
+                //gap: "4rem",
                 padding: { xs: 0, md: 0, lg: 0 },                
                 margin: { xs: 0, md: 0, lg: 0 },                
             }}>

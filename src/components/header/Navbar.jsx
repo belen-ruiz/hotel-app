@@ -11,7 +11,7 @@ import Container from "@mui/material/Container";
 import MenuItem from "@mui/material/MenuItem";
 import { pages } from "../../utils/pages";
 import { Link, NavLink } from "react-router-dom";
-import { OutlinedButton } from "../../custom/buttons/CustomButton";
+import { OutlinedButton } from "../../custom/Buttons";
 import { Logo } from "../logo/Logo";
 
 
@@ -30,13 +30,14 @@ export const Navbar = () => {
     };
 
     const navbarStyle = {
-      backgroundColor: '#ffffff8b',
+      backgroundColor: 'transparent',
       backdropFilter: scrolling ? 'blur(20px)' : 'none',
       transition: 'background-color 0.3s ease',
       paddingTop: "1rem",
       zIndex: 1,
       margin: 0,
       width: "100%",
+      position: "static",
     };
 
     useEffect(() => {
@@ -58,7 +59,7 @@ export const Navbar = () => {
     return (
         <AppBar 
             style={ navbarStyle }>
-            <Container maxWidth="md">
+            <Container maxWidth="lg">
                 <Toolbar disableGutters sx={{display: "flex", justifyContent:"space-between" }} >
                     {/* menu mobile */}
                     <Box
