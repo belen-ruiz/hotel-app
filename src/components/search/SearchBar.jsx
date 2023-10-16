@@ -16,7 +16,20 @@ import { DemoContainer, DemoItem } from "@mui/x-date-pickers/internals/demo";
 import { AdapterDayjs } from "@mui/x-date-pickers/AdapterDayjs";
 import { LocalizationProvider } from "@mui/x-date-pickers/LocalizationProvider";
 import { DatePicker } from "@mui/x-date-pickers/DatePicker";
-
+import { MobileDatePicker } from "@mui/x-date-pickers/MobileDatePicker";
+import { DesktopDatePicker } from "@mui/x-date-pickers/DesktopDatePicker";
+import { StaticDatePicker } from "@mui/x-date-pickers/StaticDatePicker";
+import {
+    White,
+    WhiteBC,
+    Green,
+    GreenBC,
+    OrangeBC,
+    TopText,
+    Title,
+    Subtitle,
+    Label,
+} from "../../custom/Typography";
 
 const Input = styled(MuiInput)`
     width: 30px;
@@ -30,16 +43,7 @@ export const SearchBar = ({
     kids,
     adults,
     handleClick,
-    dateValue,
-    setDateValue
 }) => {
-
-    //const [value, setValue] = useState()
-    const today = dayjs();
-    const tomorrow = dayjs().add(1, 'day');
-
-    console.log(dateValue)
-
     return (
         <Container sx={{ backgroundColor: "#142006", width: "100%" }}>
             <Box
@@ -59,28 +63,17 @@ export const SearchBar = ({
                         (elem) =>
                             elem && (
                                 <>
-                                    <Box key={elem.id} id={elem.id}>
-                                        <DemoContainer components={["DatePicker"]}>
-                                                <DatePicker
-                                                    disablePast
-                                                    label={elem.label}
-                                                    defaultValue={elem.defaultValue}
-                                                    value={dateValue}
-                                                    //value={dateValue}
-                                                    
-                                                    //maxDate={dayjs('2025-04-17')}
-                                                    //maxDate={elem.max}
-                                                    onChange={handleChangeDate}
-                                                    
-                                                    //onChange={(newValue) => setDateValue(newValue)}
-                                                    
-                                                    // name={elem.name}
-                                                    // min={elem.min}
-                                                    // max={elem.max}
-                                                    //views={['day', 'month', 'year']}
-                                                />
-                                                <Typography>Value: {dateValue == null ? 'null' : dateValue.format('L')}</Typography>
-                                        </DemoContainer>
+                                    <Box key={elem.id}>
+                                        <p style={Label}>{elem.label}</p>
+                                        <input
+                                            type="date"
+                                            label={elem.label}
+                                            id={elem.id}
+                                            name={elem.name}
+                                            onChange={handleChangeDate}
+                                            min={elem.min}
+                                            max={elem.max}
+                                        />
                                     </Box>
                                 </>
                             )
@@ -94,18 +87,17 @@ export const SearchBar = ({
                             elem && (
                                 <>
                                     <Stack key={elem.id}>
-                                        <p className="title-2 primary">
-                                            {elem.label}
-                                        </p>
+                                        <p style={Label}>{elem.label}</p>
                                         <Box
                                             sx={{
                                                 display: "flex",
                                                 gap: "1rem",
                                             }}
                                         >
-                                            <Box>
+                                            <Box sx={{ ...White }}>
                                                 <BoyRounded />
                                             </Box>
+                                            {/* range */}
 
                                             <Box>
                                                 <input
@@ -123,12 +115,17 @@ export const SearchBar = ({
                                                     step={1}
                                                     min={0}
                                                     max={5}
-                                                    style={{ width: "50px" }}
+                                                    style={{
+                                                        width: "70px",
+                                                        ...White,
+                                                    }}
                                                 />
                                             </Box>
 
+                                            {/* arrow */}
                                             <Box>
                                                 <Input
+                                                    style={{ ...White }}
                                                     id={elem.id}
                                                     size="small"
                                                     value={

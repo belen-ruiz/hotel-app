@@ -8,23 +8,15 @@ import { Map } from "../components/map/Map";
 import { RoomItemContainer } from "../components/rooms/RoomItemContainer";
 import { useRoomContext } from "../context/RoomProvider";
 import { Intro } from "../components/header/Intro";
+import { Pages } from "../custom/Display"
+
 
 
 export const Home = () => {
     const { rooms, search } = useRoomContext();
 
     return (
-        <Container
-            sx={{
-                width: "100vw",
-                height: "auto",
-                display: "flex",
-                flexDirection: "column",
-                alignItems: "center",
-                //gap: "4rem",
-                padding: { xs: 0, md: 0, lg: 0 },                
-                margin: { xs: 0, md: 0, lg: 0 },                
-            }}>
+        <Container sx={{ Pages }}>
 
             <Intro />
 

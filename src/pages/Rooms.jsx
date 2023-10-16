@@ -8,6 +8,7 @@ import { RoomItemListContainer } from "../components/rooms/RoomItemListContainer
 import { SearchForRoom } from "../components/search/SearchForRoom";
 import { useRoomContext } from "../context/RoomProvider";
 import { FilterIcons } from "../filter/FilterIcons";
+import { Pages } from "../custom/Display"
 
 export const Rooms = () => {
     const [select, setSelect] = useState("list");
@@ -23,16 +24,7 @@ export const Rooms = () => {
 
     
     return (
-        <Container  sx={{
-            width: "100vw",
-            height: "auto",
-            display: "flex",
-            flexDirection: "column",
-            alignItems: "center",
-            gap: "2rem",
-            padding: "1rem",                
-            margin: { xs: 0, md: 0, lg: 0 },                
-        }}>
+        <Container sx={{ Pages }}>
             
             <SearchForRoom search={search} />
 

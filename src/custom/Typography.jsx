@@ -90,6 +90,14 @@ const SmallText = {
 
 }
 
+const Label = {
+    fontSize: "0.9rem",
+  color: "#d5d8d5",
+  letterSpacing: 0,
+  padding: 0,
+
+}
+
 //const SmallText = {
 //         fontSize: "0.8rem",
 //         textTransform: "uppercase",
@@ -102,6 +110,6 @@ export {
     TopText, Title, Subtitle, CardTitle, Price,
     TextAlignCenter, TextAlignJustify,
     Bold, Italic,
-    Quote, SmallText,
+    Quote, SmallText, Label,
 };
 
