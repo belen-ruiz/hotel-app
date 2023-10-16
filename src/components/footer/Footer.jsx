@@ -10,6 +10,10 @@ import { Logo } from "../logo/Logo";
 import { Banner } from "../banner/Banner";
 import { Stack } from "@mui/material";
 import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
+import {
+    White, Orange,
+    Green, GreenBC, OrangeBC,  SmallText,
+} from "../../custom/Typography";
 
 export const Footer = () => {
     const location = useLocation();
@@ -27,6 +31,8 @@ export const Footer = () => {
             }}
         >
             <Stack sx={{ width:"inherit" }}>
+
+                {/* info */}
                 <Grid
                     container
                     spacing={2}
@@ -34,40 +40,29 @@ export const Footer = () => {
                     padding={2}
                     sx={{ width: "100%" }}
                 >
-                    {/* col 2 */}
+                    {/* col 1 */}
                     <Grid item xs={6}>
                         <Grid
                             container
-                            spacing={2}
+                            padding={0}
                             sx={{
+                                ...SmallText,
                                 gridTemplateColumns: "repeat(3, 1fr)",
-                                fontSize: "0.7rem",
-                                textTransform: "capitilize",
                             }}
                         >
                             {footer.map((feet) => (
                                 <Grid 
                                 item 
+                                padding={1}
                                 xs={4} 
                                 key={feet.id}>
-                                    <NavLink
-                                        // style={{
-                                        //     color:
-                                        //         location.pathname === feet.title
-                                        //             ? "var(--color-white)"
-                                        //             : "var(--color-secondary)",
-                                        // }}
-                                    >
+                                    <NavLink>
                                         <Box sx={{display: "flex", gap: "0.1rem", alignItems: "center"}} >
-                                            <Box sx={{width: "20px", height: "20px"}} >
+                                            <Box sx={{...Orange, width: "20px", height: "20px", display: "flex", alignItems: "center" }} >
                                                 <ArrowForwardIosIcon fontSize="sm" />
                                             </Box> 
-                                            <Box sx={{
-                                            color:
-                                                location.pathname === feet.title
-                                                    ? "var(--color-white)"
-                                                    : "var(--color-secondary)",
-                                        }}>
+
+                                            <Box sx={{ ...White }}>
                                                 {feet.title}
                                             </Box> 
                                         </Box>
@@ -91,6 +86,7 @@ export const Footer = () => {
                     </Grid>
                 </Grid>
 
+                {/* banner */}
                 <Banner />
             </Stack>
         </Container>

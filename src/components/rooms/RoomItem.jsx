@@ -11,8 +11,15 @@ import CreateNewFolder from "@mui/icons-material/CreateNewFolder";
 import { BoyRounded } from "@mui/icons-material";
 import { Stack } from "@mui/material";
 import { Link } from "react-router-dom";
-import { OutlinedButton } from "../../custom/Buttons";
-import { SmallText } from "../../custom/Typography";
+import { ContainedButton } from "../../custom/Buttons";
+
+import {
+    White, WhiteBC, GreenBC, OrangeBC, Green,
+    TopText,
+    Title,
+    Subtitle, CardTitle, Price,
+    TextAlignJustify, 
+} from "../../custom/Typography";
 
 export const RoomItem = ({ rooms }) => {
     const title = rooms.title;
@@ -25,81 +32,73 @@ export const RoomItem = ({ rooms }) => {
     const imgUrl = rooms.imgUrl;
 
     return (
-        <Card
+        <Box
             sx={{
                 width: 300,
-                "--Card-padding": "0px",
-                borderRadius: 0 
+                position: "relative",
             }}
         >
-            <AspectRatio ratio="3/4" sx={{ borderRadius: 0 }}>
+            <AspectRatio ratio="3/4" sx={{  }}>
                 <figure>
                     <img src={imgUrl} loading="lazy" alt={title} />
                 </figure>
             </AspectRatio>
 
-            <CardCover
+            <Stack
                 sx={{
+                    width: "100%",
+                    height: "100%",
+                    position: "absolute", 
+                    bottom: 0,
+                    padding: "1rem",
                     display: "flex",
-                    opacity: 0,
-                    borderRadius: 0 ,
+                    justifyContent: "space-between",
+                    alignItems: "start",
                     transition: "0.2s ease-in",
-                    justifyContent: "space-around",
-                        alignItems: "start",
+                    opacity: 0,
                     //background: "linear-gradient(0deg, #676768db 0%, #f5f6f6b4 100%);",
-                    "&:hover, &:focus-within": { opacity: 1, backdropFilter: "blur(5px)" },
+                    "&:hover, &:focus-within": {
+                        opacity: 1,
+                        backdropFilter: "blur(5px)",
+                    },
                 }}
             >
-                {/* The first box acts as a container that inherits style from the CardCover */}
-                <Stack
-                    sx={{
-                        display: "flex",
-                        height: "100%",
-                        padding: "1rem",
-                        
-                    }}
-                >
-                    {/* capacidad */}
-                    {capacity && (
-                        <Box
-                            sx={{
-                                border: "1px solid white",
-                                borderRadius: 0,
-                                display: "flex",
-                            }}
-                        >
-                            {Array(capacity)
-                                .fill()
-                                .map((_, index) => (
-                                    <BoyRounded
-                                        key={capacity}
-                                        style={{
-                                            color: "var(--color-white)",
-                                            fontSize: "2rem",
-                                        }}
-                                    />
-                                ))}
-                        </Box>
-                    )}
+                {/* capacidad */}
+                {capacity && (
+                    <Box
+                        sx={{
+                            border: "1px solid white",
+                            borderRadius: 0,
+                            display: "flex",
+                        }}
+                    >
+                        {Array(capacity)
+                            .fill()
+                            .map((_, index) => (
+                                <BoyRounded
+                                    key={capacity}
+                                    style={{
+                                        color: "var(--color-white)",
+                                        fontSize: "2rem",
+                                    }}
+                                />
+                            ))}
+                    </Box>
+                )}
 
-                    {/* data */}
-                    <Stack>
-                        <p style={SmallText}>{title}</p>
+                {/* data */}
+                <Stack spacing={2} >
+                    <p style={{ ...CardTitle, ...White }}>{title}</p>
 
-                        <p className="title secondary-light">$ {price}</p>
+                    <p style={{ ...Price, ...White }}>$ {price} <span style={{ ...Subtitle, ...White }}>person per night</span> </p>
 
-                        <p className="parraph secondary-light">
-                            person per night
-                        </p>
-
-                        <Box sx={{}}>
-                            <Link to={`/room/${title}`}>
-                                <Box sx={OutlinedButton}>see more info </Box>
-                            </Link>
-                        </Box>
-                    </Stack>
+                    <Box sx={{}}>
+                        <Link to={`/room/${title}`}>
+                            <Box sx={ContainedButton}>see more info </Box>
+                        </Link>
+                    </Box>
                 </Stack>
-            </CardCover>
-        </Card>
+            </Stack>
+        </Box>
     );
 };

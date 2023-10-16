@@ -3,50 +3,58 @@ import { Box, Toolbar, Container } from "@mui/material";
 import React from "react";
 import { socialmedia } from "../../utils/socialmedia";
 import { fastcontact } from "../../utils/fastcontact";
+import {
+    White, Orange, SmallText,
+    Green, GreenBC, OrangeBC,
+} from "../../custom/Typography";
 
 export const Banner = () => {
     return (
         <Container
-        disableGutters
+            disableGutters
             sx={{
                 zIndex: 999999,
                 padding: "0.2rem 1rem",
                 backgroundColor: "#b66808",
                 width: "100%",
-            }}>
+            }}
+        >
             <Box
                 sx={{
+                    ...SmallText, ...White,
                     display: "flex",
                     justifyContent: "space-between",
                     alignItems: "center",
                     minHeight: "auto",
-                    padding: "0.5rem 0",
-                    color: "var(--color-white)",
+                }}
+            >
 
-                }}>
+                {/* contact  */}
                 {fastcontact.map((data) => (
                     <Box
                         key={data.text}
                         sx={{
-                            mr: 2,
-                            display: { xs: "none", md: "flex" },
-                            fontFamily: "monospace",
-                            textDecoration: "underline",
+                            //mr: 2,
+                            display: "flex",
                             alignItems: "center",
                             gap: 1,
-                        }}>
+                        }}
+                    >
                         {data.icon}
-                        <Typography variant="caption">{data.text}</Typography>
+                        <span> {data.text}</span>
                     </Box>
                 ))}
 
-                <Box
-                    sx={{
-                        display: { xs: "none", md: "flex" },
-                        gap: 1,
-                    }}
-                >
-                    {socialmedia.map((icon) => icon)}
+                {/* social media  */}
+                <Box sx={{ display: "flex", gap: "0.5rem" }} >
+                    {socialmedia.map((data) => (
+                        <Box
+                            key={data}
+                            sx={{ cursor: "pointer" }}
+                        >
+                            {data}
+                        </Box>
+                    ))}
                 </Box>
             </Box>
         </Container>

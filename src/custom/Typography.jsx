@@ -15,7 +15,6 @@ const OrangeBC = { backgroundColor: "#e49408" }
 
 
 
-
 const TopText = {
     padding: "0.4rem 0.5rem",
     backgroundColor: "#e49408",
@@ -45,6 +44,20 @@ const Subtitle = {
 };
 
 
+const CardTitle = {
+    fontSize: "2.5rem",
+    textTransform: "uppercase",
+    //textAlign: "center",
+    //marginBottom: "0.3rem",
+};
+
+const Price = {
+    fontSize: "2.5rem",
+    textTransform: "uppercase",
+    fontFamily: "EB Garamond, serif",
+    fontWeight: 700,
+};
+
 
 
 const TextAlignCenter = {
@@ -72,24 +85,23 @@ const Quote = {
 };
 
 const SmallText = {
-        fontSize: "0.8rem",
-        textTransform: "uppercase",
-        fontWeight: 700,
+    fontSize: "0.7rem",
+    textTransform: "capitalze",
 
 }
 
+//const SmallText = {
+//         fontSize: "0.8rem",
+//         textTransform: "uppercase",
+//         fontWeight: 700,
+
+// }
+
 export {
     White, Green, WhiteBC, GreenBC, Orange, OrangeBC,
-
-
-    TopText,
-    Title,
-    Subtitle,
-
+    TopText, Title, Subtitle, CardTitle, Price,
     TextAlignCenter, TextAlignJustify,
-    
     Bold, Italic,
-    Quote,
-    SmallText,
+    Quote, SmallText,
 };
 
