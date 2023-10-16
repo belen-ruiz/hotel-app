@@ -11,7 +11,7 @@ import {
     White,
     WhiteBC,
     Green,
-    GreenBC,
+    GreenBC, OrangeBC,
     TopText,
     Title,
     Subtitle,
@@ -53,7 +53,7 @@ export const SearchForRoom = ({}) => {
                             alignItems: "center",
                         }}
                     >
-                        <p style={{ ...TopText, ...White, ...GreenBC }}>Make your reservation</p>
+                        <p style={{ ...TopText }}>Make your reservation</p>
 
                         <p style={{...Title, ...Green}}>Reservations</p>
 

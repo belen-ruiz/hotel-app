@@ -21,7 +21,6 @@ export const Footer = () => {
             sx={{
                 width: "100%",
                 display: "flex",
-                marginTop: "2rem",
                 justifyContent: "center",
                 alignContent: "end",
                 backgroundColor: "var(--color-primary)",

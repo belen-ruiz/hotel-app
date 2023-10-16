@@ -7,7 +7,7 @@ import { features } from "../../utils/features";
 import { Sections } from "../../custom/Display";
 import {
     White, WhiteBC,
-    Green, GreenBC,
+    Green, GreenBC, OrangeBC,
     TopText,
     Title,
     Subtitle,
@@ -38,7 +38,7 @@ export const Features = () => {
                         alignItems: "center",
                     }}
                 >
-                    <p style={{ ...TopText, ...Green, ...WhiteBC }}>Enjoy all benefits while you stay</p>
+                    <p style={{ ...TopText }}>Enjoy all benefits while you stay</p>
 
                     <p style={{...Title, ...White}}>Our services</p>
 

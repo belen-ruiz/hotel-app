@@ -6,7 +6,7 @@ import {
     White,
     WhiteBC,
     GreenBC,
-    Orange,
+    Orange, OrangeBC,
     TopText,
     Title,
     Subtitle,
@@ -33,7 +33,7 @@ export const AboutUs = () => {
                 {/* titles */}
                 <Stack spacing={"1rem"} sx={{ width: "30%", alignItems: "start" }}>
                     <Stack>
-                        <p style={{ ...TopText, ...WhiteBC }}>a little about us</p>
+                        <p style={{ ...TopText }}>a little about us</p>
                         <p style={{ ...Title, ...White }}>
                             the Best place to enjoy life
                         </p>

@@ -10,7 +10,7 @@ import ArrowCircleRightRoundedIcon from "@mui/icons-material/ArrowCircleRightRou
 import { Sections } from "../../custom/Display";
 
 import {
-    White, WhiteBC, GreenBC,
+    White, WhiteBC, GreenBC, OrangeBC,
     TopText,
     Title,
     Subtitle,
@@ -41,7 +41,7 @@ export const RoomItemContainer = ({}) => {
             >
                 {/* titles */}
                 <Stack spacing={1} sx={{ width: "30%" }}>
-                    <p style={{ ...TopText, ...WhiteBC }}> Discover our rooms </p>
+                    <p style={{ ...TopText }}> Discover our rooms </p>
                     <p style={{...Title, ...White}}> Choose your room </p>
                     <p style={{...Subtitle, ...White, ...TextAlignJustify}}>
                         the Best place to enjoy life place to enjoy life place

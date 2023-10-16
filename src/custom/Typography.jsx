@@ -9,18 +9,23 @@ const GreenBC = { backgroundColor: "#142006" };
 
 const Orange = { color: "#e49408" }
 
+const OrangeBC = { backgroundColor: "#e49408" }
+
 
 
 
 
 
 const TopText = {
+    padding: "0.4rem 0.5rem",
+    backgroundColor: "#e49408",
+    color: "#142006",
     fontSize: "0.8rem",
     fontWeight: 700,
     textTransform: "uppercase",
+    textAlign: "center",
     letterSpacing: "5px",
-    padding: "0.4rem 0.5rem",
-    marginBottom: "0.3rem",
+    //marginBottom: "0.3rem",
 };
 
 
@@ -74,7 +79,7 @@ const SmallText = {
 }
 
 export {
-    White, Green, WhiteBC, GreenBC, Orange,
+    White, Green, WhiteBC, GreenBC, Orange, OrangeBC,
 
 
     TopText,

@@ -6,12 +6,12 @@ import { Container } from '@mui/material';
 export const Header = () => {
   return (
     <Container  
-    maxWidth="md"
+    maxWidth="lg"
     disableGutters
     sx={{
       width: "100%",
       display: "flex",
-      flexDirection: "column",
+      //flexDirection: "column",
       alignItems: "center",
       //padding: { xs: 0, md: 0, lg: 0 },                
       //margin: { xs: 0, md: 0, lg: 0 },  

@@ -39,26 +39,24 @@ export const RoomItem = ({ rooms }) => {
             </AspectRatio>
 
             <CardCover
-                className="gradient-cover"
                 sx={{
-                    "&:hover, &:focus-within": { opacity: 1 },
                     display: "flex",
                     opacity: 0,
+                    borderRadius: 0 ,
                     transition: "0.2s ease-in",
-                    background:
-                        "linear-gradient(0deg, #222223d5 0%, #46474734 100%);",
-                    height: "100%",
+                    justifyContent: "space-around",
+                        alignItems: "start",
+                    //background: "linear-gradient(0deg, #676768db 0%, #f5f6f6b4 100%);",
+                    "&:hover, &:focus-within": { opacity: 1, backdropFilter: "blur(5px)" },
                 }}
             >
                 {/* The first box acts as a container that inherits style from the CardCover */}
                 <Stack
-                    spacing={1}
                     sx={{
                         display: "flex",
                         height: "100%",
                         padding: "1rem",
-                        display: "flex",
-                        justifyContent: "space-between",
+                        
                     }}
                 >
                     {/* capacidad */}
@@ -95,10 +93,8 @@ export const RoomItem = ({ rooms }) => {
                         </p>
 
                         <Box sx={{}}>
-                            <Favorite />
-
                             <Link to={`/room/${title}`}>
-                                <Box sx={OutlinedButton}>see more info </Box>{" "}
+                                <Box sx={OutlinedButton}>see more info </Box>
                             </Link>
                         </Box>
                     </Stack>

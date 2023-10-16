@@ -11,6 +11,7 @@ import {
     Orange,
     WhiteBC,
     GreenBC,
+    OrangeBC,
     TopText,
     Title,
     Subtitle,
@@ -42,7 +43,7 @@ export const Testimonials = () => {
                         alignItems: "center",
                     }}
                 >
-                    <p style={{ ...TopText, ...White, ...GreenBC }}>
+                    <p style={{ ...TopText }}>
                         What our clients say
                     </p>
 
