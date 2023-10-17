@@ -3,9 +3,9 @@ const White = { color: "#d5d8d5" }
 
 const WhiteBC = { backgroundColor: "#d5d8d5" };
 
-const Green = { color: "#142006" }
+const Green = { color: "#182706" }
 
-const GreenBC = { backgroundColor: "#142006" };
+const GreenBC = { backgroundColor: "#182706" };
 
 const Orange = { color: "#e49408" }
 
@@ -22,7 +22,6 @@ const TopText = {
     fontSize: "0.8rem",
     fontWeight: 700,
     textTransform: "uppercase",
-    textAlign: "center",
     letterSpacing: "5px",
     //marginBottom: "0.3rem",
 };
@@ -47,12 +46,13 @@ const Subtitle = {
 const CardTitle = {
     fontSize: "2.5rem",
     textTransform: "uppercase",
+    letterSpacing: "-1px"
     //textAlign: "center",
     //marginBottom: "0.3rem",
 };
 
 const Price = {
-    fontSize: "2.5rem",
+    fontSize: "8rem",
     textTransform: "uppercase",
     fontFamily: "EB Garamond, serif",
     fontWeight: 700,

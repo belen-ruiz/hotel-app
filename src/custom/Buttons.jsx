@@ -11,28 +11,32 @@ const OutlinedButton = {
     cursor: "pointer",
 
     "&:hover": {
-        transition: "background-color 0.3s ease",
+        transition: "background-color scale 0.3s ease",
         backgroundColor: "#e49408",
         color: "white",
-        boxShadow: "0 0 30px rgba(69, 69, 68, 1)",
+        scale: "1.1"
+        //boxShadow: "0 0 30px rgba(69, 69, 68, 1)",
     },
 };
 
 const ContainedButton = {
     backgroundColor: "#e49408",
     border: "2px solid #e49408",
+    color: "#d5d8d5",
     padding: "0.4rem 0.5rem",
     textTransform: "uppercase",
-    color: "white",
     fontSize: "0.8rem",
     fontWeight: "bold",
     cursor: "pointer",
 
     "&:hover": {
-        color: "#e49408",
+        transition: "background-color scale 0.3s ease",
         backgroundColor: "transparent",
-        boxShadow: "30px #454544",
+        border: "2px solid #e49408",
+        color: "#e49408",
         backdropFilter: "blur(10px)",
+        scale: "1.1"
+        //boxShadow: "30px #454544",
     },
 };
 

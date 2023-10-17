@@ -59,7 +59,7 @@ export const RoomItem = ({ rooms }) => {
                     //background: "linear-gradient(0deg, #676768db 0%, #f5f6f6b4 100%);",
                     "&:hover, &:focus-within": {
                         opacity: 1,
-                        backdropFilter: "blur(5px)",
+                        backdropFilter: "blur(8px)",
                     },
                 }}
             >
@@ -87,10 +87,17 @@ export const RoomItem = ({ rooms }) => {
                 )}
 
                 {/* data */}
-                <Stack spacing={2} >
-                    <p style={{ ...CardTitle, ...White }}>{title}</p>
+                <Stack>
+                    <p style={{ ...CardTitle, ...Green }}>{title}</p>
 
-                    <p style={{ ...Price, ...White }}>$ {price} <span style={{ ...Subtitle, ...White }}>person per night</span> </p>
+                    <Box sx={{ display: "flex", alignItems: "end" }} >
+                        {/* <p style={{ ...Price, ...White, letterSpacing: "-20px" }}> <span style={{ ...Subtitle, ...White }}>$</span> {price}  <span style={{ ...Subtitle, ...White }}> p p night</span> </p> */}
+                       <p style={{ ...Subtitle, ...Green, fontWeight: 700 }}>
+                        $
+                            <span style={{ ...Price, ...Green, letterSpacing: "-20px" }}> {price} </span>
+                        pp night
+                       </p>
+                    </Box>
 
                     <Box sx={{}}>
                         <Link to={`/room/${title}`}>

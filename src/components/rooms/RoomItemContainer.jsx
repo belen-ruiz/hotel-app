@@ -41,8 +41,8 @@ export const RoomItemContainer = ({}) => {
             >
                 {/* titles */}
                 <Stack spacing={1} sx={{ width: "30%" }}>
-                    <p style={{ ...TopText }}> Discover our rooms </p>
-                    <p style={{...Title, ...White}}> Choose your room </p>
+                    <p style={{ ...TopText, ...TextAlignJustify }}> Discover our rooms </p>
+                    <p style={{...Title, ...White, ...TextAlignJustify }}> Choose your room </p>
                     <p style={{...Subtitle, ...White, ...TextAlignJustify}}>
                         the Best place to enjoy life place to enjoy life place
                         to enjoy life place to enjoy.

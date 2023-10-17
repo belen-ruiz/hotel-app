@@ -45,7 +45,7 @@ export const SearchBar = ({
     handleClick,
 }) => {
     return (
-        <Container sx={{ backgroundColor: "#142006", width: "100%" }}>
+        <Container sx={{ ...GreenBC, width: "100%" }}>
             <Box
                 sx={{
                     display: "flex",
