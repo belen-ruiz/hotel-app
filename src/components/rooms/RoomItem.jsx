@@ -38,7 +38,7 @@ export const RoomItem = ({ rooms }) => {
                 position: "relative",
             }}
         >
-            <AspectRatio ratio="3/4" sx={{  }}>
+            <AspectRatio ratio="4/6">
                 <figure>
                     <img src={imgUrl} loading="lazy" alt={title} />
                 </figure>
@@ -46,60 +46,58 @@ export const RoomItem = ({ rooms }) => {
 
             <Stack
                 sx={{
+                    opacity: 0,
+                    display: "flex",
                     width: "100%",
                     height: "100%",
                     position: "absolute", 
                     bottom: 0,
                     padding: "1rem",
-                    display: "flex",
                     justifyContent: "space-between",
                     alignItems: "start",
                     transition: "0.2s ease-in",
-                    opacity: 0,
-                    //background: "linear-gradient(0deg, #676768db 0%, #f5f6f6b4 100%);",
                     "&:hover, &:focus-within": {
                         opacity: 1,
-                        backdropFilter: "blur(8px)",
+                        backdropFilter: "blur(10px)",
                     },
                 }}
             >
                 {/* capacidad */}
                 {capacity && (
-                    <Box
+                <Box
                         sx={{
                             border: "1px solid white",
                             borderRadius: 0,
                             display: "flex",
-                        }}
-                    >
+                        }}>
                         {Array(capacity)
                             .fill()
-                            .map((_, index) => (
+                            .map(() => (
                                 <BoyRounded
                                     key={capacity}
                                     style={{
-                                        color: "var(--color-white)",
+                                        color: { ...White },
                                         fontSize: "2rem",
                                     }}
                                 />
                             ))}
-                    </Box>
+                </Box>
                 )}
 
                 {/* data */}
-                <Stack>
+                <Stack sx={{ Maxwidth: "90%" }} >
                     <p style={{ ...CardTitle, ...Green }}>{title}</p>
 
                     <Box sx={{ display: "flex", alignItems: "end" }} >
-                        {/* <p style={{ ...Price, ...White, letterSpacing: "-20px" }}> <span style={{ ...Subtitle, ...White }}>$</span> {price}  <span style={{ ...Subtitle, ...White }}> p p night</span> </p> */}
+                       
                        <p style={{ ...Subtitle, ...Green, fontWeight: 700 }}>
                         $
-                            <span style={{ ...Price, ...Green, letterSpacing: "-20px" }}> {price} </span>
+                        <span style={{ ...Price, ...Green, letterSpacing: "-20px" }}>{price}</span>
                         pp night
                        </p>
                     </Box>
 
-                    <Box sx={{}}>
+                    <Box sx={{ width: "fit-content" }}>
                         <Link to={`/room/${title}`}>
                             <Box sx={ContainedButton}>see more info </Box>
                         </Link>

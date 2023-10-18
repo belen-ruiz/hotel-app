@@ -11,29 +11,29 @@ import {
 export const Banner = () => {
     return (
         <Container
-            disableGutters
             sx={{
-                zIndex: 999999,
                 padding: "0.2rem 1rem",
-                backgroundColor: "#b66808",
+                backgroundColor: { ...OrangeBC },
                 width: "100%",
+                zIndex: 222
             }}
         >
             <Box
                 sx={{
-                    ...SmallText, ...White,
+                    ...SmallText, ...Green,
                     display: "flex",
                     flexDirection: { xs: "wrap", md: "row" },
                     gap: "0.5rem",
                     justifyContent: "space-between",
                     alignItems: "center",
                     minHeight: "auto",
+                    width: "100%"
                 }}
             >
 
                 {/* contact  */}
                 {fastcontact.map((data) => (
-                    <Box
+                <Box
                         key={data.text}
                         sx={{
                             //mr: 2,
@@ -45,11 +45,11 @@ export const Banner = () => {
                     >
                         {data.icon}
                         <span> {data.text}</span>
-                    </Box>
+                </Box>
                 ))}
 
                 {/* social media  */}
-                <Box sx={{ display: "flex", gap: "0.5rem",  width: "100%" }} >
+                <Box sx={{ display: "flex", gap: "0.5rem",  width: "auto" }} >
                     {socialmedia.map((data) => (
                         <Box
                             key={data}

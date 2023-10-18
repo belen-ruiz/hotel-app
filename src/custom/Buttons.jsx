@@ -47,8 +47,8 @@ const WhiteButton = {
 
     "&:hover": {
         color: "#e49408",
-        boxShadow: "2px 1px 4px rgba(232, 230, 230, 0.3)",
-        borderRadius: "50%",
+        boxShadow: "0px 1px 2px rgba(232, 230, 230, 0.3)",
+        borderRadius: "30px",
         transform: "scale(1.5)",
     },
 };

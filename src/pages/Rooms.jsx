@@ -5,7 +5,7 @@ import Breadcrums from "../components/breadcrumbs/Breadcrums";
 import { DisplayData } from "../components/displayData/DisplayData";
 import { Loading } from "../components/loading/Loading";
 import { RoomItemListContainer } from "../components/rooms/RoomItemListContainer";
-import { SearchForRoom } from "../components/search/SearchForRoom";
+import { SearchForRoom } from "../components/sections/search/SearchForRoom";
 import { useRoomContext } from "../context/RoomProvider";
 import { FilterIcons } from "../filter/FilterIcons";
 import { Pages } from "../custom/Display"

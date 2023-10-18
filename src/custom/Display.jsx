@@ -1,37 +1,37 @@
-
+const disableGutters = {
+  paddingLeft: { xs: 0, md: 0, lg: 0 },
+  paddingRight: { xs: 0, md: 0, lg: 0 },
+  marginLeft: { xs: 0, md: 0, lg: 0 },
+  marginRight: { xs: 0, md: 0, lg: 0 },
+}
 const Pages = {
     display: "flex",
     flexDirection: "column",
     width: "100%",
-    maxWidth: "1200px",
+    maxWidth: "1280px",
     height: "auto",
     justifyContent: "center",
     alignItems: "center",
-    paddingLeft: { xs: 0, md: 0, lg: 0 },
-    paddingRight: { xs: 0, md: 0, lg: 0 },
-    marginLeft: { xs: 0, md: 0, lg: 0 },
-    marginRight: { xs: 0, md: 0, lg: 0 },
+
+    
 };
 
 
 const MainSections = {
+    ...disableGutters,
     display: "flex",
     width: "100%",
-    maxWidth: "1200px",
+    maxWidth: "1280px",
     height: "auto",
     justifyContent: "center",
     alignContent: "end",
     backgroundColor: "#182706",
-    paddingLeft: { xs: 0, md: 0, lg: 0 },
-    paddingRight: { xs: 0, md: 0, lg: 0 },
-    marginLeft: { xs: 0, md: 0, lg: 0 },
-    marginRight: { xs: 0, md: 0, lg: 0 },
 }
 
 
 const section = {
     width: "100%",
-    maxWidth: "1200px",
+    maxWidth: "1280px",
     display: "flex",
     justifyContent: "center",
     // padding: "4rem 2rem", // Puedes eliminarlo o agregarlo según sea necesario
