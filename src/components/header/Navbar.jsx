@@ -41,19 +41,14 @@ export const Navbar = () => {
 
     const navbarStyle = {
         backgroundColor: "transparent",
-        //backdropFilter: scrolling ? 'blur(20px)' : 'none',
-        //transition: 'background-color 0.3s ease',
-        //padding: "1rem",
-        zIndex: 1,
+        zIndex: 9999999,
         boxShadow: "none",
-        //margin: 0,
         width: "100%",
         position: "static",
         display: "flex",
-                        justifyContent: "space-around",
-                        gap: "4rem",
-                        width: "100vw",
-                        padding: "1rem",
+        gap: "4rem",
+        width: "100vw",
+        padding: "1rem",
     };
 
     // useEffect(() => {
@@ -73,15 +68,17 @@ export const Navbar = () => {
     // }, []);
 
     return (
-        <Fade direction="down" delay={2} duration="2000">
-            <AppBar disableGutters style={navbarStyle}>
-                <Toolbar disableGutters >
+        <Fade direction="down" delay={1} duration="2000">
+            <AppBar style={navbarStyle}>
+                <Toolbar style={{justifyContent: "space-between"}} >
                     {/* menu mobile */}
                     <Box
                         sx={{
                             display: { xs: "flex", md: "none" },
                             flexGrow: 1,
                             alignItems: "center",
+                            justifyContent: "space-around",
+
                         }}
                     >
                         {/* logo mobile */}
@@ -121,14 +118,16 @@ export const Navbar = () => {
                                 display: { xs: "block", md: "none" },
                             }}
                         >
-                            <MenuList style={{width: "fit-content"}}>
+                            <MenuList style={{ width: "fit-content" }}>
                                 {pages.map((page) => (
                                     <MenuItem
                                         key={page.page}
                                         onClick={handleCloseNavMenu}
-                                        
                                     >
-                                        <Link to={`${page.link}`} style={{...MenuWeb, ...Green}}>
+                                        <Link
+                                            to={`${page.link}`}
+                                            style={{ ...MenuWeb, ...Green }}
+                                        >
                                             {page.page}
                                         </Link>
                                     </MenuItem>
