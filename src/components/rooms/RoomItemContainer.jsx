@@ -7,43 +7,59 @@ import { useRoomContext } from "../../context/RoomProvider";
 import { RoomItem } from "./RoomItem";
 import ArrowCircleLeftRoundedIcon from "@mui/icons-material/ArrowCircleLeftRounded";
 import ArrowCircleRightRoundedIcon from "@mui/icons-material/ArrowCircleRightRounded";
-import { Sections } from "../../custom/Display";
+import { alignStart, alignCenter } from "../../custom/Display";
 
 import {
-    White, WhiteBC, GreenBC, OrangeBC,
+    White,
+    WhiteBC,
+    GreenBC,
+    OrangeBC,
     TopText,
     Title,
     Subtitle,
-    TextAlignJustify, 
+    TextAlignJustify,
 } from "../../custom/Typography";
 
-import {
-    WhiteButton,
-} from "../../custom/Buttons";
-
+import { WhiteButton } from "../../custom/Buttons";
 
 export const RoomItemContainer = ({}) => {
-    const { rooms, isList, setIsList, handleScroll, containerRef } = useRoomContext();
-    
+    const { rooms, isList, setIsList, handleScroll, containerRef } =
+        useRoomContext();
 
     return (
-        <Container
-            disableGutters
-            maxWidth="lg"
-            sx={{ ...Sections, ...GreenBC }}
-        >
+        <Container sx={{ ...alignStart, ...GreenBC }}>
             <Box
                 sx={{
-                    display: "flex",
-                    width: "100%",
-                    gap: "1rem",
-                }}
-            >
+                    ...alignStart,
+                    flexDirection: { xs: "column", md: "row" },
+                    padding: "2rem 0"
+                }}>
                 {/* titles */}
-                <Stack spacing={1} sx={{ width: "30%" }}>
-                    <p style={{ ...TopText, ...TextAlignJustify }}> Discover our rooms </p>
-                    <p style={{...Title, ...White, ...TextAlignJustify }}> Choose your room </p>
-                    <p style={{...Subtitle, ...White, ...TextAlignJustify}}>
+                <Stack spacing={1} sx={{ width: { xs: "100%", md: "30%" } }}>
+                    <p
+                        style={{
+                            ...TopText,
+                            textAlign: { xs: "center", md: "justify" },
+                        }}
+                    >
+                        Discover our rooms
+                    </p>
+                    <p
+                        style={{
+                            ...Title,
+                            ...White,
+                            textAlign: { xs: "center", md: "justify" },
+                        }}
+                    >
+                        Choose your room
+                    </p>
+                    <p
+                        style={{
+                            ...Subtitle,
+                            ...White,
+                            textAlign: "justify",
+                        }}
+                    >
                         the Best place to enjoy life place to enjoy life place
                         to enjoy life place to enjoy.
                     </p>
@@ -53,10 +69,9 @@ export const RoomItemContainer = ({}) => {
                 <Stack
                     sx={{
                         display: "flex",
-                        width: "70%",
+                        width: { xs: "100%", md: "70%" },
                         alignItems: "center",
-                        gap: "1rem",                    
-                        //position: "relative",
+                        gap: "1rem",
                     }}
                 >
                     {/* scroll */}
@@ -67,10 +82,7 @@ export const RoomItemContainer = ({}) => {
                             scrollBehavior: "smooth",
                             scrollSnapType: "x mandatory",
                             scrollbarWidth: "none",
-                            padding: { xs: 0, md: 0, lg: 0 },  
-                            //height: "100%",
-                            //maxHeight: "70vh",
-                            //position: "relative",
+                            padding: { xs: 0, md: 0, lg: 0 },
                         }}
                     >
                         {/* item list container */}
@@ -115,20 +127,14 @@ export const RoomItemContainer = ({}) => {
                         sx={{
                             display: "flex",
                             gap: "1rem",
-                            //position: "absolute",
                             width: "35px",
                             height: "35px",
-                            //top: "45%",
-                            //left: "0",
-                            //justifyContent: "space-between",
-                            //right: "8rem",
                             zIndex: 222,
-                            //transform: "translateY(-50%)",
                         }}
                     >
                         <Box
                             sx={{
-                                ...WhiteButton
+                                ...WhiteButton,
                             }}
                             onClick={() => handleScroll("left")}
                         >

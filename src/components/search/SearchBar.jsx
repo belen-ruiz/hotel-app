@@ -45,19 +45,21 @@ export const SearchBar = ({
     handleClick,
 }) => {
     return (
-        <Container sx={{ ...GreenBC, width: "100%" }}>
+        <Container sx={{ ...GreenBC, width: "fit-content", }}>
             <Box
                 sx={{
                     display: "flex",
+                    flexDirection: { xs: "column", md: "row" },
                     width: "100%",
                     justifyContent: "space-around",
                     alignItems: "center",
-                    boxShadow: "10px 10px 35px -21px rgba(69,68,69,1)",
                     padding: "1rem",
                     borderRadius: "10px",
                     gap: "1rem",
+                    
                 }}
             >
+                {/* dates */}
                 {searchDates &&
                     searchDates.map(
                         (elem) =>
@@ -81,6 +83,7 @@ export const SearchBar = ({
 
                 <Divider orientation="vertical" flexItem />
 
+                {/* guests */}
                 {searchGuests &&
                     searchGuests.map(
                         (elem) =>
@@ -151,6 +154,7 @@ export const SearchBar = ({
                             )
                     )}
 
+                {/* button */}
                 <Box onClick={handleClick} sx={ContainedButton}>
                     RESERVATION
                 </Box>

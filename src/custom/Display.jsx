@@ -1,20 +1,55 @@
 
 const Pages = {
-    width: "100vw",
-    height: "auto",
     display: "flex",
     flexDirection: "column",
-    alignItems: "center",
-    padding: { xs: 0, md: 0, lg: 0 },
-    margin: { xs: 0, md: 0, lg: 0 },
-};
-
-const Sections = {
-    display: "flex",
-    alignItems: "center",
+    width: "100%",
+    maxWidth: "1200px",
+    height: "auto",
     justifyContent: "center",
-    padding: "4rem 2rem",
+    alignItems: "center",
+    paddingLeft: { xs: 0, md: 0, lg: 0 },
+    paddingRight: { xs: 0, md: 0, lg: 0 },
+    marginLeft: { xs: 0, md: 0, lg: 0 },
+    marginRight: { xs: 0, md: 0, lg: 0 },
 };
 
 
-export { Pages, Sections };
+const MainSections = {
+    display: "flex",
+    width: "100%",
+    maxWidth: "1200px",
+    height: "auto",
+    justifyContent: "center",
+    alignContent: "end",
+    backgroundColor: "#182706",
+    paddingLeft: { xs: 0, md: 0, lg: 0 },
+    paddingRight: { xs: 0, md: 0, lg: 0 },
+    marginLeft: { xs: 0, md: 0, lg: 0 },
+    marginRight: { xs: 0, md: 0, lg: 0 },
+}
+
+
+const section = {
+    width: "100%",
+    maxWidth: "1200px",
+    display: "flex",
+    justifyContent: "center",
+    // padding: "4rem 2rem", // Puedes eliminarlo o agregarlo según sea necesario
+  };
+  
+  const alignCenter = {
+    ...section,
+    alignItems: "center",
+  };
+  
+  const alignStart = {
+    ...section,
+    alignItems: "start",
+    gap: "1.5rem",
+  };
+  
+
+
+
+
+export { Pages, MainSections, alignCenter, alignStart };

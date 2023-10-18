@@ -5,13 +5,14 @@ import { useRoomContext } from "../../context/RoomProvider";
 import { Typography } from "@mui/material";
 import { Stack } from "@mui/material";
 
-import { Sections } from "../../custom/Display";
+import { alignCenter } from "../../custom/Display";
 
 import {
     White,
     WhiteBC,
     Green,
-    GreenBC, OrangeBC,
+    GreenBC,
+    OrangeBC,
     TopText,
     Title,
     Subtitle,
@@ -26,53 +27,39 @@ export const SearchForRoom = ({}) => {
         handleInputChange,
         handleBlur,
         handleClick,
-    } = useRoomContext(); 
+    } = useRoomContext();
 
     return (
-        <Container
-            disableGutters
-            maxWidth="lg"
-            sx={{ ...Sections, ...WhiteBC }}
-        >
+        <Container sx={{ ...alignCenter, ...WhiteBC }}>
+            <Stack spacing={4} sx={{ ...alignCenter, padding: "4rem 0" }}>
+                {/* titles */}
                 <Stack
-                spacing={6}
+                    spacing={1}
                     sx={{
-                    display: "flex",
-                    width: "100%",
-                    justifyContent: "center",
-                    alignItems: "center",
-                    //position: "absolute",
-                    padding: "2rem",
-                    }}>
+                        display: "flex",
+                        alignItems: "center",
+                    }}
+                >
+                    <p style={{ ...TopText }}>Make your reservation</p>
 
-                    {/* titles */}
-                    <Stack
-                        spacing={1}
-                        sx={{
-                            display: "flex",
-                            alignItems: "center",
-                        }}
-                    >
-                        <p style={{ ...TopText }}>Make your reservation</p>
+                    <p style={{ ...Title, ...Green }}>Reservations</p>
 
-                        <p style={{...Title, ...Green}}>Reservations</p>
-
-                        <p style={{...Subtitle, ...Green}}>
-                            Enjoy all benefits while you stay
-                        </p>
-                    </Stack>
-
-                    {/* searchbar */}
-                    <SearchBar
-                        handleChangeDate={handleChangeDate}
-                        handleSliderChange={handleSliderChange}
-                        handleInputChange={handleInputChange}
-                        handleBlur={handleBlur}
-                        handleClick={handleClick}
-                        kids={kids}
-                        adults={adults}
-                    />
+                    <p style={{ ...Subtitle, ...Green }}>
+                        Enjoy all benefits while you stay
+                    </p>
                 </Stack>
+
+                {/* searchbar */}
+                <SearchBar
+                    handleChangeDate={handleChangeDate}
+                    handleSliderChange={handleSliderChange}
+                    handleInputChange={handleInputChange}
+                    handleBlur={handleBlur}
+                    handleClick={handleClick}
+                    kids={kids}
+                    adults={adults}
+                />
+            </Stack>
         </Container>
     );
 };

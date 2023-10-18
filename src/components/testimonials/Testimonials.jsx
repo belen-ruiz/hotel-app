@@ -3,7 +3,7 @@ import { Stack } from "@mui/material";
 import { Typography } from "@mui/material";
 import { Toolbar } from "@mui/material";
 import { Container } from "@mui/material";
-import { Sections } from "../../custom/Display";
+import { alignCenter } from "../../custom/Display";
 
 import {
     White,
@@ -23,20 +23,10 @@ import {
 export const Testimonials = () => {
     return (
         <Container
-            disableGutters
-            maxWidth="lg"
-            sx={{ ...Sections, ...WhiteBC }}
+            sx={{ ...alignCenter, ...WhiteBC }}
         >
-            <Stack
-                spacing={1}
-                sx={{
-                    display: "flex",
-                    width: "100%",
-                    alignItems: "center",
-                }}
-            >
+            <Stack spacing={4} sx={{ ...alignCenter, padding: "2rem 0" }}>
                 {/* titles */}
-
                 <Stack
                     spacing={1}
                     sx={{
@@ -84,30 +74,3 @@ export const Testimonials = () => {
         </Container>
     );
 };
-
-// const Feature = ({ data }) => {
-//     const { id, icon, title, description } = data;
-//     return (
-//         <Stack
-//             sx={{
-//                 display: "flex",
-//                 flexDirection: "column",
-//                 justifyContent: "center",
-//                 alignItems: "center",
-//                 gap: "0.5rem",
-//                 color: "#4f4e4e",
-//             }}
-//         >
-//             <Box>{icon}</Box>
-//             <Typography variant="subtitle2">{title}</Typography>
-//             <Typography
-//                 sx={{
-//                     textAlign: "center",
-//                 }}
-//                 variant="caption"
-//             >
-//                 {description}
-//             </Typography>
-//         </Stack>
-//     );
-// };

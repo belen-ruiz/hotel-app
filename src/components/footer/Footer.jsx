@@ -7,84 +7,29 @@ import Grid from "@mui/material/Grid";
 import { footer } from "../../utils/footer";
 import { Link, NavLink } from "react-router-dom";
 import { Logo } from "../logo/Logo";
-import { Banner } from "../banner/Banner";
+import { Banner } from "./Banner";
 import { Stack } from "@mui/material";
-import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
+import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
+import logoWhite from "../../images/logo_aurora_white-09.png";
 import {
-    White, Orange,
-    Green, GreenBC, OrangeBC,  SmallText,
+    White,
+    Orange,
+    Green,
+    GreenBC,
+    OrangeBC,
+    SmallText,
 } from "../../custom/Typography";
+import { FooterData } from "./FooterData";
+import { MainSections } from "../../custom/Display";
 
 export const Footer = () => {
     const location = useLocation();
 
     return (
-        <Container
-            disableGutters
-            maxWidth="lg"
-            sx={{
-                width: "100%",
-                display: "flex",
-                justifyContent: "center",
-                alignContent: "end",
-                backgroundColor: "var(--color-primary)",
-            }}
-        >
-            <Stack sx={{ width:"inherit" }}>
-
+        <Container sx={{ ...MainSections }}>
+            <Stack sx={{ width: "100%" }}>
                 {/* info */}
-                <Grid
-                    container
-                    spacing={2}
-                    margin={0}
-                    padding={2}
-                    sx={{ width: "100%" }}
-                >
-                    {/* col 1 */}
-                    <Grid item xs={6}>
-                        <Grid
-                            container
-                            padding={0}
-                            sx={{
-                                ...SmallText,
-                                gridTemplateColumns: "repeat(3, 1fr)",
-                            }}
-                        >
-                            {footer.map((feet) => (
-                                <Grid 
-                                item 
-                                padding={1}
-                                xs={4} 
-                                key={feet.id}>
-                                    <NavLink>
-                                        <Box sx={{display: "flex", gap: "0.1rem", alignItems: "center"}} >
-                                            <Box sx={{...Orange, width: "20px", height: "20px", display: "flex", alignItems: "center" }} >
-                                                <ArrowForwardIosIcon fontSize="sm" />
-                                            </Box> 
-
-                                            <Box sx={{ ...White }}>
-                                                {feet.title}
-                                            </Box> 
-                                        </Box>
-                                    </NavLink>
-                                </Grid>
-                            ))}
-                        </Grid>
-                    </Grid>
-
-                    {/* col 2 */}
-                    <Grid
-                        item
-                        xs={6}
-                        sx={{
-                            display: "flex",
-                            justifyContent: "end",
-                            alignItems: "end",
-                        }}
-                    >
-                        <Logo colorLogo={"#e8e2e2"} />
-                    </Grid>
-                </Grid>
+                <FooterData />
 
                 {/* banner */}
                 <Banner />

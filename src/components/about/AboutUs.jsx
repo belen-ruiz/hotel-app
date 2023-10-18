@@ -1,12 +1,13 @@
 import { Button } from "@mui/material";
 import { Grid, Container, Stack, Box } from "@mui/material";
 import { Link } from "react-router-dom";
-import { Sections } from "../../custom/Display";
+import { alignCenter, alignStart } from "../../custom/Display";
 import {
     White,
     WhiteBC,
     GreenBC,
-    Orange, OrangeBC,
+    Orange,
+    OrangeBC,
     TopText,
     Title,
     Subtitle,
@@ -18,20 +19,15 @@ import {
 export const AboutUs = () => {
     return (
         <Container
-            disableGutters
-            maxWidth="lg"
-            sx={{ ...Sections, ...GreenBC }}
-        >
+            sx={{ ...alignCenter, ...GreenBC }}>
             <Box
-                sx={{
-                    display: "flex",
-                    width: "100%",
-                    gap: "1rem",
-                    //height: "80%",
-                }}
-            >
-                {/* titles */}
-                <Stack spacing={"1rem"} sx={{ width: "30%", alignItems: "start" }}>
+                sx={{ ...alignStart,     
+                    flexDirection: { xs: "column", md: "row" },
+                }}>
+                {/* titles & data */}
+                <Stack spacing={1}  sx={{ width: { xs: "100%", md: "30%" },
+                    }}
+                >
                     <Stack>
                         <p style={{ ...TopText }}>a little about us</p>
                         <p style={{ ...Title, ...White }}>
@@ -39,21 +35,41 @@ export const AboutUs = () => {
                         </p>
                     </Stack>
 
-                    <Stack sx={{ width: "100%", alignItems: "start", gap: "1rem" }}>
-                        <p style={{ ...Subtitle, ...White, ...TextAlignJustify }}>
-                            the Best place to enjoy life place to enjoy life place
-                            to enjoy life place to enjoy life place to enjoy life
-                            place to enjoy life place to enjoy lifnjoy life place to enjoy lif njoy life place to enjoy lif njoy life place to enjoy lif e place to enjoy
-                            life place to enjoy life.
+                    <Stack
+                        sx={{
+                            width: "100%",
+                            alignItems: "start",
+                            gap: "1rem",
+                        }}
+                    >
+                        <p
+                            style={{
+                                ...Subtitle,
+                                ...White,
+                                ...TextAlignJustify,
+                            }}
+                        >
+                            the Best place to enjoy life place to enjoy life
+                            place to enjoy life place to enjoy life place to
+                            enjoy life place to enjoy life place to enjoy
+                            lifnjoy life place to enjoy lif njoy life place to
+                            enjoy lif njoy life place to enjoy lif e place to
+                            enjoy life place to enjoy life.
                         </p>
-                        <p style={{ ...Subtitle, ...Orange, ...Bold }}> FRANCO MOLINA
+                        <p style={{ ...Subtitle, ...Orange, ...Bold }}>
+                            FRANCO MOLINA
                         </p>
-                        <p style={{ ...Subtitle, ...White, ...Italic }}>CEO of Las Salinas</p>
+                        <p style={{ ...Subtitle, ...White, ...Italic }}>
+                            CEO of Las Salinas
+                        </p>
                     </Stack>
                 </Stack>
 
                 {/* img */}
-                <Box sx={{ display: "flex", width: "70%" }}>
+                <Box sx={{ 
+                    display: "flex", 
+                    width: { xs: "100%", md: "70%" },
+                }}>
                     <img
                         src="https://images.pexels.com/photos/189296/pexels-photo-189296.jpeg?auto=compress&cs=tinysrgb&dpr=1"
                         alt="who we are"
