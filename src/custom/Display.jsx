@@ -30,9 +30,9 @@ const MainSections = {
 
 
 const section = {
+    display: "flex",
     width: "100%",
     maxWidth: "1280px",
-    display: "flex",
     justifyContent: "center",
     padding: "2rem"
     

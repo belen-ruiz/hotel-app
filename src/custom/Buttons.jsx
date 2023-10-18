@@ -51,7 +51,23 @@ const ArrowButton = {
     },
 };
 
-export { OutlinedButton, ContainedButton, ArrowButton };
+const DataButton = {
+    cursor: "pointer",
+    color: "#d5d8d5",
+    border: "1px solid #d5d8d5",
+    backgroundColor: "#182706",
+    padding: "0.2rem",
+    fontSize: "0.8rem",   
+    transition: "color 0.2s ease",
+
+    "&:hover": {
+        color: "#182706",
+    backgroundColor: "#d5d8d5",
+        //transform: "scale(1.5)",
+    },
+}
+
+export { OutlinedButton, ContainedButton, ArrowButton, DataButton };
 
 //   '&:active': {
 //     // boxShadow: 'none',

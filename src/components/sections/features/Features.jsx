@@ -40,7 +40,7 @@ const Feature = ({ data }) => {
 }; 
 
 export const Features = () => {
-    return (
+    return ( 
         <Container sx={{ ...alignCenter, ...GreenBC }}>
             <Stack spacing={4} sx={{ ...alignCenter }}>
                 {/* titles */}

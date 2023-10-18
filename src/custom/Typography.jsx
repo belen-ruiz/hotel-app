@@ -92,6 +92,12 @@ const Label = {
     padding: 0,
 };
 
+const dataDisplay = {
+    color: "#d5d8d5",
+    backgroundColor: "#182706",
+    fontSize: "0.8rem",   
+}
+
 
 export {
     White,
@@ -113,5 +119,6 @@ export {
     Quote,
     SmallText,
     Label,
+    dataDisplay
     
 };

@@ -12,7 +12,6 @@ import { Stack } from "@mui/material";
 
 
 export const Home = () => {
-    const { rooms, search } = useRoomContext();
 
     return (
         <Container sx={{ ...MainSections }}>
@@ -23,7 +22,7 @@ export const Home = () => {
 
                 <RoomDisplayContainer />
 
-                <SearchForRoom search={search} />
+                <SearchForRoom />
 
                 <AboutUs />
 

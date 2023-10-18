@@ -1,13 +1,10 @@
 import { Button, Box, Typography } from "@mui/material";
 import React from "react";
-import { FilterIcons } from "../../filter/FilterIcons";
+import { FilterIcons } from "./FilterIcons";
+import { DataButton } from "../../custom/Buttons";
+import { dataDisplay } from "../../custom/Typography";
 
-export const FilterData = ({
-    getAllRooms,
-    totalGuests,
-    setSelect,
-    select,
-}) => {
+export const FilterData = ({ getAllRooms, totalGuests, setSelect, select }) => {
     return (
         <Box
             sx={{
@@ -15,29 +12,32 @@ export const FilterData = ({
                 justifyContent: "space-between",
                 alignItems: "center",
                 width: "100%",
+                padding: "0 2rem"
             }}
         >
             {totalGuests > 0 && totalGuests < 5 ? (
                 <>
-                    <Typography variant="subtitle2">
+                    <Box sx={{ ...dataDisplay }}>
                         Showing results for Rooms for {totalGuests} people
-                    </Typography>
-                    <Button onClick={getAllRooms}>Show all Rooms</Button>
+                    </Box>
+                    <Box sx={{ ...DataButton }} onClick={getAllRooms}>
+                        Show all Rooms
+                    </Box>
                 </>
             ) : null}
             {totalGuests > 5 ? (
                 <>
-                  <Typography variant="subtitle2">
-                      No rooms available for {totalGuests} people
-                  </Typography>
-                  <Button onClick={getAllRooms}>Show all Rooms</Button>
+                    <Box sx={{ ...dataDisplay }}>
+                        No rooms available for {totalGuests} people
+                    </Box>
+                    <Box sx={{ ...DataButton }} onClick={getAllRooms}>
+                        Show all Rooms
+                    </Box>
                 </>
             ) : null}
 
             {totalGuests === 0 ? (
-                <Typography variant="subtitle2">
-                    Showing results for all Rooms
-                </Typography>
+                <Box sx={{ ...dataDisplay }}>Showing results for all Rooms</Box>
             ) : null}
 
             <FilterIcons setSelect={setSelect} select={select} />
