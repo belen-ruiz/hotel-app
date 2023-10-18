@@ -52,4 +52,4 @@ const section = {
 
 
 
-export { Pages, MainSections, alignCenter, alignStart };
+export { Pages, MainSections, alignCenter, alignStart, disableGutters };

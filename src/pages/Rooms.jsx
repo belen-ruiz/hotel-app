@@ -1,13 +1,11 @@
 
 import { Container } from "@mui/material";
 import React, { useEffect, useState } from "react";
-import Breadcrums from "../components/breadcrumbs/Breadcrums";
-import { DisplayData } from "../components/displayData/DisplayData";
+import { FilterData } from "../components/filterData/FilterData";
 import { Loading } from "../components/loading/Loading";
 import { RoomItemListContainer } from "../components/rooms/RoomItemListContainer";
 import { SearchForRoom } from "../components/sections/search/SearchForRoom";
 import { useRoomContext } from "../context/RoomProvider";
-import { FilterIcons } from "../filter/FilterIcons";
 import { Pages } from "../custom/Display"
 
 export const Rooms = () => {
@@ -28,7 +26,7 @@ export const Rooms = () => {
             
             <SearchForRoom search={search} />
 
-            <DisplayData 
+            <FilterData 
                 getAllRooms={getAllRooms} 
                 totalGuests={totalGuests} 
                 setSelect={setSelect} 

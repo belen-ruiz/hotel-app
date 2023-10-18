@@ -63,7 +63,7 @@ import { Typography, Container, Box, Stack } from "@mui/material";
 import { ContainedButton } from "../../custom/Buttons";
 import { Logo } from "../logo/Logo";
 import LogoIntro from "../../images/logo_aurora_white-10.png"
-import { alignCenter } from "../../custom/Display";
+import { disableGutters, alignCenter } from "../../custom/Display";
 import { Flip } from "react-awesome-reveal";
 
 
@@ -73,32 +73,43 @@ const bgImg =
 export const Intro = () => {
     return (
         <Container
-            sx={{ ...alignCenter, position: "relative", paddingLeft: {xs: 0, md: 0}, paddingRight: {xs: 0, md: 0} }}
+            sx={{ ...alignCenter, ...disableGutters, position: "relative" }}
         >
             {/* img */}
             <Box sx={{ 
                 display: "flex", 
                 width: "100%", 
                 maxHeight: "500px",
-                overflow: "hidden" }}>
+                overflow: "hidden",
+                position: "relative",  
+                zIndex: 1,
+            
+                }}>                   
                 <img
                     src={bgImg}
                     alt="who we are"
                     style={{ width: "100%", height: "100%", objectFit: "cover" }}
                 />
+
+<Box sx={{backgroundColor: "rgba(66,59,16,.6)", zIndex: 2, position: "absolute", top: 0, bottom: 0, left: 0, right: 0, content: '"  "',
+            }}></Box>
             </Box>
+
+            
 
             {/* text box */}
             <Stack
                 sx={{
                     display: "flex",
                     width: "100%",
+                    height: "auto",
                     top: "30%",
                     position: "absolute",
-                    zIndex: 1,
+                    zIndex: 3,
                     justifyContent: "center",
                     alignItems: "center",
                     gap: "0,8rem",
+
                 }}
             >
                 <Flip delay={1} fraction={1} duration="2000">

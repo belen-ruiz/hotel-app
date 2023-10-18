@@ -2,7 +2,7 @@ import { Button, Box, Typography } from "@mui/material";
 import React from "react";
 import { FilterIcons } from "../../filter/FilterIcons";
 
-export const DisplayData = ({
+export const FilterData = ({
     getAllRooms,
     totalGuests,
     setSelect,

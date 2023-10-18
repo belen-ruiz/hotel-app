@@ -65,6 +65,7 @@ export const RoomItem = ({ rooms }) => {
                 {/* capacidad */}
                 {capacity && (
                 <Box
+                title="capacity"
                         sx={{
                             border: "1px solid white",
                             borderRadius: 0,
@@ -75,8 +76,7 @@ export const RoomItem = ({ rooms }) => {
                             .map(() => (
                                 <BoyRounded
                                     key={capacity}
-                                    style={{
-                                        color: { ...White },
+                                    style={{ ...White ,
                                         fontSize: "2rem",
                                     }}
                                 />

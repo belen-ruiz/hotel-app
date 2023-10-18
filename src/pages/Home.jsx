@@ -4,7 +4,6 @@ import { SearchForRoom } from "../components/sections/search/SearchForRoom";
 import { Features } from "../components/sections/features/Features";
 import { Testimonials } from "../components/sections/testimonials/Testimonials";
 import { AboutUs } from "../components/sections/about/AboutUs";
-import { Map } from "../components/map/Map";
 import { RoomDisplayContainer } from "../components/sections/roomdisplay/RoomDisplayContainer";
 import { useRoomContext } from "../context/RoomProvider";
 import { Intro } from "../components/header/Intro";
