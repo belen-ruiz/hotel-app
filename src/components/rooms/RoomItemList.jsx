@@ -23,6 +23,7 @@ import {
     ContainedButton,
     OutlinedButton,
 } from "../../custom/Buttons";
+import { Image } from "./RoomItem";
 
 export const RoomItemList = ({ rooms, isList, setIsList }) => {
     const title = rooms.title;
@@ -35,9 +36,7 @@ export const RoomItemList = ({ rooms, isList, setIsList }) => {
     const price = rooms.price;
     const imgUrl = rooms.imgUrl;
 
-    //const [isList, setIsList] = useState(true)
-    //<Link to={`/room/${title}`} sx={{height: "fit-content"}}>
-
+   
     return (
         <Card
             sx={{
@@ -61,17 +60,10 @@ export const RoomItemList = ({ rooms, isList, setIsList }) => {
                     width: "100%",
                 }}
             >
-                {/* IMAGEN */}
+                {/* image */}
                 <Box sx={{ flex: 1 }}>
-                    <AspectRatio
-                        ratio="4/3"
-                        sx={{ width: 300, borderRadius: 0 }}
-                    >
-                        <figure>
-                            <img src={imgUrl} alt={title} />
-                        </figure>
-                    </AspectRatio>
-                </Box>
+                    <Image imgUrl={imgUrl} title={title} ratio="4/3" />
+                </Box> 
 
                 {/* data */}
                 <Stack
@@ -107,6 +99,7 @@ export const RoomItemList = ({ rooms, isList, setIsList }) => {
                         }}
                     >
                         {/* capacity */}
+                        
                         <Chip
                             size="sm"
                             sx={{
