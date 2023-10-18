@@ -5,6 +5,8 @@ import { Toolbar } from "@mui/material";
 import { Container } from "@mui/material";
 import { features } from "../../utils/features";
 import { alignCenter } from "../../custom/Display";
+import { Flip } from "react-awesome-reveal";
+
 import {
     White,
     WhiteBC,
@@ -58,26 +60,29 @@ export const Features = () => {
                 </Stack>
 
                 {/* item box */}
-                <Box
-                    sx={{
-                        display: "flex",
-                        justifyContent: "center",
-                        flexWrap: "wrap",
-                        gap: "2rem 1rem",
-                    }}
-                >
-                    {features.map((feature) => (
-                        <Box
-                            key={feature.id}
-                            sx={{
-                                flex: "0 0 20%",
-                                maxWidth: "20%",
-                            }}
+
+                    <Box
+                        sx={{
+                            display: "flex",
+                            justifyContent: "center",
+                            flexWrap: "wrap",
+                            gap: "2rem",
+                            width: "60%"
+                        }}
                         >
-                            <Feature data={feature} />
-                        </Box>
-                    ))}
-                </Box>
+                        <Flip cascade damping={0.1}>
+                        {features.map((feature) => (
+                            <Box
+                                key={feature.id}
+                                sx={{
+                                    flex: "0 0 20%",
+                                }}
+                            >
+                                    <Feature data={feature} />
+                            </Box>
+                        ))}
+                        </Flip>
+                    </Box>
             </Stack>
         </Container>
     );

@@ -64,6 +64,7 @@ import { ContainedButton } from "../../custom/Buttons";
 import { Logo } from "../logo/Logo";
 import LogoIntro from "../../images/logo_aurora_white-10.png"
 import { alignCenter } from "../../custom/Display";
+import { Flip } from "react-awesome-reveal";
 
 
 const bgImg =
@@ -72,40 +73,42 @@ const bgImg =
 export const Intro = () => {
     return (
         <Container
-            sx={{ ...alignCenter, position: "relative",
-            }}
+            sx={{ ...alignCenter, position: "relative", paddingLeft: {xs: 0, md: 0}, paddingRight: {xs: 0, md: 0} }}
         >
             {/* img */}
             <Box sx={{ 
                 display: "flex", 
                 width: "100%", 
+                maxHeight: "500px",
                 overflow: "hidden" }}>
                 <img
                     src={bgImg}
                     alt="who we are"
-                    style={{ width: "100%", objectFit: "cover" }}
+                    style={{ width: "100%", height: "100%", objectFit: "cover" }}
                 />
             </Box>
 
             {/* text box */}
             <Stack
                 sx={{
-                    width: "100%",
-                    //top: "50%",
                     display: "flex",
-                    //left: "1rem",
+                    width: "100%",
+                    top: "30%",
                     position: "absolute",
-                    //height: "33vh",
                     zIndex: 1,
                     justifyContent: "center",
                     alignItems: "center",
                     gap: "0,8rem",
                 }}
             >
-                <Logo logo={LogoIntro} altLogo={"logo-intro"} height={{xs:"100px", md:"300px"}} />                
+                <Flip delay={1} fraction={1} duration="2000">
+                    <Logo logo={LogoIntro} altLogo={"logo-intro"} height={{xs:"100px", md:"300px"}} />
+                </Flip>              
 
                 {/* contact */}
-                <Box sx={ContainedButton}>contact us</Box>
+                <Flip direction="down" delay={1} duration="2000">                 
+                    <Box sx={ContainedButton}>contact us</Box>
+                </Flip>
             </Stack>
         </Container>
     );

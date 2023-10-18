@@ -48,7 +48,7 @@ export const Navbar = () => {
         display: "flex",
         gap: "4rem",
         width: "100vw",
-        padding: "1rem",
+        padding: "0.5rem",
     };
 
     // useEffect(() => {
@@ -68,9 +68,9 @@ export const Navbar = () => {
     // }, []);
 
     return (
-        <Fade direction="down" delay={1} duration="2000">
             <AppBar style={navbarStyle}>
-                <Toolbar style={{justifyContent: "space-between"}} >
+                <Toolbar style={{justifyContent: "space-evenly", maxWidth: "1200px"}} >
+
                     {/* menu mobile */}
                     <Box
                         sx={{
@@ -136,48 +136,51 @@ export const Navbar = () => {
                         </Menu>
                     </Box>
 
-                    {/* logo */}
-                    <Box
-                        sx={{
-                            display: { xs: "none", md: "flex" },
-                        }}
-                    >
-                        <Logo
-                            logo={logoIso}
-                            altLogo={"logo-header"}
-                            height={"50px"}
-                        />
-                    </Box>
+                    
+                <Fade direction="down" delay={1} duration="2000">
 
-                    {/* menu web */}
-                    <Box
-                        sx={{
-                            display: { xs: "none", md: "flex" },
-                            gap: "2rem",
-                            ...MenuWeb,
-                            //flexGrow: 1,
-                        }}
-                    >
-                        {pages.map((page) => (
-                            <NavLink
-                                to={page.link}
-                                key={page.page}
-                                style={{
-                                    color:
-                                        location.pathname === page.link
-                                            ? "#d5d8d5"
-                                            : "#989696fa",
-                                }}
-                            >
-                                {page.page}
-                            </NavLink>
-                        ))}
-                    </Box>
-
-                    {/* booknow */}
-                    <Box sx={OutlinedButton}>book now</Box>
+                        {/* logo */}
+                        <Box
+                            sx={{
+                                display: { xs: "none", md: "flex" },
+                            }}
+                        >
+                            <Logo
+                                logo={logoIso}
+                                altLogo={"logo-header"}
+                                height={"50px"}
+                            />
+                        </Box>
+                        
+                        {/* menu web */}
+                        <Box
+                            sx={{
+                                display: { xs: "none", md: "flex" },
+                                gap: "2rem",
+                                ...MenuWeb,
+                                //flexGrow: 1,
+                            }}
+                        >
+                            {pages.map((page) => (
+                                <NavLink
+                                    to={page.link}
+                                    key={page.page}
+                                    style={{
+                                        color:
+                                            location.pathname === page.link
+                                                ? "#d5d8d5"
+                                                : "#989696fa",
+                                    }}
+                                >
+                                    {page.page}
+                                </NavLink>
+                            ))}
+                        </Box>
+                        
+                        {/* booknow */}
+                        <Box sx={OutlinedButton}>book now</Box>
+                    </Fade>
                 </Toolbar>
             </AppBar>
-        </Fade>
     );
 };
