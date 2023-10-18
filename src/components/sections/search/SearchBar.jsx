@@ -1,15 +1,14 @@
 import { Typography, Box, Stack, Container } from "@mui/material";
-import React, { useState } from "react";
-
-import MuiInput from "@mui/material/Input";
-import { BoyRounded } from "@mui/icons-material";
 import { styled } from "@mui/material/styles";
+import { BoyRounded } from "@mui/icons-material";
+import { Divider } from "@mui/material";
+import MuiInput from "@mui/material/Input";
 
 import { searchDates } from "../../../utils/searchDates";
-import { Divider } from "@mui/material";
-
 import { searchGuests } from "../../../utils/searchGuests";
+
 import { ContainedButton } from "../../../custom/Buttons";
+import { Zoom, Fade } from "react-awesome-reveal";
 
 import dayjs from "dayjs";
 
@@ -149,9 +148,11 @@ export const SearchBar = ({
                     )}
 
                 {/* button */}
-                <Box onClick={handleClick} sx={ContainedButton}>
-                    RESERVATION
-                </Box>
+                <Zoom duration={1000} delay={1} >
+                    <Box onClick={handleClick} sx={ContainedButton}>
+                        RESERVATION
+                    </Box>
+                </Zoom>
             </Box>
         </Container>
     );

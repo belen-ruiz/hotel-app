@@ -4,6 +4,7 @@ import { Typography } from "@mui/material";
 import { Toolbar } from "@mui/material";
 import { Container } from "@mui/material";
 import { alignCenter } from "../../../custom/Display";
+import { Zoom, Fade } from "react-awesome-reveal";
 
 import {
     White,
@@ -64,11 +65,13 @@ export const Testimonials = () => {
                     <p style={{ ...Subtitle, ...Italic }}>
                         Reviewed from TripAdvisor
                     </p>
-                    <img
-                        src="https://download.logo.wine/logo/TripAdvisor/TripAdvisor-Logo.wine.png"
-                        alt="trip advisor"
-                        style={{ width: "150px" }}
-                    />
+                    <Fade direction="up" delay={1} duration="2000">
+                        <img
+                            src="https://download.logo.wine/logo/TripAdvisor/TripAdvisor-Logo.wine.png"
+                            alt="trip advisor"
+                            style={{ width: "150px" }}
+                        />
+                    </Fade>
                 </Stack>
             </Stack>
         </Container>

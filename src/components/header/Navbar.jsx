@@ -68,119 +68,113 @@ export const Navbar = () => {
     // }, []);
 
     return (
-            <AppBar style={navbarStyle}>
-                <Toolbar style={{justifyContent: "space-evenly", maxWidth: "1200px"}} >
-
-                    {/* menu mobile */}
+        <AppBar style={navbarStyle}>
+            <Toolbar
+                style={{ justifyContent: "space-evenly", maxWidth: "1200px" }}
+            >
+                {/* menu mobile */}
+                <Box
+                    sx={{
+                        display: { xs: "flex", md: "none" },
+                        flexGrow: 1,
+                        alignItems: "center",
+                        justifyContent: "space-around",
+                    }}
+                >
+                    {/* logo mobile */}
                     <Box
                         sx={{
                             display: { xs: "flex", md: "none" },
-                            flexGrow: 1,
-                            alignItems: "center",
-                            justifyContent: "space-around",
-
                         }}
                     >
-                        {/* logo mobile */}
-                        <Box
-                            sx={{
-                                display: { xs: "flex", md: "none" },
-                            }}
-                        >
-                            <Logo
-                                logo={logoIso}
-                                altLogo={"logo-header"}
-                                height={"30px"}
-                            />
-                        </Box>
-
-                        {/* icon mobile */}
-                        <IconButton size="large" onClick={handleOpenNavMenu}>
-                            <MenuIcon sx={{ color: "#d5d8d5" }} />
-                        </IconButton>
-
-                        {/* menu mobile */}
-                        <Menu
-                            id="menu-appbar"
-                            anchorEl={anchorElNav}
-                            anchorOrigin={{
-                                vertical: "bottom",
-                                horizontal: "left",
-                            }}
-                            keepMounted
-                            transformOrigin={{
-                                vertical: "top",
-                                horizontal: "left",
-                            }}
-                            open={Boolean(anchorElNav)}
-                            onClose={handleCloseNavMenu}
-                            sx={{
-                                display: { xs: "block", md: "none" },
-                            }}
-                        >
-                            <MenuList style={{ width: "fit-content" }}>
-                                {pages.map((page) => (
-                                    <MenuItem
-                                        key={page.page}
-                                        onClick={handleCloseNavMenu}
-                                    >
-                                        <Link
-                                            to={`${page.link}`}
-                                            style={{ ...MenuWeb, ...Green }}
-                                        >
-                                            {page.page}
-                                        </Link>
-                                    </MenuItem>
-                                ))}
-                            </MenuList>
-                        </Menu>
+                        <Logo
+                            logo={logoIso}
+                            altLogo={"logo-header"}
+                            height={"30px"}
+                        />
                     </Box>
 
-                    
-                <Fade direction="down" delay={1} duration="2000">
+                    {/* icon mobile */}
+                    <IconButton size="large" onClick={handleOpenNavMenu}>
+                        <MenuIcon sx={{ color: "#d5d8d5" }} />
+                    </IconButton>
 
-                        {/* logo */}
-                        <Box
-                            sx={{
-                                display: { xs: "none", md: "flex" },
-                            }}
-                        >
-                            <Logo
-                                logo={logoIso}
-                                altLogo={"logo-header"}
-                                height={"50px"}
-                            />
-                        </Box>
-                        
-                        {/* menu web */}
-                        <Box
-                            sx={{
-                                display: { xs: "none", md: "flex" },
-                                gap: "2rem",
-                                ...MenuWeb,
-                                //flexGrow: 1,
-                            }}
-                        >
+                    {/* menu mobile */}
+                    <Menu
+                        id="menu-appbar"
+                        anchorEl={anchorElNav}
+                        anchorOrigin={{
+                            vertical: "bottom",
+                            horizontal: "left",
+                        }}
+                        keepMounted
+                        transformOrigin={{
+                            vertical: "top",
+                            horizontal: "left",
+                        }}
+                        open={Boolean(anchorElNav)}
+                        onClose={handleCloseNavMenu}
+                        sx={{
+                            display: { xs: "block", md: "none" },
+                        }}
+                    >
+                        <MenuList style={{ width: "fit-content" }}>
                             {pages.map((page) => (
-                                <NavLink
-                                    to={page.link}
+                                <MenuItem
                                     key={page.page}
-                                    style={{
-                                        color:
-                                            location.pathname === page.link
-                                                ? "#d5d8d5"
-                                                : "#989696fa",
-                                    }}
+                                    onClick={handleCloseNavMenu}
                                 >
-                                    {page.page}
-                                </NavLink>
+                                    <Link
+                                        to={`${page.link}`}
+                                        style={{ ...MenuWeb, ...Green }}
+                                    >
+                                        {page.page}
+                                    </Link>
+                                </MenuItem>
                             ))}
-                        </Box>
-                        
-                        {/* booknow */}
-                        <Box sx={OutlinedButton}>book now</Box>
-                    </Fade>
-                </Toolbar>
-            </AppBar>
+                        </MenuList>
+                    </Menu>
+                </Box>
+
+                <Fade direction="down" delay={1} duration="2000">
+                    {/* logo */}
+                    <Box sx={{ display: { xs: "none", md: "flex" } }}>
+                        <Logo
+                            logo={logoIso}
+                            altLogo={"logo-header"}
+                            height={"50px"}
+                        />
+                    </Box>
+
+                    {/* menu web */}
+                    <Box
+                        sx={{
+                            display: { xs: "none", md: "flex" },
+                            gap: "2rem",
+                            ...MenuWeb,
+                            //flexGrow: 1,
+                        }}
+                    >
+                        {pages.map((page) => (
+                            <NavLink
+                                to={page.link}
+                                key={page.page}
+                                style={{
+                                    color: location.pathname === page.link
+                                            ? "#d5d8d5"
+                                            : "#989696fa",
+                                    
+                                }}
+                            >
+                                {page.page}
+                            </NavLink>
+                        ))}
+                    </Box>
+
+                    {/* booknow */}
+                    <Box sx={OutlinedButton}>book now</Box>
+                </Fade>
+            </Toolbar>
+        </AppBar>
     );
 };

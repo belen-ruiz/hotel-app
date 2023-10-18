@@ -34,7 +34,8 @@ const section = {
     maxWidth: "1280px",
     display: "flex",
     justifyContent: "center",
-    // padding: "4rem 2rem", // Puedes eliminarlo o agregarlo según sea necesario
+    padding: "2rem"
+    
   };
   
   const alignCenter = {

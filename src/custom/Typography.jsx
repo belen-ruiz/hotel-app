@@ -14,7 +14,7 @@ const MenuWeb = {
     fontSize: "0.7rem",
     fontWeight: 700,
     textTransform: "uppercase",
-    };
+};
 
 const TopText = {
     backgroundColor: "#e49408",
@@ -92,12 +92,6 @@ const Label = {
     padding: 0,
 };
 
-//const SmallText = {
-//         fontSize: "0.8rem",
-//         textTransform: "uppercase",
-//         fontWeight: 700,
-
-// }
 
 export {
     White,
@@ -106,7 +100,6 @@ export {
     GreenBC,
     Orange,
     OrangeBC,
-
     MenuWeb,
     TopText,
     Title,
@@ -120,4 +113,5 @@ export {
     Quote,
     SmallText,
     Label,
+    
 };

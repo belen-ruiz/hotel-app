@@ -40,20 +40,18 @@ const ContainedButton = {
     },
 };
 
-const WhiteButton = {
-    color: "#d5d8d5",
+const ArrowButton = {
+    color: "#e49408",
     cursor: "pointer",
-    transition: "transform 0.1s ease",
+    transition: "transform color 0.2s ease",
 
     "&:hover": {
-        color: "#e49408",
-        boxShadow: "0px 1px 2px rgba(232, 230, 230, 0.3)",
-        borderRadius: "30px",
+        color: "#d5d8d5",
         transform: "scale(1.5)",
     },
 };
 
-export { OutlinedButton, ContainedButton, WhiteButton };
+export { OutlinedButton, ContainedButton, ArrowButton };
 
 //   '&:active': {
 //     // boxShadow: 'none',

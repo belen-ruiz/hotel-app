@@ -1,7 +1,8 @@
 import { Container, Box } from "@mui/material";
 import { useRoomContext } from "../../../context/RoomProvider";
 import { RoomItem } from "../../rooms/RoomItem";
-import { WhiteButton } from "../../../custom/Buttons";
+import { ArrowButton } from "../../../custom/Buttons";
+import { Zoom, Fade } from "react-awesome-reveal";
 import ArrowCircleLeftRoundedIcon from "@mui/icons-material/ArrowCircleLeftRounded";
 import ArrowCircleRightRoundedIcon from "@mui/icons-material/ArrowCircleRightRounded";
 
@@ -20,12 +21,16 @@ const Buttons = () => {
                 height: "32px",
             }}
         >
-            <Box sx={{ ...WhiteButton }} onClick={() => handleScroll("left")}>
-                <ArrowCircleLeftRoundedIcon fontSize="large" />
+            <Box sx={{ ...ArrowButton }} onClick={() => handleScroll("left")}>
+                <Zoom duration={1000} delay={1} >
+                    <ArrowCircleLeftRoundedIcon fontSize="large" />
+                </Zoom>
             </Box>
 
-            <Box sx={{ ...WhiteButton }} onClick={() => handleScroll("right")}>
-                <ArrowCircleRightRoundedIcon fontSize="large" />
+            <Box sx={{ ...ArrowButton }} onClick={() => handleScroll("right")}>
+                <Zoom duration={3000} delay={4}>
+                    <ArrowCircleRightRoundedIcon fontSize="large" />
+                </Zoom>
             </Box>
         </Box>
     );
