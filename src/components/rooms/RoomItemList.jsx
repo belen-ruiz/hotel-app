@@ -14,7 +14,7 @@ import {
     OutlinedButton,
 } from "../../custom/Buttons";
 import { Green, WhiteBC } from "../../custom/Typography"
-import { RoomCapacity, RoomImage, RoomDescription, RoomPrice, RoomTitle, RoomAmenities, GroupButtons } from "./RoomItem";
+import { RoomCapacity, RoomImage, RoomDescription, RoomPrice, RoomTitle, RoomAmenities, GroupButtons, RoomAmenitiesIcon } from "./RoomItem";
 
 export const RoomItemList = ({ rooms, isList, setIsList }) => {
     const title = rooms.title;
@@ -86,7 +86,7 @@ export const RoomItemList = ({ rooms, isList, setIsList }) => {
 
                         <Divider orientation="vertical" flexItem />
 
-                        <RoomAmenities amenities={amenities} comfort={comfort} />
+                        <RoomAmenities amenities={amenities} comfort={comfort} displayText={false} />
                         
                     </Box>
 

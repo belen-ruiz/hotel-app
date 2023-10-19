@@ -9,7 +9,7 @@ import { Typography } from "@mui/material";
 import { Box } from "@mui/material";
 import React from "react";
 import { comfort } from "../../utils/comfort";
-import { GroupButtons, RoomAmenities, RoomCapacity, RoomDescription, RoomImage, RoomPrice, RoomTitle } from "./RoomItem";
+import { GroupButtons, RoomAmenities, RoomAmenitiesText, RoomCapacity, RoomDescription, RoomImage, RoomPrice, RoomTitle } from "./RoomItem";
 import {
     White,
     WhiteBC,
@@ -73,7 +73,8 @@ export const RoomDetail = ({ room }) => {
                     <RoomCapacity capacity={capacity} />
 
                     {/* amenities */}
-                    <RoomAmenities amenities={amenities} comfort={comfort} />
+                    <RoomAmenities amenities={amenities} comfort={comfort} displayText={true}/>
+                    {/* <RoomAmenities amenities={amenities} comfort={comfort} /> */}
                         
                     {/* descrip */}
                     <RoomDescription description={description}/>

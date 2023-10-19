@@ -115,10 +115,8 @@ export const RoomCapacity = ({ capacity }) => {
     );
 };
 
-import React from "react";
-import { Box } from "@mui/material";
 
-const RoomAmenities = ({ amenities, comfort, displayText }) => {
+export const RoomAmenities = ({ amenities, comfort, displayText }) => {
   return (
     <Box sx={{ display: "flex", gap: "0.5rem", alignItems: "center" }}>
       {comfort &&
@@ -133,7 +131,12 @@ const RoomAmenities = ({ amenities, comfort, displayText }) => {
                   ...Green,
                 }}
               >
-                {displayText ? amenity.name : amenity.icon}
+                {displayText ? 
+                    <RoomAmenity icon={amenity.icon} name={amenity.name} />
+                 : 
+                 <>
+                    <RoomAmenitiesIcon icon={amenity.icon} />
+                </>}
               </div>
             );
           }
@@ -143,13 +146,25 @@ const RoomAmenities = ({ amenities, comfort, displayText }) => {
   );
 };
 
-export const RoomAmenitiesIcon = ({ amenities, comfort }) => {
-  return <RoomAmenities amenities={amenities} comfort={comfort} displayText={false} />;
+
+const RoomAmenity = ({ icon, name }) => {
+    return (
+        <>
+            <p>{icon}</p>
+            <p>{name}</p>
+        </>
+    );
 };
 
-export const RoomAmenitiesText = ({ amenities, comfort }) => {
-  return <RoomAmenities amenities={amenities} comfort={comfort} displayText={true} />;
+const RoomAmenitiesIcon = ({ icon }) => {
+    return (
+        <>
+            <p>{icon}</p>
+        </>
+    );
 };
+
+
 
 
 export const RoomTitle = ({ title }) => {
