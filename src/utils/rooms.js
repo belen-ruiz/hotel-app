@@ -1,5 +1,6 @@
 export const roomsData = [
     {
+        id: 52578752,
         title: "Napoleon",
         capacity: 2,
         amenities: ["mini bar", "tv", "sofa", "ironing service", "computer", "phone", "laundry", "taxi service", "hairdryer"],
@@ -18,6 +19,7 @@ export const roomsData = [
         ]
     },
     {
+        id: 52234552,
         title: "Lenin",
         capacity: 2,
         amenities: ["mini bar", "tv", "sofa", "ironing service", "computer", "phone", "laundry", "taxi service", "hairdryer"],
@@ -36,6 +38,7 @@ export const roomsData = [
         ]
     },
     {
+        id: 52509852,
         title: "London",
         capacity: 3,
         amenities: ["mini bar", "tv", "sofa", "ironing service", "computer", "phone", "laundry", "taxi service", "hairdryer"], allows: "dog",
@@ -53,6 +56,7 @@ export const roomsData = [
         ]
     },
     {
+        id: 5258752,
         title: "Aruba",
         capacity: 4,
         amenities: ["mini bar", "tv", "sofa", "ironing service", "computer", "phone", "laundry", "taxi service", "hairdryer"], allows: "dog",
@@ -70,6 +74,7 @@ export const roomsData = [
         ]
     },
     {
+        id: 525233252,
         title: "Punta Cana",
         capacity: 3,
         amenities: ["mini bar", "tv", "sofa", "ironing service", "computer", "phone", "laundry", "taxi service", "hairdryer"], allows: "dog",
@@ -87,6 +92,7 @@ export const roomsData = [
         ]
     },
     {
+        id: 52557682,
         title: "Jamaica",
         capacity: 5,
         amenities: ["mini bar", "tv", "sofa", "ironing service", "computer", "phone", "laundry", "taxi service", "hairdryer"], allows: "dog",
@@ -104,6 +110,7 @@ export const roomsData = [
         ]
     },
     {
+        id: 5253552,
         title: "Cuba",
         capacity: 2,
         amenities: ["mini bar", "tv", "sofa", "ironing service", "computer", "phone", "laundry", "taxi service", "hairdryer"], allows: "dog",
@@ -121,6 +128,7 @@ export const roomsData = [
         ]
     },
     {
+        id: 5255575,
         title: "Deluxe",
         capacity: 1,
         amenities: ["mini bar", "tv", "sofa", "ironing service", "computer", "phone", "laundry", "taxi service", "hairdryer"], allows: "dog",
@@ -138,6 +146,7 @@ export const roomsData = [
         ]
     },
     {
+        id: 525652,
         title: "Habanna",
         capacity: 3,
         amenities: ["mini bar", "tv", "sofa", "ironing service", "computer", "phone", "laundry", "taxi service", "hairdryer"], allows: "dog",

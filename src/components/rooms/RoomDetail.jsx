@@ -23,6 +23,7 @@ import {
     Price,
     TextAlignJustify,
 } from "../../custom/Typography";
+import { Divider } from "@mui/material";
 
 const Review = () => {
     return (
@@ -39,12 +40,14 @@ const Review = () => {
 
 
 export const RoomDetail = ({ room }) => {
+    const id = room.id;
     const title = room.title;
     const capacity = room.capacity;
     const amenities = room.amenities;
     const description = room.description;
     const price = room.price;
     const imgUrl = room.imgUrl;
+
 
     return (
            <>
@@ -80,6 +83,8 @@ export const RoomDetail = ({ room }) => {
                     <RoomDescription description={description}/>
                 </Stack>    
 
+                <Divider orientation="vertical" flexItem />
+
                 {/* price & book */}
                 <Stack
                     sx={{
@@ -95,7 +100,7 @@ export const RoomDetail = ({ room }) => {
                     }}
                 >
                     <RoomPrice price={price} title={title} />
-                    <GroupButtons title={title}/>
+                    <GroupButtons id={id}/>
                 </Stack>       
                  
                         

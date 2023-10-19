@@ -16,7 +16,7 @@ export const RoomDetailContainer = ({  }) => {
 
   const fecthRoom = () => {
     const findRoom = rooms.find((room) => (
-      room.title == room_id
+      room.id == room_id
       ))
     setRoom(findRoom)
   }

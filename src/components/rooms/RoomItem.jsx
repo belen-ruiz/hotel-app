@@ -28,6 +28,7 @@ import {
 } from "../../custom/Typography";
 
 export const RoomItem = ({ rooms }) => {
+    const id = rooms.id;
     const title = rooms.title;
     const capacity = rooms.capacity;
     const price = rooms.price;
@@ -66,7 +67,7 @@ export const RoomItem = ({ rooms }) => {
                 <RoomTitle title={title} />
                 <RoomPrice price={price} />
 
-                <GroupButtons title={title} />
+                <GroupButtons id={id} />
             </Stack>
         </Box>
     );
@@ -205,17 +206,17 @@ export const RoomDescription = ({ description }) => {
     );
 };
 
-export const GroupButtons = ({ title }) => {
+export const GroupButtons = ({ id }) => {
     return (
         <>
         <Box sx= {{ width: "100%", display: "flex", justifyContent: "space-between", gap: "0.7rem" }}>
                 <Box sx={{ flex: 1 }}>
-                    <Link to={`/room/${title}`}>
+                    <Link to={`/room/${id}`}>
                         <Box sx={ContainedButton}>more info </Box>
                     </Link>
                 </Box>
                 <Box sx={{ flex: 1 }}>
-                    <Link to={`/room/${title}`}>
+                    <Link to={`/room/${id}`}>
                         <Box sx={OutlinedButton}>book now </Box>
                     </Link>
                 </Box>

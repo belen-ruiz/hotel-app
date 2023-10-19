@@ -17,6 +17,7 @@ import { Green, WhiteBC } from "../../custom/Typography"
 import { RoomCapacity, RoomImage, RoomDescription, RoomPrice, RoomTitle, RoomAmenities, GroupButtons, RoomAmenitiesIcon } from "./RoomItem";
 
 export const RoomItemList = ({ rooms, isList, setIsList }) => {
+    const id = rooms.id;
     const title = rooms.title;
     const capacity = rooms.capacity;
     //const amenities = rooms.amenities;
@@ -116,7 +117,7 @@ export const RoomItemList = ({ rooms, isList, setIsList }) => {
                     }}
                 >
                     <RoomPrice price={price} title={title} />
-                    <GroupButtons title={title}/>
+                    <GroupButtons id={id}/>
                 </Stack>
             </Box>
         </Card>
