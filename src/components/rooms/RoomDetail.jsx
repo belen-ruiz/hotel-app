@@ -60,11 +60,10 @@ export const RoomDetail = ({ room }) => {
 
                  {/* data */}
                 <Stack
+                spacing={2}
                     sx={{
                         display: "flex",
-                        gap: "0.5rem",
                         //width: "50%",
-                        padding: "1rem",
                         justifySelf: "start",
                         flex: 2
                     }}
@@ -73,11 +72,14 @@ export const RoomDetail = ({ room }) => {
                     <RoomTitle title={title} />
 
                     {/* capacity */}
-                    <RoomCapacity capacity={capacity} />
+                    <Box sx={{ display: "flex" }} >
+                        <RoomCapacity capacity={capacity} />
+                    </Box>
 
                     {/* amenities */}
-                    <RoomAmenities amenities={amenities} comfort={comfort} displayText={true}/>
-                    {/* <RoomAmenities amenities={amenities} comfort={comfort} /> */}
+                    <Box sx={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "1rem", width: "100%"  }} >
+                        <RoomAmenities amenities={amenities} comfort={comfort} displayText={true}/>
+                    </Box>
                         
                     {/* descrip */}
                     <RoomDescription description={description}/>

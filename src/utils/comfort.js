@@ -14,32 +14,32 @@ export const comfort = [
     {
         name:    "mini bar",
 
-        icon:  <LocalBarRounded />
+        icon:  <LocalBarRounded fontSize=""/>
     },
     {
         name:    "tv",
 
-        icon:  <TvRounded />
+        icon:  <TvRounded fontSize=""/>
     },
     {
         name:    "sofa",
 
-        icon: <ChairRounded />
+        icon: <ChairRounded fontSize=""/>
     },
     {
-        name:    "ironing service",
+        name:    "ironing",
 
-        icon: <IronRounded />
+        icon: <IronRounded fontSize=""/>
     },
     {
         name:    "computer",
 
-        icon:  <ComputerRounded />
+        icon:  <ComputerRounded fontSize=""/>
     },
     {
         name:    "phone",
 
-        icon: <PhoneAndroidRounded />
+        icon: <PhoneAndroidRounded fontSize=""/>
     },
     // {
     //     name:    "laundry",

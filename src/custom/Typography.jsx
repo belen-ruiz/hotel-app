@@ -82,7 +82,7 @@ const Quote = {
 
 const SmallText = {
     fontSize: "0.7rem",
-    textTransform: "capitalze",
+    textTransform: "capitalize",
 };
 
 const Label = {

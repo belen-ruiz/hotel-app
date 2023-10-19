@@ -18,6 +18,7 @@ import {
     WhiteBC,
     GreenBC,
     OrangeBC,
+    Orange,
     Green,
     TopText,
     Title,
@@ -25,7 +26,9 @@ import {
     CardTitle,
     Price,
     TextAlignJustify,
+    SmallText
 } from "../../custom/Typography";
+import { Grid } from "@mui/material";
 
 export const RoomItem = ({ rooms }) => {
     const id = rooms.id;
@@ -67,6 +70,7 @@ export const RoomItem = ({ rooms }) => {
                 <RoomTitle title={title} />
                 <RoomPrice price={price} />
 
+                {/* buttons */}
                 <GroupButtons id={id} />
             </Stack>
         </Box>
@@ -119,7 +123,7 @@ export const RoomCapacity = ({ capacity }) => {
 
 export const RoomAmenities = ({ amenities, comfort, displayText }) => {
   return (
-    <Box sx={{ display: "flex", gap: "0.5rem", alignItems: "center" }}>
+    <>
       {comfort &&
         amenities &&
         comfort.map((amenity) => {
@@ -143,7 +147,7 @@ export const RoomAmenities = ({ amenities, comfort, displayText }) => {
           }
           return null;
         })}
-    </Box>
+    </>
   );
 };
 
@@ -151,11 +155,15 @@ export const RoomAmenities = ({ amenities, comfort, displayText }) => {
 const RoomAmenity = ({ icon, name }) => {
     return (
         <>
-            <p>{icon}</p>
-            <p>{name}</p>
+            <Box sx={{display:"flex", gap:"0.7rem", width: "100%"}}>
+                <p style={{fontSize:"1rem", ...Orange}}>{icon}</p> 
+                <p style={{ ...SmallText, ...Green }}>{name}</p>
+            </Box>
         </>
-    );
-};
+    ); 
+    };
+
+
 
 const RoomAmenitiesIcon = ({ icon }) => {
     return (
