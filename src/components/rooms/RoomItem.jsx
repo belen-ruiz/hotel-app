@@ -11,7 +11,7 @@ import CreateNewFolder from "@mui/icons-material/CreateNewFolder";
 import { BoyRounded } from "@mui/icons-material";
 import { Stack } from "@mui/material";
 import { Link } from "react-router-dom";
-import { ContainedButton } from "../../custom/Buttons";
+import { ContainedButton, OutlinedButton } from "../../custom/Buttons";
 
 import {
     White,
@@ -40,7 +40,7 @@ export const RoomItem = ({ rooms }) => {
                 position: "relative",
             }}
         >
-            <Image imgUrl={imgUrl} title={title} ratio="4/6"/>
+            <RoomImage imgUrl={imgUrl} title={title} ratio="4/6" />
 
             <Stack
                 sx={{
@@ -61,21 +61,24 @@ export const RoomItem = ({ rooms }) => {
                 }}
             >
                 {/* capacidad */}
-                {capacity && (
-                    <Capacity capacity={capacity} style={{ ...White }} />
-                )}
+                {capacity && <RoomCapacity capacity={capacity} />}
 
                 {/* data */}
-                <Data title={title} price={price} />
+                <RoomTitle title={title} />
+                <RoomPrice price={price} />
+
+                <GroupBottons titile={title} />
             </Stack>
         </Box>
     );
 };
 
-export const Image = ({ title, imgUrl, ratio }) => {
+///
+
+export const RoomImage = ({ title, imgUrl, ratio }) => {
     return (
         <>
-            <AspectRatio sx={{borderRadius: 0 }} ratio={ratio} >
+            <AspectRatio sx={{ borderRadius: 0 }} ratio={ratio}>
                 <figure>
                     <img src={imgUrl} alt={title} />
                 </figure>
@@ -84,7 +87,7 @@ export const Image = ({ title, imgUrl, ratio }) => {
     );
 };
 
-export const Capacity = ({ capacity, style }) => {
+export const RoomCapacity = ({ capacity }) => {
     return (
         <>
             <Box
@@ -92,9 +95,10 @@ export const Capacity = ({ capacity, style }) => {
                 sx={{
                     Maxwidth: "90%",
                     border: "1px solid white",
+                    backgroundColor: { ...GreenBC },
+                    color: { ...White },
                     borderRadius: 0,
                     display: "flex",
-                    ...style,
                 }}
             >
                 {Array(capacity)
@@ -110,30 +114,86 @@ export const Capacity = ({ capacity, style }) => {
     );
 };
 
-export const Data = ({ title, price }) => {
+export const RoomAmenities = ({ amenities, comfort }) => {
+    return (
+        <>
+            <Box sx={{ display: "flex", gap: "0.5rem", alignItems: "center" }}>
+                {comfort &&
+                    amenities &&
+                    comfort.map((amenity) => {
+                        if (amenities.includes(amenity.name)) {
+                            return (
+                                <div
+                                    title={amenity.name}
+                                    key={amenity.name}
+                                    style={{
+                                        ...Green,
+                                    }}
+                                >
+                                    {amenity.icon}
+                                </div>
+                            );
+                        }
+                    })}
+            </Box>
+        </>
+    );
+};
+
+export const RoomTitle = ({ title }) => {
     return (
         <>
             <Box>
                 <p style={{ ...CardTitle, ...Green }}>{title}</p>
             </Box>
+        </>
+    );
+};
 
+export const RoomPrice = ({ title, price }) => {
+    return (
+        <>
             <Box sx={{ display: "flex", alignItems: "end" }}>
                 <p style={{ ...Subtitle, ...Green, fontWeight: 700 }}>
                     $
                     <span
-                        style={{ ...Price, ...Green, letterSpacing: "-20px" }}
+                        style={{ ...Price, ...Green, letterSpacing: "-10px" }}
                     >
                         {price}
                     </span>
                     pp night
                 </p>
             </Box>
+        </>
+    );
+};
 
-            <Box sx={{ width: "fit-content" }}>
-                <Link to={`/room/${title}`}>
-                    <Box sx={ContainedButton}>see more info </Box>
-                </Link>
+export const RoomDescription = ({ description }) => {
+    return (
+        <>
+            <Box sx={{ display: "flex", alignItems: "end" }}>
+                <p style={{ ...Subtitle, ...Green }}>${description}</p>
             </Box>
         </>
     );
 };
+
+export const GroupBottons = ({ title }) => {
+    return (
+        <>
+        <Box sx= {{ width: "80%", display: "flex", justifyContent: "space-between" }}>
+                <Box sx={{ width: "fit-content" }}>
+                    <Link to={`/room/${title}`}>
+                        <Box sx={ContainedButton}>see more info </Box>
+                    </Link>
+                </Box>
+                <Box sx={{ width: "fit-content" }}>
+                    <Link to={`/room/${title}`}>
+                        <Box sx={OutlinedButton}>see more info </Box>
+                    </Link>
+                </Box>
+            </Box>
+        </>
+    );
+};
+
