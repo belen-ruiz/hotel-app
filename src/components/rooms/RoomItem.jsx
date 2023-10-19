@@ -50,7 +50,7 @@ export const RoomItem = ({ rooms }) => {
                     height: "100%",
                     position: "absolute",
                     bottom: 0,
-                    padding: "1rem",
+                    padding: "1.5rem",
                     justifyContent: "space-between",
                     alignItems: "start",
                     transition: "0.2s ease-in",
@@ -58,8 +58,7 @@ export const RoomItem = ({ rooms }) => {
                         opacity: 1,
                         backdropFilter: "blur(10px)",
                     },
-                }}
-            >
+                }} >
                 {/* capacidad */}
                 {capacity && <RoomCapacity capacity={capacity} />}
 
@@ -67,7 +66,7 @@ export const RoomItem = ({ rooms }) => {
                 <RoomTitle title={title} />
                 <RoomPrice price={price} />
 
-                <GroupBottons titile={title} />
+                <GroupButtons title={title} />
             </Stack>
         </Box>
     );
@@ -79,13 +78,15 @@ export const RoomImage = ({ title, imgUrl, ratio }) => {
     return (
         <>
             <AspectRatio sx={{ borderRadius: 0 }} ratio={ratio}>
-                <figure>
-                    <img src={imgUrl} alt={title} />
+                <figure  style={{ height: "100%", width: "100%", overflow: "hidden",  }}>
+                    <img src={imgUrl} alt={title} style={{ height: "100%", width: "100%", objectFit: "cover" }}/>
                 </figure>
             </AspectRatio>
         </>
     );
 };
+
+
 
 export const RoomCapacity = ({ capacity }) => {
     return (
@@ -178,18 +179,18 @@ export const RoomDescription = ({ description }) => {
     );
 };
 
-export const GroupBottons = ({ title }) => {
+export const GroupButtons = ({ title }) => {
     return (
         <>
-        <Box sx= {{ width: "80%", display: "flex", justifyContent: "space-between" }}>
-                <Box sx={{ width: "fit-content" }}>
+        <Box sx= {{ width: "100%", display: "flex", justifyContent: "space-between", gap: "0.7rem" }}>
+                <Box sx={{ flex: 1 }}>
                     <Link to={`/room/${title}`}>
-                        <Box sx={ContainedButton}>see more info </Box>
+                        <Box sx={ContainedButton}>more info </Box>
                     </Link>
                 </Box>
-                <Box sx={{ width: "fit-content" }}>
+                <Box sx={{ flex: 1 }}>
                     <Link to={`/room/${title}`}>
-                        <Box sx={OutlinedButton}>see more info </Box>
+                        <Box sx={OutlinedButton}>book now </Box>
                     </Link>
                 </Box>
             </Box>

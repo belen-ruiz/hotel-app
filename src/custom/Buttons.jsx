@@ -1,6 +1,7 @@
 //backdropFilter: scrolling ? 'blur(10px)' : 'none',
 
 const OutlinedButton = {
+    textAlign: "center",
     backgroundColor: "transparent",
     border: "2px solid #e49408",
     padding: "0.4rem 0.5rem",
@@ -20,6 +21,7 @@ const OutlinedButton = {
 };
 
 const ContainedButton = {
+    textAlign: "center",
     backgroundColor: "#e49408",
     border: "2px solid #e49408",
     color: "#d5d8d5",

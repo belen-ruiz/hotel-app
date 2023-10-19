@@ -230,7 +230,7 @@ import {
     OutlinedButton,
 } from "../../custom/Buttons";
 import { Green, WhiteBC } from "../../custom/Typography"
-import { RoomCapacity, RoomImage, RoomDescription, RoomPrice, RoomTitle, RoomAmenities } from "./RoomItem";
+import { RoomCapacity, RoomImage, RoomDescription, RoomPrice, RoomTitle, RoomAmenities, GroupButtons } from "./RoomItem";
 
 export const RoomItemList = ({ rooms, isList, setIsList }) => {
     const title = rooms.title;
@@ -249,9 +249,10 @@ export const RoomItemList = ({ rooms, isList, setIsList }) => {
             sx={{
                 ...WhiteBC,
                 width: isList ? "fit-content" : "300px",
-                //boxShadow: "none",
                 height: "fit-content",
-                
+                maxHeight: "max-content",
+                overflow: "hidden",
+                borderRadius: 0,                
                 "--Card-padding": "0px",
                 transition: "all .4s ease-out",
                 "&:hover": {
@@ -266,11 +267,12 @@ export const RoomItemList = ({ rooms, isList, setIsList }) => {
                     flexDirection: isList ? "row" : "column",
                     alignItems: "space-between",
                     width: "100%",
+                    height: "100%"
                 }}
             >
                 {/* image */}
-                <Box sx={{ flex: 1 }}>
-                    <RoomImage imgUrl={imgUrl} title={title} ratio="4/3" />
+                <Box sx={{ flex: 1, height: "100%" }}>
+                    <RoomImage imgUrl={imgUrl} title={title} ratio="3/5" />
                 </Box> 
 
                 {/* data */}
@@ -295,13 +297,11 @@ export const RoomItemList = ({ rooms, isList, setIsList }) => {
                             alignItems: "center",
                         }}
                     >
-                        {/* capacity */}
                         
                         <RoomCapacity capacity={capacity} />
 
                         <Divider orientation="vertical" flexItem />
 
-                        {/* amenities */}
                         <RoomAmenities amenities={amenities} comfort={comfort} />
                         
                     </Box>
@@ -324,7 +324,7 @@ export const RoomItemList = ({ rooms, isList, setIsList }) => {
                         width: "100%",
                         flexDirection: "column",
                         justifyContent: "space-between",
-                        alignItems: "start",
+                        //alignItems: "start",
                         padding: "1rem",
                         flex: isList && 1,
                         //justifySelf: "end",
@@ -332,6 +332,7 @@ export const RoomItemList = ({ rooms, isList, setIsList }) => {
                     }}
                 >
                     <RoomPrice price={price} title={title} />
+                    <GroupButtons title={title}/>
                 </Stack>
             </Box>
         </Card>

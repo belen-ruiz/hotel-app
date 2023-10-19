@@ -34,7 +34,7 @@ const section = {
     width: "100%",
     maxWidth: "1280px",
     justifyContent: "center",
-    padding: "2rem"
+    padding: "2rem 4rem",
     
   };
   

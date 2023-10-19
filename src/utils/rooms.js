@@ -65,11 +65,11 @@ export const roomsData = [
         imgUrl: "https://images.pexels.com/photos/2983020/pexels-photo-2983020.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
     },
     {
-        title: "Republica Dominicana",
+        title: "Deluxe",
         capacity: 1,
         amenities: ["mini bar", "tv", "sofa", "ironing service", "computer", "phone", "laundry", "taxi service", "hairdryer"], allows: "dog",
         donts: "cat",
-        description: "Punta vdhn unf j  fuihfuhvu v hufeh ufjnvnjkv vhuv   g jdsjdo iajdoasdjsnc  jfeif oiejfoidsjv f g hthhheag  vb h yj uju uff ucrffu ccf rfijmi njr ifmcen hfruueuh urfhru f ur ur nrulefimjcf eihfin nhrwgh rCana",
+        description: "Punta vdhn unf uff ucrffu ccf rfijmi njr ifmcen hfruueuh urfhru f ur ur nrulefimjcf eihfin nhrwgh rCana",
         price: 65,
         imgUrl: "https://images.pexels.com/photos/6588592/pexels-photo-6588592.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
     },
@@ -78,7 +78,7 @@ export const roomsData = [
         capacity: 3,
         amenities: ["mini bar", "tv", "sofa", "ironing service", "computer", "phone", "laundry", "taxi service", "hairdryer"], allows: "dog",
         donts: "cat",
-        description: "Punta vdhn u j fu ihfuhvuv  hufehuf jnvnjkv vhuv g j d sjdoia jdoasdjsnc jf eifoi ejfoidsjv f g hthhheag  vb h yj uju uff nfucrffu ccf rfijmi njr ifmcen hfruueuh urfhru f ur ur nrulefimjcf eihfin nhrwgh rCana",
+        description: "Punta vdhn u j fu ihfuhvuv  hufehuf jnvnjkv vhuv g j d sjdoia jdoasdjsnc jf eiifmcen hfruueuh urfhru f ur ur nrulefimjcf eihfin nhrwgh rCana",
         price: 35,
         imgUrl: "https://images.pexels.com/photos/6186848/pexels-photo-6186848.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
     },
