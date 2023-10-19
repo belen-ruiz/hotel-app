@@ -1,16 +1,18 @@
 import { RoomServiceTwoTone } from '@mui/icons-material'
 import { Box } from '@mui/material'
-import { Container } from '@mui/material'
 import React, { useEffect, useState } from 'react'
+import { Container, Stack } from '@mui/material'
 import { useParams } from 'react-router-dom'
 import { useRoomContext } from '../../context/RoomProvider'
+import { Green, WhiteBC } from "../../custom/Typography"
 import { RoomDetail } from './RoomDetail'
+import { RoomGallery } from './RoomGallery'
 
 export const RoomDetailContainer = ({  }) => {
   
-  const { rooms }  =  useRoomContext()
-  const [room, setRoom] = useState([])
   const { room_id } = useParams()
+  const { rooms }  =  useRoomContext()
+  const [ room, setRoom ] = useState([])
 
   const fecthRoom = () => {
     const findRoom = rooms.find((room) => (
@@ -19,18 +21,20 @@ export const RoomDetailContainer = ({  }) => {
     setRoom(findRoom)
   }
 
-    useEffect(() => {
+  useEffect(() => {
         fecthRoom()
-    }, [room_id])
+  }, [room_id])
     
 
   return (
 
     <Container 
-        sx={{
-            padding: "3rem"
-            }}>                       
-                {rooms && <RoomDetail room={room}/>}
+        sx={ { ...WhiteBC, padding: "2rem" }}>                       
+          <Stack spacing={6} >
+            <RoomDetail room={room}/>
+            
+            <RoomGallery room={room}/>
+          </Stack>
     </Container>
   )
 }

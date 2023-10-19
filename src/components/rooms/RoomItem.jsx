@@ -115,31 +115,42 @@ export const RoomCapacity = ({ capacity }) => {
     );
 };
 
-export const RoomAmenities = ({ amenities, comfort }) => {
-    return (
-        <>
-            <Box sx={{ display: "flex", gap: "0.5rem", alignItems: "center" }}>
-                {comfort &&
-                    amenities &&
-                    comfort.map((amenity) => {
-                        if (amenities.includes(amenity.name)) {
-                            return (
-                                <div
-                                    title={amenity.name}
-                                    key={amenity.name}
-                                    style={{
-                                        ...Green,
-                                    }}
-                                >
-                                    {amenity.icon}
-                                </div>
-                            );
-                        }
-                    })}
-            </Box>
-        </>
-    );
+import React from "react";
+import { Box } from "@mui/material";
+
+const RoomAmenities = ({ amenities, comfort, displayText }) => {
+  return (
+    <Box sx={{ display: "flex", gap: "0.5rem", alignItems: "center" }}>
+      {comfort &&
+        amenities &&
+        comfort.map((amenity) => {
+          if (amenities.includes(amenity.name)) {
+            return (
+              <div
+                title={amenity.name}
+                key={amenity.name}
+                style={{
+                  ...Green,
+                }}
+              >
+                {displayText ? amenity.name : amenity.icon}
+              </div>
+            );
+          }
+          return null;
+        })}
+    </Box>
+  );
 };
+
+export const RoomAmenitiesIcon = ({ amenities, comfort }) => {
+  return <RoomAmenities amenities={amenities} comfort={comfort} displayText={false} />;
+};
+
+export const RoomAmenitiesText = ({ amenities, comfort }) => {
+  return <RoomAmenities amenities={amenities} comfort={comfort} displayText={true} />;
+};
+
 
 export const RoomTitle = ({ title }) => {
     return (

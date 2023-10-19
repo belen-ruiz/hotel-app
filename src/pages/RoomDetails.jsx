@@ -1,15 +1,48 @@
-import { Box, Stack } from "@mui/material";
+import { Container, Stack } from "@mui/material";
 import React from "react";
-import { useRoomContext } from "../context/RoomProvider";
-import AspectRatio from "@mui/joy/AspectRatio";
 import { RoomDetailContainer } from "../components/rooms/RoomDetailContainer";
-import { Pages } from "../custom/Display";
-import { Container } from "@mui/material";
+import { SearchForRoom } from "../components/sections/search/SearchForRoom";
+import { MainSections, alignCenter } from "../custom/Display"
+
+import {
+    White,
+    WhiteBC,
+    GreenBC,
+    OrangeBC,
+    Orange,
+    TopText,
+    Title,
+    Subtitle,
+    TextAlignJustify, TextAlignCenter, 
+} from "../custom/Typography";
+
 
 export const RoomDetails = () => {
     return (
-        <Container sx={{ Pages }}>
-            <RoomDetailContainer />
+        <Container sx={{ ...MainSections }}>
+            <Stack sx={{ width: "100%" }}>
+                <Titles />
+
+                <RoomDetailContainer />
+                
+                <SearchForRoom />
+            </Stack>
         </Container>
     );
 };
+
+
+const Titles = () => {
+    return(
+        <Stack
+            spacing={1}
+            sx={{ ...alignCenter, padding: "1rem 0" }}
+        >
+            <p style={{ ...Title, ...Orange }}>Room Detail</p>
+
+            <p style={{ ...Subtitle, ...White }}>
+                Enjoy all benefits while you stay
+            </p>
+        </Stack>
+)
+}

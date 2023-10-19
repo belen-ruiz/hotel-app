@@ -13,6 +13,7 @@ import {
     WhiteBC,
     GreenBC,
     OrangeBC,
+    Orange,
     TopText,
     Title,
     Subtitle,
@@ -33,7 +34,7 @@ export const Rooms = () => {
         }
     }, [select, loading]);
 
-    
+     
     return (
         <Container sx={{ ...MainSections }}>
             
@@ -64,7 +65,7 @@ const Titles = () => {
             spacing={1}
             sx={{ ...alignCenter, padding: "1rem 0" }}
         >
-            <p style={{ ...Title, ...White }}>Our services</p>
+            <p style={{ ...Title, ...Orange }}>Our services</p>
 
             <p style={{ ...Subtitle, ...White }}>
                 Enjoy all benefits while you stay

@@ -1,3 +1,4 @@
+
 import { Star } from "@mui/icons-material";
 import { StarBorder } from "@mui/icons-material";
 import { BoyRounded } from "@mui/icons-material";
@@ -8,7 +9,20 @@ import { Typography } from "@mui/material";
 import { Box } from "@mui/material";
 import React from "react";
 import { comfort } from "../../utils/comfort";
-
+import { GroupButtons, RoomAmenities, RoomCapacity, RoomDescription, RoomImage, RoomPrice, RoomTitle } from "./RoomItem";
+import {
+    White,
+    WhiteBC,
+    GreenBC,
+    OrangeBC,
+    Green,
+    TopText,
+    Title,
+    Subtitle,
+    CardTitle,
+    Price,
+    TextAlignJustify,
+} from "../../custom/Typography";
 
 const Review = () => {
     return (
@@ -23,97 +37,76 @@ const Review = () => {
     )
 }
 
+
 export const RoomDetail = ({ room }) => {
     const title = room.title;
     const capacity = room.capacity;
     const amenities = room.amenities;
-    const allows = room.allows;
-    const donts = room.donts;
     const description = room.description;
     const price = room.price;
     const imgUrl = room.imgUrl;
 
     return (
            <>
-             <Box sx={{display: "flex", gap: "2rem"}}>
-                 <Box>
-                     <img src={imgUrl} alt="" style={{height: "500px"}}/>
-                 </Box>
-            
-                 <Stack>
-                     <Typography variant="h3">{title}</Typography>
-            
-                     <Review />
-            
-                     <Box sx={{paddingTop: "1rem"}}>
-                         <Typography variant="subtitle2" >Capacity</Typography>
-                         <Box>
-                             {capacity && (
-                                 <div>
-                                     {Array(capacity)
-                                         .fill()
-                                         .map((_, index) => (
-                                             <BoyRounded />
-                                         ))}
-                                 </div>
-                             )}
-                             
-                         </Box>
-                     </Box>
-            
-            
-            
-                     <Box sx={{paddingTop: "1rem"}}>
-                         <Typography variant="subtitle2" >Amenities</Typography>
-                         <Grid container spacing={2}  sx={{ justifyContent: "space-between" }}>
-                             {comfort && amenities &&
-                                 comfort.map((service) => {
-                                     if (amenities.includes(service.name)) {
-                                         return (
-                                             <Grid item xs={4}
-                                                 key={service.name}
-                                                 sx={{display:"flex", gap:"0.6rem"}}>
-                                                 <Box> {service.icon} </Box>
-                                                 <Typography variant="subtitle2" sx={{textTransform:"capitalize"}}> {service.name}</Typography> 
-                                             </Grid>
-                                         );
-                                     }
-                                 })}
-                         </Grid>
-                     </Box>
-            
-                     
-            
-            
-                     <Box sx={{paddingTop: "1rem"}}>
-                         <Typography variant="subtitle2" > 
-                         Includes
-                         </Typography>
-            
-                         <Typography variant="subtitle2" > 
-                         Doesnt Include
-                         </Typography>
-                     </Box>
-            
-            
-            
-                     <Box sx={{paddingTop: "1rem"}}>
-                         <Typography variant="subtitle2" > ${price} per person per night</Typography>
-                         <Button variant="contained" color="primary">
-                             RESERVATION
-                         </Button>
-                     </Box>
-            
-                 </Stack>
-            
+             <Box sx={{display: "flex", gap: "2rem" }}>
+
+                {/* image */}
+                <Box sx={{ flex: 1, height: "100%" }}>
+                    <RoomImage imgUrl={imgUrl} title={title} ratio="3/5" />
+                </Box>   
+
+                 {/* data */}
+                <Stack
+                    sx={{
+                        display: "flex",
+                        gap: "0.5rem",
+                        //width: "50%",
+                        padding: "1rem",
+                        justifySelf: "start",
+                        flex: 2
+                    }}
+                >
+                    {/* title */}
+                    <RoomTitle title={title} />
+
+                    {/* capacity */}
+                    <RoomCapacity capacity={capacity} />
+
+                    {/* amenities */}
+                    <RoomAmenities amenities={amenities} comfort={comfort} />
+                        
+                    {/* descrip */}
+                    <RoomDescription description={description}/>
+                </Stack>    
+
+                {/* price & book */}
+                <Stack
+                    sx={{
+                        flex: 1,
+                        display: "flex",
+                        width: "100%",
+                        justifyContent: "space-between",
+                        //flexDirection: "column",
+                        //alignItems: "start",
+                        //padding: "1rem",
+                        //justifySelf: "end",
+                        //gap: !isList && "1rem",
+                    }}
+                >
+                    <RoomPrice price={price} title={title} />
+                    <GroupButtons title={title}/>
+                </Stack>       
+                 
+                        
              </Box>
              
-             <Box sx={{paddingTop: "1rem"}}>
-                     <Typography variant="subtitle2" >Description</Typography>
-                     <Typography>{description}</Typography>
-             </Box>
            </>
     );
 };
 
 
+{/* 
+            //  <Box sx={{paddingTop: "1rem"}}>
+            //          <Typography variant="subtitle2" >Description</Typography>
+            //          <Typography>{description}</Typography>
+            //  </Box> */}
