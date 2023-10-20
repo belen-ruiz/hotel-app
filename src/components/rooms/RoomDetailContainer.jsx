@@ -7,6 +7,7 @@ import { useRoomContext } from '../../context/RoomProvider'
 import { Green, WhiteBC } from "../../custom/Typography"
 import { RoomDetail } from './RoomDetail'
 import { RoomGallery } from './RoomGallery'
+import { Zoom, Fade } from "react-awesome-reveal";
 
 export const RoomDetailContainer = ({  }) => {
   

@@ -71,6 +71,9 @@ export const RoomDetail = ({ room }) => {
                     {/* title */}
                     <RoomTitle title={title} />
 
+                    {/* review */}
+                    <Review />
+
                     {/* capacity */}
                     <Box sx={{ display: "flex" }} >
                         <RoomCapacity capacity={capacity} />
@@ -103,9 +106,7 @@ export const RoomDetail = ({ room }) => {
                 >
                     <RoomPrice price={price} title={title} />
                     <GroupButtons id={id}/>
-                </Stack>       
-                 
-                        
+                </Stack>                               
              </Box>
              
            </>

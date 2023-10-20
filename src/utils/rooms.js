@@ -1,7 +1,7 @@
 export const roomsData = [
     {
-        id: "Pink Room",
-        title: "Pink Room",
+        id: "Onsuite Room",
+        title: "Onsuite Room",
         capacity: 2,
         amenities: ["mini bar", "tv", "sofa", "ironing service", "computer", "phone", "laundry", "taxi service", "hairdryer"],
         allows: "dog",
@@ -19,8 +19,8 @@ export const roomsData = [
         ]
     },
     {
-        id: "Patio Room",
-        title: "Patio Room",
+        id: "Rooftop Room",
+        title: "Rooftop Room",
         capacity: 2,
         amenities: ["mini bar", "tv", "sofa", "ironing service", "computer", "phone", "laundry", "taxi service", "hairdryer"],
         allows: "dog",
@@ -56,8 +56,8 @@ export const roomsData = [
         ]
     },
     {
-        id: "Family Room",
-        title: "Family Room",
+        id: "Familiar Room",
+        title: "Familiar Room",
         capacity: 4,
         amenities: ["mini bar", "tv", "sofa", "ironing service", "computer", "phone", "laundry", "taxi service", "hairdryer"], allows: "dog",
         donts: "cat",
@@ -92,8 +92,8 @@ export const roomsData = [
         ]
     },
     {
-        id: "Suite Room",
-        title: "Suite Room",
+        id: "Bohemian Room",
+        title: "Bohemian Room",
         capacity: 5,
         amenities: ["mini bar", "tv", "sofa", "ironing service", "computer", "phone", "laundry", "taxi service", "hairdryer"], allows: "dog",
         donts: "cat",

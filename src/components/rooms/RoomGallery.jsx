@@ -10,6 +10,8 @@ import { Typography } from "@mui/material";
 import { Box } from "@mui/material";
 import React, { useState } from "react";
 import { comfort } from "../../utils/amenity";
+import { Zoom, Fade } from "react-awesome-reveal";
+
 import {
     White,
     WhiteBC,
@@ -50,9 +52,7 @@ export const RoomGallery = ({ room }) => {
                         />
                     ))}
                 
-            </Box>
-
-            
+            </Box>       
         </>
     );
 };
