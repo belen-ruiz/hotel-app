@@ -1,5 +1,6 @@
 import { Container, Stack } from "@mui/material";
 import React from "react";
+import BreadcrumbsContainer from "../components/breadcrumbs/BreadcrumbsContainer";
 import { RoomDetailContainer } from "../components/rooms/RoomDetailContainer";
 import { SearchForRoom } from "../components/sections/search/SearchForRoom";
 import { MainSections, alignCenter } from "../custom/Display"
@@ -23,6 +24,8 @@ export const RoomDetails = () => {
             <Stack sx={{ width: "100%" }}>
                 <Titles />
 
+                <BreadcrumbsContainer />
+                
                 <RoomDetailContainer />
                 
                 <SearchForRoom />
