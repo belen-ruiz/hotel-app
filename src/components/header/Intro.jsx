@@ -11,8 +11,8 @@ const bgImg =
 
 export const Intro = () => {
     return (
-        <Container
-            sx={{ ...alignCenter, ...disableGutters, position: "relative", padding: 0 }}
+        <Container className="alignCenter"
+            sx={{ position: "relative" }}
         >
             {/* img */}
             <Box
@@ -73,7 +73,7 @@ export const Intro = () => {
 
                 {/* contact */}
                 <Flip direction="down" delay={1} duration="2000">
-                    <Box sx={ContainedButton}>contact us</Box>
+                    <Box  className="btn contained-btn">contact us</Box>
                 </Flip>
             </Stack>
         </Container>

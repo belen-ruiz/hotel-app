@@ -6,7 +6,7 @@ import { MainSections } from "../../custom/Display";
 
 export const Header = () => {
   return (
-    <Container sx={{ ...MainSections }}>
+    <Container className="mainSections">
       <Navbar />
     </Container>
   )  

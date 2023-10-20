@@ -10,17 +10,16 @@ import {
 
 export const Banner = () => {
     return (
-        <Container
+        <Container className="orange-bc"
             sx={{
                 padding: "0.2rem 1rem",
-                backgroundColor: { ...OrangeBC },
                 width: "100%",
                 zIndex: 222
             }}
         >
             <Box
+            className="smallText green"
                 sx={{
-                    ...SmallText, ...Green,
                     display: "flex",
                     flexDirection: { xs: "wrap", md: "row" },
                     gap: "0.5rem",

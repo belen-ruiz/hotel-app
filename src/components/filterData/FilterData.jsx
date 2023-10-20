@@ -17,27 +17,27 @@ export const FilterData = ({ getAllRooms, totalGuests, setSelect, select }) => {
         >
             {totalGuests > 0 && totalGuests < 5 ? (
                 <>
-                    <Box sx={{ ...dataDisplay }}>
+                    <Box className="dataDisplay">
                         Showing results for Rooms for {totalGuests} people
                     </Box>
-                    <Box sx={{ ...DataButton }} onClick={getAllRooms}>
+                    <Box className="dataButton" onClick={getAllRooms}>
                         Show all Rooms
                     </Box>
                 </>
             ) : null}
             {totalGuests > 5 ? (
                 <>
-                    <Box sx={{ ...dataDisplay }}>
+                    <Box className="dataDisplay"> 
                         No rooms available for {totalGuests} people
                     </Box>
-                    <Box sx={{ ...DataButton }} onClick={getAllRooms}>
+                    <Box className="dataButton" onClick={getAllRooms}>
                         Show all Rooms
                     </Box>
                 </>
             ) : null}
 
             {totalGuests === 0 ? (
-                <Box sx={{ ...dataDisplay }}>Showing results for all Rooms</Box>
+                <Box className="dataDisplay"> Showing results for all Rooms</Box>
             ) : null}
 
             <FilterIcons setSelect={setSelect} select={select} />

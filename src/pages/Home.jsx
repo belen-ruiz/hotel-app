@@ -14,7 +14,7 @@ import { Stack } from "@mui/material";
 export const Home = () => {
 
     return (
-        <Container sx={{ ...MainSections }}>
+        <Container className="mainSections" >
             <Stack spacing={6} sx={{ width: "100%" }}>
                 <Intro />
 

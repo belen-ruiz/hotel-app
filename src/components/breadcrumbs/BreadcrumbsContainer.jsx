@@ -17,23 +17,23 @@ export const BreadcrumbsContainer = () => {
     
     return (
       <>
-        <NavLink to={pathToCrumb} style={{ ...White }} >{decodedCrumb}</NavLink>
+        <NavLink to={pathToCrumb} className="white">{decodedCrumb}</NavLink>
         {i < pathSegments.length - 1 ? ' / ' : ''}
       </>
     );
   });
 
   return (
-      <Box sx={{ ...alignCenter, ...SmallText, ...White, padding: "0 1rem", gap: "0.3rem" }}>
-          <Box sx={{ display: "flex", alignItems: "center" }}>
-              <Link to="/" style={{  ...White, display: "flex", alignItems: "center", gap: "0.5rem"}} >
+      <Box className="section alignCenter smallText white" sx={{ gap: "0.3rem" }}>
+          <Box className="section alignCenter white">
+              <Link to="/" className="section alignCenter white" style={{  gap: "0.5rem"}} >
                   <HomeRounded style={{ fontSize:"1rem" }}/>  Home
               </Link>
           </Box>
 
-          <Box sx={{ display: "flex", alignItems: "center" }}> / </Box>
+          <Box className="section alignCenter"> / </Box>
 
-          <Box sx={{ display: "flex", alignItems: "center", gap: "0.3rem" }}>{crumbs}</Box>
+          <Box className="section alignCenter">{crumbs}</Box>
       </Box>
   );
 };

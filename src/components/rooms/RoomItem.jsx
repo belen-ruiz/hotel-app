@@ -98,11 +98,10 @@ export const RoomCapacity = ({ capacity }) => {
         <>
             <Box
                 title="capacity"
+                className="white green-bc"
                 sx={{
                     Maxwidth: "90%",
                     border: "1px solid white",
-                    backgroundColor: { ...GreenBC },
-                    color: { ...White },
                     borderRadius: 0,
                     display: "flex",
                 }}
@@ -130,11 +129,10 @@ export const RoomAmenities = ({ amenities, amenity, displayText }) => {
           if (amenities.includes(am.name)) {
             return (
               <div
+              className="green"
                 title={am.name}
                 key={am.name}
-                style={{
-                  ...Green,
-                }}
+                
               >
                 {displayText ? 
                     <RoomAmenity icon={am.icon} name={am.name} />
@@ -156,8 +154,8 @@ const RoomAmenity = ({ icon, name }) => {
     return (
         <>
             <Box sx={{display:"flex", gap:"0.7rem", width: "100%"}}>
-                <p style={{fontSize:"1rem", ...Orange}}>{icon}</p> 
-                <p style={{ ...SmallText, ...Green }}>{name}</p>
+                <p className="orange" style={{fontSize:"1rem"}}>{icon}</p> 
+                <p className="smallText green">{name}</p>
             </Box>
         </>
     ); 
@@ -180,7 +178,7 @@ export const RoomTitle = ({ title }) => {
     return (
         <>
             <Box>
-                <p style={{ ...CardTitle, ...Green }}>{title}</p>
+                <p className="cardTitle green">{title}</p>
             </Box>
         </>
     );
@@ -190,10 +188,10 @@ export const RoomPrice = ({ title, price }) => {
     return (
         <>
             <Box sx={{ display: "flex", alignItems: "end" }}>
-                <p style={{ ...Subtitle, ...Green, fontWeight: 700 }}>
+                <p className="subtitle green" style={{ fontWeight: 700 }}>
                     $
-                    <span
-                        style={{ ...Price, ...Green, letterSpacing: "-10px" }}
+                    <span className="price green"
+                        style={{ letterSpacing: "-10px" }}
                     >
                         {price}
                     </span>
@@ -208,7 +206,7 @@ export const RoomDescription = ({ description }) => {
     return (
         <>
             <Box sx={{ display: "flex", alignItems: "end" }}>
-                <p style={{ ...Subtitle, ...Green }}>${description}</p>
+                <p className="subtitle green">${description}</p>
             </Box>
         </>
     );
@@ -220,12 +218,12 @@ export const GroupButtons = ({ id }) => {
         <Box sx= {{ width: "100%", display: "flex", justifyContent: "space-between", gap: "0.7rem" }}>
                 <Box sx={{ flex: 1 }}>
                     <Link to={`/rooms/${id}`}>
-                        <Box sx={ContainedButton}>more info </Box>
+                        <Box className="btn contained-btn">more info </Box>
                     </Link>
                 </Box>
                 <Box sx={{ flex: 1 }}>
                     <Link to={`/rooms/${id}`}>
-                        <Box sx={OutlinedButton}>book now </Box>
+                        <Box className="btn outlined-btn">book now </Box>
                     </Link>
                 </Box>
             </Box>

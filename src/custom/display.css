@@ -10,7 +10,7 @@
   .pages {
     display: flex;
     flex-direction: column;
-    width: 100%;
+    width: 100%; 
     max-width: 1280px;
     height: auto;
     justify-content: center;

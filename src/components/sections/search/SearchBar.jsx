@@ -38,7 +38,7 @@ export const SearchBar = ({
     handleClick,
 }) => {
     return (
-        <Container sx={{ ...GreenBC, width: "fit-content", }}>
+        <Container className="breen-bc" sx={{ width: "fit-content", }}>
             <Box
                 sx={{
                     display: "flex",
@@ -59,7 +59,7 @@ export const SearchBar = ({
                             elem && (
                                 <>
                                     <Box key={elem.id}>
-                                        <p style={Label}>{elem.label}</p>
+                                        <p className="label" >{elem.label}</p>
                                         <input
                                             type="date"
                                             label={elem.label}
@@ -83,14 +83,14 @@ export const SearchBar = ({
                             elem && (
                                 <>
                                     <Stack key={elem.id}>
-                                        <p style={Label}>{elem.label}</p>
+                                        <p className="label">{elem.label}</p>
                                         <Box
                                             sx={{
                                                 display: "flex",
                                                 gap: "1rem",
                                             }}
                                         >
-                                            <Box sx={{ ...White }}>
+                                            <Box className="white">
                                                 <BoyRounded />
                                             </Box>
                                             {/* range */}
@@ -111,9 +111,9 @@ export const SearchBar = ({
                                                     step={1}
                                                     min={0}
                                                     max={5}
+                                                    className="white"
                                                     style={{
                                                         width: "70px",
-                                                        ...White,
                                                     }}
                                                 />
                                             </Box>
@@ -121,7 +121,7 @@ export const SearchBar = ({
                                             {/* arrow */}
                                             <Box>
                                                 <Input
-                                                    style={{ ...White }}
+                                                    className="white"
                                                     id={elem.id}
                                                     size="small"
                                                     value={
@@ -149,7 +149,7 @@ export const SearchBar = ({
 
                 {/* button */}
                 <Zoom duration={1000} delay={1} >
-                    <Box onClick={handleClick} sx={ContainedButton}>
+                    <Box onClick={handleClick} className="btn contained-btn">
                         RESERVATION
                     </Box>
                 </Zoom>

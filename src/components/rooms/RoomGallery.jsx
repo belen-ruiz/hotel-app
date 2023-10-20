@@ -9,22 +9,8 @@ import { Button } from "@mui/material";
 import { Typography } from "@mui/material";
 import { Box } from "@mui/material";
 import React, { useState } from "react";
-import { comfort } from "../../utils/amenity";
 import { Zoom, Fade } from "react-awesome-reveal";
-
-import {
-    White,
-    WhiteBC,
-    GreenBC,
-    OrangeBC,
-    Green,
-    TopText,
-    Title,
-    Subtitle,
-    CardTitle,
-    Price,
-    TextAlignJustify,
-} from "../../custom/Typography";
+ 
 
 export const RoomGallery = ({ room }) => {
     const imgUrl = room.imgUrl;

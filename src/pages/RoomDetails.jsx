@@ -20,7 +20,7 @@ import {
 
 export const RoomDetails = () => {
     return (
-        <Container sx={{ ...MainSections }}>
+        <Container className="mainSections">
             <Stack sx={{ width: "100%" }}>
                 <BreadcrumbsContainer />
                 

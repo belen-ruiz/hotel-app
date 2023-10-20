@@ -23,10 +23,8 @@ import {
 
 export const Testimonials = () => {
     return (
-        <Container
-            sx={{ ...alignCenter, ...WhiteBC }}
-        >
-            <Stack spacing={4} sx={{ ...alignCenter, padding: "2rem 0" }}>
+        <Container className="section alignCenter white-bc">
+            <Stack spacing={4} className="section alignCenter">
                 {/* titles */}
                 <Stack
                     spacing={1}
@@ -34,11 +32,11 @@ export const Testimonials = () => {
                         alignItems: "center",
                     }}
                 >
-                    <p style={{ ...TopText }}>
+                    <p className="topText">
                         What our clients say
                     </p>
 
-                    <p style={{ ...Title, ...Green }}>Testimonials</p>
+                    <p className="title green">Testimonials</p>
                 </Stack>
 
                 {/* tripAd quote */}
@@ -50,7 +48,7 @@ export const Testimonials = () => {
                         alignItems: "center",
                     }}
                 >
-                    <p style={{...Quote, ...Green}}>
+                    <p className="quote green">
                         "My stay was simply amazing and exceeded all my
                         expectations. The room, elegantly decorated, offered
                         breathtaking views and exceptional comfort. The pool,
@@ -61,8 +59,8 @@ export const Testimonials = () => {
                         hotel without hesitation for a dream vacation by the
                         beach!"
                     </p>
-                    <p style={{ ...Subtitle, ...Bold }}>Bruce Wayne</p>
-                    <p style={{ ...Subtitle, ...Italic }}>
+                    <p className="subtitle bold">Bruce Wayne</p>
+                    <p className="subtitle italic">
                         Reviewed from TripAdvisor
                     </p>
                     <Fade direction="up" delay={1} duration="2000">

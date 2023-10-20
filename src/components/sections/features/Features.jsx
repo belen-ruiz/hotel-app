@@ -24,54 +24,55 @@ const Feature = ({ data }) => {
     const { id, icon, title } = data;
     return (
         <Stack
+            className="white"
             sx={{
                 display: "flex",
                 flexDirection: "column",
                 justifyContent: "center",
                 alignItems: "center",
                 gap: "0.5rem",
-                color: { ...White },
             }}
         >
             <Box>{icon}</Box>
-            <p style={{ ...MenuWeb, ...White, ...TextAlignCenter }}>{title}</p>
+            <p className="menuWeb white textAlignCenter">{title}</p>
         </Stack>
     );
-}; 
+};
 
 export const Features = () => {
-    return ( 
-        <Container sx={{ ...alignCenter, ...GreenBC }}>
-            <Stack spacing={4} sx={{ ...alignCenter }}>
+    return (
+        <Container className="section alignCenter green-bc">
+            <Stack spacing={4} className="section alignCenter">
                 {/* titles */}
                 <Stack
                     spacing={1}
-                    sx={{ ...alignCenter, padding: "2rem 0" }}
+                    className="section alignCenter"
+                    sx={{ padding: "2rem 0" }}
                 >
-                    <p style={{ ...TopText, ...TextAlignCenter }}>
+                    <p className="topText textAlignCenter">
                         Enjoy all benefits while you stay
                     </p>
 
-                    <p style={{ ...Title, ...White }}>Our services</p>
+                    <p className="title white">Our services</p>
 
-                    <p style={{ ...Subtitle, ...White }}>
+                    <p className="subtitle white">
                         Enjoy all benefits while you stay
                     </p>
                 </Stack>
 
                 {/* item box */}
 
-                    <Box
-                        sx={{
-                            display: "flex",
-                            justifyContent: "center",
-                            flexWrap: "wrap",
-                            gap: "5rem",
-                            width: "70%",
-                            maxWidth: "700px",
-                        }}
-                        >
-                        <Flip cascade damping={0.1}>
+                <Box
+                    sx={{
+                        display: "flex",
+                        justifyContent: "center",
+                        flexWrap: "wrap",
+                        gap: "5rem",
+                        width: "70%",
+                        maxWidth: "700px",
+                    }}
+                >
+                    <Flip cascade damping={0.1}>
                         {features.map((feature) => (
                             <Box
                                 key={feature.id}
@@ -79,11 +80,11 @@ export const Features = () => {
                                     flex: "0 0 20%",
                                 }}
                             >
-                                    <Feature data={feature} />
+                                <Feature data={feature} />
                             </Box>
                         ))}
-                        </Flip>
-                    </Box>
+                    </Flip>
+                </Box>
             </Stack>
         </Container>
     );

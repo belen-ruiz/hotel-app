@@ -16,12 +16,8 @@ import { Logo } from "../logo/Logo";
 import logoIso from "../../images/logo_iso.png";
 import { Fade } from "react-awesome-reveal";
 import {
-    White,
-    Orange,
+    
     Green,
-    GreenBC,
-    OrangeBC,
-    SmallText,
     MenuWeb,
 } from "../../custom/Typography";
 import { MenuList } from "@mui/material";
@@ -96,7 +92,7 @@ export const Navbar = () => {
 
                     {/* icon mobile */}
                     <IconButton size="large" onClick={handleOpenNavMenu}>
-                        <MenuIcon sx={{ color: "#d5d8d5" }} />
+                        <MenuIcon className="white" />
                     </IconButton>
 
                     {/* menu mobile */}
@@ -126,7 +122,7 @@ export const Navbar = () => {
                                 >
                                     <Link
                                         to={`${page.link}`}
-                                        style={{ ...MenuWeb, ...Green }}
+                                        className="menuWeb green"
                                     >
                                         {page.page}
                                     </Link>
@@ -147,11 +143,10 @@ export const Navbar = () => {
                     </Box>
 
                     {/* menu web */}
-                    <Box
+                    <Box className="menuWeb green"
                         sx={{
                             display: { xs: "none", md: "flex" },
                             gap: "2rem",
-                            ...MenuWeb,
                             //flexGrow: 1,
                         }}
                     >
@@ -172,7 +167,8 @@ export const Navbar = () => {
                     </Box>
 
                     {/* booknow */}
-                    <Box sx={OutlinedButton}>book now</Box>
+                    <Box 
+                    className="btn outlined-btn">book now</Box>
                 </Fade>
             </Toolbar>
         </AppBar>

@@ -37,8 +37,8 @@ export const FooterData = () => {
                     <Grid
                         container
                         padding={0}
+                        className="smallText"
                         sx={{
-                            ...SmallText,
                             gridTemplateColumns: "repeat(3, 1fr)",
                         }}
                     >
@@ -52,9 +52,8 @@ export const FooterData = () => {
                                             alignItems: "center",
                                         }}
                                     >
-                                        <Box
+                                        <Box className="orange"
                                             sx={{
-                                                ...Orange,
                                                 width: "20px",
                                                 height: "20px",
                                                 display: "flex",
@@ -64,7 +63,7 @@ export const FooterData = () => {
                                             <ArrowForwardIosIcon fontSize="sm" />
                                         </Box>
 
-                                        <Box sx={{ ...White }}>
+                                        <Box className="white">
                                             {feet.title}
                                         </Box>
                                     </Box>

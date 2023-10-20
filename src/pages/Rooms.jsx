@@ -37,7 +37,7 @@ export const Rooms = () => {
 
      
     return (
-        <Container sx={{ ...MainSections }}>
+        <Container className="mainSections">
             
             <Stack spacing={6} sx={{ width: "100%" }}>
                 <BreadcrumbsContainer />
@@ -66,11 +66,12 @@ const Titles = () => {
     return(
         <Stack
             spacing={1}
-            sx={{ ...alignCenter, padding: "1rem 0" }}
+            className="section alignCenter"
+            sx={{ padding: "1rem 0" }}
         >
-            <p style={{ ...Title, ...Orange }}>Our services</p>
+            <p className="title orange">Our services</p>
 
-            <p style={{ ...Subtitle, ...White }}>
+            <p className="subtitle white">
                 Enjoy all benefits while you stay
             </p>
         </Stack>

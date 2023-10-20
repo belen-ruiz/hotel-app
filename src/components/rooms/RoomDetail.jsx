@@ -10,19 +10,6 @@ import { Box } from "@mui/material";
 import React from "react";
 import { amenity } from "../../utils/amenity";
 import { GroupButtons, RoomAmenities, RoomAmenitiesText, RoomCapacity, RoomDescription, RoomImage, RoomPrice, RoomTitle } from "./RoomItem";
-import {
-    White,
-    WhiteBC,
-    GreenBC,
-    OrangeBC,
-    Green,
-    TopText,
-    Title,
-    Subtitle,
-    CardTitle,
-    Price,
-    TextAlignJustify,
-} from "../../custom/Typography";
 import { Divider } from "@mui/material";
 
 const Review = () => {
@@ -113,9 +100,3 @@ export const RoomDetail = ({ room }) => {
     );
 };
 
-
-{/* 
-            //  <Box sx={{paddingTop: "1rem"}}>
-            //          <Typography variant="subtitle2" >Description</Typography>
-            //          <Typography>{description}</Typography>
-            //  </Box> */}

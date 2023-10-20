@@ -18,36 +18,31 @@ import {
 export const RoomDisplayContainer = ({}) => {
 
     return (
-        <Container sx={{ ...alignStart, ...GreenBC }}>
-                <Box
-                    sx={{
-                        ...alignStart,
+        <Container className="section alignStart green-bc">
+                <Box className="section alignStart"
+                    sx={{ 
                         flexDirection: { xs: "column", md: "row" },
                         padding: "2rem 0"
                     }}>
                     {/* titles */}
                     <Stack spacing={1} sx={{ width: { xs: "100%", md: "30%" } }}>
-                        <p
+                        <p  className="topText"
                             style={{
-                                ...TopText,
                                 textAlign: { xs: "center", md: "justify" },
                             }}
                         >
                             Discover our rooms
                         </p>
-                        <p
+                        <p className="title white"
                             style={{
-                                ...Title,
-                                ...White,
                                 textAlign: { xs: "center", md: "justify" },
                             }}
                         >
                             Choose your room
                         </p>
-                        <p
+                        <p className="subtitle white"
                             style={{
-                                ...Subtitle,
-                                ...White,
+                               
                                 textAlign: "justify",
                             }}
                         >

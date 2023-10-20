@@ -9,11 +9,7 @@ import { amenity } from "../../utils/amenity";
 
 import Divider from "@mui/joy/Divider";
 import { Container } from "@mui/material";
-import {
-    ContainedButton,
-    OutlinedButton,
-} from "../../custom/Buttons";
-import { Green, WhiteBC } from "../../custom/Typography"
+
 import { RoomCapacity, RoomImage, RoomDescription, RoomPrice, RoomTitle, RoomAmenities, GroupButtons, RoomAmenitiesIcon } from "./RoomItem";
 
 export const RoomItemList = ({ rooms, isList }) => {
@@ -30,9 +26,8 @@ export const RoomItemList = ({ rooms, isList }) => {
 
    
     return (
-        <Card
+        <Card className="white-bc"
             sx={{
-                ...WhiteBC,
                 width: isList ? "fit-content" : "300px",
                 height: "fit-content",
                 maxHeight: "max-content",

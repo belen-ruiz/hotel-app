@@ -5,7 +5,7 @@ import { MainSections } from "../../custom/Display";
 
 export const Footer = () => {
     return (
-        <Container sx={{ ...MainSections, }}>
+        <Container className="mainSections">
             <Stack sx={{ width: "100%" }}>
                 {/* info */}
                 <FooterData />

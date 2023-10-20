@@ -29,8 +29,8 @@ export const SearchForRoom = ({}) => {
     } = useRoomContext();
 
     return (
-        <Container sx={{ ...alignCenter, ...WhiteBC }}>
-            <Stack spacing={4} sx={{ ...alignCenter, padding: "4rem 0" }}>
+        <Container className="section alignCenter white-bc">
+            <Stack spacing={4}  className="section alignCenter" sx={{ padding: "4rem 0" }}>
                 {/* titles */}
                 <Stack
                     spacing={1}
@@ -39,11 +39,11 @@ export const SearchForRoom = ({}) => {
                         alignItems: "center",
                     }}
                 >
-                    <p style={{ ...TopText }}>Make your reservation</p>
+                    <p className="topText">Make your reservation</p>
 
-                    <p style={{ ...Title, ...Green }}>Reservations</p>
+                    <p className="title green">Reservations</p>
 
-                    <p style={{ ...Subtitle, ...Green }}>
+                    <p className="subtitle green">
                         Enjoy all benefits while you stay
                     </p>
                 </Stack>
