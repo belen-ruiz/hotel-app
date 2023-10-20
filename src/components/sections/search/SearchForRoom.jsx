@@ -4,18 +4,6 @@ import { SearchBar } from "./SearchBar";
 import { useRoomContext } from "../../../context/RoomProvider";
 import { Stack } from "@mui/material";
 
-import { alignCenter } from "../../../custom/Display";
-
-import {
-    White,
-    WhiteBC,
-    Green,
-    GreenBC,
-    OrangeBC,
-    TopText,
-    Title,
-    Subtitle,
-} from "../../../custom/Typography";
 
 export const SearchForRoom = ({}) => {
     const {
@@ -30,14 +18,11 @@ export const SearchForRoom = ({}) => {
 
     return (
         <Container className="section alignCenter white-bc">
-            <Stack spacing={4}  className="section alignCenter" sx={{ padding: "4rem 0" }}>
+            <Stack spacing={4}  className="section alignCenter">
                 {/* titles */}
                 <Stack
                     spacing={1}
-                    sx={{
-                        display: "flex",
-                        alignItems: "center",
-                    }}
+                    className="alignCenter"
                 >
                     <p className="topText">Make your reservation</p>
 
@@ -58,7 +43,7 @@ export const SearchForRoom = ({}) => {
                     kids={kids}
                     adults={adults}
                 />
-            </Stack>
+            </Stack> 
         </Container>
     );
 };

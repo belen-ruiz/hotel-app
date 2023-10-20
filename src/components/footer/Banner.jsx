@@ -3,57 +3,33 @@ import { Box, Toolbar, Container } from "@mui/material";
 import React from "react";
 import { socialmedia } from "../../utils/socialmedia";
 import { contact } from "../../utils/contact";
-import {
-    White, Orange, SmallText,
-    Green, GreenBC, OrangeBC,
-} from "../../custom/Typography";
 
 export const Banner = () => {
     return (
-        <Container className="orange-bc"
-            sx={{
-                padding: "0.2rem 1rem",
-                width: "100%",
-                zIndex: 222
-            }}
-        >
+        <Container className="banner orange-bc">
             <Box
-            className="smallText green"
+                className="box-sb smallText green"
                 sx={{
-                    display: "flex",
                     flexDirection: { xs: "wrap", md: "row" },
                     gap: "0.5rem",
-                    justifyContent: "space-between",
-                    alignItems: "center",
                     minHeight: "auto",
-                    width: "100%"
                 }}
             >
-
                 {/* contact  */}
                 {contact.map((data) => (
-                <Box
+                    <Box className="alignCenter"
                         key={data.text}
-                        sx={{
-                            //mr: 2,
-                            display: "flex",
-                            alignItems: "center",
-                            gap: 1,
-                            width: "100%"
-                        }}
+                        sx={{ gap: 1 }}
                     >
                         {data.icon}
                         <span> {data.text}</span>
-                </Box>
+                    </Box>
                 ))}
 
                 {/* social media  */}
-                <Box sx={{ display: "flex", gap: "0.5rem",  width: "auto" }} >
+                <Box sx={{ display: "flex", gap: "0.5rem", width: "auto" }}>
                     {socialmedia.map((data) => (
-                        <Box
-                            key={data}
-                            sx={{ cursor: "pointer" }}
-                        >
+                        <Box key={data}>
                             {data}
                         </Box>
                     ))}

@@ -6,20 +6,6 @@ import { Container } from "@mui/material";
 import { alignCenter } from "../../../custom/Display";
 import { Zoom, Fade } from "react-awesome-reveal";
 
-import {
-    White,
-    Green,
-    Orange,
-    WhiteBC,
-    GreenBC,
-    OrangeBC,
-    TopText,
-    Title,
-    Subtitle,
-    Quote,
-    Bold,
-    Italic,
-} from "../../../custom/Typography";
 
 export const Testimonials = () => {
     return (
@@ -27,10 +13,8 @@ export const Testimonials = () => {
             <Stack spacing={4} className="section alignCenter">
                 {/* titles */}
                 <Stack
-                    spacing={1}
-                    sx={{
-                        alignItems: "center",
-                    }}
+                    className="alignCenter"
+                    spacing={1}                   
                 >
                     <p className="topText">
                         What our clients say
@@ -42,10 +26,10 @@ export const Testimonials = () => {
                 {/* tripAd quote */}
                 <Stack
                     spacing={1}
+                    className="alignCenter"
                     sx={{
                         display: "flex",
                         width: "80%",
-                        alignItems: "center",
                     }}
                 >
                     <p className="quote green">
@@ -74,4 +58,4 @@ export const Testimonials = () => {
             </Stack>
         </Container>
     );
-};
+}; 

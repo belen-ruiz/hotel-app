@@ -84,7 +84,7 @@ export const RoomImage = ({ title, imgUrl, ratio }) => {
         <>
             <AspectRatio sx={{ borderRadius: 0 }} ratio={ratio}>
                 <figure  style={{ height: "100%", width: "100%", overflow: "hidden",  }}>
-                    <img src={imgUrl} alt={title} style={{ height: "100%", width: "100%", objectFit: "cover" }}/>
+                    <img src={imgUrl} alt={title} className="image"/>
                 </figure>
             </AspectRatio>
         </>
@@ -100,7 +100,7 @@ export const RoomCapacity = ({ capacity }) => {
                 title="capacity"
                 className="white green-bc"
                 sx={{
-                    Maxwidth: "90%",
+                    //Maxwidth: "90%",
                     border: "1px solid white",
                     borderRadius: 0,
                     display: "flex",

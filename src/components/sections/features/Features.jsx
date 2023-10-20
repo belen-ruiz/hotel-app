@@ -7,32 +7,12 @@ import { features } from "../../../utils/features";
 import { alignCenter } from "../../../custom/Display";
 import { Flip } from "react-awesome-reveal";
 
-import {
-    White,
-    WhiteBC,
-    Green,
-    GreenBC,
-    OrangeBC,
-    TopText,
-    Title,
-    Subtitle,
-    TextAlignCenter,
-    MenuWeb,
-} from "../../../custom/Typography";
 
 const Feature = ({ data }) => {
     const { id, icon, title } = data;
     return (
         <Stack
-            className="white"
-            sx={{
-                display: "flex",
-                flexDirection: "column",
-                justifyContent: "center",
-                alignItems: "center",
-                gap: "0.5rem",
-            }}
-        >
+            className="feature-box white">
             <Box>{icon}</Box>
             <p className="menuWeb white textAlignCenter">{title}</p>
         </Stack>
@@ -46,10 +26,9 @@ export const Features = () => {
                 {/* titles */}
                 <Stack
                     spacing={1}
-                    className="section alignCenter"
-                    sx={{ padding: "2rem 0" }}
+                    className="alignCenter"
                 >
-                    <p className="topText textAlignCenter">
+                    <p className="topText">
                         Enjoy all benefits while you stay
                     </p>
 
@@ -62,16 +41,7 @@ export const Features = () => {
 
                 {/* item box */}
 
-                <Box
-                    sx={{
-                        display: "flex",
-                        justifyContent: "center",
-                        flexWrap: "wrap",
-                        gap: "5rem",
-                        width: "70%",
-                        maxWidth: "700px",
-                    }}
-                >
+                <Box className="feature-item" >
                     <Flip cascade damping={0.1}>
                         {features.map((feature) => (
                             <Box
@@ -85,7 +55,7 @@ export const Features = () => {
                         ))}
                     </Flip>
                 </Box>
-            </Stack>
-        </Container>
+            </Stack> 
+        </Container> 
     );
 };

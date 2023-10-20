@@ -39,19 +39,7 @@ export const SearchBar = ({
 }) => {
     return (
         <Container className="breen-bc" sx={{ width: "fit-content", }}>
-            <Box
-                sx={{
-                    display: "flex",
-                    flexDirection: { xs: "column", md: "row" },
-                    width: "100%",
-                    justifyContent: "space-around",
-                    alignItems: "center",
-                    padding: "1rem",
-                    borderRadius: "10px",
-                    gap: "1rem",
-                    
-                }}
-            >
+            <Box className="containerResponsive">
                 {/* dates */}
                 {searchDates &&
                     searchDates.map(

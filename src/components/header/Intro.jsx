@@ -11,58 +11,23 @@ const bgImg =
 
 export const Intro = () => {
     return (
-        <Container className="alignCenter"
+        <Container className="section alignCenter"
             sx={{ position: "relative" }}
         >
             {/* img */}
-            <Box
-                sx={{
-                    display: "flex",
-                    width: "100%",
-                    maxHeight: "500px",
-                    overflow: "hidden",
-                    position: "relative",
-                    zIndex: 1,
-                }}
-            >
+            <Box className="introImg">
                 <img
                     src={bgImg}
                     alt="who we are"
-                    style={{
-                        width: "100%",
-                        height: "100%",
-                        objectFit: "cover",
-                    }}
+                    className="image"
                 />
 
-                <Box
-                    sx={{
-                        backgroundColor: "rgba(66,59,16,.6)",
-                        zIndex: 2,
-                        position: "absolute",
-                        top: 0,
-                        bottom: 0,
-                        left: 0,
-                        right: 0,
-                        content: '"  "',
-                    }}
+                <Box className="introOverlay"
                 ></Box>
             </Box>
 
             {/* text box */}
-            <Stack
-                sx={{
-                    display: "flex",
-                    width: "100%",
-                    height: "auto",
-                    top: "30%",
-                    position: "absolute",
-                    zIndex: 3,
-                    justifyContent: "center",
-                    alignItems: "center",
-                    gap: "0,8rem",
-                }}
-            >
+            <Stack className="introText">
                 <Flip delay={1} fraction={1} duration="2000">
                     <Logo
                         logo={LogoIntro}

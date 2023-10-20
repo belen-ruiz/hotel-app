@@ -84,11 +84,7 @@ export const RoomDetail = ({ room }) => {
                         display: "flex",
                         width: "100%",
                         justifyContent: "space-between",
-                        //flexDirection: "column",
-                        //alignItems: "start",
-                        //padding: "1rem",
-                        //justifySelf: "end",
-                        //gap: !isList && "1rem",
+                        
                     }}
                 >
                     <RoomPrice price={price} title={title} />

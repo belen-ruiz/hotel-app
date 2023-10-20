@@ -5,16 +5,15 @@ import ReactPlayer from 'react-player'
 
 const Video = () => {
     const url = "https://www.youtube.com/watch?v=VupspyQYYdY"
- return (
-    <Box style={{ width: "100%", height:"100%", objectFit: "cover"}}>
-        <ReactPlayer 
-        title="hotel tour video"
-        url={ url }
-        muted
-        width='100%'
-        >
-        </ReactPlayer>
-    </Box>
+    return (
+        <Box className="image" >
+            <ReactPlayer 
+            title="hotel tour video"
+            url={ url }
+            muted
+            width='100%'>
+            </ReactPlayer>
+        </Box>
  )
 }
 
@@ -35,13 +34,7 @@ export const AboutUs = () => {
                         </p>
                     </Stack>
 
-                    <Stack
-                        sx={{
-                            width: "100%",
-                            alignItems: "start",
-                            gap: "1rem",
-                        }}
-                    >
+                    <Stack spacing={2}>
                         <p className="subtitle white textAlignJustify" >
                             the Best place to enjoy life place to enjoy life
                             place to enjoy life place to enjoy life place to
@@ -63,11 +56,6 @@ export const AboutUs = () => {
                 <Box sx={{ 
                     width: { xs: "100%", md: "70%" },
                 }}>
-                    {/* <img
-                        src="https://images.pexels.com/photos/189296/pexels-photo-189296.jpeg?auto=compress&cs=tinysrgb&dpr=1"
-                        alt="who we are"
-                        style={{ width: "100%", objectFit: "cover" }}
-                    /> */}
                     <Video />
                 </Box>
             </Box>

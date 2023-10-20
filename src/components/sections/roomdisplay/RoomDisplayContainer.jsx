@@ -1,27 +1,14 @@
 import { Container, Stack, Box } from "@mui/material";
 import React, { useRef, useState } from "react";
-import { alignStart, alignCenter } from "../../../custom/Display";
 import { ScrollContainer } from "./ScrollContainer";
-
-import {
-    White,
-    WhiteBC,
-    GreenBC,
-    OrangeBC,
-    TopText,
-    Title,
-    Subtitle,
-    TextAlignJustify,
-} from "../../../custom/Typography";
 
 
 export const RoomDisplayContainer = ({}) => {
 
     return (
         <Container className="section alignStart green-bc">
-                <Box className="section alignStart"
+                <Box className="section containerResponsive alignStart "
                     sx={{ 
-                        flexDirection: { xs: "column", md: "row" },
                         padding: "2rem 0"
                     }}>
                     {/* titles */}
@@ -52,12 +39,9 @@ export const RoomDisplayContainer = ({}) => {
                     </Stack>
             
                     {/* scroll container */}
-                    <Stack
+                    <Stack className="alignCenter"
                         sx={{
-                            display: "flex",
                             width: { xs: "100%", md: "70%" },
-                            alignItems: "center",
-                            gap: "1rem",
                         }}
                     >
                         {/* scroll */}

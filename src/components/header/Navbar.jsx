@@ -64,9 +64,8 @@ export const Navbar = () => {
     // }, []);
 
     return (
-        <AppBar style={navbarStyle}>
-            <Toolbar
-                style={{ justifyContent: "space-evenly", maxWidth: "1200px" }}
+        <AppBar className="navbarStyle">
+            <Toolbar style={{ justifyContent: "space-evenly", maxWidth: "1280px" }}
             >
                 {/* menu mobile */}
                 <Box
@@ -78,10 +77,7 @@ export const Navbar = () => {
                     }}
                 >
                     {/* logo mobile */}
-                    <Box
-                        sx={{
-                            display: { xs: "flex", md: "none" },
-                        }}
+                    <Box sx={{  display: { xs: "flex", md: "none" },}}
                     >
                         <Logo
                             logo={logoIso}

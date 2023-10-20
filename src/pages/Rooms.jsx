@@ -7,19 +7,6 @@ import { Loading } from "../components/loading/Loading";
 import { RoomItemListContainer } from "../components/rooms/RoomItemListContainer";
 import { SearchForRoom } from "../components/sections/search/SearchForRoom";
 import { useRoomContext } from "../context/RoomProvider";
-import { MainSections, alignCenter } from "../custom/Display"
-
-import {
-    White,
-    WhiteBC,
-    GreenBC,
-    OrangeBC,
-    Orange,
-    TopText,
-    Title,
-    Subtitle,
-    TextAlignJustify, TextAlignCenter, 
-} from "../custom/Typography";
 
 
 export const Rooms = () => {

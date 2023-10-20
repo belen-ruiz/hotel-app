@@ -1,10 +1,6 @@
-import { HomeRounded } from '@mui/icons-material';
-import { HomeMiniRounded } from '@mui/icons-material';
+import { Link, NavLink, useLocation } from 'react-router-dom';
 import { Box } from '@mui/material';
-import { NavLink } from 'react-router-dom';
-import { Link, useLocation } from 'react-router-dom';
-import { alignCenter } from '../../custom/Display';
-import { White, Orange, SmallText } from '../../custom/Typography';
+import { HomeRounded } from '@mui/icons-material';
 
 
 export const BreadcrumbsContainer = () => {
@@ -24,16 +20,18 @@ export const BreadcrumbsContainer = () => {
   });
 
   return (
-      <Box className="section alignCenter smallText white" sx={{ gap: "0.3rem" }}>
+      <Box className="section alignCenter smallText white">
           <Box className="section alignCenter white">
-              <Link to="/" className="section alignCenter white" style={{  gap: "0.5rem"}} >
+              <Link to="/" className="section alignCenter white" >
                   <HomeRounded style={{ fontSize:"1rem" }}/>  Home
               </Link>
           </Box>
 
           <Box className="section alignCenter"> / </Box>
 
-          <Box className="section alignCenter">{crumbs}</Box>
+          <Box className="section alignCenter">
+            {crumbs}
+          </Box>
       </Box>
   );
 };

@@ -6,15 +6,7 @@ import { dataDisplay } from "../../custom/Typography";
 
 export const FilterData = ({ getAllRooms, totalGuests, setSelect, select }) => {
     return (
-        <Box
-            sx={{
-                display: "flex",
-                justifyContent: "space-between",
-                alignItems: "center",
-                width: "100%",
-                padding: "0 2rem"
-            }}
-        >
+        <Box className="box-sb">
             {totalGuests > 0 && totalGuests < 5 ? (
                 <>
                     <Box className="dataDisplay">

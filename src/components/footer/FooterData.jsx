@@ -1,24 +1,14 @@
 import { useState } from "react";
 import { useLocation } from "react-router-dom";
-import Box from "@mui/material/Box";
-import Toolbar from "@mui/material/Toolbar";
+import { Grid, Box } from "@mui/material";
 import Container from "@mui/material/Container";
-import Grid from "@mui/material/Grid";
 import { footer } from "../../utils/footer";
 import { Link, NavLink } from "react-router-dom";
 import { Logo } from "../logo/Logo";
-import { Banner } from "./Banner";
 import { Stack } from "@mui/material";
 import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
 import logoWhite from "../../images/logo_aurora_white-09.png";
-import {
-    White,
-    Orange,
-    Green,
-    GreenBC,
-    OrangeBC,
-    SmallText,
-} from "../../custom/Typography";
+
 
 export const FooterData = () => {
     const location = useLocation();
@@ -45,19 +35,13 @@ export const FooterData = () => {
                         {footer.map((feet) => (
                             <Grid item padding={1} xs={4} key={feet.id}>
                                 <NavLink>
-                                    <Box
-                                        sx={{
-                                            display: "flex",
-                                            gap: "0.1rem",
-                                            alignItems: "center",
-                                        }}
+                                    <Box className="alignCenter"
+                                        sx={{ gap: "0.1rem" }}
                                     >
-                                        <Box className="orange"
+                                        <Box className="orange alignCenter"
                                             sx={{
                                                 width: "20px",
                                                 height: "20px",
-                                                display: "flex",
-                                                alignItems: "center",
                                             }}
                                         >
                                             <ArrowForwardIosIcon fontSize="sm" />
@@ -75,13 +59,10 @@ export const FooterData = () => {
 
                 {/* col 2 */}
                 <Grid
+                    className="contentEnd"
                     item
                     xs={6}
-                    sx={{
-                        display: { xs: "none", md: "flex" },
-                        justifyContent: "end",
-                        alignItems: "end",
-                    }}
+                    sx={{ display: { xs: "none", md: "flex" } }}
                 >
                     <Logo
                         logo={logoWhite}
