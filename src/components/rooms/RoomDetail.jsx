@@ -8,7 +8,7 @@ import { Button } from "@mui/material";
 import { Typography } from "@mui/material";
 import { Box } from "@mui/material";
 import React from "react";
-import { comfort } from "../../utils/comfort";
+import { amenity } from "../../utils/amenity";
 import { GroupButtons, RoomAmenities, RoomAmenitiesText, RoomCapacity, RoomDescription, RoomImage, RoomPrice, RoomTitle } from "./RoomItem";
 import {
     White,
@@ -78,7 +78,7 @@ export const RoomDetail = ({ room }) => {
 
                     {/* amenities */}
                     <Box sx={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "1rem", width: "100%"  }} >
-                        <RoomAmenities amenities={amenities} comfort={comfort} displayText={true}/>
+                        <RoomAmenities amenities={amenities} amenity={amenity} displayText={true}/>
                     </Box>
                         
                     {/* descrip */}

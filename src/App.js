@@ -6,6 +6,7 @@ import { RoomProvider } from "./context/RoomProvider";
 import { LocalizationProvider } from "@mui/x-date-pickers/LocalizationProvider";
 import { AdapterDayjs } from "@mui/x-date-pickers/AdapterDayjs";
 import { ThemeProvider, createTheme } from "@mui/material";
+import { ScrollToTop } from "./router/ScrollToTop";
 
 
 
@@ -15,6 +16,7 @@ function App() {
         {/* //<ThemeProvider theme={theme}> */}
                 <LocalizationProvider dateAdapter={AdapterDayjs}>
                     <RoomProvider>
+                        <ScrollToTop />
                             <Header />
                             <Router />
                             <Footer />

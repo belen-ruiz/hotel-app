@@ -5,7 +5,7 @@ import Avatar from "@mui/joy/Avatar";
 import Box from "@mui/joy/Box";
 import Card from "@mui/joy/Card";
 import { Stack } from "@mui/material";
-import { comfort } from "../../utils/comfort";
+import { amenity } from "../../utils/amenity";
 
 import Divider from "@mui/joy/Divider";
 import { Container } from "@mui/material";
@@ -16,12 +16,12 @@ import {
 import { Green, WhiteBC } from "../../custom/Typography"
 import { RoomCapacity, RoomImage, RoomDescription, RoomPrice, RoomTitle, RoomAmenities, GroupButtons, RoomAmenitiesIcon } from "./RoomItem";
 
-export const RoomItemList = ({ rooms, isList, setIsList }) => {
+export const RoomItemList = ({ rooms, isList }) => {
     const id = rooms.id;
     const title = rooms.title;
     const capacity = rooms.capacity;
-    //const amenities = rooms.amenities;
-    const amenities = rooms.amenities.slice(0, 4);
+    const amenities = rooms.amenities;
+    //const amenities = rooms.amenities.slice(0, 4);
     const allows = rooms.allows;
     const donts = rooms.donts;
     const description = rooms.description;
@@ -87,7 +87,8 @@ export const RoomItemList = ({ rooms, isList, setIsList }) => {
 
                         <Divider orientation="vertical" flexItem />
 
-                        <RoomAmenities amenities={amenities} comfort={comfort} displayText={false} />
+                        <RoomAmenities amenities={amenities} amenity={amenity} displayText={false} />
+                        
                         
                     </Box>
 

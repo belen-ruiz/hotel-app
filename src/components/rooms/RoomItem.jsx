@@ -121,26 +121,26 @@ export const RoomCapacity = ({ capacity }) => {
 };
 
 
-export const RoomAmenities = ({ amenities, comfort, displayText }) => {
+export const RoomAmenities = ({ amenities, amenity, displayText }) => {
   return (
     <>
-      {comfort &&
+      {amenity &&
         amenities &&
-        comfort.map((amenity) => {
-          if (amenities.includes(amenity.name)) {
+        amenity.map((am) => {
+          if (amenities.includes(am.name)) {
             return (
               <div
-                title={amenity.name}
-                key={amenity.name}
+                title={am.name}
+                key={am.name}
                 style={{
                   ...Green,
                 }}
               >
                 {displayText ? 
-                    <RoomAmenity icon={amenity.icon} name={amenity.name} />
+                    <RoomAmenity icon={am.icon} name={am.name} />
                  : 
                  <>
-                    <RoomAmenitiesIcon icon={amenity.icon} />
+                    <RoomAmenitiesIcon icon={am.icon} />
                 </>}
               </div>
             );
@@ -219,12 +219,12 @@ export const GroupButtons = ({ id }) => {
         <>
         <Box sx= {{ width: "100%", display: "flex", justifyContent: "space-between", gap: "0.7rem" }}>
                 <Box sx={{ flex: 1 }}>
-                    <Link to={`/room/${id}`}>
+                    <Link to={`/rooms/${id}`}>
                         <Box sx={ContainedButton}>more info </Box>
                     </Link>
                 </Box>
                 <Box sx={{ flex: 1 }}>
-                    <Link to={`/room/${id}`}>
+                    <Link to={`/rooms/${id}`}>
                         <Box sx={OutlinedButton}>book now </Box>
                     </Link>
                 </Box>

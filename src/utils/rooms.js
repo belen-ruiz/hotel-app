@@ -1,7 +1,7 @@
 export const roomsData = [
     {
-        id: 52578752,
-        title: "Napoleon",
+        id: "Pink Room",
+        title: "Pink Room",
         capacity: 2,
         amenities: ["mini bar", "tv", "sofa", "ironing service", "computer", "phone", "laundry", "taxi service", "hairdryer"],
         allows: "dog",
@@ -19,8 +19,8 @@ export const roomsData = [
         ]
     },
     {
-        id: 52234552,
-        title: "Lenin",
+        id: "Patio Room",
+        title: "Patio Room",
         capacity: 2,
         amenities: ["mini bar", "tv", "sofa", "ironing service", "computer", "phone", "laundry", "taxi service", "hairdryer"],
         allows: "dog",
@@ -38,8 +38,8 @@ export const roomsData = [
         ]
     },
     {
-        id: 52509852,
-        title: "London",
+        id: "Friendly Room",
+        title: "Friendly Room",
         capacity: 3,
         amenities: ["mini bar", "tv", "sofa", "ironing service", "computer", "phone", "laundry", "taxi service", "hairdryer"], allows: "dog",
         donts: "cat",
@@ -56,8 +56,8 @@ export const roomsData = [
         ]
     },
     {
-        id: 5258752,
-        title: "Aruba",
+        id: "Family Room",
+        title: "Family Room",
         capacity: 4,
         amenities: ["mini bar", "tv", "sofa", "ironing service", "computer", "phone", "laundry", "taxi service", "hairdryer"], allows: "dog",
         donts: "cat",
@@ -74,8 +74,8 @@ export const roomsData = [
         ]
     },
     {
-        id: 525233252,
-        title: "Punta Cana",
+        id: "Deluxe Room",
+        title: "Deluxe Room",
         capacity: 3,
         amenities: ["mini bar", "tv", "sofa", "ironing service", "computer", "phone", "laundry", "taxi service", "hairdryer"], allows: "dog",
         donts: "cat",
@@ -92,8 +92,8 @@ export const roomsData = [
         ]
     },
     {
-        id: 52557682,
-        title: "Jamaica",
+        id: "Suite Room",
+        title: "Suite Room",
         capacity: 5,
         amenities: ["mini bar", "tv", "sofa", "ironing service", "computer", "phone", "laundry", "taxi service", "hairdryer"], allows: "dog",
         donts: "cat",
@@ -110,8 +110,8 @@ export const roomsData = [
         ]
     },
     {
-        id: 5253552,
-        title: "Cuba",
+        id: "Couples Room",
+        title: "Couples Room",
         capacity: 2,
         amenities: ["mini bar", "tv", "sofa", "ironing service", "computer", "phone", "laundry", "taxi service", "hairdryer"], allows: "dog",
         donts: "cat",
@@ -128,8 +128,8 @@ export const roomsData = [
         ]
     },
     {
-        id: 5255575,
-        title: "Deluxe",
+        id: "Golden Room",
+        title: "Golden Room",
         capacity: 1,
         amenities: ["mini bar", "tv", "sofa", "ironing service", "computer", "phone", "laundry", "taxi service", "hairdryer"], allows: "dog",
         donts: "cat",
@@ -146,8 +146,8 @@ export const roomsData = [
         ]
     },
     {
-        id: 525652,
-        title: "Habanna",
+        id: "Private Room",
+        title: "Private Room",
         capacity: 3,
         amenities: ["mini bar", "tv", "sofa", "ironing service", "computer", "phone", "laundry", "taxi service", "hairdryer"], allows: "dog",
         donts: "cat",

@@ -26,7 +26,7 @@ export const allRoutes = () => {
             element: <Rooms />
         },
         {
-            path:"/room/:room_id",
+            path:"/rooms/:room_id",
             label: "room detail",
             exact: true,
             element: <RoomDetails />

@@ -2,7 +2,7 @@ import { Typography } from "@mui/material";
 import { Box, Toolbar, Container } from "@mui/material";
 import React from "react";
 import { socialmedia } from "../../utils/socialmedia";
-import { fastcontact } from "../../utils/fastcontact";
+import { contact } from "../../utils/contact";
 import {
     White, Orange, SmallText,
     Green, GreenBC, OrangeBC,
@@ -32,7 +32,7 @@ export const Banner = () => {
             >
 
                 {/* contact  */}
-                {fastcontact.map((data) => (
+                {contact.map((data) => (
                 <Box
                         key={data.text}
                         sx={{
