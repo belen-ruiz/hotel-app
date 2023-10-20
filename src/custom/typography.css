@@ -1,0 +1,111 @@
+/* Colors */
+.white {
+    color: #d5d8d5;
+  }
+  
+  .whitebc {
+    background-color: #d5d8d5;
+  }
+  
+  .green {
+    color: #182706;
+  }
+  
+  .greenbc {
+    background-color: #182706;
+  }
+  
+  .orange {
+    color: #e49408;
+  }
+  
+  .orangebc {
+    background-color: #e49408;
+  }
+  
+  /* Component Styles */
+  .menuWeb {
+    font-size: 0.7rem;
+    font-weight: 700;
+    text-transform: uppercase;
+  }
+  
+  .topText {
+    background-color: #e49408;
+    color: #142006;
+    font-size: 0.8rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    padding: 0.4rem 0.5rem;
+  }
+  
+  .title {
+    font-family: "EB Garamond, serif";
+    font-size: 3rem;
+    font-weight: 700;
+    text-transform: capitalize;
+  }
+  
+  .subtitle {
+    font-size: 1rem;
+    font-weight: 400;
+    text-transform: capitalize;
+    margin: 0;
+  }
+  
+  .cardTitle {
+    font-size: 2.5rem;
+    text-transform: uppercase;
+    letter-spacing: -1px;
+  }
+  
+  .price {
+    font-size: 8rem;
+    text-transform: uppercase;
+    font-family: "EB Garamond, serif";
+    font-weight: 700;
+  }
+  
+  .textAlignCenter {
+    text-align: center;
+  }
+  
+  .textAlignJustify {
+    text-align: start;
+  }
+  
+  .bold {
+    font-weight: 700;
+  }
+  
+  .italic {
+    font-style: italic;
+  }
+  
+  .quote {
+    font-size: 1.2rem;
+    font-weight: 400;
+    text-transform: lowercase;
+    font-style: italic;
+    text-align: center;
+  }
+  
+  .smallText {
+    font-size: 0.7rem;
+    text-transform: capitalize;
+  }
+  
+  .label {
+    font-size: 0.9rem;
+    color: #d5d8d5;
+    letter-spacing: 0;
+    padding: 0;
+  }
+  
+  .dataDisplay {
+    color: #d5d8d5;
+    background-color: #182706;
+    font-size: 0.8rem;
+  }
+  

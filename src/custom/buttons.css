@@ -1,0 +1,75 @@
+/* OutlinedButton */
+.outlinedButton {
+    text-align: center;
+    background-color: transparent;
+    border: 2px solid #e49408;
+    padding: 0.4rem 0.5rem;
+    text-transform: uppercase;
+    color: #e49408;
+    font-size: 0.8rem;
+    font-weight: bold;
+    cursor: pointer;
+  }
+  
+  .outlinedButton:hover {
+    transition: background-color scale 0.3s ease;
+    background-color: #e49408;
+    color: white;
+    transform: scale(1.1);
+    /* boxShadow: 0 0 30px rgba(69, 69, 68, 1); */
+  }
+  
+  /* ContainedButton */
+  .containedButton {
+    text-align: center;
+    background-color: #e49408;
+    border: 2px solid #e49408;
+    color: #d5d8d5;
+    padding: 0.4rem 0.5rem;
+    text-transform: uppercase;
+    font-size: 0.8rem;
+    font-weight: bold;
+    cursor: pointer;
+  }
+  
+  .containedButton:hover {
+    transition: background-color scale 0.3s ease;
+    background-color: transparent;
+    border: 2px solid #e49408;
+    color: #e49408;
+    backdrop-filter: blur(10px);
+    transform: scale(1.1);
+    /* boxShadow: 30px #454544; */
+  }
+  
+  /* ArrowButton */
+  .arrowButton {
+    color: #e49408;
+    cursor: pointer;
+    transition: transform color 0.2s ease;
+  }
+  
+  .arrowButton:hover {
+    color: #d5d8d5;
+    transform: scale(1.5);
+  }
+  
+  /* DataButton */
+  .dataButton {
+    cursor: pointer;
+    color: #d5d8d5;
+    border: 1px solid #d5d8d5;
+    background-color: #182706;
+    padding: 0.2rem;
+    font-size: 0.8rem;
+    transition: color 0.2s ease;
+  }
+  
+  .dataButton:hover {
+    color: #182706;
+    background-color: #d5d8d5;
+    /* transform: scale(1.5); */
+  }
+  
+  /* Add additional states here as needed (e.g., ':active', ':focus') */
+  
