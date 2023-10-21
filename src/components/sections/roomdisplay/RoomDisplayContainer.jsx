@@ -7,10 +7,7 @@ export const RoomDisplayContainer = ({}) => {
 
     return (
         <Container className="section alignStart green-bc">
-                <Box className="section containerResponsive alignStart "
-                    sx={{ 
-                        padding: "2rem 0"
-                    }}>
+                <Box className="alignStart containerResponsive">
                     {/* titles */}
                     <Stack spacing={1} sx={{ width: { xs: "100%", md: "30%" } }}>
                         <p  className="topText"
@@ -39,14 +36,14 @@ export const RoomDisplayContainer = ({}) => {
                     </Stack>
             
                     {/* scroll container */}
-                    <Stack className="alignCenter"
+                    <Box className="alignCenter"
                         sx={{
                             width: { xs: "100%", md: "70%" },
                         }}
                     >
                         {/* scroll */}
                         <ScrollContainer />
-                    </Stack>
+                    </Box>
                 </Box>
             </Container>
     );

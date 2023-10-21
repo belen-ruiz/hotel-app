@@ -1,4 +1,4 @@
-import { Container, Box } from "@mui/material";
+import { Container, Stack, Box } from "@mui/material";
 import { useRoomContext } from "../../../context/RoomProvider";
 import { RoomItem } from "../../rooms/RoomItem";
 import { ArrowButton } from "../../../custom/Buttons";
@@ -51,38 +51,44 @@ export const ScrollContainer = ({}) => {
                     padding: { xs: 0, md: 0, lg: 0 },
                 }}
             >
-                {/* item list container */}
-                <Box
-                    sx={{
-                        width: "100%",
-                        display: "flex",
-                        gap: "1rem", 
-                        position: "relative",
-                    }}>
-                    {/* item */}
-                    {rooms &&
-                        rooms.map((room) => (
-                            <Box
-                                key={rooms.title}
-                                sx={{
-                                    width: "100%",
-                                    display: "flex",
-                                    gap: "1rem",
-                                }}>
-                                {room && (
-                                    <RoomItem
-                                        isList={isList}
-                                        setIsList={setIsList}
-                                        rooms={room}
-                                    />
-                                )}
-                            </Box>
-                    ))}
-                </Box>
+                <Stack spacing={1} className="alignCenter">
+                    {/* item list container */}
+                    <Box
+                        sx={{
+                            width: "100%",
+                            display: "flex",
+                            gap: "1rem", 
+                            position: "relative",
+                        }}>
+                        {/* item */}
+                        {rooms &&
+                            rooms.map((room) => (
+                                <Box
+                                    key={rooms.title}
+                                    sx={{
+                                        width: "100%",
+                                        display: "flex",
+                                        gap: "1rem",
+                                    }}>
+                                    {room && (
+                                        <RoomItem
+                                            isList={isList}
+                                            setIsList={setIsList}
+                                            rooms={room}
+                                        />
+                                    )}
+                                </Box>
+                        ))}
+                    </Box>
+                    
+                    
+                    
+                    {/* buttons */}
+                    <Buttons />
+                </Stack>
+
             </Container>
 
-            {/* buttons */}
-            <Buttons />
         </>
     );
 };

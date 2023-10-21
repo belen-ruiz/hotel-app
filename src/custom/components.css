@@ -61,6 +61,10 @@
       flex-direction: row;
     }
   }
+
+.breadcrumbs {
+  margin-top: 2rem;
+}
   
 .room-item {
   opacity: 0;
@@ -88,26 +92,18 @@
   
 }
 
-
-.itemlist-box {
-  width: 100%;
-  height: fit-content;
-  display: flex;
-  justify-content: center;
-  flex-direction: row;
-  flex-wrap: wrap; 
-  gap: 4rem;
-}
-
 .item-card{
-  width: 300px;
+  width: 330px;
   height: fit-content;
   max-height: max-content;
   overflow: hidden;
   border-radius: 0!important;
   --Card-padding: 0px;
   transition: all 0.4s ease-out;
+}  
 
+.item-card.isList{
+  width: fit-content;
 }  
 
 
@@ -117,17 +113,17 @@
 
 .item-box {
   display: flex;
-  justify-content: center;
   width: 100%;
   height: 100%;
-  align-items: space-between;
+  justify-content: center;
+  gap: 1rem;
+  /* align-items: space-between; */
 }
 
 
 .item-data {
   display: flex;
   gap: 0.5rem;
-  padding: 1rem;
   justify-self: flex-start;
   flex: 2;
 }
@@ -142,15 +138,18 @@
 .item-price {
   display: flex;
   width: 100%;
-  flex-direction: column;
   justify-content: space-between;
-  padding: 1rem;
-}
-
-.item-price.isList {
   flex: 1;
 }
 
-.item-price:not(.isList) {
-  gap: 1rem;
+
+
+.itemlist-box {
+  width: 100%;
+  height: fit-content;
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  flex-wrap: wrap; 
+  gap: 3rem;
 }

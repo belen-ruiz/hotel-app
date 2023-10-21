@@ -20,7 +20,7 @@ export const BreadcrumbsContainer = () => {
   });
 
   return (
-      <Box className="section alignCenter smallText white">
+      <Box className="section alignCenter breadcrumbs smallText white">
           <Box className="section alignCenter white">
               <Link to="/" className="section alignCenter white" >
                   <HomeRounded style={{ fontSize:"1rem" }}/>  Home

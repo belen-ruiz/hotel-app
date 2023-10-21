@@ -20,8 +20,8 @@ const Video = () => {
 export const AboutUs = () => {
     return (
         <Container className="section alignCenter green-bc" >
-            <Box className="section alignStart"
-                sx={{ flexDirection: { xs: "column", md: "row" } }}>
+            <Box className="alignStart containerResponsive"
+                >
 
                 {/* titles & data */}
                 <Stack spacing={1}  sx={{ width: { xs: "100%", md: "30%" },

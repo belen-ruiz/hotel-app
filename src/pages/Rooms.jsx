@@ -24,8 +24,7 @@ export const Rooms = () => {
 
      
     return (
-        <Container className="mainSections">
-            
+        <Container className="mainSections">            
             <Stack spacing={6} sx={{ width: "100%" }}>
                 <BreadcrumbsContainer />
 

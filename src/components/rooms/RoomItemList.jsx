@@ -1,15 +1,11 @@
 import React, { useState } from "react";
-
-import AspectRatio from "@mui/joy/AspectRatio";
-import Avatar from "@mui/joy/Avatar";
 import Card from "@mui/joy/Card";
 import { Stack, Box } from "@mui/material";
 import { amenity } from "../../utils/amenity";
 
 import Divider from "@mui/joy/Divider";
-import { Container } from "@mui/material";
 
-import { RoomCapacity, RoomImage, RoomDescription, RoomPrice, RoomTitle, RoomAmenities, GroupButtons, RoomAmenitiesIcon } from "./Room";
+import { RoomCapacity, RoomImage, RoomDescription, RoomPrice, RoomTitle, RoomAmenities, GroupButtons } from "./Room";
 
 export const RoomItemList = ({ rooms, isList }) => {
     const id = rooms.id;
@@ -25,10 +21,9 @@ export const RoomItemList = ({ rooms, isList }) => {
 
    
     return (
-        <Card className="item-card white-bc"
-            sx={{ width: isList ? "fit-content" : "300px" }}>
+        <Card className={`item-card white-bc ${isList ? 'isList' : ''}`}>
             <Box className="item-box"
-                sx={{ flexDirection: isList ? "row" : "column" }}
+                sx={{ flexDirection: isList ? "row" : "column",  }}
             >
                 {/* image */}
                 <Box sx={{ flex: 1, height: "100%", width: "100%" }}>
@@ -64,7 +59,7 @@ export const RoomItemList = ({ rooms, isList }) => {
                 }
 
                 {/* price & book */}
-                <Stack className="item-price" sx={{  flex: 1 }} >
+                <Stack className="item-price">
                     <RoomPrice price={price} title={title} />
                     <GroupButtons id={id}/>
                 </Stack>

@@ -90,3 +90,27 @@
   }
   
   
+
+
+
+
+  .css-jdd77b-MuiStack-root > :not(style) + :not(style) {
+    margin-top: 0!important;
+  }
+
+  .css-1oqqzyl-MuiContainer-root {
+    max-width: 2080px!important;
+    /* padding-left: 0!important;
+    padding-right: 0!important; */
+  }
+
+  
+  @media (min-width: 1200px) {
+    .css-1oqqzyl-MuiContainer-root {
+    max-width: 2080px!important;
+    }
+    .padd {
+      padding-left: 0!important;
+      padding-right: 0!important;
+    }
+  }
