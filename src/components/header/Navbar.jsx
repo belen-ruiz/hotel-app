@@ -35,17 +35,6 @@ export const Navbar = () => {
         setAnchorElNav(null);
     };
 
-    const navbarStyle = {
-        backgroundColor: "transparent",
-        zIndex: 9999999,
-        boxShadow: "none",
-        width: "100%",
-        position: "static",
-        display: "flex",
-        gap: "4rem",
-        width: "100vw",
-        padding: "0.5rem",
-    };
 
     // useEffect(() => {
     //     const handleScroll = () => {
@@ -64,7 +53,7 @@ export const Navbar = () => {
     // }, []);
 
     return (
-        <AppBar className="navbarStyle">
+        <AppBar className="navbar">
             <Toolbar style={{ justifyContent: "space-evenly", maxWidth: "1280px" }}
             >
                 {/* menu mobile */}

@@ -11,8 +11,8 @@ const bgImg =
 
 export const Intro = () => {
     return (
-        <Container className="section alignCenter"
-            sx={{ position: "relative" }}
+        <Container className="section alignCenter p-0"
+            sx={{ position: "relative", padding: 0 }}
         >
             {/* img */}
             <Box className="introImg">
@@ -22,8 +22,7 @@ export const Intro = () => {
                     className="image"
                 />
 
-                <Box className="introOverlay"
-                ></Box>
+                <Box className="introOverlay" ></Box>
             </Box>
 
             {/* text box */}
