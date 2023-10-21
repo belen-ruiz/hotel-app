@@ -2,15 +2,14 @@ import React, { useState } from "react";
 
 import AspectRatio from "@mui/joy/AspectRatio";
 import Avatar from "@mui/joy/Avatar";
-import Box from "@mui/joy/Box";
 import Card from "@mui/joy/Card";
-import { Stack } from "@mui/material";
+import { Stack, Box } from "@mui/material";
 import { amenity } from "../../utils/amenity";
 
 import Divider from "@mui/joy/Divider";
 import { Container } from "@mui/material";
 
-import { RoomCapacity, RoomImage, RoomDescription, RoomPrice, RoomTitle, RoomAmenities, GroupButtons, RoomAmenitiesIcon } from "./RoomItem";
+import { RoomCapacity, RoomImage, RoomDescription, RoomPrice, RoomTitle, RoomAmenities, GroupButtons, RoomAmenitiesIcon } from "./Room";
 
 export const RoomItemList = ({ rooms, isList }) => {
     const id = rooms.id;
@@ -26,57 +25,23 @@ export const RoomItemList = ({ rooms, isList }) => {
 
    
     return (
-        <Card className="white-bc"
-            sx={{
-                width: isList ? "fit-content" : "300px",
-                height: "fit-content",
-                maxHeight: "max-content",
-                overflow: "hidden",
-                borderRadius: 0,                
-                "--Card-padding": "0px",
-                transition: "all .4s ease-out",
-                "&:hover": {
-                    transform: "translateY(-5%)",
-                },
-            }}
-        >
-            <Box
-                sx={{
-                    display: "flex",
-                    //justifyContent: "center",
-                    flexDirection: isList ? "row" : "column",
-                    alignItems: "space-between",
-                    width: "100%",
-                    height: "100%"
-                }}
+        <Card className="item-card white-bc"
+            sx={{ width: isList ? "fit-content" : "300px" }}>
+            <Box className="item-box"
+                sx={{ flexDirection: isList ? "row" : "column" }}
             >
                 {/* image */}
-                <Box sx={{ flex: 1, height: "100%" }}>
+                <Box sx={{ flex: 1, height: "100%", width: "100%" }}>
                     <RoomImage imgUrl={imgUrl} title={title} ratio="3/5" />
                 </Box> 
 
                 {/* data */}
-                <Stack
-                    sx={{
-                        display: "flex",
-                        gap: "0.5rem",
-                        //width: "50%",
-                        padding: "1rem",
-                        justifySelf: "start",
-                        flex: 2
-                    }}
-                >
+                <Stack className="item-data" >
                     {/* title */}
                     <RoomTitle title={title} />
 
                     {/* capacity & amenities */}
-                    <Box
-                        sx={{
-                            display: "flex",
-                            gap: "0.5rem",
-                            alignItems: "center",
-                        }}
-                    >
+                    <Box className="item-databox" >
                         
                         <RoomCapacity capacity={capacity} />
 
@@ -99,19 +64,7 @@ export const RoomItemList = ({ rooms, isList }) => {
                 }
 
                 {/* price & book */}
-                <Stack
-                    sx={{
-                        display: "flex",
-                        width: "100%",
-                        flexDirection: "column",
-                        justifyContent: "space-between",
-                        //alignItems: "start",
-                        padding: "1rem",
-                        flex: isList && 1,
-                        //justifySelf: "end",
-                        //gap: !isList && "1rem",
-                    }}
-                >
+                <Stack className="item-price" sx={{  flex: 1 }} >
                     <RoomPrice price={price} title={title} />
                     <GroupButtons id={id}/>
                 </Stack>

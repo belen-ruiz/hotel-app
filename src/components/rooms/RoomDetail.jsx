@@ -9,7 +9,7 @@ import { Typography } from "@mui/material";
 import { Box } from "@mui/material";
 import React from "react";
 import { amenity } from "../../utils/amenity";
-import { GroupButtons, RoomAmenities, RoomAmenitiesText, RoomCapacity, RoomDescription, RoomImage, RoomPrice, RoomTitle } from "./RoomItem";
+import { GroupButtons, RoomAmenities, RoomCapacity, RoomDescription, RoomImage, RoomPrice, RoomTitle } from "./Room";
 import { Divider } from "@mui/material";
 
 const Review = () => {

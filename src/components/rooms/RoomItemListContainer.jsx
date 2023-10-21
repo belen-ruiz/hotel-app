@@ -9,20 +9,15 @@ export const RoomItemListContainer = () => {
 
   const renderRooms = (roomList) =>
     roomList.map((room, index) => (
-      <Box key={index}>
-        {room && <RoomItemList isList={isList} setIsList={setIsList} rooms={room} />}
-      </Box>
+        room && <RoomItemList key={index}  isList={isList} setIsList={setIsList} rooms={room} />
+      
     ));
 
   return (
-    <Container className="section alignCenter"
-      sx={{
-        gap: "4rem",
-        flexDirection: isList ? "column" : "row",
-        flexWrap: !isList && "wrap",
-      }}
-    >
-      {search.length > 0 ? renderRooms(search) : renderRooms(rooms)}
+    <Container className="section alignCenter">
+      <Box className="itemlist-box" >
+        {search.length > 0 ? renderRooms(search) : renderRooms(rooms)}        
+      </Box>
     </Container>
   );
 };
