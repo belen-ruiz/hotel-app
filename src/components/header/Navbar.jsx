@@ -51,23 +51,15 @@ export const Navbar = () => {
     //     //     window.removeEventListener('scroll', handleScroll);
     //     //   };
     // }, []);
-
+ 
     return (
         <AppBar className="navbar">
             <Toolbar style={{ justifyContent: "space-evenly", maxWidth: "1280px" }}
             >
                 {/* menu mobile */}
-                <Box
-                    sx={{
-                        display: { xs: "flex", md: "none" },
-                        flexGrow: 1,
-                        alignItems: "center",
-                        justifyContent: "space-around",
-                    }}
-                >
+                <Box className="menu-mobile">
                     {/* logo mobile */}
-                    <Box sx={{  display: { xs: "flex", md: "none" },}}
-                    >
+                    <Box>
                         <Logo
                             logo={logoIso}
                             altLogo={"logo-header"}
@@ -77,7 +69,7 @@ export const Navbar = () => {
 
                     {/* icon mobile */}
                     <IconButton size="large" onClick={handleOpenNavMenu}>
-                        <MenuIcon className="white" />
+                        <MenuIcon className="orange" />
                     </IconButton>
 
                     {/* menu mobile */}
@@ -117,6 +109,9 @@ export const Navbar = () => {
                     </Menu>
                 </Box>
 
+
+
+                {/* navbar expanded */}
                 <Fade direction="down" delay={1} duration="2000">
                     {/* logo */}
                     <Box sx={{ display: { xs: "none", md: "flex" } }}>
@@ -152,8 +147,7 @@ export const Navbar = () => {
                     </Box>
 
                     {/* booknow */}
-                    <Box 
-                    className="btn outlined-btn">book now</Box>
+                    <Box className="btn outlined-btn">book now</Box>
                 </Fade>
             </Toolbar>
         </AppBar>

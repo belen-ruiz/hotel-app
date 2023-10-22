@@ -8,7 +8,7 @@ export const RoomImage = ({ title, imgUrl, ratio }) => {
     return (
         <>
             <AspectRatio sx={{ borderRadius: 0 }} ratio={ratio}>
-                <figure  style={{ height: "100%", width: "100%", overflow: "hidden"  }}>
+                <figure className="image">
                     <img src={imgUrl} alt={title} className="image"/>
                 </figure>
             </AspectRatio>
