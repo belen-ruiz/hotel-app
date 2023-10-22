@@ -11,9 +11,7 @@ const bgImg =
 
 export const Intro = () => {
     return (
-        <Container className="section alignCenter p-0"
-            sx={{ position: "relative", padding: 0 }}
-        >
+        <Container className="section alignCenter p-0" >
             {/* img */}
             <Box className="introImg">
                 <img
@@ -42,4 +40,4 @@ export const Intro = () => {
             </Stack>
         </Container>
     );
-};
+}; 

@@ -20,7 +20,7 @@ const Video = () => {
 export const AboutUs = () => {
     return (
         <Container className="section alignCenter green-bc" >
-            <Box className="alignStart containerResponsive"
+            <Box className="section alignStart containerResponsive"
                 >
 
                 {/* titles & data */}

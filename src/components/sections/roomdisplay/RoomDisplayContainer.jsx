@@ -9,11 +9,11 @@ export const RoomDisplayContainer = ({}) => {
         <Container className="section alignStart green-bc">
                 <Box className="alignStart containerResponsive">
                     {/* titles */}
-                    <Stack spacing={1} sx={{ width: { xs: "100%", md: "30%" } }}>
+                    <Stack spacing={1} className="titlesResponsive">
                         <p  className="topText"
-                            style={{
-                                textAlign: { xs: "center", md: "justify" },
-                            }}
+                            // style={{
+                            //     textAlign: { xs: "center", md: "justify" },
+                            // }}
                         >
                             Discover our rooms
                         </p>
@@ -36,14 +36,11 @@ export const RoomDisplayContainer = ({}) => {
                     </Stack>
             
                     {/* scroll container */}
-                    <Box className="alignCenter"
-                        sx={{
-                            width: { xs: "100%", md: "70%" },
-                        }}
-                    >
+                    <Stack spacing={2} className="alignCenter scrollResponsive">
                         {/* scroll */}
                         <ScrollContainer />
-                    </Box>
+                        
+                    </Stack>
                 </Box>
             </Container>
     );

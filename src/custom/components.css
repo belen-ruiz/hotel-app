@@ -10,12 +10,16 @@
     padding: 0.5rem;
   }
 
-
+.intro {
+  position: relative;
+  align-self: center;
+}
 .introImg {
     z-index: 1;
     display: flex;
     width: 100%;
-    max-height: 500px;
+    height: 100%;
+    /* max-height: 500px; */
     overflow: hidden;
     position: relative;
 }  
@@ -37,16 +41,26 @@
     height: auto;
     justify-content: center;
     align-items: center;
-    top: "30%";
-    position: "absolute";
+    top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+    position: absolute;
   }
   
   .containerResponsive {
     display: flex;
     width: 100%;
     justify-content: center;
-    padding: 1rem;
+    padding: 5rem 2rem;
     border-radius: 10px;
+    gap: 1rem;
+  }
+  
+  .boxResponsive {
+    display: flex;
+    width: 100%;
+    justify-content: center;
     gap: 1rem;
   }
 
@@ -92,6 +106,45 @@
   width: 100%;
   
 }
+
+.scrollable-container {
+  overflow-x: scroll;
+  scroll-behavior: smooth;
+  scroll-snap-type: x mandatory;
+  scrollbar-width: none;
+}
+
+.scrollable-container::-webkit-scrollbar {
+  display: none;
+}
+
+.scrollResponsive {
+  width: 100%;
+}
+
+.titlesResponsive {
+  width: 100%;
+}
+
+/* Para dispositivos con un ancho mayor o igual a 768px (md) */
+@media (min-width: 768px) {
+  .scrollResponsive {
+    width: 70%; 
+  }
+
+  .titlesResponsive {
+    width: 30%; 
+  }
+}
+
+
+.item-listContainer {
+  width: 100%;
+  display: flex;
+  gap: 1rem;
+  position: relative;
+}
+
 
 .item-card{
   width: 330px;

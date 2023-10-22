@@ -39,7 +39,7 @@ export const SearchBar = ({
 }) => {
     return (
         <Container className="breen-bc" sx={{ width: "fit-content", }}>
-            <Box className="containerResponsive">
+            <Box className="boxResponsive">
                 {/* dates */}
                 {searchDates &&
                     searchDates.map(
@@ -72,12 +72,7 @@ export const SearchBar = ({
                                 <>
                                     <Stack key={elem.id}>
                                         <p className="label">{elem.label}</p>
-                                        <Box
-                                            sx={{
-                                                display: "flex",
-                                                gap: "1rem",
-                                            }}
-                                        >
+                                        <Box className="flex-box">
                                             <Box className="white">
                                                 <BoyRounded />
                                             </Box>

@@ -45,6 +45,7 @@ export const RoomProvider = ({ children }) => {
                 container.scrollLeft += 300;
             }
         }
+        console.log("left")
     };
 
     const handleClick = () => {
