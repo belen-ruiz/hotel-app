@@ -38,7 +38,7 @@ export const SearchBar = ({
     handleClick,
 }) => {
     return (
-        <Container className="breen-bc" sx={{ width: "fit-content", }}>
+        <Container className="breen-bc">
             <Box className="boxResponsive">
                 {/* dates */}
                 {searchDates &&
@@ -73,7 +73,7 @@ export const SearchBar = ({
                                     <Stack key={elem.id}>
                                         <p className="label">{elem.label}</p>
                                         <Box className="flex-box">
-                                            <Box className="white">
+                                            <Box className="green">
                                                 <BoyRounded />
                                             </Box>
                                             {/* range */}

@@ -87,10 +87,7 @@ export const Navbar = () => {
                         }}
                         open={Boolean(anchorElNav)}
                         onClose={handleCloseNavMenu}
-                        sx={{
-                            display: { xs: "block", md: "none" },
-                        }}
-                    >
+                        >
                         <MenuList style={{ width: "fit-content" }}>
                             {pages.map((page) => (
                                 <MenuItem
@@ -114,7 +111,7 @@ export const Navbar = () => {
                 {/* navbar expanded */}
                 <Fade direction="down" delay={1} duration="2000">
                     {/* logo */}
-                    <Box sx={{ display: { xs: "none", md: "flex" } }}>
+                    <Box className="menu-web">
                         <Logo
                             logo={logoIso}
                             altLogo={"logo-header"}
@@ -123,11 +120,9 @@ export const Navbar = () => {
                     </Box>
 
                     {/* menu web */}
-                    <Box className="menuWeb green"
-                        sx={{
-                            display: { xs: "none", md: "flex" },
+                    <Box className="menuWeb menu-web green"
+                        sx={{ 
                             gap: "2rem",
-                            //flexGrow: 1,
                         }}
                     >
                         {pages.map((page) => (

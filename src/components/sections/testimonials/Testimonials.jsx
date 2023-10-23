@@ -10,7 +10,7 @@ import { Zoom, Fade } from "react-awesome-reveal";
 export const Testimonials = () => {
     return (
         <Container className="section alignCenter white-bc">
-            <Stack spacing={4} className="section alignCenter containerResponsive">
+            <Stack spacing={2} className="section alignCenter containerResponsive">
                 {/* titles */}
                 <Stack
                     className="alignCenter"

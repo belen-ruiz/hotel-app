@@ -59,10 +59,9 @@ export const FooterData = () => {
 
                 {/* col 2 */}
                 <Grid
-                    className="contentEnd"
+                    className="contentEnd footer-logo"
                     item
                     xs={6}
-                    sx={{ display: { xs: "none", md: "flex" } }}
                 >
                     <Logo
                         logo={logoWhite}

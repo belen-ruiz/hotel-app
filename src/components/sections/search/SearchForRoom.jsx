@@ -18,7 +18,7 @@ export const SearchForRoom = ({}) => {
 
     return (
         <Container className="section alignCenter white-bc">
-            <Stack spacing={4}  className="section alignCenter containerResponsive">
+            <Stack spacing={2}  className="section alignCenter containerResponsive">
                 {/* titles */}
                 <Stack
                     spacing={1}

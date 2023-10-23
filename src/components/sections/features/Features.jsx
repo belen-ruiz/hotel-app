@@ -22,7 +22,7 @@ const Feature = ({ data }) => {
 export const Features = () => {
     return (
         <Container className="section alignCenter green-bc">
-            <Stack spacing={4} className="section alignCenter containerResponsive">
+            <Stack spacing={2} className="section alignCenter containerResponsive">
                 {/* titles */}
                 <Stack
                     spacing={1}
