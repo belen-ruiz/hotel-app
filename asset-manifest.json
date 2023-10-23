@@ -1,0 +1,14 @@
+{
+  "files": {
+    "main.css": "/belen-ruiz/hotel-app/tree/hotel6/static/css/main.fce8c5db.css",
+    "main.js": "/belen-ruiz/hotel-app/tree/hotel6/static/js/main.f0b1aeda.js",
+    "static/media/bajo-construccion.gif": "/belen-ruiz/hotel-app/tree/hotel6/static/media/bajo-construccion.e05c0f59f995a4d796e1.gif",
+    "index.html": "/belen-ruiz/hotel-app/tree/hotel6/index.html",
+    "main.fce8c5db.css.map": "/belen-ruiz/hotel-app/tree/hotel6/static/css/main.fce8c5db.css.map",
+    "main.f0b1aeda.js.map": "/belen-ruiz/hotel-app/tree/hotel6/static/js/main.f0b1aeda.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.fce8c5db.css",
+    "static/js/main.f0b1aeda.js"
+  ]
+}
