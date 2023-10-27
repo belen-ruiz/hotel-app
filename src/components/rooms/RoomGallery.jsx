@@ -10,31 +10,28 @@ import { Typography } from "@mui/material";
 import { Box } from "@mui/material";
 import React, { useState } from "react";
 import { Zoom, Fade } from "react-awesome-reveal";
+import { Titles } from "../titles/Titles";
  
 
 export const RoomGallery = ({ room }) => {
-    const imgUrl = room.imgUrl;
+    
+    const title = "Room Gallery"
     const images = room.images;
 
 
     return (
         <>
-            <Box
-                sx={{
-                    display: "grid",
-                    gap: "2rem",
-                    gridTemplateColumns:
-                        "repeat(auto-fill, minmax(300px, 1fr))",
-                        
-                }}
-            >
+            <Titles style={{color: "#d5d8d5"}}
+                    title={title} 
+                    />
+            <Box className="gallery-box"  >
                 {images &&
                     images.map((img, i) => (
                         <img
                             key={`Image ${i}`}
                             src={img}
                             alt={`Image ${i}`}
-                            style={{ maxWidth: "100%", height: "auto", maxHeight:"80vh" }}
+                            style={{ maxWidth: "100%", height: "auto"}}
                         />
                     ))}
                 

@@ -49,6 +49,13 @@
   }
   
 
+
+  .start {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+  }
+
   .d-start {
     display: flex;
     justify-content: center;

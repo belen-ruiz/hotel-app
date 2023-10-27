@@ -1,26 +1,22 @@
 
+import React from "react";
 import { Star } from "@mui/icons-material";
 import { StarBorder } from "@mui/icons-material";
-import { BoyRounded } from "@mui/icons-material";
 import { Stack } from "@mui/material";
-import { Grid } from "@mui/material";
-import { Button } from "@mui/material";
-import { Typography } from "@mui/material";
 import { Box } from "@mui/material";
-import React from "react";
 import { amenity } from "../../utils/amenity";
 import { GroupButtons, RoomAmenities, RoomCapacity, RoomDescription, RoomImage, RoomPrice, RoomTitle } from "./Room";
 import { Divider } from "@mui/material";
 
 const Review = () => {
     return (
-        <Box sx={{display: "flex", alignItems: "center"}}>
+        <Box className="start green" >
             <Star />
             <Star />
             <Star />
             <Star />
             <StarBorder/>
-            <Typography variant="subtitle2" > 9 Reviews</Typography>
+            <p className="menuWeb" > 9 Reviews</p>
         </Box>
     )
 }
@@ -38,7 +34,7 @@ export const RoomDetail = ({ room }) => {
 
     return (
            <>
-             <Box className="white-bc" sx={{display: "flex", gap: "2rem" }}>
+             <Box className="white-bc detail-box">
 
                 {/* image */}
                 <Box sx={{ flex: 1, height: "100%" }}>
@@ -50,9 +46,8 @@ export const RoomDetail = ({ room }) => {
                 spacing={2}
                     sx={{
                         display: "flex",
-                        //width: "50%",
-                        justifySelf: "start",
-                        flex: 2
+                        flex: 2,
+                        height: "100%"
                     }}
                 >
                     {/* title */}

@@ -12,7 +12,6 @@ export const RoomItemList = ({ rooms, isList }) => {
     const title = rooms.title;
     const capacity = rooms.capacity;
     const amenities = rooms.amenities;
-    //const amenities = rooms.amenities.slice(0, 4);
     const allows = rooms.allows;
     const donts = rooms.donts;
     const description = rooms.description;
@@ -22,9 +21,7 @@ export const RoomItemList = ({ rooms, isList }) => {
    
     return (
         <Card className={`item-card white-bc ${isList ? 'isList' : ''}`}>
-            <Box className="item-box"
-                sx={{ flexDirection: isList ? "row" : "column",  }}
-            >
+            <Box className={`item-box ${isList ? 'isList' : ''}`} >
                 {/* image */}
                 <Box sx={{ flex: 1, height: "100%", width: "100%" }}>
                     <RoomImage imgUrl={imgUrl} title={title} ratio="3/5" />
