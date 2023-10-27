@@ -3,7 +3,7 @@ import React from "react";
 import { BreadcrumbsContainer } from "../components/breadcrumbs/BreadcrumbsContainer";
 import { RoomDetailContainer } from "../components/rooms/RoomDetailContainer";
 import { SearchForRoom } from "../components/sections/search/SearchForRoom";
-import { MainSections, alignCenter } from "../custom/Display"
+import { MainSections, alignCenter } from "../styles/Display"
 
 import {
     White,
@@ -15,7 +15,7 @@ import {
     Title,
     Subtitle,
     TextAlignJustify, TextAlignCenter, 
-} from "../custom/Typography";
+} from "../styles/Typography";
 
 
 export const RoomDetails = () => {

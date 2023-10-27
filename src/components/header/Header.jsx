@@ -1,7 +1,7 @@
 import React from 'react'
 import { Navbar } from './Navbar'
 import { Container } from '@mui/material';
-import { MainSections } from "../../custom/Display";
+import { MainSections } from "../../styles/Display";
 
 
 export const Header = () => {

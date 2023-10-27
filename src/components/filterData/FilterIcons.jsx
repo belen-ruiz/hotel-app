@@ -1,8 +1,8 @@
 import { Box } from '@mui/material';
 import React from 'react';
 import { itemView } from '../../utils/itemView';
-import { DataButton } from "../../custom/Buttons";
-import { White, Green, WhiteBC, GreenBC } from "../../custom/Typography";
+import { DataButton } from "../../styles/Buttons";
+import { White, Green, WhiteBC, GreenBC } from "../../styles/Typography";
 
 
 

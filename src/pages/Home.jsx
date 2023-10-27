@@ -7,7 +7,7 @@ import { AboutUs } from "../components/sections/about/AboutUs";
 import { RoomDisplayContainer } from "../components/sections/roomdisplay/RoomDisplayContainer";
 import { useRoomContext } from "../context/RoomProvider";
 import { Intro } from "../components/header/Intro";
-import { MainSections } from "../custom/Display";
+import { MainSections } from "../styles/Display";
 import { Stack } from "@mui/material";
 
 

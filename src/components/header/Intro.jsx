@@ -1,9 +1,9 @@
 import React from "react";
 import { Typography, Container, Box, Stack } from "@mui/material";
-import { ContainedButton } from "../../custom/Buttons";
+import { ContainedButton } from "../../styles/Buttons";
 import { Logo } from "../logo/Logo";
 import LogoIntro from "../../images/logo_aurora_white-10.png";
-import { disableGutters, alignCenter } from "../../custom/Display";
+import { disableGutters, alignCenter } from "../../styles/Display";
 import { Flip } from "react-awesome-reveal";
 
 const bgImg =

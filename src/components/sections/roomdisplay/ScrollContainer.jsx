@@ -1,7 +1,7 @@
 // import { Container, Stack, Box } from "@mui/material";
 // import { useRoomContext } from "../../../context/RoomProvider";
 // import { RoomItem } from "../../rooms/RoomItem";
-// import { ArrowButton } from "../../../custom/Buttons";
+// import { ArrowButton } from "../../../styles/Buttons";
 // import { Zoom, Fade } from "react-awesome-reveal";
 // import ArrowCircleLeftRoundedIcon from "@mui/icons-material/ArrowCircleLeftRounded";
 // import ArrowCircleRightRoundedIcon from "@mui/icons-material/ArrowCircleRightRounded";
@@ -75,7 +75,7 @@
 import { Container, Box } from "@mui/material";
 import { useRoomContext } from "../../../context/RoomProvider";
 import { RoomItem } from "../../rooms/RoomItem";
-import { ArrowButton } from "../../../custom/Buttons";
+import { ArrowButton } from "../../../styles/Buttons";
 import { Zoom, Fade } from "react-awesome-reveal";
 import ArrowCircleLeftRoundedIcon from "@mui/icons-material/ArrowCircleLeftRounded";
 import ArrowCircleRightRoundedIcon from "@mui/icons-material/ArrowCircleRightRounded";

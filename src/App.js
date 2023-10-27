@@ -1,5 +1,5 @@
 import "./App.css";
-import "./custom/styles.js";
+import "./styles/styles.js";
 import { Router } from "./router/Router";
 import { Header } from "./components/header/Header";
 import { Footer } from "./components/footer/Footer";

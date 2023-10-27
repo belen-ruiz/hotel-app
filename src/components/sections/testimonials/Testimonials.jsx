@@ -3,7 +3,7 @@ import { Stack } from "@mui/material";
 import { Typography } from "@mui/material";
 import { Toolbar } from "@mui/material";
 import { Container } from "@mui/material";
-import { alignCenter } from "../../../custom/Display";
+import { alignCenter } from "../../../styles/Display";
 import { Zoom, Fade } from "react-awesome-reveal";
 
 

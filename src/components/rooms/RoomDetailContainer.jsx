@@ -4,7 +4,7 @@ import React, { useEffect, useState } from 'react'
 import { Container, Stack } from '@mui/material'
 import { useParams } from 'react-router-dom'
 import { useRoomContext } from '../../context/RoomProvider'
-import { Green, WhiteBC } from "../../custom/Typography"
+import { Green, WhiteBC } from "../../styles/Typography"
 import { RoomDetail } from './RoomDetail'
 import { RoomGallery } from './RoomGallery'
 import { Zoom, Fade } from "react-awesome-reveal";

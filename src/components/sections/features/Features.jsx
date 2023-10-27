@@ -4,7 +4,7 @@ import { Typography } from "@mui/material";
 import { Toolbar } from "@mui/material";
 import { Container } from "@mui/material";
 import { features } from "../../../utils/features";
-import { alignCenter } from "../../../custom/Display";
+import { alignCenter } from "../../../styles/Display";
 import { Flip } from "react-awesome-reveal";
 
 

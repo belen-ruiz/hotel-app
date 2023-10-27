@@ -11,7 +11,7 @@ import Container from "@mui/material/Container";
 import MenuItem from "@mui/material/MenuItem";
 import { pages } from "../../utils/pages";
 import { Link, NavLink } from "react-router-dom";
-import { OutlinedButton } from "../../custom/Buttons";
+import { OutlinedButton } from "../../styles/Buttons";
 import { Logo } from "../logo/Logo";
 import logoIso from "../../images/logo_iso.png";
 import { Fade } from "react-awesome-reveal";
@@ -19,7 +19,7 @@ import {
     
     Green,
     MenuWeb,
-} from "../../custom/Typography";
+} from "../../styles/Typography";
 import { MenuList } from "@mui/material";
 
 export const Navbar = () => {

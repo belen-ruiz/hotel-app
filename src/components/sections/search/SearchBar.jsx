@@ -7,7 +7,7 @@ import MuiInput from "@mui/material/Input";
 import { searchDates } from "../../../utils/searchDates";
 import { searchGuests } from "../../../utils/searchGuests";
 
-import { ContainedButton } from "../../../custom/Buttons";
+import { ContainedButton } from "../../../styles/Buttons";
 import { Zoom, Fade } from "react-awesome-reveal";
 
 import dayjs from "dayjs";
@@ -22,7 +22,7 @@ import {
     Title,
     Subtitle,
     Label,
-} from "../../../custom/Typography";
+} from "../../../styles/Typography";
 
 const Input = styled(MuiInput)`
     width: 30px;

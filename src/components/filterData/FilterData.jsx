@@ -1,8 +1,8 @@
 import { Button, Box, Typography } from "@mui/material";
 import React from "react";
 import { FilterIcons } from "./FilterIcons";
-import { DataButton } from "../../custom/Buttons";
-import { dataDisplay } from "../../custom/Typography";
+import { DataButton } from "../../styles/Buttons";
+import { dataDisplay } from "../../styles/Typography";
 
 export const FilterData = ({ getAllRooms, totalGuests, setSelect, select }) => {
     return (
