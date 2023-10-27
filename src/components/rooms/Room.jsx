@@ -145,7 +145,7 @@ export const GroupButtons = ({ id }) => {
                     </Link>
                 </Box>
                 <Box sx={{ flex: 1 }}>
-                    <Link to={`/rooms/${id}`}>
+                    <Link to={`/book-now`}>
                         <Box className="btn outlined-btn">book now </Box>
                     </Link>
                 </Box>

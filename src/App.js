@@ -8,22 +8,23 @@ import { LocalizationProvider } from "@mui/x-date-pickers/LocalizationProvider";
 import { AdapterDayjs } from "@mui/x-date-pickers/AdapterDayjs";
 import { ThemeProvider, createTheme } from "@mui/material";
 import { ScrollToTop } from "./router/ScrollToTop";
+import { UserProvider } from "./context/UserProvider";
 
 
 
 function App() {
     return (
         <>
-        {/* //<ThemeProvider theme={theme}> */}
                 <LocalizationProvider dateAdapter={AdapterDayjs}>
-                    <RoomProvider>
-                        <ScrollToTop />
-                            <Header />
-                            <Router />
-                            <Footer />
-                    </RoomProvider>
+                    <UserProvider>
+                        <RoomProvider>
+                            <ScrollToTop />
+                                <Header />
+                                <Router />
+                                <Footer />
+                        </RoomProvider>
+                    </UserProvider>
                 </LocalizationProvider>
-        {/* </ThemeProvider> */} 
         </>
     );
 }
