@@ -117,19 +117,16 @@ export const RoomProvider = ({ children }) => {
     };
      
 
+    //initial room render       
     useEffect(() => {
-        //initial room render       
-
         setTimeout(() => {            
             renderRooms()
         }, 2000);
     }, [])
 
     
-  
+    //guest render
     useEffect(() => {
-        //guest render
-
         setTimeout(() => {
             if (totalGuests) {
                 const roomsFiltered = rooms.filter((room) => 

@@ -67,6 +67,11 @@
     background-color: #d5d8d5;
     /* transform: scale(1.5); */
   }
+
+  .data-btn.isSelected {
+    color: #182706;
+    background-color: #d5d8d5;
+    /* transform: scale(1.5); */
+  }
   
-  /* Add additional states here as needed (e.g., ':active', ':focus') */
   

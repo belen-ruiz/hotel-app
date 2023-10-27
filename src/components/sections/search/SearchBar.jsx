@@ -34,7 +34,7 @@ export const SearchBar = ({
                         (elem) =>
                             elem && (
                                 <>
-                                    <Box key={elem.id}>
+                                    <Box key={elem.id} sx={{height: "51px"}}>
                                         <p className="label" >{elem.label}</p>
                                         <input
                                             type="date"

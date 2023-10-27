@@ -4,28 +4,30 @@ import { Typography } from "@mui/material";
 import { Toolbar } from "@mui/material";
 import { Container } from "@mui/material";
 import { Zoom, Fade } from "react-awesome-reveal";
+import { Titles } from "../../titles/Titles";
 
+ 
 
 export const Testimonials = () => {
-    return (
-        <Container className="section alignCenter white-bc">
-            <Stack spacing={2} className="section alignCenter containerResponsive">
-                {/* titles */}
-                <Stack
-                    className="alignCenter"
-                    spacing={1}                   
-                >
-                    <p className="topText">
-                        What our clients say
-                    </p>
 
-                    <p className="title green">Testimonials</p>
-                </Stack>
+    const topText = "What our clients say"
+    const title = "Testimonials"
+    const subtitle = "Enjoy all benefits while you stay"
+
+    return (
+        <Container className="section d-center white-bc">
+            <Stack spacing={2} className="section d-center containerResponsive">
+                {/* titles */}
+                <Titles 
+                    topText={topText}
+                    title={title} 
+                    subtitle={subtitle}/>
+
 
                 {/* tripAd quote */}
                 <Stack
                     spacing={1}
-                    className="alignCenter"
+                    className="d-center"
                     sx={{
                         display: "flex",
                         width: "80%",

@@ -3,15 +3,20 @@ import React from "react";
 import { BreadcrumbsContainer } from "../components/breadcrumbs/BreadcrumbsContainer";
 import { RoomDetailContainer } from "../components/rooms/RoomDetailContainer";
 import { SearchForRoom } from "../components/sections/search/SearchForRoom";
+import { Titles } from "../components/titles/Titles";
 
 
 export const RoomDetails = () => {
+    const title = "Room Details"
+    
     return (
         <Container className="mainSections p-0">
-            <Stack sx={{ width: "100%" }}>
+            <Stack className="d-center" spacing={6}>
                 <BreadcrumbsContainer />
                 
-                <Titles />
+                <Titles style={{color: "#d5d8d5"}}
+                    title={title} 
+                    />
                 
                 <RoomDetailContainer />
                 
@@ -22,25 +27,3 @@ export const RoomDetails = () => {
 };
 
 
-const Titles = () => {
-    return(
-        <Stack
-            spacing={1}
-            sx={{ 
-                //...alignCenter, 
-                padding: "1rem 0" }}
-        >
-            <p style={{ 
-                //...Title, 
-                //...Orange 
-                }}>Room Detail</p>
-
-            <p style={{ 
-                //...Subtitle, 
-                //...White 
-                }}>
-                Enjoy all benefits while you stay
-            </p>
-        </Stack>
-)
-}

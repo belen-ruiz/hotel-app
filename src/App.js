@@ -1,8 +1,8 @@
 import "./App.css";
 import "./styles/styles.js";
 import { Router } from "./router/Router";
-import { Header } from "./components/header/Header";
-import { Footer } from "./components/footer/Footer";
+import { Header } from "./components/sections/header/Header";
+import { Footer } from "./components/sections/footer/Footer";
 import { RoomProvider } from "./context/RoomProvider";
 import { LocalizationProvider } from "@mui/x-date-pickers/LocalizationProvider";
 import { AdapterDayjs } from "@mui/x-date-pickers/AdapterDayjs";

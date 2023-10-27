@@ -14,18 +14,17 @@ const Video = () => {
             width='100%'>
             </ReactPlayer>
         </Box>
- )
+ )  
 }
 
 export const AboutUs = () => {
     return (
-        <Container className="section alignCenter green-bc" >
-            <Box className="section alignStart containerResponsive"
+        <Container className="section d-center green-bc" >
+            <Box className="section d-start containerResponsive"
                 >
 
                 {/* titles & data */}
-                <Stack spacing={1}  sx={{ width: { xs: "100%", md: "30%" },
-                    }}
+                <Stack spacing={1}  className="titlesResponsive"
                 >
                     <Stack>
                         <p className="topText">a little about us</p>

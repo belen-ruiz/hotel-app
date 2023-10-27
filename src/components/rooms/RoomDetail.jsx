@@ -38,7 +38,7 @@ export const RoomDetail = ({ room }) => {
 
     return (
            <>
-             <Box sx={{display: "flex", gap: "2rem" }}>
+             <Box className="white-bc" sx={{display: "flex", gap: "2rem" }}>
 
                 {/* image */}
                 <Box sx={{ flex: 1, height: "100%" }}>

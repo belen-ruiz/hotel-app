@@ -1,7 +1,7 @@
 import React from "react";
 import { Typography, Container, Box, Stack } from "@mui/material";
-import { Logo } from "../logo/Logo";
-import LogoIntro from "../../images/logo_aurora_white-10.png";
+import { Logo } from "../../logo/Logo";
+import LogoIntro from "../../../images/logo_aurora_white-10.png";
 import { Flip } from "react-awesome-reveal";
 
 const bgImg =

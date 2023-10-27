@@ -1,8 +1,8 @@
 import { Typography } from "@mui/material";
 import { Box, Toolbar, Container } from "@mui/material";
 import React from "react";
-import { socialmedia } from "../../utils/socialmedia";
-import { contact } from "../../utils/contact";
+import { socialmedia } from "../../../utils/socialmedia";
+import { contact } from "../../../utils/contact";
 
 export const Banner = () => {
     return (
@@ -17,23 +17,20 @@ export const Banner = () => {
             >
                 {/* contact  */}
                 {contact.map((data) => (
-                    <Box className="alignCenter"
+                    <Box className="d-center"
                         key={data.text}
                         sx={{ gap: 1 }}
                     >
-                        {data.icon}
-                        <span> {data.text}</span>
+                        {data.icon} <span>{data.text}</span>
                     </Box>
                 ))}
 
                 {/* social media  */}
-                <Box sx={{ display: "flex", gap: "0.5rem", width: "auto" }}>
-                    {socialmedia.map((data) => (
-                        <Box key={data}>
-                            {data}
-                        </Box>
-                    ))}
-                </Box>
+                {socialmedia.map((data) => (
+                    <Box key={data}>
+                        {data}
+                    </Box>
+                ))}
             </Box>
         </Container>
     );

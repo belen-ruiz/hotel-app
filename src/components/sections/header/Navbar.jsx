@@ -4,14 +4,13 @@ import AppBar from "@mui/material/AppBar";
 import Box from "@mui/material/Box";
 import Toolbar from "@mui/material/Toolbar";
 import IconButton from "@mui/material/IconButton";
-import Typography from "@mui/material/Typography";
 import Menu from "@mui/material/Menu";
 import MenuIcon from "@mui/icons-material/Menu";
 import MenuItem from "@mui/material/MenuItem";
-import { pages } from "../../utils/pages";
+import { pages } from "../../../utils/pages";
 import { Link, NavLink } from "react-router-dom";
-import { Logo } from "../logo/Logo";
-import logoIso from "../../images/logo_iso.png";
+import { Logo } from "../../logo/Logo";
+import logoIso from "../../../images/logo_iso.png";
 import { Fade } from "react-awesome-reveal";
 import { MenuList } from "@mui/material";
 

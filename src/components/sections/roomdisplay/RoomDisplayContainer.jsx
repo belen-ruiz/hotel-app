@@ -1,42 +1,26 @@
 import { Container, Stack, Box } from "@mui/material";
 import React, { useRef, useState } from "react";
+import { TitlesSecondary } from "../../titles/Titles";
 import { ScrollContainer } from "./ScrollContainer";
 
 
 export const RoomDisplayContainer = ({}) => {
+    const topText = "Discover our rooms"
+    const title = "Choose your room"
+    const subtitle = "the Best place to enjoy life place to enjoy life place to enjoy life place to enjoy."
 
     return (
-        <Container className="section alignStart green-bc">
-                <Box className="alignStart containerResponsive">
+        <Container className="section d-start green-bc">
+                <Box className="section d-start containerResponsive">
                     {/* titles */}
-                    <Stack spacing={1} className="titlesResponsive">
-                        <p  className="topText"
-                            // style={{
-                            //     textAlign: { xs: "center", md: "justify" },
-                            // }}
-                        >
-                            Discover our rooms
-                        </p>
-                        <p className="title white"
-                            style={{
-                                textAlign: { xs: "center", md: "justify" },
-                            }}
-                        >
-                            Choose your room
-                        </p>
-                        <p className="subtitle white"
-                            style={{
-                               
-                                textAlign: "justify",
-                            }}
-                        >
-                            the Best place to enjoy life place to enjoy life place
-                            to enjoy life place to enjoy.
-                        </p>
-                    </Stack>
+                    <TitlesSecondary 
+                        topText={topText} 
+                        title={title}
+                        subtitle={subtitle}
+                        />
             
                     {/* scroll container */}
-                    <Stack spacing={2} className="alignCenter scrollResponsive">
+                    <Stack spacing={2} className="d-center scrollResponsive">
                         {/* scroll */}
                         <ScrollContainer />
                         
@@ -44,4 +28,4 @@ export const RoomDisplayContainer = ({}) => {
                 </Box>
             </Container>
     );
-};
+}; 

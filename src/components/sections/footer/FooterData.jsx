@@ -2,16 +2,15 @@ import { useState } from "react";
 import { useLocation } from "react-router-dom";
 import { Grid, Box } from "@mui/material";
 import Container from "@mui/material/Container";
-import { footer } from "../../utils/footer";
+import { footer } from "../../../utils/footer";
 import { Link, NavLink } from "react-router-dom";
-import { Logo } from "../logo/Logo";
+import { Logo } from "../../logo/Logo";
 import { Stack } from "@mui/material";
 import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
-import logoWhite from "../../images/logo_aurora_white-09.png";
+import logoWhite from "../../../images/logo_aurora_white-09.png";
 
 
 export const FooterData = () => {
-    const location = useLocation();
 
     return (
         <>

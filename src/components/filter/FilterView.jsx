@@ -10,10 +10,9 @@ const ItemView = ({ name, icon, select, setSelect }) => {
   const handleClick = () => {
     setSelect(name);
   };
-
  
   return (
-    <Box className={`data-btn ${isSelected? "white-bc" : "green-bc" }`} onClick={handleClick}>
+    <Box className={`data-btn ${isSelected? "isSelected" : "" }`} onClick={handleClick}>
       {icon}
     </Box>
   );

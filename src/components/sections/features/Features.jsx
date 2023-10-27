@@ -5,38 +5,35 @@ import { Toolbar } from "@mui/material";
 import { Container } from "@mui/material";
 import { features } from "../../../utils/features";
 import { Flip } from "react-awesome-reveal";
+import { Titles } from "../../titles/Titles";
+
 
 
 const Feature = ({ data }) => {
     const { id, icon, title } = data;
     return (
         <Stack
-            className="feature-box white">
+            className="feature-box green">
             <Box>{icon}</Box>
-            <p className="menuWeb white textAlignCenter">{title}</p>
+            <p className="menuWeb green textAlignCenter">{title}</p>
         </Stack>
     );
 };
 
 export const Features = () => {
+    const topText = "What we can offer you"
+    const title = "Our services"
+    const subtitle = "Enjoy all benefits while you stay"
+
+
     return (
-        <Container className="section alignCenter green-bc">
-            <Stack spacing={2} className="section alignCenter containerResponsive">
+        <Container className="section d-center white-bc">
+            <Stack spacing={2} className="section d-center containerResponsive">
                 {/* titles */}
-                <Stack
-                    spacing={1}
-                    className="alignCenter"
-                >
-                    <p className="topText">
-                        Enjoy all benefits while you stay
-                    </p>
-
-                    <p className="title white">Our services</p>
-
-                    <p className="subtitle white">
-                        Enjoy all benefits while you stay
-                    </p>
-                </Stack>
+                <Titles 
+                topText={topText}
+                    title={title} 
+                    subtitle={subtitle}/>
 
                 {/* item box */}
 
