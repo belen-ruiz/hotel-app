@@ -10,11 +10,26 @@
     padding: 0.5rem;
   }
 
+.navbar.scrollOn {
+  backdrop-filter: blur(20px);
+}
 
-.menu-mobile {
+.isActive{
+  color: #e49408!important;
+}
+
+.notActive{
+  color: #989696fa!important;
+}
+
+.display-mobile {
   display: flex;
   flex-grow: 1;
   align-items: center;
+}
+
+.display-web {
+  display: none;
 }
 
 .intro {
@@ -72,9 +87,7 @@
     gap: 1rem;
   }
 
-  .menu-web {
-    display: none;
-  }
+  
   
   /* @media (min-width: 600) {
     .css-1oqqzyl-MuiContainer-root {
@@ -92,12 +105,13 @@
     .containerResponsive {
       flex-direction: row;
     }
-    .menu-mobile {
+    .display-mobile {
       display: none;
     }
 
-    .menu-web {
+    .display-web {
       display: flex;
+      gap: 2rem;
     }
   }
 

@@ -7,22 +7,10 @@ import MuiInput from "@mui/material/Input";
 import { searchDates } from "../../../utils/searchDates";
 import { searchGuests } from "../../../utils/searchGuests";
 
-import { ContainedButton } from "../../../styles/Buttons";
 import { Zoom, Fade } from "react-awesome-reveal";
 
 import dayjs from "dayjs";
 
-import {
-    White,
-    WhiteBC,
-    Green,
-    GreenBC,
-    OrangeBC,
-    TopText,
-    Title,
-    Subtitle,
-    Label,
-} from "../../../styles/Typography";
 
 const Input = styled(MuiInput)`
     width: 30px;

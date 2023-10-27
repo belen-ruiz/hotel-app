@@ -2,7 +2,6 @@ import React from "react";
 import { Container, Box } from "@mui/material";
 import { useRoomContext } from "../../context/RoomProvider";
 import { RoomItemList } from "./RoomItemList";
-import { alignCenter } from "../../styles/Display";
 
 export const RoomItemListContainer = () => {
   const { rooms, isList, setIsList, search } = useRoomContext();

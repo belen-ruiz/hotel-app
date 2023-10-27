@@ -75,7 +75,6 @@
 import { Container, Box } from "@mui/material";
 import { useRoomContext } from "../../../context/RoomProvider";
 import { RoomItem } from "../../rooms/RoomItem";
-import { ArrowButton } from "../../../styles/Buttons";
 import { Zoom, Fade } from "react-awesome-reveal";
 import ArrowCircleLeftRoundedIcon from "@mui/icons-material/ArrowCircleLeftRounded";
 import ArrowCircleRightRoundedIcon from "@mui/icons-material/ArrowCircleRightRounded";
@@ -88,13 +87,13 @@ const Buttons = () => {
 
     return (
         <Box className="arrow-box">
-            <Box sx={{ ...ArrowButton }} onClick={() => handleScroll("left")}>
+            <Box className="arrow-btn" onClick={() => handleScroll("left")}>
                 <Zoom duration={1000} delay={1} >
                     <ArrowCircleLeftRoundedIcon fontSize="large" />
                 </Zoom>
             </Box>
 
-            <Box sx={{ ...ArrowButton }} onClick={() => handleScroll("right")}>
+            <Box className="arrow-btn" onClick={() => handleScroll("right")}>
                 <Zoom duration={3000} delay={4}>
                     <ArrowCircleRightRoundedIcon fontSize="large" />
                 </Zoom>

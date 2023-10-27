@@ -5,9 +5,7 @@ import { Features } from "../components/sections/features/Features";
 import { Testimonials } from "../components/sections/testimonials/Testimonials";
 import { AboutUs } from "../components/sections/about/AboutUs";
 import { RoomDisplayContainer } from "../components/sections/roomdisplay/RoomDisplayContainer";
-import { useRoomContext } from "../context/RoomProvider";
 import { Intro } from "../components/header/Intro";
-import { MainSections } from "../styles/Display";
 import { Stack } from "@mui/material";
 
 
@@ -18,11 +16,11 @@ export const Home = () => {
             <Stack sx={{ width: "100%" }}>
                 <Intro />
 
-                <Features /> 
+                <SearchForRoom />
 
                 <RoomDisplayContainer />
 
-                <SearchForRoom />
+                <Features /> 
 
                 <AboutUs />
 

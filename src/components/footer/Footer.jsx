@@ -1,7 +1,6 @@
 import { Container, Stack } from "@mui/material";
 import { FooterData } from "./FooterData";
 import { Banner } from "./Banner";
-import { MainSections } from "../../styles/Display";
 
 export const Footer = () => {
     return (

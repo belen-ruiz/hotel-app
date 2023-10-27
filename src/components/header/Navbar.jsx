@@ -7,19 +7,12 @@ import IconButton from "@mui/material/IconButton";
 import Typography from "@mui/material/Typography";
 import Menu from "@mui/material/Menu";
 import MenuIcon from "@mui/icons-material/Menu";
-import Container from "@mui/material/Container";
 import MenuItem from "@mui/material/MenuItem";
 import { pages } from "../../utils/pages";
 import { Link, NavLink } from "react-router-dom";
-import { OutlinedButton } from "../../styles/Buttons";
 import { Logo } from "../logo/Logo";
 import logoIso from "../../images/logo_iso.png";
 import { Fade } from "react-awesome-reveal";
-import {
-    
-    Green,
-    MenuWeb,
-} from "../../styles/Typography";
 import { MenuList } from "@mui/material";
 
 export const Navbar = () => {
@@ -36,28 +29,28 @@ export const Navbar = () => {
     };
 
 
-    // useEffect(() => {
-    //     const handleScroll = () => {
-    //         if (window.scrollY > 0) {
-    //             setScrolling(true);
-    //         } else {
-    //             setScrolling(false);
-    //         }
-    //     };
+    useEffect(() => {
+        const handleScroll = () => {
+            if (window.scrollY > 0) {
+                setScrolling(true);
+            } else {
+                setScrolling(false);
+            }
+        };
 
-    //     window.addEventListener("scroll", handleScroll);
+        window.addEventListener("scroll", handleScroll);
 
-    //     //   return () => {
-    //     //     window.removeEventListener('scroll', handleScroll);
-    //     //   };
-    // }, []);
- 
+        //   return () => {
+        //     window.removeEventListener('scroll', handleScroll);
+        //   };
+    }, []);
+
     return (
-        <AppBar className="navbar">
+        <AppBar className={`navbar ${scrolling ? 'scrollOn' : ''}`}>
             <Toolbar style={{ justifyContent: "space-evenly", maxWidth: "1280px" }}
             >
                 {/* menu mobile */}
-                <Box className="menu-mobile">
+                <Box className="display-mobile">
                     {/* logo mobile */}
                     <Box>
                         <Logo
@@ -111,7 +104,7 @@ export const Navbar = () => {
                 {/* navbar expanded */}
                 <Fade direction="down" delay={1} duration="2000">
                     {/* logo */}
-                    <Box className="menu-web">
+                    <Box className="display-web">
                         <Logo
                             logo={logoIso}
                             altLogo={"logo-header"}
@@ -120,22 +113,16 @@ export const Navbar = () => {
                     </Box>
 
                     {/* menu web */}
-                    <Box className="menuWeb menu-web green"
-                        sx={{ 
-                            gap: "2rem",
-                        }}
-                    >
+                    <Box className="menuWeb display-web">
                         {pages.map((page) => (
                             <NavLink
                                 to={page.link}
                                 key={page.page}
-                                style={{
-                                    color: location.pathname === page.link
-                                            ? "#d5d8d5"
-                                            : "#989696fa",
+                                className={ location.pathname === page.link
+                                            ? "isActive"
+                                            : "notActive"
                                     
-                                }}
-                            >
+                                }>
                                 {page.page}
                             </NavLink>
                         ))}

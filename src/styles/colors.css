@@ -22,3 +22,36 @@
   .orange-bc {
     background-color: #e49408;
   }
+
+
+  /* Colors */
+:root{
+    --white: #d5d8d5;
+    --green: #182706;
+    --orange: #e49408;
+}
+
+
+.white {
+  color: #d5d8d5;
+}
+
+.white-bc {
+  background-color: #d5d8d5!important;
+}
+
+.green {
+  color: #182706;
+} 
+
+.green-bc {
+  background-color: #182706;
+}
+
+.orange {
+  color: #e49408;
+}
+
+.orange-bc {
+  background-color: #e49408;
+}

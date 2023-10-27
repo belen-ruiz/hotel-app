@@ -1,5 +1,11 @@
-node_modules/
+node_modules
 
 .vscode
 
 package-lock.json
+
+
+
+
+
+# <Card className={`item-card white-bc ${isList ? 'isList' : ''}`}>

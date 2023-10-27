@@ -1,8 +1,6 @@
 import { Button, Box, Typography } from "@mui/material";
 import React from "react";
-import { FilterIcons } from "./FilterIcons";
-import { DataButton } from "../../styles/Buttons";
-import { dataDisplay } from "../../styles/Typography";
+import { FilterView } from "./FilterView";
 
 export const FilterData = ({ getAllRooms, totalGuests, setSelect, select }) => {
     return (
@@ -32,7 +30,7 @@ export const FilterData = ({ getAllRooms, totalGuests, setSelect, select }) => {
                 <Box className="dataDisplay"> Showing results for all Rooms</Box>
             ) : null}
 
-            <FilterIcons setSelect={setSelect} select={select} />
+            <FilterView setSelect={setSelect} select={select} />
         </Box>
     );
 };
