@@ -3,7 +3,8 @@ import { Error404 } from '../pages/Error404'
 import { Home } from '../pages/Home'
 import { Rooms } from '../pages/Rooms'
 import { RoomDetails } from '../pages/RoomDetails'
-import { BookNow } from '../components/booknow/BookNow'
+import { BookNow } from '../components/modals/BookNow'
+import { Contact } from '../components/modals/Contact'
 
 
 export const allRoutes = () => {
@@ -61,6 +62,12 @@ export const allRoutes = () => {
             label: "book-now",
             exact: true,
             element: <BookNow />
+        },
+        {
+            path:"/contact",
+            label: "contact",
+            exact: true,
+            element: <Contact />
         },
        
         {

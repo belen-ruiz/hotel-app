@@ -1,4 +1,3 @@
-
 import AspectRatio from "@mui/joy/AspectRatio";
 import { BoyRounded } from "@mui/icons-material";
 import { Stack, Box } from "@mui/material";
@@ -9,21 +8,17 @@ export const RoomImage = ({ title, imgUrl, ratio }) => {
         <>
             <AspectRatio sx={{ borderRadius: 0 }} ratio={ratio}>
                 <figure className="image">
-                    <img src={imgUrl} alt={title} className="image"/>
+                    <img src={imgUrl} alt={title} className="image" />
                 </figure>
             </AspectRatio>
         </>
     );
 };
 
-
-
 export const RoomCapacity = ({ capacity }) => {
     return (
         <>
-            <Box
-                title="capacity"
-                className="white green-bc">
+            <Box title="capacity" className="white green-bc">
                 {Array(capacity)
                     .fill()
                     .map(() => (
@@ -37,49 +32,50 @@ export const RoomCapacity = ({ capacity }) => {
     );
 };
 
-
 export const RoomAmenities = ({ amenities, amenity, displayText }) => {
-  return (
-    <>
-      {amenity &&
-        amenities &&
-        amenity.map((am) => {
-          if (amenities.includes(am.name)) {
-            return (
-              <div
-              className="green"
-                title={am.name}
-                key={am.name}
-                
-              >
-                {displayText ? 
-                    <RoomAmenity icon={am.icon} name={am.name} />
-                 : 
-                 <>
-                    <RoomAmenitiesIcon icon={am.icon} />
-                </>}
-              </div>
-            );
-          }
-          return null;
-        })}
-    </>
-  );
+    return (
+        <>
+            {amenity &&
+                amenities &&
+                amenity.map((am) => {
+                    if (amenities.includes(am.name)) {
+                        return (
+                            <div
+                                className="green"
+                                title={am.name}
+                                key={am.name}
+                            >
+                                {displayText ? (
+                                    <RoomAmenity
+                                        icon={am.icon}
+                                        name={am.name}
+                                    />
+                                ) : (
+                                    <>
+                                        <RoomAmenitiesIcon icon={am.icon} />
+                                    </>
+                                )}
+                            </div>
+                        );
+                    }
+                    return null;
+                })}
+        </>
+    );
 };
-
 
 const RoomAmenity = ({ icon, name }) => {
     return (
         <>
-            <Box sx={{display:"flex", gap:"0.7rem", width: "100%"}}>
-                <p className="orange" style={{fontSize:"1rem"}}>{icon}</p> 
+            <Box sx={{ display: "flex", gap: "0.7rem", width: "100%" }}>
+                <p className="orange" style={{ fontSize: "1rem" }}>
+                    {icon}
+                </p>
                 <p className="smallText green">{name}</p>
             </Box>
         </>
-    ); 
-    };
-
-
+    );
+};
 
 const RoomAmenitiesIcon = ({ icon }) => {
     return (
@@ -88,8 +84,6 @@ const RoomAmenitiesIcon = ({ icon }) => {
         </>
     );
 };
-
-
 
 export const RoomTitle = ({ title }) => {
     return (
@@ -101,15 +95,14 @@ export const RoomTitle = ({ title }) => {
     );
 };
 
-
-
 export const RoomPrice = ({ title, price }) => {
     return (
         <>
             <Box sx={{ display: "flex", alignItems: "end" }}>
                 <p className="subtitle green" style={{ fontWeight: 700 }}>
                     $
-                    <span className="price green"
+                    <span
+                        className="price green"
                         style={{ letterSpacing: "-10px" }}
                     >
                         {price}
@@ -121,8 +114,6 @@ export const RoomPrice = ({ title, price }) => {
     );
 };
 
-
-
 export const RoomDescription = ({ description }) => {
     return (
         <>
@@ -133,24 +124,49 @@ export const RoomDescription = ({ description }) => {
     );
 };
 
-
-
-export const GroupButtons = ({ id }) => {
+export const BookNowBtn = () => {
     return (
         <>
-        <Box sx= {{ width: "100%", display: "flex", justifyContent: "space-between", gap: "0.7rem" }}>
-                <Box sx={{ flex: 1 }}>
-                    <Link to={`/rooms/${id}`}>
-                        <Box className="btn contained-btn">more info </Box>
-                    </Link>
-                </Box>
-                <Box sx={{ flex: 1 }}>
-                    <Link to={`/book-now`}>
-                        <Box className="btn outlined-btn">book now </Box>
-                    </Link>
-                </Box>
+            <Box sx={{ flex: 1 }}>
+                <Link to={`/book-now`}>
+                    <Box className="btn outlined-btn">book now </Box>
+                </Link>
             </Box>
         </>
     );
 };
 
+export const ContactBtn = () => {
+    return (
+        <>
+            <Box sx={{ flex: 1 }}>
+                <Link to={`/contact`}>
+                    <Box className="btn outlined-btn">contact us</Box>
+                </Link>
+            </Box>
+        </>
+    );
+};
+
+export const GroupButtons = ({ id }) => {
+    return (
+        <>
+            <Box
+                sx={{
+                    width: "100%",
+                    display: "flex",
+                    justifyContent: "space-between",
+                    gap: "0.7rem",
+                }}
+            >
+                <Box sx={{ flex: 1 }}>
+                    <Link to={`/rooms/${id}`}>
+                        <Box className="btn contained-btn">more info </Box>
+                    </Link>
+                </Box>
+                
+                <BookNowBtn />
+            </Box>
+        </>
+    );
+};

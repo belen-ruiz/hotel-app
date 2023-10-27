@@ -3,6 +3,7 @@ import { Typography, Container, Box, Stack } from "@mui/material";
 import { Logo } from "../../logo/Logo";
 import LogoIntro from "../../../images/logo_aurora_white-10.png";
 import { Flip } from "react-awesome-reveal";
+import { ContactBtn } from "../../rooms/Room";
 
 const bgImg =
     "https://images.pexels.com/photos/17488420/pexels-photo-17488420/free-photo-of-madera-paisaje-agua-apple.jpeg";
@@ -33,7 +34,7 @@ export const Intro = () => {
 
                 {/* contact */}
                 <Flip direction="down" delay={1} duration="2000">
-                    <Box  className="btn contained-btn">contact us</Box>
+                    <ContactBtn />
                 </Flip>
             </Stack>
         </Container>

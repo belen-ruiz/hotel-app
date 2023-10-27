@@ -13,6 +13,7 @@ import { Logo } from "../../logo/Logo";
 import logoIso from "../../../images/logo_iso.png";
 import { Fade } from "react-awesome-reveal";
 import { MenuList } from "@mui/material";
+import { BookNowBtn } from "../../rooms/Room";
 
 export const Navbar = () => {
     const [anchorElNav, setAnchorElNav] = useState(null);
@@ -39,13 +40,10 @@ export const Navbar = () => {
 
         window.addEventListener("scroll", handleScroll);
 
-        //   return () => {
-        //     window.removeEventListener('scroll', handleScroll);
-        //   };
     }, []);
 
     return (
-        <AppBar className={`navbar ${scrolling ? 'scrollOn' : ''}`}>
+        <AppBar className={`navbar ${scrolling && 'scrollOn'}`}>
             <Toolbar style={{ justifyContent: "space-evenly", maxWidth: "1280px" }}
             >
                 {/* menu mobile */}
@@ -128,7 +126,7 @@ export const Navbar = () => {
                     </Box>
 
                     {/* booknow */}
-                    <Box className="btn outlined-btn">book now</Box>
+                    <BookNowBtn />
                 </Fade>
             </Toolbar>
         </AppBar>
