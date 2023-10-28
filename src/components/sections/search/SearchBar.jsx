@@ -26,15 +26,14 @@ export const SearchBar = ({
     handleClick,
 }) => {
     return (
-        <Container className="breen-bc">
-            <Box className="boxResponsive">
+            <Box className="container-search a-center breen-bc">
                 {/* dates */}
                 {searchDates &&
                     searchDates.map(
                         (elem) =>
                             elem && (
                                 <>
-                                    <Box key={elem.id} sx={{height: "51px"}}>
+                                    <Box key={elem.id} className=" a-center" sx={{height: "51px"}}>
                                         <p className="label" >{elem.label}</p>
                                         <input
                                             type="date"
@@ -61,11 +60,11 @@ export const SearchBar = ({
                                     <Stack key={elem.id}>
                                         <p className="label">{elem.label}</p>
                                         <Box className="d-flex">
+                                                                                                                                    {/* icon */}
                                             <Box className="green">
                                                 <BoyRounded />
                                             </Box>
                                             {/* range */}
-
                                             <Box>
                                                 <input
                                                     type="range"
@@ -125,6 +124,5 @@ export const SearchBar = ({
                     </Box>
                 </Zoom>
             </Box>
-        </Container>
     );
 };

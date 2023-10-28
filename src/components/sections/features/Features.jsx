@@ -28,7 +28,7 @@ export const Features = () => {
 
     return (
         <Container className="section a-center white-bc">
-            <Stack spacing={2} className="section a-center container-web">
+            <Stack spacing={2} className="section a-center container-web p-lg">
                 {/* titles */}
                 <Titles 
                 topText={topText}

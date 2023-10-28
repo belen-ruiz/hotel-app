@@ -34,7 +34,7 @@ export const FooterData = () => {
                         {footer.map((feet) => (
                             <Grid item padding={1} xs={4} key={feet.id}>
                                 <NavLink>
-                                    <Box className="d-flex j-start">
+                                    <Box className="d-flex g-sm j-start">
                                         <Box className="footer-icon">
                                             <ArrowForwardIosIcon fontSize="sm" />
                                         </Box>

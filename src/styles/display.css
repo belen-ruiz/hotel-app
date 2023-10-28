@@ -39,6 +39,32 @@
     width: 100%;
     max-width: 1280px;
   }
+
+
+
+  /* min: 70 */
+.w-100 {
+  width: 100%;
+}
+ 
+  /* min: 70 */
+.w-70 {
+  width: 70%;
+}
+
+  /* min: 30 */
+.w-30 {
+  width: 30%;
+  /* text-align: center; */
+}
+
+/* hasta 900px */
+@media (max-width: 900px) {
+  .w-70, .w-30 {
+    width: 100%; 
+  }
+
+}
   
   /* alignCenter */
   .alignCenter {
@@ -68,11 +94,19 @@
   }
   
   
-.d-flex{
+.d-flex {
   display: flex;
   width: 100%;
+}
+
+.g-sm {
   gap: 0.5rem;
 }
+
+.g-1 {
+  gap: 1rem;
+}
+
 
   .feature-box {
       display: flex;

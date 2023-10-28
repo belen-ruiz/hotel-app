@@ -21,7 +21,7 @@ const Video = () => {
 export const AboutUs = () => {
     const topText = "a little about us"
     const title = "the Best place to enjoy life"
-    
+
     const data = "the Best place to enjoy life place to enjoy life place to enjoy life place to enjoy life place to enjoy life place to enjoy life place to enjoy lifnjoy life place to enjoy lif njoy life place to enjoy lif njoy life place to enjoy lif e place to enjoy life place to enjoy life."
     const sign = "FRANCO MOLINA"
     const label = "CEO of Las Salinas"
@@ -32,7 +32,7 @@ export const AboutUs = () => {
                 >
 
                 {/* titles & data */}
-                <Stack spacing={1}  className="title-web">
+                <Stack spacing={1}  className="w-30">
                     <TitlesSecondary topText={topText} title={title}/>
 
                     <Stack spacing={2}>
@@ -43,7 +43,7 @@ export const AboutUs = () => {
                 </Stack>
 
                 {/* img */}
-                <Box sx={{ width: { xs: "100%", md: "70%" } }}>
+                <Box className="w-70">
                     <Video />
                 </Box>
             </Box>

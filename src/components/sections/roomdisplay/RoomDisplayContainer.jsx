@@ -11,16 +11,16 @@ export const RoomDisplayContainer = ({}) => {
 
     return (
         <Container className="section a-start green-bc">
-                <Box className="section a-start container-web">
+                <Box className="section a-start container-web p-lg">
                     {/* titles */}
-                    <TitlesSecondary 
+                    <TitlesSecondary className="a-center w-30"
                         topText={topText} 
                         title={title}
                         subtitle={subtitle}
                         />
             
                     {/* scroll container */}
-                    <Stack spacing={2} className="a-center scrollResponsive">
+                    <Stack spacing={2} className="a-center w-70">
                         {/* scroll */}
                         <ScrollContainer />
                         
