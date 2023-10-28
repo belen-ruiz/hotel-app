@@ -5,15 +5,15 @@ import { Link } from "react-router-dom";
 import { useUsersContext } from "../../context/UserProvider";
 
 export const Contact = () => {
-    const inputs = [
+    const inputsSignUp = [
         { label: "Name", name: "name", type: "text" },
         { label: "E-mail", name: "email", type: "email" },
         { label: "Password", name: "password", type: "password" },
-        {
-            label: "I agree to terms and conditions",
-            name: "conditions",
-            type: "checkbox",
-        },
+    ];
+
+    const inputsSignIn = [
+        { label: "E-mail", name: "email", type: "email" },
+        { label: "Contraseña", name: "password", type: "password" },
     ];
 
     const { handleChange, handleSubmit } = useUsersContext();
@@ -39,12 +39,14 @@ export const Contact = () => {
                     {/* create acc */}
                     <Stack className="modal-content">
                         <p className="title">Create Account</p>
+
                         <form className="form" onSubmit={handleSubmit}>
-                            {inputs.map((i) => (
+                            {inputsSignUp.map((i) => (
                                 <Box key={i.name} className="form-label">
                                     <label htmlFor={i.name}>{i.label}</label>
+
                                     <input
-                                        style={{width: "100%"}}
+                                        style={{ width: "100%" }}
                                         i={i}
                                         onChange={handleChange}
                                         type={i.type}
@@ -60,35 +62,19 @@ export const Contact = () => {
                     {/* sign in */}
                     <Stack className="modal-content">
                         <p className="title">Sign In</p>
-                        <form className="form" onSubmit={handleSubmit} >
-                            <Box className="form-label">
-                                <label htmlFor="email">
-                                    E-Mail </label>
+                        <form className="form" onSubmit={handleSubmit}>
+                            {inputsSignIn.map((i) => (
+                                <Box key={i.name} className="form-label">
+                                    <label htmlFor={i.name}>{i.label}</label>
                                     <input
-                                    style={{width: "100%"}}
+                                        style={{ width: "100%" }}
                                         onChange={handleChange}
-                                        type="email"
-                                        name="nombre"
-                                        placeholder="Enter your e-mail"
+                                        type={i.type}
+                                        name={i.name}
+                                        placeholder={`Enter your ${i.name}`}
                                     />
-                                
-                            </Box>
-
-                            <Box className="form-label">
-                                <label htmlFor="password">
-                                    Contraseña: </label>
-                                    <input
-                                    style={{width: "100%"}}
-                                        onChange={handleChange}
-                                        type="password"
-                                        name="password"
-                                        placeholder="Enter your password"
-                                    />
-                                
-                            </Box>
-
-                            <Link>No recuerdo mi contraseña</Link>
-
+                                </Box>
+                            ))}
                             <button>SIGN IN</button>
                         </form>
                     </Stack>
