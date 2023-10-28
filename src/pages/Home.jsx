@@ -13,7 +13,7 @@ export const Home = () => {
 
     return (
         <Container className="mainSections p-0" >
-            <Stack className="d-center">
+            <Stack className="a-center">
                 <Intro />
 
                 <SearchForRoom />

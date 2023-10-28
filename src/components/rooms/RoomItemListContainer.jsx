@@ -13,7 +13,7 @@ export const RoomItemListContainer = () => {
     ));
 
   return (
-    <Container className="section d-center">
+    <Container className="section a-center">
       <Box className="itemlist-box" >
         {search.length > 0 ? renderRooms(search) : renderRooms(rooms)}        
       </Box>

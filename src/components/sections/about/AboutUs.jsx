@@ -1,6 +1,7 @@
 import { Container, Stack, Box } from "@mui/material";
 import { Link } from "react-router-dom"; 
 import ReactPlayer from 'react-player'
+import { TitlesSecondary } from "../../titles/Titles";
 
 
 const Video = () => {
@@ -18,43 +19,31 @@ const Video = () => {
 }
 
 export const AboutUs = () => {
+    const topText = "a little about us"
+    const title = "the Best place to enjoy life"
+    
+    const data = "the Best place to enjoy life place to enjoy life place to enjoy life place to enjoy life place to enjoy life place to enjoy life place to enjoy lifnjoy life place to enjoy lif njoy life place to enjoy lif njoy life place to enjoy lif e place to enjoy life place to enjoy life."
+    const sign = "FRANCO MOLINA"
+    const label = "CEO of Las Salinas"
+
     return (
-        <Container className="section d-center green-bc" >
-            <Box className="section d-start containerResponsive"
+        <Container className="section a-center green-bc" >
+            <Box className="section a-start container-web"
                 >
 
                 {/* titles & data */}
-                <Stack spacing={1}  className="titlesResponsive"
-                >
-                    <Stack>
-                        <p className="topText">a little about us</p>
-                        <p className="title white">
-                            the Best place to enjoy life
-                        </p>
-                    </Stack>
+                <Stack spacing={1}  className="title-web">
+                    <TitlesSecondary topText={topText} title={title}/>
 
                     <Stack spacing={2}>
-                        <p className="subtitle white textAlignJustify" >
-                            the Best place to enjoy life place to enjoy life
-                            place to enjoy life place to enjoy life place to
-                            enjoy life place to enjoy life place to enjoy
-                            lifnjoy life place to enjoy lif njoy life place to
-                            enjoy lif njoy life place to enjoy lif e place to
-                            enjoy life place to enjoy life.
-                        </p>
-                        <p className="subtitle orange bold" >
-                            FRANCO MOLINA
-                        </p>
-                        <p className="subtitle white italic" >
-                            CEO of Las Salinas
-                        </p>
+                        <p className="subtitle white textAlignJustify"> { data } </p>
+                        <p className="subtitle orange bold" > { sign } </p>
+                        <p className="subtitle white italic" > {label }  </p>
                     </Stack>
                 </Stack>
 
                 {/* img */}
-                <Box sx={{ 
-                    width: { xs: "100%", md: "70%" },
-                }}>
+                <Box sx={{ width: { xs: "100%", md: "70%" } }}>
                     <Video />
                 </Box>
             </Box>

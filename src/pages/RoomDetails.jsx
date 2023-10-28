@@ -11,7 +11,7 @@ export const RoomDetails = () => {
     
     return (
         <Container className="mainSections p-0">
-            <Stack className="d-center" spacing={6}>
+            <Stack className="a-center" spacing={6}>
                 <BreadcrumbsContainer />
                 
                 <Titles style={{color: "#d5d8d5"}}

@@ -13,7 +13,7 @@
 //     const { handleScroll } = useRoomContext();
 
 //     return (
-//         <Box className="flex-box"
+//         <Box className="d-flex"
 //             sx={{
 //                 width: "32px",
 //                 height: "32px",
@@ -50,7 +50,7 @@
 //                             rooms.map((room) => (
 //                                 <Box
 //                                     key={rooms.title}
-//                                     className="flex-box">
+//                                     className="d-flex">
 //                                     {room && (
 //                                         <RoomItem
 //                                             isList={isList}
@@ -116,7 +116,7 @@ export const ScrollContainer = ({}) => {
                         rooms.map((room) => (
                             <Box
                                 key={rooms.title}
-                                className="flex-box">
+                                className="d-flex">
                                 {room && (
                                     <RoomItem
                                         isList={isList}

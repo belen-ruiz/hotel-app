@@ -15,8 +15,8 @@ export const Testimonials = () => {
     const subtitle = "Enjoy all benefits while you stay"
 
     return (
-        <Container className="section d-center white-bc">
-            <Stack spacing={2} className="section d-center containerResponsive">
+        <Container className="section a-center white-bc">
+            <Stack spacing={2} className="section a-center container-web">
                 {/* titles */}
                 <Titles 
                     topText={topText}
@@ -27,7 +27,7 @@ export const Testimonials = () => {
                 {/* tripAd quote */}
                 <Stack
                     spacing={1}
-                    className="d-center"
+                    className="a-center"
                     sx={{
                         display: "flex",
                         width: "80%",

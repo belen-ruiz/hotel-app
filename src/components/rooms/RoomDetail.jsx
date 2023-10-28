@@ -10,7 +10,7 @@ import { Divider } from "@mui/material";
 
 const Review = () => {
     return (
-        <Box className="start green" >
+        <Box className="j-start green" >
             <Star />
             <Star />
             <Star />

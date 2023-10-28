@@ -17,7 +17,7 @@ export const Banner = () => {
             >
                 {/* contact  */}
                 {contact.map((data) => (
-                    <Box className="d-center"
+                    <Box className="a-center"
                         key={data.text}
                         sx={{ gap: 1 }}
                     >

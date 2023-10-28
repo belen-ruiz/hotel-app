@@ -5,7 +5,7 @@
     position: static;
     background-color: transparent!important;
     /* background-color: #182706; */
-    box-shadow: none;
+    box-shadow: none; 
     gap: 4rem;
     padding: 0.5rem;
   }
@@ -37,45 +37,44 @@
   align-self: center;
 }
 .introImg {
+  position: relative;
     z-index: 1;
     display: flex;
     width: 100%;
     height: 100%;
     /* max-height: 500px; */
     overflow: hidden;
-    position: relative;
 }  
   
 .introOverlay {
+  position: absolute;
     z-index: 2;
     background-color: rgba(66, 59, 16, 0.6);
-  position: absolute;
   top: 0;
   bottom: 0;
   left: 0;
   right: 0;
-  content: "  ";
+  content: " ";
 }
 .introText {
+  position: absolute;
     z-index: 3;
     display: flex;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
     width: 100%;
     height: auto;
     justify-content: center;
     align-items: center;
-    top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-    position: absolute;
   }
   
-  .containerResponsive {
+  .container-web {
     display: flex;
     width: 100%;
     justify-content: center;
     padding: 5rem 2rem;
-    border-radius: 10px;
     gap: 1rem;
   }
   
@@ -100,11 +99,19 @@
     padding-right: 0!important;
   }
 
+  /* en mobiles */
+  /* hasta 900px */
+  @media (max-width: 900px) {
+    .container-web {
+      flex-direction: column;
+    }
+    
+  }
+
+
   /* desde 900px */
   @media (min-width: 900px) {
-    .containerResponsive {
-      flex-direction: row;
-    }
+    
     .display-mobile {
       display: none;
     }
@@ -163,7 +170,7 @@
   width: 100%;
 }
 
-.titlesResponsive {
+.title-web {
   width: 100%;
   /* text-align: center; */
 }
@@ -174,7 +181,7 @@
     width: 70%; 
   }
 
-  .titlesResponsive {
+  .title-web {
     width: 30%; 
     /* text-align: start; */
   }
@@ -259,12 +266,6 @@
 }
 
 
-.footer-logo{
-  display: flex;
-  justify-content: flex-end;
-  align-self: flex-end;
-}
-
 .gallery-box { 
     display: grid;
     height: auto;
@@ -281,6 +282,10 @@
 }
 
 
+
+
+
+/* modal */
 .modal-container {
   background-color: rgba(0, 0, 0, 0.3);
     position: fixed;
@@ -316,7 +321,7 @@
 
 .modal-header {
     display: flex;
-    align-self: end;
+    align-self: flex-end;
 }
 
 
@@ -357,4 +362,26 @@
   display: flex;
   gap: 1rem;
   width: 100%;
+}
+
+
+
+
+/* footer */
+
+.footer-logo{
+  display: flex;
+  justify-content: flex-end;
+  align-self: flex-end;
+}
+
+.footer-icon {
+  display: flex;
+  width: 20px;
+  height: 20px;
+  color: #e49408;
+}
+
+.footer-icon svg {
+  align-self: center;
 }
