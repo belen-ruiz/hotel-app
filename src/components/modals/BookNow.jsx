@@ -1,6 +1,7 @@
 import React from 'react'
 import { Link } from "react-router-dom";
 import { useUsersContext } from '../../context/UserProvider';
+import { BtnContained } from '../buttons/Buttons';
 
 export const BookNow = () => {
 
@@ -42,7 +43,7 @@ export const BookNow = () => {
                                 /> 
                             </div>))
                         }
-                        <button>CREATE</button>
+                        <BtnContained text="create" />
 
                     </form>
                 </div>
@@ -68,7 +69,7 @@ export const BookNow = () => {
                             />
                             <Link>No recuerdo mi contraseña</Link>
                         </label>
-                        <button>SIGN IN</button>
+                        <BtnContained text="sign in" />
                     </form>
                 </div>
             </div>

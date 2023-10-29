@@ -3,6 +3,7 @@ import { Stack, Box } from "@mui/material";
 import React from "react";
 import { Link } from "react-router-dom";
 import { useUsersContext } from "../../context/UserProvider";
+import { BtnContained } from "../buttons/Buttons";
 
 export const Contact = () => {
     const inputsSignUp = [
@@ -55,7 +56,8 @@ export const Contact = () => {
                                     />
                                 </Box>
                             ))}
-                            <button>CREATE</button>
+                            <BtnContained text="create" />                        
+
                         </form>
                     </Stack>
 
@@ -67,7 +69,7 @@ export const Contact = () => {
                                 <Box key={i.name} className="form-label">
                                     <label htmlFor={i.name}>{i.label}</label>
                                     <input
-                                        style={{ width: "100%" }}
+                                        className="w-100"
                                         onChange={handleChange}
                                         type={i.type}
                                         name={i.name}
@@ -75,7 +77,7 @@ export const Contact = () => {
                                     />
                                 </Box>
                             ))}
-                            <button>SIGN IN</button>
+                            <BtnContained text="sign in" />
                         </form>
                     </Stack>
                 </Box>

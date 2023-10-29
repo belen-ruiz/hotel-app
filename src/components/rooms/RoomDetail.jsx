@@ -5,8 +5,9 @@ import { StarBorder } from "@mui/icons-material";
 import { Stack } from "@mui/material";
 import { Box } from "@mui/material";
 import { amenity } from "../../utils/amenity";
-import { GroupButtons, RoomAmenities, RoomCapacity, RoomDescription, RoomImage, RoomPrice, RoomTitle } from "./Room";
+import { GroupButtons, RoomAmenities, RoomCapacity, RoomDescription, RoomImage, RoomPrice, RoomTitle } from "./RoomData";
 import { Divider } from "@mui/material";
+import { BtnOutlined } from "../buttons/Buttons";
 
 const Review = () => {
     return (
@@ -83,7 +84,8 @@ export const RoomDetail = ({ room }) => {
                     }}
                 >
                     <RoomPrice price={price} title={title} />
-                    <GroupButtons id={id}/>
+                    
+                    <BtnOutlined link="book-now" text="book now"/>
                 </Stack>                               
              </Box>
              

@@ -2,6 +2,7 @@ import AspectRatio from "@mui/joy/AspectRatio";
 import { BoyRounded } from "@mui/icons-material";
 import { Stack, Box } from "@mui/material";
 import { Link } from "react-router-dom";
+import { BtnContained, BtnOutlined } from "../buttons/Buttons";
 
 export const RoomImage = ({ title, imgUrl, ratio }) => {
     return (
@@ -124,30 +125,6 @@ export const RoomDescription = ({ description }) => {
     );
 };
 
-export const BookNowBtn = () => {
-    return (
-        <>
-            <Box sx={{ flex: 1 }}>
-                <Link to={`/book-now`}>
-                    <Box className="btn outlined-btn">book now </Box>
-                </Link>
-            </Box>
-        </>
-    );
-};
-
-export const ContactBtn = () => {
-    return (
-        <>
-            <Box sx={{ flex: 1 }}>
-                <Link to={`/contact`}>
-                    <Box className="btn outlined-btn">contact us</Box>
-                </Link>
-            </Box>
-        </>
-    );
-};
-
 export const GroupButtons = ({ id }) => {
     return (
         <>
@@ -159,13 +136,9 @@ export const GroupButtons = ({ id }) => {
                     gap: "0.7rem",
                 }}
             >
-                <Box sx={{ flex: 1 }}>
-                    <Link to={`/rooms/${id}`}>
-                        <Box className="btn contained-btn">more info </Box>
-                    </Link>
-                </Box>
+                <BtnContained link={`rooms/${id}`} text="more info" />
                 
-                <BookNowBtn />
+                <BtnOutlined link="book-now" text="book now" />
             </Box>
         </>
     );

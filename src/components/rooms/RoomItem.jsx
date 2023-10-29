@@ -1,6 +1,6 @@
 import React from "react";
 import { Stack, Box } from "@mui/material";
-import { GroupButtons, RoomCapacity, RoomImage, RoomPrice, RoomTitle } from "./Room";
+import { GroupButtons, RoomCapacity, RoomImage, RoomPrice, RoomTitle } from "./RoomData";
 
 //home room item 
 export const RoomItem = ({ rooms }) => {

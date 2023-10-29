@@ -5,7 +5,7 @@ import { amenity } from "../../utils/amenity";
 
 import Divider from "@mui/joy/Divider";
 
-import { RoomCapacity, RoomImage, RoomDescription, RoomPrice, RoomTitle, RoomAmenities, GroupButtons } from "./Room";
+import { RoomCapacity, RoomImage, RoomDescription, RoomPrice, RoomTitle, RoomAmenities, GroupButtons } from "./RoomData";
 
 export const RoomItemList = ({ rooms, isList }) => {
     const id = rooms.id;

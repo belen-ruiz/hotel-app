@@ -5,7 +5,7 @@ import { Features } from "../components/sections/features/Features";
 import { Testimonials } from "../components/sections/testimonials/Testimonials";
 import { AboutUs } from "../components/sections/about/AboutUs";
 import { RoomDisplayContainer } from "../components/sections/roomdisplay/RoomDisplayContainer";
-import { Intro } from "../components/sections/header/Intro";
+import { Intro } from "../components/sections/intro/Intro";
 import { Stack } from "@mui/material";
 
 
