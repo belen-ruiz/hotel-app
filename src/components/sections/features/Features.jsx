@@ -13,7 +13,7 @@ const Feature = ({ data }) => {
     const { id, icon, title } = data;
     return (
         <Stack
-            className="feature-box green">
+            className="feature-item green">
             <Box>{icon}</Box>
             <p className="block-font green">{title}</p>
         </Stack>

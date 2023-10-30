@@ -1,77 +1,29 @@
-/* disableGutters */
-.disableGutters {
-    padding-left: 0;
-    padding-right: 0;
-    margin-left: 0;
-    margin-right: 0;
-  }
 
 
-/* roomitemlist */
-
-.itemlist-container {
+.item-box {
+  display: flex;
   width: 100%;
-  height: max-content;
-  display: flex;
+  height: 100%;
   justify-content: center;
-  flex-direction: row;
-  flex-wrap: wrap; 
-  gap: 3rem;
-  padding: 4rem;
-  }
-  
-  
-  
-  /* room detail */
-  .detail-box {
-  display: flex;
-  align-items: center;
-  padding: 2rem;
+  flex-direction: column;
   gap: 1rem;
-  }
-  
-  
+  /* align-items: space-between; */
+}
+
+
+
+/* ////////////////////// */
+
   /* buttons */
   
   .btn-box {
-  display: flex;
-  width: 100%;
-  justify-content: space-between;
-  flex: 1;
-  }
-  
-  
-  /* gallery */
-  .gallery-box { 
-  display: grid;
-  height: auto;
-  gap: 2rem;
-  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-  
-  }
-  
-  .box-sb {
-    width: 100%;
     display: flex;
+    width: 100%;
     justify-content: space-between;
-    align-items: center;
-    padding: 0 2rem;
-  }
-
-                
-  .css-jdd77b-MuiStack-root > :not(style) + :not(style) {
-    margin-top: 0!important;
-  }
-
-  .css-1oqqzyl-MuiContainer-root {
-    max-width: 2080px!important;
-    /* padding-left: 0!important;
-    padding-right: 0!important; */
-  }
-
+    flex: 1;
+    }
   
 
-/* ////////////////////// */
 /* containers */
 
 /* responsive container  */
@@ -97,6 +49,7 @@
   display: flex;
   width: 100%;
   max-width: 1280px;
+  align-items: center;
 }
 
 .container-search {
@@ -118,13 +71,77 @@ scrollbar-width: none;
 display: none;
 }
 
-.feature-container {
+
+.itemlist-container {
+  width: 100%;
+  height: max-content;
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  flex-wrap: wrap; 
+  gap: 3rem;
+  padding: 4rem;
+  }
+  
+
+
+  .room-item {
+    opacity: 0;
+    display: flex;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    bottom: 0;
+    padding: 1.5rem;
+    justify-content: space-between;
+    align-items: start;
+    transition: opacity 0.2s ease-in;
+  
+  }
+  
+  .room-item:hover, .room-item:focus-within {
+    opacity: 1;
+    backdrop-filter: blur(10px);
+  }
+
+  
+.feature-container { 
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 70%;
+  max-width: 700px;
+  gap: 5rem;
+}
+
+.feature-item {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   gap: 0.5rem;     
 }
+
+
+  /* room detail */
+  .detail-box {
+    display: flex;
+    align-items: center;
+    padding: 2rem;
+    gap: 1rem;
+    }
+    
+    
+    
+    /* gallery */
+    .gallery-box { 
+    display: grid;
+    height: auto;
+    gap: 2rem;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    
+    }
+    
 
 
 /* width */
@@ -223,10 +240,11 @@ width: 100%;
     flex-grow: 1;
     align-items: center;
   }
-  
+  .web-container {
+    flex-direction: column;
+  }
 
 }
-
 
 
 

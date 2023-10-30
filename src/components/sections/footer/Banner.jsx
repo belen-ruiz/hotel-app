@@ -29,15 +29,8 @@ export const socialmedia = [
 
 export const Banner = () => {
     return (
-        <Container className="btn-box orange-bc">
             <Box
-                className="box-sb block-font green"
-                sx={{
-                    flexDirection: { xs: "wrap", md: "row" },
-                    gap: "0.5rem",
-                    minHeight: "auto",
-                }}
-            >
+                className="btn-box block-font green orange-bc">
                 {/* contact  */}
                 {contact.map((data) => (
                     <Box className="a-center"
@@ -55,6 +48,5 @@ export const Banner = () => {
                     </Box>
                 ))}
             </Box>
-        </Container>
     );
 };
