@@ -1,9 +1,7 @@
-import { Divider } from "@mui/material";
-import { Stack, Box } from "@mui/material";
 import React from "react";
-import { Link } from "react-router-dom";
+import { Stack, Box, Divider } from "@mui/material";
 import { useUsersContext } from "../../context/UserProvider";
-import { BtnContained } from "../buttons/Buttons";
+import { BtnContained, BtnOutlined } from "../buttons/Buttons";
 
 export const Contact = () => {
     const { handleChange, handleSubmit } = useUsersContext();
@@ -77,7 +75,7 @@ export const Contact = () => {
                                     />
                                 </Box>
                             ))}
-                            <BtnContained text="sign in" />
+                            <BtnOutlined text="sign in" />
                         </form>
                     </Stack>
                 </Box>

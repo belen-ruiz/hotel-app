@@ -121,7 +121,7 @@ export const Navbar = () => {
                     </Box>
 
                     {/* booknow */}
-                    <BtnOutlined link="book-now" text="book now" />
+                    <BtnOutlined link="contact" text="book now" />
                 </Fade>
             </Toolbar>
         </AppBar>

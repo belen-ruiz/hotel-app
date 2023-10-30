@@ -90,7 +90,7 @@ export const SearchBar = ({
                                             {/* arrow */}
                                             <Box>
                                                 <Input
-                                                    className="white"
+                                                    className="green"
                                                     id={elem.id}
                                                     size="small"
                                                     value={
