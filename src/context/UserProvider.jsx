@@ -7,7 +7,7 @@ export const useUsersContext = () => useContext(UsersContext);
 export const UserProvider = ({ children }) => {
 
     const [form, setForm] = useLocalStorage("user", []);
-    const [buyersData, setBuyersData] = useState()
+   // const [user, setUser] = useState()
     const orderId = useId()
 
     const handleChange = (e) => {
@@ -15,35 +15,37 @@ export const UserProvider = ({ children }) => {
             ...form,
             [e.target.name]: e.target.value,
         });
-    };
-
-    
-    const handleOnChange = (e) => {
-        setBuyersData({
-            ...buyersData,
-            [e.target.name]: e.target.value,  
-            orderId,           
-        });
-        
-        return buyersData
-        
-    };
-
-    const handleSubmit = () => {
         console.log(form);
+
     };
+
     
-    console.log(buyersData)
+    // const handleOnChange = (e) => {
+    //     setUser({
+    //         ...user,
+    //         [e.target.name]: e.target.value,  
+    //         orderId,           
+    //     });
+        
+    //     return user
+        
+    // };
+
+    // const handleSubmit = () => {
+    //     console.log(form);
+    // };
+    
+    //console.log(user)
 
     return (
         <UsersContext.Provider
             value={{
                 form,
                 handleChange,
-                buyersData,
-                handleOnChange,
-                handleSubmit,
-                orderId
+                //user,
+                // handleOnChange,
+                //handleSubmit,
+                //orderId
             }}
         >
             {children}
@@ -53,7 +55,7 @@ export const UserProvider = ({ children }) => {
 
 
 
-export const useLocalStorage = (key, defaultValue) => {
+const useLocalStorage = (key, defaultValue) => {
 
     const [storedValue, setStoredValue] = useState(()=>{
         try {

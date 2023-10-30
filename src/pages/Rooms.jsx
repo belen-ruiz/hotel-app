@@ -26,7 +26,7 @@ export const Rooms = () => {
 
      
     return (
-        <Container className="page-container p-0">            
+        <Container className="page-container">            
             <Stack className="a-center" spacing={6}>
                 <BreadcrumbsContainer />
 

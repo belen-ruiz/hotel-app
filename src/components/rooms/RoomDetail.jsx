@@ -1,5 +1,5 @@
 
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { Star } from "@mui/icons-material";
 import { StarBorder } from "@mui/icons-material";
 import { Stack } from "@mui/material";
@@ -8,6 +8,7 @@ import { amenity } from "../../utils/hotelData";
 import { GroupButtons, RoomAmenities, RoomCapacity, RoomDescription, RoomImage, RoomPrice, RoomTitle } from "./RoomData";
 import { Divider } from "@mui/material";
 import { BtnOutlined } from "../buttons/Buttons";
+import { Title } from "@mui/icons-material";
 
 const Review = () => {
     return (
@@ -25,8 +26,7 @@ const Review = () => {
 
 export const RoomDetail = ({ room }) => {
     const { id, title, capacity, amenities, description, price, imgUrl } = room;
-
-
+    
     return (
            <>
              <Box className="white-bc detail-box">

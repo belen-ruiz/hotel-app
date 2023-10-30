@@ -41,7 +41,7 @@ export const Contact = () => {
                     <Stack className="modal-content">
                         <p className="title">Create Account</p>
 
-                        <form className="form" onSubmit={handleSubmit}>
+                        <form className="form" >
                             {inputsSignUp.map((i) => (
                                 <Box key={i.name} className="form-label">
                                     <label htmlFor={i.name}>{i.label}</label>
@@ -56,7 +56,7 @@ export const Contact = () => {
                                     />
                                 </Box>
                             ))}
-                            <BtnContained text="create" />                        
+                            <BtnContained text="create" onClick={handleSubmit}/>                        
 
                         </form>
                     </Stack>
@@ -64,7 +64,7 @@ export const Contact = () => {
                     {/* sign in */}
                     <Stack className="modal-content">
                         <p className="title">Sign In</p>
-                        <form className="form" onSubmit={handleSubmit}>
+                        <form className="form">
                             {inputsSignIn.map((i) => (
                                 <Box key={i.name} className="form-label">
                                     <label htmlFor={i.name}>{i.label}</label>

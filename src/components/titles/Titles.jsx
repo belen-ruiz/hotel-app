@@ -14,7 +14,7 @@ const Titles = ({ topText, title, subtitle, style }) => {
 
 const TitlesSecondary = ({ topText, title, subtitle, style }) => {
     return (
-        <Stack spacing={1} className="w-30">
+        <Stack spacing={1}>
             { topText && <p className="text-bc">{ topText }</p>}
 
             {  title && <p className="title white">{ title }</p>}

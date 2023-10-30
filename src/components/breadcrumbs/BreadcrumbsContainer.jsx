@@ -20,16 +20,11 @@ export const BreadcrumbsContainer = () => {
   });
 
   return (
-      <Box className="section-container a-center breadcrumbs text-sm white">
-          <Box className="section-container a-center d-block">
+      <Box className="breadcrumbs item-databox font-sm white">
               <Link to="/" className="section-container a-center white">
                   <HomeRounded className="fs-1"/>  Home
               </Link>
-          </Box>
-
-          <Box className="section-container a-center">
-            /{crumbs}
-          </Box>
+              /{crumbs}
       </Box>
   );
 };

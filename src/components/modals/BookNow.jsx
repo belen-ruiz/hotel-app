@@ -3,9 +3,11 @@ import { Link } from "react-router-dom";
 import { useUsersContext } from '../../context/UserProvider';
 import { BtnContained } from '../buttons/Buttons';
 
+
+// como el add to cart
 export const BookNow = () => {
     
-    const { handleChange, handleSubmit } = useUsersContext()
+    const { handleChange, handleSubmit, } = useUsersContext()
     const inputs = [
         { label: "Nombre", name: "nombre", type: "text"},
         { label: "E-mail", name: "email", type: "email" },
@@ -25,52 +27,16 @@ export const BookNow = () => {
                     </div>
                 </div>
 
-                <div className="modal-content">
-                    <h5>Create Account</h5>
-                    <form onSubmit={handleSubmit}>
-                    {
-                        inputs.map((i) => (
-                            <div key={i.name}>
-                            <label htmlFor={i.name}>
-                                {i.label}
-                            </label>
-                            <input 
-                                i={i} 
-                                onChange={handleChange}
-                                type={i.type}
-                                name={i.name}
-                                /> 
-                            </div>))
-                        }
-                        <BtnContained text="create" />
-
-                    </form>
-                </div>
 
                 <div className="modal-content">
-                    <h5>Sign In</h5>
-                    <form>
-                        <label htmlFor="email">
-                            E-Mail
-                            <input
-                                onChange={handleChange}
-                                type="email"
-                                name="nombre"
-                            />
-                        </label>
+                    <h5>Room Info</h5>
+                    <p>You have selected room: </p>
+                   
+                   
 
-                        <label htmlFor="password">
-                            Contraseña:
-                            <input
-                                onChange={handleChange}
-                                type="password"
-                                name="password"
-                            />
-                            <Link>No recuerdo mi contraseña</Link>
-                        </label>
-                        <BtnContained text="sign in" />
-                    </form>
                 </div>
+
+                
             </div>
         </div>
   )

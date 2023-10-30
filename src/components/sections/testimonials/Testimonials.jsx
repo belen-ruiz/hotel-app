@@ -48,13 +48,11 @@ export const Testimonials = () => {
                     <p className="subtitle italic">
                         Reviewed from TripAdvisor
                     </p>
-                    <Fade direction="up" delay={1} duration="2000">
                         <img
                             src="https://download.logo.wine/logo/TripAdvisor/TripAdvisor-Logo.wine.png"
                             alt="trip advisor"
                             style={{ width: "150px" }}
                         />
-                    </Fade>
                 </Stack>
             </Stack>
         </Container>

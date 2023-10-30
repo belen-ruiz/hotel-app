@@ -7,12 +7,11 @@ import { TitlesSecondary } from "../../titles/Titles";
 const Video = () => {
     const url = "https://www.youtube.com/watch?v=VupspyQYYdY"
     return (
-        <Box className="image" >
+        <Box className="image w-100" >
             <ReactPlayer 
             title="hotel tour video"
             url={ url }
-            muted
-            width='100%'>
+            muted>
             </ReactPlayer>
         </Box>
  )  
@@ -21,17 +20,17 @@ const Video = () => {
 export const AboutUs = () => {
     const topText = "a little about us"
     const title = "the Best place to enjoy life"
-    const data = "the Best place to enjoy life place to enjoy life place to enjoy life place to enjoy life place to enjoy life place to enjoy life place to enjoy lifnjoy life place to enjoy lif njoy life place to enjoy lif njoy life place to enjoy lif e place to enjoy life place to enjoy life."
     const sign = "FRANCO MOLINA"
     const label = "CEO of Las Salinas"
-
+    const data = "the Best place to enjoy life place to enjoy life place to enjoy life place to enjoy life place to enjoy life place to enjoy life place to enjoy lifnjoy life place to enjoy lif njoy life place to enjoy lif njoy life place to enjoy lif e place to enjoy life place to enjoy life."
+    
     return (
-        <Container className="section-container a-center green-bc" >
-            <Box className="section-container a-start web-container"
+        <Container className=" a-start green-bc" >
+            <Box className=" a-start web-container p-lg"
                 >
 
                 {/* titles & data */}
-                <Stack spacing={1}  className="w-30">
+                <Stack spacing={1}  className="a-start w-30">
                     <TitlesSecondary topText={topText} title={title}/>
 
                     <Stack spacing={2}>
