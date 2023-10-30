@@ -29,6 +29,13 @@
     font-style: italic;
   }
 
+  .textA-c {
+    text-align: center;
+  }
+
+  .textA-j {
+    text-align: justify;
+  }
 
 
   /* text */

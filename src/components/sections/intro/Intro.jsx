@@ -9,6 +9,8 @@ const bgImg =
     "https://images.pexels.com/photos/17488420/pexels-photo-17488420/free-photo-of-madera-paisaje-agua-apple.jpeg";
 
 export const Intro = () => {
+    const bigScreen = window.innerWidth < 600;
+
     return (
         <Container className="section-container a-center p-0">
             {/* img */}
@@ -24,18 +26,31 @@ export const Intro = () => {
 
             {/* text box */}
             <Stack className="text-intro">
-                <Flip delay={1} fraction={1} duration="2000">
+                {bigScreen ? (
                     <Logo
+                    logo={LogoIntro}
+                    altLogo={"logo-intro"}
+                    height={{ xs: "100px" }}/>) 
+                    :
+                    (
+                    <Flip delay={1} fraction={1} duration="2000">
+                        <Logo
                         logo={LogoIntro}
                         altLogo={"logo-intro"}
-                        height={{ xs: "100px", md: "300px" }}
+                        height={{ md: "300px" }}
                     />
-                </Flip>
+                    </Flip>
+                    )
+                }
 
                 {/* contact */}
-                <Flip direction="down" delay={1} duration="2000">
+                {bigScreen ? (
                     <BtnOutlined link="contact" text="contact us" />
-                </Flip>
+                ) : (
+                    <Flip direction="down" delay={1} duration="2000">
+                        <BtnOutlined link="contact" text="contact us" />
+                    </Flip>
+                )}
             </Stack>
         </Container>
     );

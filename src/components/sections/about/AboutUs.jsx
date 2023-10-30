@@ -9,6 +9,7 @@ const Video = () => {
     return (
         <Box className="image w-100" >
             <ReactPlayer 
+            width="100%"
             title="hotel tour video"
             url={ url }
             muted>
@@ -25,8 +26,8 @@ export const AboutUs = () => {
     const data = "the Best place to enjoy life place to enjoy life place to enjoy life place to enjoy life place to enjoy life place to enjoy life place to enjoy lifnjoy life place to enjoy lif njoy life place to enjoy lif njoy life place to enjoy lif e place to enjoy life place to enjoy life."
     
     return (
-        <Container className=" a-start green-bc" >
-            <Box className=" a-start web-container p-lg"
+        <Container className="a-start green-bc" >
+            <Box className="a-start web-container p-lg"
                 >
 
                 {/* titles & data */}

@@ -24,7 +24,7 @@
   }
   
   .p-lg {
-  padding: 5rem 2rem;
+  padding: 5rem;
   }
   
   
@@ -189,7 +189,6 @@ display: none;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  width: 70%;
   max-width: 700px;
   gap: 5rem;
 }
@@ -243,9 +242,12 @@ display: none;
   .web-container {
     flex-direction: column;
   }
-
+  
+  .container-search {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
 }
-
 
 
   @media (min-width: 1200px) {

@@ -80,7 +80,7 @@ backdrop-filter: blur(20px);
     z-index: 3;
     display: flex;
     top: 0;
-    bottom: 0;
+    bottom: 50%;
     left: 0;
     right: 0;
     width: 100%;
