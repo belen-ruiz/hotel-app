@@ -20,7 +20,7 @@ const BtnScrollContainer = () => {
             </Box>
 
             <Box className="arrow-btn" onClick={() => handleScroll("right")}>
-                <Zoom duration={3000} delay={4}>
+                <Zoom duration={1000} delay={2}>
                     <ArrowCircleRightRoundedIcon className="fs-3" />
                 </Zoom>
             </Box>

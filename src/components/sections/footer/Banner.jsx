@@ -30,13 +30,11 @@ export const socialmedia = [
 export const Banner = () => {
     return (
             <Box
-                className="btn-box block-font green orange-bc">
+                className="btn-box green orange-bc">
                 {/* contact  */}
                 {contact.map((data) => (
-                    <Box className="a-center"
-                        key={data.text}
-                        sx={{ gap: 1 }}
-                    >
+                    <Box className="a-center block-font"
+                        key={data.text}  >
                         {data.icon} <span>{data.text}</span>
                     </Box>
                 ))}

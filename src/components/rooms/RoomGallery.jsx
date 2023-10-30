@@ -26,7 +26,7 @@ export const RoomGallery = ({ room }) => {
                     />
             <Box className="gallery-box"  >
                 {images &&
-                    images.map((img, i) => (
+                    images.map(( i, img ) => (
                         <img
                             key={`Image ${i}`}
                             src={img}

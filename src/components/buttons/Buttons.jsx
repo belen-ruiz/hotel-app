@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 export const BtnOutlined = ({ link, text }) => {
     return (
         <>
-            <Box sx={{ flex: 1 }}>
+            <Box>
                 <Link to={`/${link}`}>
                     <Box className="btn outlined-btn">{text}</Box>
                 </Link>
@@ -18,7 +18,7 @@ export const BtnOutlined = ({ link, text }) => {
 export const BtnContained = ({ link, onClick, text }) => {
     return (
         <>
-            <Box sx={{ flex: 1 }} onClick={onClick}>
+            <Box onClick={onClick}>
                 <Link to={`/${link}`}>
                     <Box className="btn contained-btn">{text}</Box>
                 </Link>

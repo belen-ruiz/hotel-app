@@ -8,19 +8,11 @@ import Divider from "@mui/joy/Divider";
 import { RoomCapacity, RoomImage, RoomDescription, RoomPrice, RoomTitle, RoomAmenities, GroupButtons } from "./RoomData";
 
 export const RoomItemList = ({ rooms, isList }) => {
-    const id = rooms.id;
-    const title = rooms.title;
-    const capacity = rooms.capacity;
-    const amenities = rooms.amenities;
-    const allows = rooms.allows;
-    const donts = rooms.donts;
-    const description = rooms.description;
-    const price = rooms.price;
-    const imgUrl = rooms.imgUrl;
+    const { id, title, capacity, amenities, description, price, imgUrl } = rooms;
 
        return (
-        <Card className={`item-card white-bc ${isList ? 'isList' : ''}`}>
-            <Box className={`item-box ${isList ? 'isList' : ''}`} >
+        <Card className={`item-card white-bc ${isList && 'isList'}`}>
+            <Box className={`item-box ${isList && 'isList'}`} >
                 {/* image */}
                 <Box sx={{ flex: 1, height: "100%", width: "100%" }}>
                     <RoomImage imgUrl={imgUrl} title={title} ratio="3/5" />

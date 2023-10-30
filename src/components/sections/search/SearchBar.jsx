@@ -103,11 +103,7 @@ export const SearchBar = ({
                                                     inputProps={{
                                                         step: 1,
                                                         min: 0,
-                                                        max: 5,
-                                                        type: "number",
-                                                        "aria-labelledby":
-                                                            "input-slider",
-                                                    }}
+                                                        max: 5,}}
                                                 />
                                             </Box>
                                         </Box>

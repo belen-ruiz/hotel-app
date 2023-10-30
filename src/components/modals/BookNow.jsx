@@ -4,15 +4,14 @@ import { useUsersContext } from '../../context/UserProvider';
 import { BtnContained } from '../buttons/Buttons';
 
 export const BookNow = () => {
-
+    
+    const { handleChange, handleSubmit } = useUsersContext()
     const inputs = [
         { label: "Nombre", name: "nombre", type: "text"},
         { label: "E-mail", name: "email", type: "email" },
         { label: "Password", name: "password", type: "password" },
         { label: "Acepto terminos y condiciones", name: "conditions", type: "checkbox" }
     ];
-
-    const { handleChange, handleSubmit } = useUsersContext()
 
 
   return (

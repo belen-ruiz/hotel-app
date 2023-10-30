@@ -28,9 +28,8 @@ export const RoomDetailContainer = ({  }) => {
 
   return (
 
-    <Container className="white"
-        sx={ { padding: "2rem" }}>                       
-          <Stack spacing={6} >
+    <Container className="section-container a-center white">                       
+          <Stack className="itemlist-container"  spacing={6} >
             <RoomDetail room={room}/>
             
             <RoomGallery room={room}/>

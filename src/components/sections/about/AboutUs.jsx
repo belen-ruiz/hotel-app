@@ -35,7 +35,7 @@ export const AboutUs = () => {
                     <TitlesSecondary topText={topText} title={title}/>
 
                     <Stack spacing={2}>
-                        <p className="subtitle white textAlignJustify"> { data } </p>
+                        <p className="subtitle white"> { data } </p>
                         <p className="subtitle orange bold" > { sign } </p>
                         <p className="subtitle white italic" > {label }  </p>
                     </Stack>

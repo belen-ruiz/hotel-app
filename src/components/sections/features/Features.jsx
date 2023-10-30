@@ -40,14 +40,7 @@ export const Features = () => {
                 <Box className="feature-container" >
                     <Flip cascade damping={0.1}>
                         {features.map((feature) => (
-                            <Box
-                                key={feature.id}
-                                sx={{
-                                    flex: "0 0 20%",
-                                }}
-                            >
-                                <Feature data={feature} />
-                            </Box>
+                        <Feature key={feature.id} data={feature} />
                         ))}
                     </Flip>
                 </Box>

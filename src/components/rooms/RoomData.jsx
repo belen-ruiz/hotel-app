@@ -68,7 +68,7 @@ export const RoomAmenities = ({ amenities, amenity, displayText }) => {
 const RoomAmenity = ({ icon, name }) => {
     return (
         <>
-            <Box sx={{ display: "flex", gap: "0.7rem", width: "100%" }}>
+            <Box>
                 <p className="orange fs-1">
                     {icon}
                 </p>
@@ -96,16 +96,13 @@ export const RoomTitle = ({ title }) => {
     );
 };
 
-export const RoomPrice = ({ title, price }) => {
+export const RoomPrice = ({ price }) => {
     return (
         <>
-            <Box sx={{ display: "flex", alignItems: "end" }}>
-                <p className="subtitle green" style={{ fontWeight: 700 }}>
+            <Box>
+                <p className="subtitle green">
                     $
-                    <span
-                        className="price green"
-                        style={{ letterSpacing: "-10px" }}
-                    >
+                    <span className="price green">
                         {price}
                     </span>
                     pp night
@@ -118,7 +115,7 @@ export const RoomPrice = ({ title, price }) => {
 export const RoomDescription = ({ description }) => {
     return (
         <>
-            <Box sx={{ display: "flex", alignItems: "end" }}>
+            <Box>
                 <p className="subtitle green">${description}</p>
             </Box>
         </>

@@ -21,16 +21,10 @@ const Review = () => {
         </Box>
     )
 }
-
+ 
 
 export const RoomDetail = ({ room }) => {
-    const id = room.id;
-    const title = room.title;
-    const capacity = room.capacity;
-    const amenities = room.amenities;
-    const description = room.description;
-    const price = room.price;
-    const imgUrl = room.imgUrl;
+    const { id, title, capacity, amenities, description, price, imgUrl } = room;
 
 
     return (

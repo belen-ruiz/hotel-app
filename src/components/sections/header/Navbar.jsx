@@ -44,8 +44,7 @@ export const Navbar = () => {
 
     return (
         <AppBar className={`navbar ${scrolling && 'scroll-on'}`}>
-            <Toolbar style={{ justifyContent: "space-evenly", maxWidth: "1280px" }}
-            >
+            <Toolbar className="btn-box">
                 {/* menu mobile */}
                 <Box className="d-mob">
                     {/* logo mobile */}

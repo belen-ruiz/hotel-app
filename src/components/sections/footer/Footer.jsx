@@ -5,7 +5,7 @@ import { Banner } from "./Banner";
 export const Footer = () => {
     return (
         <Container className="page-container">
-            <Stack sx={{ width: "100%" }}>
+            <Stack>
                 {/* info */}
                 <FooterData />
 

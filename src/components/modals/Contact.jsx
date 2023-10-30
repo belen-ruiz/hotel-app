@@ -6,18 +6,18 @@ import { useUsersContext } from "../../context/UserProvider";
 import { BtnContained } from "../buttons/Buttons";
 
 export const Contact = () => {
+    const { handleChange, handleSubmit } = useUsersContext();
+
     const inputsSignUp = [
         { label: "Name", name: "name", type: "text" },
         { label: "E-mail", name: "email", type: "email" },
         { label: "Password", name: "password", type: "password" },
     ];
-
     const inputsSignIn = [
         { label: "E-mail", name: "email", type: "email" },
         { label: "Contraseña", name: "password", type: "password" },
     ];
 
-    const { handleChange, handleSubmit } = useUsersContext();
 
     return (
         <Box className="modal-container">
@@ -47,7 +47,7 @@ export const Contact = () => {
                                     <label htmlFor={i.name}>{i.label}</label>
 
                                     <input
-                                        style={{ width: "100%" }}
+                                        className="w-100"
                                         i={i}
                                         onChange={handleChange}
                                         type={i.type}
