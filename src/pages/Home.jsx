@@ -12,7 +12,7 @@ import { Stack } from "@mui/material";
 export const Home = () => {
 
     return (
-        <Container className="mainSections p-0" >
+        <Container className="page-container p-0" >
             <Stack className="a-center">
                 <Intro />
 

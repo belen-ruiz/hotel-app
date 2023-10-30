@@ -26,7 +26,7 @@ export const FooterData = () => {
                     <Grid
                         container
                         padding={0}
-                        className="smallText"
+                        className="block-font"
                         sx={{
                             gridTemplateColumns: "repeat(3, 1fr)",
                         }}
@@ -36,7 +36,7 @@ export const FooterData = () => {
                                 <NavLink>
                                     <Box className="d-flex g-sm j-start">
                                         <Box className="footer-icon">
-                                            <ArrowForwardIosIcon fontSize="sm" />
+                                            <ArrowForwardIosIcon className="fs-05" />
                                         </Box>
 
                                         <Box className="white">

@@ -10,8 +10,8 @@ export const RoomDisplayContainer = ({}) => {
     const subtitle = "the Best place to enjoy life place to enjoy life place to enjoy life place to enjoy."
 
     return (
-        <Container className="section a-start green-bc">
-                <Box className="section a-start container-web p-lg">
+        <Container className="section-container a-start green-bc">
+                <Box className="section-container a-start web-container p-lg">
                     {/* titles */}
                     <TitlesSecondary className="a-center w-30"
                         topText={topText} 
@@ -23,7 +23,6 @@ export const RoomDisplayContainer = ({}) => {
                     <Stack spacing={2} className="a-center w-70">
                         {/* scroll */}
                         <ScrollContainer />
-                        
                     </Stack>
                 </Box>
             </Container>

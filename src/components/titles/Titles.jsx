@@ -2,8 +2,8 @@ import { Stack } from "@mui/material";
 
 const Titles = ({ topText, title, subtitle, style }) => {
     return (
-        <Stack spacing={1} className="section alignCenter">
-            {topText && <p className="topText">{topText}</p>}
+        <Stack spacing={1} className="section-container alignCenter">
+            {topText && <p className="text-bc">{topText}</p>}
 
             {title && <p className="title green" style={style}> {title}</p>}
 
@@ -15,7 +15,7 @@ const Titles = ({ topText, title, subtitle, style }) => {
 const TitlesSecondary = ({ topText, title, subtitle, style }) => {
     return (
         <Stack spacing={1} className="w-30">
-            { topText && <p className="topText">{ topText }</p>}
+            { topText && <p className="text-bc">{ topText }</p>}
 
             {  title && <p className="title white">{ title }</p>}
 

@@ -4,7 +4,7 @@ import { Star } from "@mui/icons-material";
 import { StarBorder } from "@mui/icons-material";
 import { Stack } from "@mui/material";
 import { Box } from "@mui/material";
-import { amenity } from "../../utils/amenity";
+import { amenity } from "../../utils/hotelData";
 import { GroupButtons, RoomAmenities, RoomCapacity, RoomDescription, RoomImage, RoomPrice, RoomTitle } from "./RoomData";
 import { Divider } from "@mui/material";
 import { BtnOutlined } from "../buttons/Buttons";
@@ -17,7 +17,7 @@ const Review = () => {
             <Star />
             <Star />
             <StarBorder/>
-            <p className="menuWeb" > 9 Reviews</p>
+            <p className="block-font" > 9 Reviews</p>
         </Box>
     )
 }
@@ -74,22 +74,13 @@ export const RoomDetail = ({ room }) => {
                 <Divider orientation="vertical" flexItem />
 
                 {/* price & book */}
-                <Stack
-                    sx={{
-                        flex: 1,
-                        display: "flex",
-                        width: "100%",
-                        justifyContent: "space-between",
-                        
-                    }}
-                >
+                <Stack className="btn-box">
                     <RoomPrice price={price} title={title} />
                     
                     <BtnOutlined link="book-now" text="book now"/>
                 </Stack>                               
              </Box>
              
-           </>
+           </> 
     );
 };
-

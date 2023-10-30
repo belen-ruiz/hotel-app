@@ -7,7 +7,7 @@ import ArrowCircleRightRoundedIcon from "@mui/icons-material/ArrowCircleRightRou
 
 
 
-const Buttons = () => {
+const BtnScrollContainer = () => {
     
     const { handleScroll } = useRoomContext();
 
@@ -15,13 +15,13 @@ const Buttons = () => {
         <Box className="arrow-box">
             <Box className="arrow-btn" onClick={() => handleScroll("left")}>
                 <Zoom duration={1000} delay={1} >
-                    <ArrowCircleLeftRoundedIcon fontSize="large" />
+                    <ArrowCircleLeftRoundedIcon className="fs-3" />
                 </Zoom>
             </Box>
 
             <Box className="arrow-btn" onClick={() => handleScroll("right")}>
                 <Zoom duration={3000} delay={4}>
-                    <ArrowCircleRightRoundedIcon fontSize="large" />
+                    <ArrowCircleRightRoundedIcon className="fs-3" />
                 </Zoom>
             </Box>
         </Box>
@@ -35,8 +35,8 @@ export const ScrollContainer = ({}) => {
         <>
             <Container
                 ref={containerRef} className="scrollable-container" >
-                {/* item list container */}
-                <Box className="item-listContainer">
+                {/* item container */}
+                <Box className="item-scroll">
                     {/* item */}
                     {rooms &&
                         rooms.map((room) => (
@@ -56,7 +56,7 @@ export const ScrollContainer = ({}) => {
             </Container>
 
             {/* buttons */}
-            <Buttons />
+            <BtnScrollContainer />
         </>
     );
 };

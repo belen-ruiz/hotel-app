@@ -1,6 +1,17 @@
 import { Box } from '@mui/material';
 import React from 'react';
-import { itemView } from '../../utils/itemView';
+import { ViewHeadlineRounded, GridViewRounded } from "@mui/icons-material";
+
+const views = [
+    {
+        name: "list",
+        icon: <ViewHeadlineRounded />
+    },
+    {
+        name: "grid",
+        icon: <GridViewRounded />
+    }
+]
 
 
 
@@ -23,7 +34,7 @@ const ItemView = ({ name, icon, select, setSelect }) => {
 export const FilterView = ({ select, setSelect }) => {
   return (
     <Box sx={{ display: 'flex', gap: '1rem', justifyContent: 'end' }}>
-      {itemView.map((view) => (
+      {views.map((view) => (
         <ItemView
           select={select}
           setSelect={setSelect}

@@ -1,6 +1,6 @@
 import { useContext, useState, useEffect, createContext, useRef } from "react";
 import { useNavigate } from "react-router-dom";
-import { roomsData } from "../utils/rooms";
+import { roomsData } from "../utils/roomsData";
 
 const RoomContext = createContext([]);
 export const useRoomContext = () => useContext(RoomContext);

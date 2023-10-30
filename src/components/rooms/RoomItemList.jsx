@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import Card from "@mui/joy/Card";
 import { Stack, Box } from "@mui/material";
-import { amenity } from "../../utils/amenity";
+import { amenity } from "../../utils/hotelData";
 
 import Divider from "@mui/joy/Divider";
 
@@ -18,8 +18,7 @@ export const RoomItemList = ({ rooms, isList }) => {
     const price = rooms.price;
     const imgUrl = rooms.imgUrl;
 
-   
-    return (
+       return (
         <Card className={`item-card white-bc ${isList ? 'isList' : ''}`}>
             <Box className={`item-box ${isList ? 'isList' : ''}`} >
                 {/* image */}
@@ -56,7 +55,7 @@ export const RoomItemList = ({ rooms, isList }) => {
                 }
 
                 {/* price & book */}
-                <Stack className="item-price">
+                <Stack className="btn-box">
                     <RoomPrice price={price} title={title} />
                     <GroupButtons id={id}/>
                 </Stack>

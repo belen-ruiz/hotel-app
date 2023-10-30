@@ -10,7 +10,7 @@ export const RoomDetails = () => {
     const title = "Room Details"
     
     return (
-        <Container className="mainSections p-0">
+        <Container className="page-container p-0">
             <Stack className="a-center" spacing={6}>
                 <BreadcrumbsContainer />
                 

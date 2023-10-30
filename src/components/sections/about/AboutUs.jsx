@@ -21,14 +21,13 @@ const Video = () => {
 export const AboutUs = () => {
     const topText = "a little about us"
     const title = "the Best place to enjoy life"
-
     const data = "the Best place to enjoy life place to enjoy life place to enjoy life place to enjoy life place to enjoy life place to enjoy life place to enjoy lifnjoy life place to enjoy lif njoy life place to enjoy lif njoy life place to enjoy lif e place to enjoy life place to enjoy life."
     const sign = "FRANCO MOLINA"
     const label = "CEO of Las Salinas"
 
     return (
-        <Container className="section a-center green-bc" >
-            <Box className="section a-start container-web"
+        <Container className="section-container a-center green-bc" >
+            <Box className="section-container a-start web-container"
                 >
 
                 {/* titles & data */}

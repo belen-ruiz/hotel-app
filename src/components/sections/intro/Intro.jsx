@@ -10,20 +10,20 @@ const bgImg =
 
 export const Intro = () => {
     return (
-        <Container className="section alignCenter p-0" >
+        <Container className="section-container a-center p-0">
             {/* img */}
-            <Box className="introImg">
+            <Box className="img-intro">
                 <img
                     src={bgImg}
                     alt="who we are"
                     className="image"
                 />
 
-                <Box className="introOverlay" ></Box>
+                <Box className="overlay-intro" ></Box>
             </Box>
 
             {/* text box */}
-            <Stack className="introText">
+            <Stack className="text-intro">
                 <Flip delay={1} fraction={1} duration="2000">
                     <Logo
                         logo={LogoIntro}

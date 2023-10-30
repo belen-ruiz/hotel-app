@@ -58,7 +58,7 @@ export const FilterData = ({ getAllRooms, totalGuests, setSelect, select }) => {
           <Box className="data-btn" onClick={getAllRooms}>
             Show all Rooms
           </Box>
-          <Box className="dataDisplay">{dataDisplay}</Box>
+          <Box className="data-info">{dataDisplay}</Box>
         </>
       )}
 

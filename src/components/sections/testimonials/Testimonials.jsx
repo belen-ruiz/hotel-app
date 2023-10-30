@@ -15,8 +15,8 @@ export const Testimonials = () => {
     const subtitle = "Enjoy all benefits while you stay"
 
     return (
-        <Container className="section a-center white-bc">
-            <Stack spacing={2} className="section a-center container-web p-lg">
+        <Container className="section-container a-center white-bc">
+            <Stack spacing={2} className="section-container a-center web-container p-lg">
                 {/* titles */}
                 <Titles 
                     topText={topText}

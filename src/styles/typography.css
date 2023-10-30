@@ -1,26 +1,52 @@
   
-  /* Component Styles */
-  .menuWeb {
-    font-size: 0.7rem;
+  /* fontsize */
+  .fs-05 {
+    font-size: 0.5rem!important;
+  }
+  .fs-1 {
+    font-size: 1rem!important;
+  }
+  .fs-15 {
+    font-size: 1.5rem!important;
+  }
+  .fs-2 {
+    font-size: 2rem!important;
+  }
+  .fs-3 {
+    font-size: 3rem!important;
+  }
+  .fs-4 {
+    font-size: 4rem!important;
+  }
+
+
+  /* styles */
+  .bold {
     font-weight: 700;
-    text-transform: uppercase;
   }
   
-  .topText {
-    background-color: #e49408;
-    color: #142006;
+  .italic {
+    font-style: italic;
+  }
+
+
+
+  /* text */
+  .text-bc {
     font-size: 0.8rem;
     font-weight: 700;
     text-transform: uppercase;
     letter-spacing: 5px;
+    color: #142006;
+    background-color: #e49408;
     padding: 0.4rem 0.5rem;
   }
   
   .title {
-    font-family: "EB Garamond, serif";
     font-size: 3rem;
     font-weight: 700;
     text-transform: capitalize;
+    font-family: "EB Garamond, serif";
   }
   
   .subtitle {
@@ -30,7 +56,47 @@
     margin: 0;
   }
   
-  .cardTitle {
+  .data-info {
+    font-size: 0.8rem;
+    color: #d5d8d5;
+    background-color: #182706;
+  }
+
+  
+  .quote {
+    font-size: 1rem;
+    font-weight: 400;
+    text-transform: lowercase;
+    font-style: italic;
+    text-align: center;
+  }
+
+  /* components */
+
+  /* navbar */
+  .block-font {
+    font-size: 0.7rem;
+    font-weight: 700;
+    text-transform: uppercase;
+  }
+  
+  .block-font a{
+    color: #d5d8d5;
+    
+  }
+  
+  .block-font a:hover {
+    color: #e49408;
+
+  }
+
+  .block-font .active{
+    color: #e49408!important;
+  }
+
+
+  /* card */
+  .card-title {
     font-size: 2.2rem;
     text-transform: uppercase;
     letter-spacing: -1px;
@@ -38,50 +104,7 @@
   
   .price {
     font-size: 8rem;
+    font-weight: 700;
     text-transform: uppercase;
     font-family: "EB Garamond, serif";
-    font-weight: 700;
   }
-  
-  .textAlignCenter {
-    text-align: center;
-  }
-  
-  .textAlignStart {
-    text-align: start;
-  }
-  
-  .bold {
-    font-weight: 700;
-  }
-  
-  .italic {
-    font-style: italic;
-  }
-  
-  .quote {
-    font-size: 1.2rem;
-    font-weight: 400;
-    text-transform: lowercase;
-    font-style: italic;
-    text-align: center;
-  }
-  
-  .smallText {
-    font-size: 0.7rem;
-    text-transform: capitalize;
-  }
-  
-  .label {
-    font-size: 0.9rem;
-    color: #182706;
-    letter-spacing: 0;
-    padding: 0;
-  }
-  
-  .dataDisplay {
-    color: #d5d8d5;
-    background-color: #182706;
-    font-size: 0.8rem;
-  }
-  

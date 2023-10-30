@@ -20,14 +20,14 @@ export const BreadcrumbsContainer = () => {
   });
 
   return (
-      <Box className="section a-center breadcrumbs smallText white">
-          <Box className="section a-center d-block">
-              <Link to="/" className="section a-center white">
-                  <HomeRounded style={{ fontSize:"1rem" }}/>  Home
+      <Box className="section-container a-center breadcrumbs text-sm white">
+          <Box className="section-container a-center d-block">
+              <Link to="/" className="section-container a-center white">
+                  <HomeRounded className="fs-1"/>  Home
               </Link>
           </Box>
 
-          <Box className="section a-center">
+          <Box className="section-container a-center">
             /{crumbs}
           </Box>
       </Box>

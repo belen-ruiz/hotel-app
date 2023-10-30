@@ -23,17 +23,19 @@ export const RoomItem = ({ rooms }) => {
             {/* data */}
             <Stack className="room-item">
                 {/* capacidad */}
-                {capacity && <RoomCapacity capacity={capacity} />}
+                {capacity && 
+                <RoomCapacity capacity={capacity} />}
 
                 {/* data */}
                 <RoomTitle title={title} />
                 <RoomPrice price={price} />
 
                 {/* buttons */}
-                <GroupButtons id={id} />
+                <Box className="btn-box">
+                    <GroupButtons id={id} />
+                </Box>
             </Stack>
         </Box>
     );
 };
 
-///

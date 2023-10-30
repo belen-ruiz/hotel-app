@@ -4,8 +4,7 @@ import { BoyRounded } from "@mui/icons-material";
 import { Divider } from "@mui/material";
 import MuiInput from "@mui/material/Input";
 
-import { searchDates } from "../../../utils/searchDates";
-import { searchGuests } from "../../../utils/searchGuests";
+import { searchDates, searchGuests } from "../../../utils/search";
 
 import { Zoom, Fade } from "react-awesome-reveal";
 
@@ -33,8 +32,8 @@ export const SearchBar = ({
                         (elem) =>
                             elem && (
                                 <>
-                                    <Box key={elem.id} className=" a-center" sx={{height: "51px"}}>
-                                        <p className="label" >{elem.label}</p>
+                                    <Box key={elem.id} className="a-center">
+                                        <p className="block-font green" >{elem.label}</p>
                                         <input
                                             type="date"
                                             label={elem.label}
@@ -58,7 +57,7 @@ export const SearchBar = ({
                             elem && (
                                 <>
                                     <Stack key={elem.id}>
-                                        <p className="label">{elem.label}</p>
+                                        <p className="block-font green">{elem.label}</p>
                                         <Box className="d-flex">
                                                                                                                                     {/* icon */}
                                             <Box className="green">

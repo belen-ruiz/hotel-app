@@ -3,7 +3,7 @@ import { Stack } from "@mui/material";
 import { Typography } from "@mui/material";
 import { Toolbar } from "@mui/material";
 import { Container } from "@mui/material";
-import { features } from "../../../utils/features";
+import { features } from "../../../utils/hotelData";
 import { Flip } from "react-awesome-reveal";
 import { Titles } from "../../titles/Titles";
 
@@ -15,7 +15,7 @@ const Feature = ({ data }) => {
         <Stack
             className="feature-box green">
             <Box>{icon}</Box>
-            <p className="menuWeb green textAlignCenter">{title}</p>
+            <p className="block-font green">{title}</p>
         </Stack>
     );
 };
@@ -27,8 +27,8 @@ export const Features = () => {
 
 
     return (
-        <Container className="section a-center white-bc">
-            <Stack spacing={2} className="section a-center container-web p-lg">
+        <Container className="section-container a-center white-bc">
+            <Stack spacing={2} className="section-container a-center web-container p-lg">
                 {/* titles */}
                 <Titles 
                 topText={topText}
@@ -37,7 +37,7 @@ export const Features = () => {
 
                 {/* item box */}
 
-                <Box className="feature-item" >
+                <Box className="feature-container" >
                     <Flip cascade damping={0.1}>
                         {features.map((feature) => (
                             <Box

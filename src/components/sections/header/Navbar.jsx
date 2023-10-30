@@ -43,11 +43,11 @@ export const Navbar = () => {
     }, []);
 
     return (
-        <AppBar className={`navbar ${scrolling && 'scrollOn'}`}>
+        <AppBar className={`navbar ${scrolling && 'scroll-on'}`}>
             <Toolbar style={{ justifyContent: "space-evenly", maxWidth: "1280px" }}
             >
                 {/* menu mobile */}
-                <Box className="display-mobile">
+                <Box className="d-mob">
                     {/* logo mobile */}
                     <Box>
                         <Logo
@@ -86,7 +86,7 @@ export const Navbar = () => {
                                 >
                                     <Link
                                         to={`${page.link}`}
-                                        className="menuWeb green"
+                                        className="block-font green"
                                     >
                                         {page.page}
                                     </Link>
@@ -101,7 +101,7 @@ export const Navbar = () => {
                 {/* navbar expanded */}
                 <Fade direction="down" delay={1} duration="2000">
                     {/* logo */}
-                    <Box className="display-web">
+                    <Box className="d-web">
                         <Logo
                             logo={logoIso}
                             altLogo={"logo-header"}
@@ -110,16 +110,12 @@ export const Navbar = () => {
                     </Box>
 
                     {/* menu web */}
-                    <Box className="menuWeb display-web">
+                    <Box className="block-font d-web">
                         {pages.map((page) => (
                             <NavLink
                                 to={page.link}
                                 key={page.page}
-                                className={ location.pathname === page.link
-                                            ? "isActive"
-                                            : "notActive"
-                                    
-                                }>
+                                className={ location.pathname === page.link && "isActive" }>
                                 {page.page}
                             </NavLink>
                         ))}

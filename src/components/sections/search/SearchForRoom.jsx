@@ -23,8 +23,8 @@ export const SearchForRoom = ({}) => {
     const subtitle = "Enjoy all benefits while you stay"
 
     return (
-        <Container className="section a-center white-bc p-lg">
-            <Stack spacing={2}  className="section a-center container-web">
+        <Container className="section-container a-center white-bc p-lg">
+            <Stack spacing={2}  className="section-container a-center web-container">
                 {/* titles */}
                 <Titles 
                     topText={topText} 

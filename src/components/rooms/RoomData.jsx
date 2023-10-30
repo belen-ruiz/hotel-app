@@ -25,7 +25,7 @@ export const RoomCapacity = ({ capacity }) => {
                     .map(() => (
                         <BoyRounded
                             key={capacity}
-                            style={{ fontSize: "2rem" }}
+                            className="fs-15"
                         />
                     ))}
             </Box>
@@ -69,10 +69,10 @@ const RoomAmenity = ({ icon, name }) => {
     return (
         <>
             <Box sx={{ display: "flex", gap: "0.7rem", width: "100%" }}>
-                <p className="orange" style={{ fontSize: "1rem" }}>
+                <p className="orange fs-1">
                     {icon}
                 </p>
-                <p className="smallText green">{name}</p>
+                <p className="text-sm green">{name}</p>
             </Box>
         </>
     );
@@ -90,7 +90,7 @@ export const RoomTitle = ({ title }) => {
     return (
         <>
             <Box>
-                <p className="cardTitle green">{title}</p>
+                <p className="card-title green">{title}</p>
             </Box>
         </>
     );
@@ -128,14 +128,7 @@ export const RoomDescription = ({ description }) => {
 export const GroupButtons = ({ id }) => {
     return (
         <>
-            <Box
-                sx={{
-                    width: "100%",
-                    display: "flex",
-                    justifyContent: "space-between",
-                    gap: "0.7rem",
-                }}
-            >
+            <Box className="btn-box">
                 <BtnContained link={`rooms/${id}`} text="more info" />
                 
                 <BtnOutlined link="book-now" text="book now" />
