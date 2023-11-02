@@ -3,11 +3,11 @@ import { Stack } from "@mui/material";
 const Titles = ({ topText, title, subtitle, style }) => {
     return (
         <Stack spacing={1} className="section-container alignCenter">
-            {topText && <p className="text-bc">{topText}</p>}
+            {topText && <div className="text-bc">{topText}</div>}
 
-            {title && <p className="title green" style={style}> {title}</p>}
+            {title && <div className="title green" style={style}> {title}</div>}
 
-            {subtitle && <p className="subtitle green">{subtitle}</p>}
+            {subtitle && <div className="subtitle green">{subtitle}</div>}
         </Stack>
     );
 };
@@ -15,11 +15,11 @@ const Titles = ({ topText, title, subtitle, style }) => {
 const TitlesSecondary = ({ topText, title, subtitle, style }) => {
     return (
         <Stack spacing={1}>
-            { topText && <p className="text-bc">{ topText }</p>}
+            { topText && <div className="text-bc">{ topText }</div>}
 
-            {  title && <p className="title white">{ title }</p>}
+            {  title && <div className="title white">{ title }</div>}
 
-            {  subtitle && <p className="subtitle white">{ subtitle }</p>}
+            {  subtitle && <div className="subtitle white">{ subtitle }</div>}
         </Stack>
     );
 };

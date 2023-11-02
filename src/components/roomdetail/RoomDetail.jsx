@@ -1,14 +1,13 @@
 
-import React, { useEffect, useState } from "react";
+import React from "react";
 import { Star } from "@mui/icons-material";
 import { StarBorder } from "@mui/icons-material";
 import { Stack } from "@mui/material";
 import { Box } from "@mui/material";
 import { amenity } from "../../utils/hotelData";
-import { GroupButtons, RoomAmenities, RoomCapacity, RoomDescription, RoomImage, RoomPrice, RoomTitle } from "./RoomData";
+import { RoomAmenities, RoomCapacity, RoomDescription, RoomImage, RoomPrice, RoomTitle } from "../rooms/RoomData";
 import { Divider } from "@mui/material";
 import { BtnOutlined } from "../buttons/Buttons";
-import { Title } from "@mui/icons-material";
 
 const Review = () => {
     return (
@@ -18,7 +17,7 @@ const Review = () => {
             <Star />
             <Star />
             <StarBorder/>
-            <p className="block-font" > 9 Reviews</p>
+            <div className="block-font" > 9 Reviews</div>
         </Box>
     )
 }

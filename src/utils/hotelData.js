@@ -75,31 +75,31 @@ export const amenity = [
     {
         name:    "mini bar",
 
-        icon:  <LocalBarRounded />
+        icon:  <LocalBarRounded className="fs-1"/>
     },
     {
         name:    "tv",
 
-        icon:  <TvRounded />
+        icon:  <TvRounded className="fs-1"/>
     },
     {
         name:    "sofa",
 
-        icon: <ChairRounded />
+        icon: <ChairRounded className="fs-1"/>
     },
     {
         name:    "ironing",
 
-        icon: <IronRounded />
+        icon: <IronRounded className="fs-1"/>
     },
     {
         name:    "computer",
 
-        icon:  <ComputerRounded />
+        icon:  <ComputerRounded className="fs-1"/>
     },
     {
         name:    "phone",
 
-        icon: <PhoneAndroidRounded />
+        icon: <PhoneAndroidRounded className="fs-1"/>
     },
 ]

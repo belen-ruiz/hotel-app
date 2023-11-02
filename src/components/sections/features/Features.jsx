@@ -15,7 +15,7 @@ const Feature = ({ data }) => {
         <Stack
             className="feature-item green">
             <Box>{icon}</Box>
-            <p className="block-font green">{title}</p>
+            <div className="block-font green">{title}</div>
         </Stack>
     );
 };

@@ -14,7 +14,7 @@ export const RoomItemList = ({ rooms, isList }) => {
         <Card className={`item-card white-bc ${isList && 'isList'}`}>
             <Box className={`item-box ${isList && 'isList'}`} >
                 {/* image */}
-                <Box sx={{ flex: 1, height: "100%", width: "100%" }}>
+                <Box className="flex-1" >
                     <RoomImage imgUrl={imgUrl} title={title} ratio="3/5" />
                 </Box> 
 

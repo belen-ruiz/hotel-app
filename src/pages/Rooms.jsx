@@ -2,7 +2,7 @@
 import { Container, Stack } from "@mui/material";
 import React, { useEffect, useState } from "react";
 import { BreadcrumbsContainer } from "../components/breadcrumbs/BreadcrumbsContainer";
-import { FilterData } from "../components/filter/FilterData";
+import { Filter } from "../components/filter/Filter";
 import { Loading } from "../components/loading/Loading";
 import { RoomItemListContainer } from "../components/rooms/RoomItemListContainer";
 import { SearchForRoom } from "../components/sections/search/SearchForRoom";
@@ -34,7 +34,7 @@ export const Rooms = () => {
                     title={title} 
                     />
 
-                <FilterData 
+                <Filter
                     getAllRooms={getAllRooms} 
                     totalGuests={totalGuests} 
                     setSelect={setSelect} 

@@ -33,7 +33,7 @@ export const SearchBar = ({
                             elem && (
                                 <>
                                     <Box key={elem.id} className="a-center">
-                                        <p className="block-font green" >{elem.label}</p>
+                                        <div className="block-font green" >{elem.label}</div>
                                         <input
                                             type="date"
                                             label={elem.label}
@@ -57,7 +57,7 @@ export const SearchBar = ({
                             elem && (
                                 <>
                                     <Stack key={elem.id}>
-                                        <p className="block-font green">{elem.label}</p>
+                                        <div className="block-font green">{elem.label}</div>
                                         <Box className="d-flex">
                                                                                                                                     {/* icon */}
                                             <Box className="green">

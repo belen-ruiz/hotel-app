@@ -35,9 +35,9 @@ export const AboutUs = () => {
                     <TitlesSecondary topText={topText} title={title}/>
 
                     <Stack spacing={2}>
-                        <p className="subtitle white"> { data } </p>
-                        <p className="subtitle orange bold" > { sign } </p>
-                        <p className="subtitle white italic" > {label }  </p>
+                        <div className="subtitle white"> { data } </div>
+                        <div className="subtitle orange bold" > { sign } </div>
+                        <div className="subtitle white italic" > {label }  </div>
                     </Stack>
                 </Stack>
 

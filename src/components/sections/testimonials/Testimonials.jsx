@@ -33,7 +33,7 @@ export const Testimonials = () => {
                         width: "80%",
                     }}
                 >
-                    <p className="quote green">
+                    <div className="quote green">
                         "My stay was simply amazing and exceeded all my
                         expectations. The room, elegantly decorated, offered
                         breathtaking views and exceptional comfort. The pool,
@@ -43,11 +43,11 @@ export const Testimonials = () => {
                         unforgettable experience. I would highly recommend this
                         hotel without hesitation for a dream vacation by the
                         beach!"
-                    </p>
-                    <p className="subtitle bold">Bruce Wayne</p>
-                    <p className="subtitle italic">
+                    </div>
+                    <div className="subtitle bold">Bruce Wayne</div>
+                    <div className="subtitle italic">
                         Reviewed from TripAdvisor
-                    </p>
+                    </div>
                         <img
                             src="https://download.logo.wine/logo/TripAdvisor/TripAdvisor-Logo.wine.png"
                             alt="trip advisor"

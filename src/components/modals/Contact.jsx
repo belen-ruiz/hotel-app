@@ -37,7 +37,7 @@ export const Contact = () => {
                 <Box className="modal-data">
                     {/* create acc */}
                     <Stack className="modal-content">
-                        <p className="title">Create Account</p>
+                        <div className="title">Create Account</div>
 
                         <form className="form" >
                             {inputsSignUp.map((i) => (
@@ -61,7 +61,7 @@ export const Contact = () => {
 
                     {/* sign in */}
                     <Stack className="modal-content">
-                        <p className="title">Sign In</p>
+                        <div className="title">Sign In</div>
                         <form className="form">
                             {inputsSignIn.map((i) => (
                                 <Box key={i.name} className="form-label">

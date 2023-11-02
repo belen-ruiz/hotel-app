@@ -1,7 +1,7 @@
 import { Container, Stack } from "@mui/material";
 import React from "react";
 import { BreadcrumbsContainer } from "../components/breadcrumbs/BreadcrumbsContainer";
-import { RoomDetailContainer } from "../components/rooms/RoomDetailContainer";
+import { RoomDetailContainer } from "../components/roomdetail/RoomDetailContainer";
 import { SearchForRoom } from "../components/sections/search/SearchForRoom";
 import { Titles } from "../components/titles/Titles";
 

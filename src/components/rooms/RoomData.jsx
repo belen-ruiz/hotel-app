@@ -23,10 +23,7 @@ export const RoomCapacity = ({ capacity }) => {
                 {Array(capacity)
                     .fill()
                     .map(() => (
-                        <BoyRounded
-                            key={capacity}
-                            className="fs-15"
-                        />
+                        <BoyRounded key={capacity} className="fs-15" />
                     ))}
             </Box>
         </>
@@ -36,8 +33,7 @@ export const RoomCapacity = ({ capacity }) => {
 export const RoomAmenities = ({ amenities, amenity, displayText }) => {
     return (
         <>
-            {amenity &&
-                amenities &&
+            {amenity && amenities &&
                 amenity.map((am) => {
                     if (amenities.includes(am.name)) {
                         return (
@@ -47,13 +43,19 @@ export const RoomAmenities = ({ amenities, amenity, displayText }) => {
                                 key={am.name}
                             >
                                 {displayText ? (
-                                    <RoomAmenity
-                                        icon={am.icon}
-                                        name={am.name}
-                                    />
+                                    <>
+                                        <Box>
+                                            <div className="orange fs-05">
+                                                {am.icon}
+                                            </div>
+                                            <div className="text-sm green">
+                                                {am.name}
+                                            </div>
+                                        </Box>
+                                    </>
                                 ) : (
                                     <>
-                                        <RoomAmenitiesIcon icon={am.icon} />
+                                        <div className="orange ">{am.icon}</div>
                                     </>
                                 )}
                             </div>
@@ -65,33 +67,10 @@ export const RoomAmenities = ({ amenities, amenity, displayText }) => {
     );
 };
 
-const RoomAmenity = ({ icon, name }) => {
-    return (
-        <>
-            <Box>
-                <p className="orange fs-1">
-                    {icon}
-                </p>
-                <p className="text-sm green">{name}</p>
-            </Box>
-        </>
-    );
-};
-
-const RoomAmenitiesIcon = ({ icon }) => {
-    return (
-        <>
-            <p>{icon}</p>
-        </>
-    );
-};
-
 export const RoomTitle = ({ title }) => {
     return (
         <>
-            <Box>
-                <p className="card-title green">{title}</p>
-            </Box>
+            <div className="card-title green">{title}</div>
         </>
     );
 };
@@ -100,13 +79,10 @@ export const RoomPrice = ({ price }) => {
     return (
         <>
             <Box>
-                <p className="subtitle green">
-                    $
-                    <span className="price green">
-                        {price}
-                    </span>
+                <div className="subtitle green">
+                    $<span className="price green">{price}</span>
                     pp night
-                </p>
+                </div>
             </Box>
         </>
     );
@@ -116,7 +92,7 @@ export const RoomDescription = ({ description }) => {
     return (
         <>
             <Box>
-                <p className="subtitle green">${description}</p>
+                <div className="subtitle green">${description}</div>
             </Box>
         </>
     );
@@ -127,7 +103,7 @@ export const GroupButtons = ({ id }) => {
         <>
             <Box className="btn-box">
                 <BtnContained link={`rooms/${id}`} text="more info" />
-                
+
                 <BtnOutlined link="book-now" text="book now" />
             </Box>
         </>

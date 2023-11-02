@@ -8,8 +8,8 @@ export const Error404 = () => {
     <Container className="page-container p-0" sx={{ height: "max-content" }} >
       <Stack sx={{ display: "flex", justifyContent: "center", alignItems: "center" }} >
         
-        <p> Error404 </p>
-        <p> Page under construction </p>
+        <div> Error404 </div>
+        <div> Page under construction </div>
           <img src={undercontruction} alt="page under construction" style={{ width: "30%" }} />      
       </Stack>
     </Container>

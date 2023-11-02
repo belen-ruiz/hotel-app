@@ -38,16 +38,27 @@
 
 import React from "react";
 import { Box } from "@mui/material";
+import { FilterView } from "./FilterView";
+import { FilterData } from "./FilterData";
 
-export const FilterData = ({ getAllRooms, dataDisplay }) => {
-  
+export const Filter = ({ getAllRooms, totalGuests, setSelect, select }) => {
+  let dataDisplay = null;
+
+  if (totalGuests === 0) {
+    dataDisplay = "Showing results for all Rooms";
+  } else if (totalGuests < 5) {
+    dataDisplay = `Showing results for Rooms for ${totalGuests} people`;
+  } else {
+    dataDisplay = `No rooms available for ${totalGuests} people`;
+  }
+
   return (
-          <Box className="d-flex j-start g-1">
-            <Box className="data-btn" onClick={getAllRooms}>
-              Show all Rooms
-            </Box>
-            <Box className="data-info">{dataDisplay}</Box>
-          </Box>
-          )
-        
+    <Box className="filters">
+      {dataDisplay && (
+        <FilterData dataDisplay={dataDisplay} getAllRooms={getAllRooms} />
+      )}
+
+      <FilterView setSelect={setSelect} select={select} />
+    </Box>
+  );
 };
