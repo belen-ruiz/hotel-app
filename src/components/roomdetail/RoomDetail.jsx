@@ -56,7 +56,7 @@ export const RoomDetail = ({ room }) => {
                     </Box>
 
                     {/* amenities */}
-                    <Box sx={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "1rem", width: "100%"  }} >
+                    <Box className="amenities" >
                         <RoomAmenities amenities={amenities} amenity={amenity} displayText={true}/>
                     </Box>
                         

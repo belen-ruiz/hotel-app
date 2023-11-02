@@ -44,11 +44,11 @@ export const RoomAmenities = ({ amenities, amenity, displayText }) => {
                             >
                                 {displayText ? (
                                     <>
-                                        <Box>
-                                            <div className="orange fs-05">
+                                        <Box className="d-flex g-sm">
+                                            <div className="icon orange fs-05">
                                                 {am.icon}
                                             </div>
-                                            <div className="text-sm green">
+                                            <div className="font-sm green">
                                                 {am.name}
                                             </div>
                                         </Box>

@@ -259,3 +259,21 @@ height: 32px;
   padding-left: 0!important;
   padding-right: 0!important;
 }
+
+
+/* room details */
+
+
+.amenities {
+  display: grid; 
+  grid-template-columns: 1fr 1fr; 
+  gap: 1rem; 
+  width: 100%;
+}
+
+.icon {
+  display: flex;
+}
+.icon svg {
+  align-self: center;
+}
