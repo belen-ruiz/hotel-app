@@ -13,7 +13,7 @@ import { Logo } from "../../logo/Logo";
 import logoIso from "../../../images/logo_iso.png";
 import { Fade } from "react-awesome-reveal";
 import { MenuList } from "@mui/material";
-import { BtnOutlined } from "../../buttons/Buttons";
+import { BtnContained } from "../../buttons/Buttons";
 
 export const Navbar = () => {
     const [anchorElNav, setAnchorElNav] = useState(null);
@@ -121,7 +121,7 @@ export const Navbar = () => {
                     </Box>
 
                     {/* booknow */}
-                    <BtnOutlined link="contact" text="book now" />
+                    <BtnContained link="contact" text="book now" />
                 </Fade>
             </Toolbar>
         </AppBar>

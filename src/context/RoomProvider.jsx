@@ -139,6 +139,25 @@ export const RoomProvider = ({ children }) => {
         }, 2000);        
     }, [totalGuests]);
     
+    const [order, setOrder] = useState("")
+
+    useEffect(() => {
+        const sortRooms = () => {
+          if (order === 1) {
+            const roomsOrdered = rooms.sort((a, b) => a.price - b.price);
+            setSearch(roomsOrdered);
+            navigate("/rooms");
+          } else if (order === 2){
+            const roomsOrdered = rooms.sort((a, b) => a.capacity - b.capacity);
+            setSearch(roomsOrdered);
+            navigate("/rooms");
+          }
+          setLoading(false);
+        };
+    
+        sortRooms();
+      }, [order]);
+    
 
     return (
         <RoomContext.Provider
@@ -150,6 +169,7 @@ export const RoomProvider = ({ children }) => {
                 isList, 
                 setIsList, 
                 getAllRooms,
+                order, setOrder,
                 
                 handleChangeDate, handleSliderChange, handleInputChange, handleBlur, handleClick, dateValue, 
 

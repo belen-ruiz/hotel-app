@@ -1,7 +1,7 @@
 import React from "react";
+import LogoIntro from "../../../images/logo_aurora_white-10.png";
 import { Typography, Container, Box, Stack } from "@mui/material";
 import { Logo } from "../../logo/Logo";
-import LogoIntro from "../../../images/logo_aurora_white-10.png";
 import { Flip } from "react-awesome-reveal";
 import { BtnOutlined } from "../../buttons/Buttons";
 
@@ -9,7 +9,7 @@ const bgImg =
     "https://images.pexels.com/photos/17488420/pexels-photo-17488420/free-photo-of-madera-paisaje-agua-apple.jpeg";
 
 export const Intro = () => {
-    const bigScreen = window.innerWidth < 600;
+    const bigScreen = window.innerWidth > 600;
 
     return (
         <Container className="section-container a-center p-0">
@@ -24,33 +24,37 @@ export const Intro = () => {
                 <Box className="overlay-intro" ></Box>
             </Box>
 
-            {/* text box */}
+            {/* text box & contact */}
+
             <Stack className="text-intro">
                 {bigScreen ? (
-                    <Logo
-                    logo={LogoIntro}
-                    altLogo={"logo-intro"}
-                    height={{ xs: "100px" }}/>) 
+                        <>
+                            <Flip>
+                                <Logo
+                            logo={LogoIntro}
+                            altLogo={"logo-intro"}
+                            height={{ xs: "100px" }}/>
+                            </Flip>
+                                
+                            <Flip duration={3000} >
+                                <BtnOutlined link="contact" text="contact us" />
+                            </Flip >
+                        </>
+                    ) 
                     :
                     (
-                    <Flip delay={1} fraction={1} duration="2000">
-                        <Logo
-                        logo={LogoIntro}
-                        altLogo={"logo-intro"}
-                        height={{ md: "300px" }}
-                    />
-                    </Flip>
+                        <>
+                            <Logo
+                            logo={LogoIntro}
+                            altLogo={"logo-intro"}
+                            height={{ md: "300px" }}/>
+                            
+                            <BtnOutlined link="contact" text="contact us" />
+                        </>
                     )
                 }
 
-                {/* contact */}
-                {bigScreen ? (
-                    <BtnOutlined link="contact" text="contact us" />
-                ) : (
-                    <Flip direction="down" delay={1} duration="2000">
-                        <BtnOutlined link="contact" text="contact us" />
-                    </Flip>
-                )}
+                
             </Stack>
         </Container>
     );

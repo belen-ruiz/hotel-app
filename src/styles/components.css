@@ -79,7 +79,7 @@ backdrop-filter: blur(20px);
   position: absolute;
     z-index: 3;
     display: flex;
-    top: 0;
+    top: 50%;
     bottom: 50%;
     left: 0;
     right: 0;

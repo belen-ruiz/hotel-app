@@ -7,7 +7,7 @@ import { Box } from "@mui/material";
 import { amenity } from "../../utils/hotelData";
 import { RoomAmenities, RoomCapacity, RoomDescription, RoomImage, RoomPrice, RoomTitle } from "../rooms/RoomData";
 import { Divider } from "@mui/material";
-import { BtnOutlined } from "../buttons/Buttons";
+import { BtnContained, BtnOutlined } from "../buttons/Buttons";
 
 const Review = () => {
     return (
@@ -17,7 +17,7 @@ const Review = () => {
             <Star />
             <Star />
             <StarBorder/>
-            <div className="block-font" > 9 Reviews</div>
+            <div className="block-font underline"> 9 Reviews</div>
         </Box>
     )
 }
@@ -70,7 +70,7 @@ export const RoomDetail = ({ room }) => {
                 <Stack className="btn-box">
                     <RoomPrice price={price} title={title} />
                     
-                    <BtnOutlined link="book-now" text="book now"/>
+                    <BtnContained link="book-now" text="book now"/>
                 </Stack>                               
              </Box>
              

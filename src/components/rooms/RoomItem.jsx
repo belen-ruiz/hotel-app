@@ -25,11 +25,10 @@ export const RoomItem = ({ rooms }) => {
                 {/* capacidad */}
                 {capacity && 
                 <RoomCapacity capacity={capacity} />}
-
-                {/* data */}
+                {/* title */}
                 <RoomTitle title={title} />
+                {/* prince */}
                 <RoomPrice price={price} />
-
                 {/* buttons */}
                 <Box className="btn-box">
                     <GroupButtons id={id} />

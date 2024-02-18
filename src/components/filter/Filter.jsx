@@ -1,62 +1,41 @@
-// import { Button, Box, Typography } from "@mui/material";
-// import React from "react";
-// import { FilterView } from "./FilterView";
-
-// export const FilterData = ({ getAllRooms, totalGuests, setSelect, select }) => {
-//     return (
-//         <Box className="box-sb">
-//             {totalGuests > 0 && totalGuests < 5 ? (
-//                 <>
-//                     <Box className="dataDisplay">
-//                         Showing results for Rooms for {totalGuests} people
-//                     </Box>
-//                     <Box className="dataButton" onClick={getAllRooms}>
-//                         Show all Rooms
-//                     </Box>
-//                 </>
-//             ) : null}
-//             {totalGuests > 5 ? (
-//                 <>
-//                     <Box className="dataDisplay"> 
-//                         No rooms available for {totalGuests} people
-//                     </Box>
-//                     <Box className="dataButton" onClick={getAllRooms}>
-//                         Show all Rooms
-//                     </Box>
-//                 </>
-//             ) : null}
-
-//             {totalGuests === 0 ? (
-//                 <Box className="dataDisplay"> Showing results for all Rooms</Box>
-//             ) : null}
-
-//             <FilterView setSelect={setSelect} select={select} />
-//         </Box>
-//     );
-// };
-
-
-import React from "react";
+import React, { useState } from "react";
 import { Box } from "@mui/material";
 import { FilterView } from "./FilterView";
 import { FilterData } from "./FilterData";
+import Order from "./Order";
+import { useEffect } from "react";
 
-export const Filter = ({ getAllRooms, totalGuests, setSelect, select }) => {
+export const Filter = ({ getAllRooms, totalGuests, setSelect, select, order, setOrder }) => {
+
   let dataDisplay = null;
 
-  if (totalGuests === 0) {
-    dataDisplay = "Showing results for all Rooms";
-  } else if (totalGuests < 5) {
+  if (totalGuests > 0 && totalGuests <= 5) {
     dataDisplay = `Showing results for Rooms for ${totalGuests} people`;
-  } else {
+  } else if (totalGuests > 5) {
     dataDisplay = `No rooms available for ${totalGuests} people`;
+  } else {
+    dataDisplay = `Showing results for all Rooms`;
   }
+
+
+    // if (order == 1) {
+
+    //   console.log(order)
+    //     }
+    //     else if(order == 2){
+    //       console.log(order)
+      
+    //     }    
+
 
   return (
     <Box className="filters">
+      <Order setOrder={setOrder}/>
+
       {dataDisplay && (
-        <FilterData dataDisplay={dataDisplay} getAllRooms={getAllRooms} />
+      <FilterData dataDisplay={dataDisplay} getAllRooms={getAllRooms} />
       )}
+
 
       <FilterView setSelect={setSelect} select={select} />
     </Box>

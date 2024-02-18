@@ -7,7 +7,7 @@ export const BtnOutlined = ({ link, text }) => {
         <>
             <Box>
                 <Link to={`/${link}`}>
-                    <Box className="btn contained-btn">{text}</Box>
+                    <Box className="btn outlined-btn">{text}</Box>
                 </Link>
             </Box>
         </>

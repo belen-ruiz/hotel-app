@@ -12,7 +12,7 @@ import { useRoomContext } from "../context/RoomProvider";
 
 export const Rooms = () => {
     const [select, setSelect] = useState("list");
-    const { loading, setIsList, totalGuests, getAllRooms } = useRoomContext();
+    const { loading, setIsList, totalGuests, getAllRooms, order, setOrder } = useRoomContext();
 
     const title = "Rooms"
 
@@ -35,6 +35,8 @@ export const Rooms = () => {
                     />
 
                 <Filter
+                order={order}
+                setOrder={setOrder}
                     getAllRooms={getAllRooms} 
                     totalGuests={totalGuests} 
                     setSelect={setSelect} 

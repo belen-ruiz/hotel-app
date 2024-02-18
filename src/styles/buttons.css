@@ -1,6 +1,5 @@
 .btn {
-  border: 2px solid #e49408;
-  padding: 0.4rem 0.5rem;
+  padding: 0.8rem 1.3rem;
   font-size: 0.8rem;
   text-align: center;
   text-transform: uppercase;
@@ -11,13 +10,14 @@
 
 /* OutlinedButton */
 .outlined-btn {
-    background-color: transparent;
-    color: #e49408;
+    background-color: #182706;
+    color: #d5d8d5;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;  
     transition: background-color scale 0.3s ease;
   }
   
   .outlined-btn:hover {
-    color: white;
+    color: #182706;
     background-color: #e49408;
     transform: scale(1.1);
   }
@@ -30,10 +30,8 @@
   }
   
   .contained-btn:hover {
-    background-color: transparent;
+    background-color: #182706;
     color: #e49408;
-    border: 2px solid #e49408;
-    backdrop-filter: blur(10px);
     transform: scale(1.1);
     /* boxShadow: 30px #454544; */
   }
